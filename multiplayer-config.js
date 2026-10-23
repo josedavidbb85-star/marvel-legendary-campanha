@@ -1,7 +1,6 @@
-// Preencha com os dados públicos do seu projeto Supabase para ativar a sala em tempo real.
-// Project URL: Settings > API > Project URL
-// Publishable/anon key: Settings > API > Project API keys
+// Configuração pública do Supabase para a Sala Compartilhada.
+// A publishable key é própria para uso no frontend; nunca coloque service_role/secret key aqui.
 window.MARVEL_MULTIPLAYER = {
-  supabaseUrl: "",
-  supabaseKey: ""
+  supabaseUrl: "https://zlrukmdlnymchtxjqsfu.supabase.co",
+  supabaseKey: "sb_publishable_xE3peGZJLWM78IhymBA0_A_ifMJHmxf"
 };
