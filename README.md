@@ -1,11 +1,17 @@
-# Marvel Legendary — Campanha II
+# Marvel Legendary — Ecos da Ruptura
 
-Protótipo da aba **Partida** com Villain Deck virtual, City e Sala Compartilhada.
+Aplicativo narrativo para a campanha cooperativa **Ecos da Ruptura**, criada para Marvel Legendary.
 
-## Multiplayer
-A interface usa Supabase Realtime (Broadcast + Presence). Para ativar a sincronização entre celulares, preencha `multiplayer-config.js` com a Project URL e a chave pública/anon de um projeto Supabase.
+## Versão atual
 
-## Publicação
-O `index.html` é estático e pode ser publicado pelo GitHub Pages a partir da branch `main`.
+**v0.8.21 — Responsável definido pelo grupo**
 
-> Protótipo não canônico da campanha em desenvolvimento.
+A campanha possui cinco missões e utiliza o jogo base de Marvel Legendary com a expansão *Into the Cosmos*. O aplicativo funciona como mestre da campanha, conduzindo preparação, narrativa, responsabilidades, testes, consequências, legados, trilha sonora e sequências cinematográficas.
+
+### Jogadores
+David • Bel • Guilherme
+
+### Execução
+Abra `index.html` em um navegador ou utilize o GitHub Pages deste repositório.
+
+Os vídeos das Missões 1 e 2 e os recursos de áudio/ícones estão armazenados junto ao aplicativo neste repositório.
