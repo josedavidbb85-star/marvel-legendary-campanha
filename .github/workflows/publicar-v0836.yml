@@ -1,0 +1,30 @@
+name: Publicar Ecos v0.8.36
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publicar-v0836.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - shell: bash
+        run: |
+          set -e
+          cp index_v0835.html index_v0836.html
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('index_v0836.html'); s=p.read_text(encoding='utf-8')
+          s=s.replace('Ecos da Ruptura v0.8.35','Ecos da Ruptura v0.8.36').replace('BUILD 0.8.35','BUILD 0.8.36')
+          s=s.replace('narracao-sync-v0835.js','narracao-sync-v0836.js')
+          p.write_text(s,encoding='utf-8')
+          Path('index.html').write_text('''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ecos da Ruptura v0.8.36</title><meta http-equiv="refresh" content="0; url=./index_v0836.html"><script>location.replace('./index_v0836.html'+location.search+location.hash);</script></head><body><p>Abrindo Ecos da Ruptura v0.8.36…</p></body></html>''',encoding='utf-8')
+          PY
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add index_v0836.html index.html
+          git commit -m 'Publica v0.8.36: volta ao Algenib e sincroniza eventos narrativos'
+          git push
