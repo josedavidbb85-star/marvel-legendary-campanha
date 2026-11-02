@@ -1,45 +1,36 @@
-// Ecos da Ruptura v0.8.32 — narração determinística: o bloco visível define o áudio
+// Ecos da Ruptura v0.8.32 — sincronização por Responsabilidade ativa, sem inferência pelo primeiro texto visível
 (()=>{
 'use strict';
-const MAP={
-'Fragmentos que Não Deveriam Existir':[1,1,1],'A Memória Retorna':[1,1,2],'A Doreen da Terra Morta':[1,2,1],'A Outra Doreen Tem Testemunhas':[1,2,2],'A Primeira Conversão':[1,3,1],'A Conversão Chega ao Centro':[1,3,2],
-'O Arquivo dos Convertidos':[2,1,1],'O Arquivo Respira':[2,1,2],'Fé contra Memória':[2,2,1],'A Memória Escolhe um Lado':[2,2,2],'O Pregador na City':[2,3,1],'O Sermão Vira Ordem':[2,3,2],
-'A Aposta do Grandmaster':[3,1,1],'A Aposta Cobra Retorno':[3,1,2],'Campeão ou Peça':[3,2,1],'O Campeão Recebe uma Coroa':[3,2,2],'A Ponte dos Mapmakers':[3,3,1],'A Ponte Encontra o Destino':[3,3,2],
-'A Falsificação se Defende':[4,1,2],'Beyonder Corrige a Cena':[4,2,2],'O Julgamento Recebe Evidência':[4,3,2],'A Oferta Tem um Preço':[5,1,2],'As Páginas Começam a Fechar':[5,2,2],'O Evangelho do Fim':[5,3,2]
-};
 const norm=s=>(s||'').normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 const play=(f,l)=>window.playNarration&&window.playNarration(f,l);
-let ctx=null,lastScene='',lastChoice={};
-function visible(el){if(!el)return false;const s=getComputedStyle(el);return s.display!=='none'&&s.visibility!=='hidden'&&el.getClientRects().length>0}
+let activeResp=null,lastChoice={};
 function mission(){return Number(window.viewMission||(window.state&&state.current)||1)}
-function narrativeHost(){
- const nodes=[...document.querySelectorAll('.modal.show .modalBox,.activeRespWrap,#playContent .resp')].filter(visible);
- // modal narrativo/decisão tem prioridade; modal de atribuição é excluído
- return nodes.find(x=>x.closest('#respModal')===null && Object.keys(MAP).some(t=>(x.innerText||'').includes(t))) || nodes.find(x=>Object.keys(MAP).some(t=>(x.innerText||'').includes(t))) || null;
-}
-function contextFrom(el){if(!el)return null;const text=el.innerText||'';for(const [t,v] of Object.entries(MAP))if(text.includes(t))return {m:v[0],r:v[1],n:v[2],title:t};return null}
-function scene(){
- if(document.querySelector('#respModal.show'))return;const h=narrativeHost(),c=contextFrom(h);if(!h||!c)return;
- // Só inicia cena quando o título e o texto narrativo correspondente estão simultaneamente visíveis.
- const text=(h.innerText||'').trim();if(text.length<100)return;
- const key=`m${c.m}_r${c.r}_n${c.n}`;ctx=c;if(lastScene===key)return;lastScene=key;play(`${key}_cena.mp3`,`${c.title} · N${c.n}`);
-}
-function optionIndex(btn,host){const box=btn.closest('.choice');if(!box)return 0;const choices=[...host.querySelectorAll('.choice')].filter(visible);const i=choices.indexOf(box);return i>=0&&i<3?i+1:0}
+function st(i){try{return typeof window.respState==='function'?window.respState(i):null}catch(e){return null}}
+function level(i){const x=st(i);return x&&Number(x.level)===2?2:1}
+function key(i){return `m${mission()}_r${Number(i)+1}_n${level(i)}`}
+function label(i,suffix='cena'){return `Missão ${mission()} · Responsabilidade ${Number(i)+1} · N${level(i)} · ${suffix}`}
+function scene(i){if(i==null)return;activeResp=Number(i);const k=key(i);play(`${k}_cena.mp3`,label(i,'cena'))}
+function parseIndex(code,name){const m=(code||'').match(new RegExp(name+'\\((\\d+)'));return m?Number(m[1]):null}
+function choiceNumber(i,id){try{const lev=level(i),t=window.TESTS&&TESTS[lev===2?`${mission()}-${i}-L2`:`${mission()}-${i}`];if(!t)return 0;const p=t.choices.findIndex(c=>String(c.id)===String(id));return p>=0?p+1:0}catch(e){return 0}}
 document.addEventListener('click',e=>{
- const b=e.target.closest&&e.target.closest('button');if(!b)return;const txt=norm(b.textContent),oc=norm(b.getAttribute('onclick'));
- // atribuição não fala; espera o bloco narrativo aparecer
- if(/confirmar responsavel/.test(txt)){setTimeout(scene,180);return}
- const h=narrativeHost(),c=contextFrom(h);if(!h||!c)return;ctx=c;const key=`m${c.m}_r${c.r}_n${c.n}`;
- const op=optionIndex(b,h);if(op){lastChoice[key]=op;setTimeout(()=>play(`${key}_op${op}.mp3`,`${c.title} · escolha ${op}`),20);return}
- let result='';if(/sucesso/.test(txt)||/success/.test(oc))result='sucesso';else if(/falha/.test(txt)||/fail|failure/.test(oc))result='falha';
- if(result){const oi=lastChoice[key];if(oi)setTimeout(()=>play(`${key}_op${oi}_${result}.mp3`,`${c.title} · ${result}`),50)}
+ const b=e.target.closest&&e.target.closest('button');if(!b)return;
+ const code=b.getAttribute('onclick')||'',txt=norm(b.textContent);
+ let i=parseIndex(code,'startResp');if(i!=null){activeResp=i;return}
+ if(/confirmar responsavel/.test(txt)){
+   const chosen=activeResp;setTimeout(()=>{if(chosen!=null)scene(chosen)},60);return;
+ }
+ i=parseIndex(code,'chooseResp');
+ if(i!=null){activeResp=i;const mid=code.match(/chooseResp\(\d+\s*,\s*['\"]([^'\"]+)/),id=mid&&mid[1],op=choiceNumber(i,id);if(op){const k=key(i);lastChoice[k]=op;setTimeout(()=>play(`${k}_op${op}.mp3`,label(i,`escolha ${op}`)),20)}return}
+ i=parseIndex(code,'openTest');if(i!=null){activeResp=i;return}
+ const result=/sucesso/.test(txt)?'sucesso':(/falha/.test(txt)?'falha':'');
+ if(result&&activeResp!=null){const k=key(activeResp),op=lastChoice[k];if(op)setTimeout(()=>play(`${k}_op${op}_${result}.mp3`,label(activeResp,result)),30)}
 },true);
-let timer;new MutationObserver(()=>{clearTimeout(timer);timer=setTimeout(scene,100)}).observe(document.body,{subtree:true,childList:true,characterData:true,attributes:true,attributeFilter:['class','style']});
-// ABERTURA: começa quando o vídeo de abertura começa, simultânea ao texto/cinemática. Nunca após fechar.
+let wasAssign=false;new MutationObserver(()=>{const assign=!!document.querySelector('#respModal.show');if(wasAssign&&!assign&&activeResp!=null){const x=st(activeResp);if(x&&x.stage&&x.stage!=='hidden')setTimeout(()=>scene(activeResp),40)}wasAssign=assign}).observe(document.body,{subtree:true,attributes:true,attributeFilter:['class']});
+// O botão Ouvir repete sempre o último áudio explicitamente selecionado por esta máquina de estados.
+// Não há varredura dos cartões visíveis; portanto a Responsabilidade 1 não pode sequestrar o contexto da 2 ou 3.
 let opening='';function openingM(v){const src=norm(decodeURIComponent(v.currentSrc||v.src||''));if(src.includes('1000274259'))return 1;if(src.includes('1000274260'))return 2;if(src.includes('missao 3'))return 3;if(src.includes('missao 4'))return 4;if(src.includes('missao_5_abertura'))return 5;return Number(v.dataset.mission)||mission()}
 document.addEventListener('play',e=>{const v=e.target;if(!(v instanceof HTMLVideoElement)||v.id!=='missionVideoPlayer')return;const src=norm(decodeURIComponent(v.currentSrc||v.src||''));if(/encerramento|4262|4261/.test(src))return;const m=openingM(v),k=`m${m}_abertura`;if(opening===k)return;opening=k;play(`${k}.mp3`,`Missão ${m} · abertura`)},true);
-// CONFLITO: reservado deliberadamente. Nesta versão não há áudio de conflito.
-// ENCERRAMENTO: mantém vitória/derrota após a cinematográfica final.
-function bindEnd(){const v=document.getElementById('missionEndingVideo');if(v&&!v.dataset.nar832){v.dataset.nar832='1';v.addEventListener('ended',()=>{const m=mission(),r=(window.state&&state.results&&state.results[m]&&state.results[m].result)||'win';play(`m${m}_${r==='win'?'vitoria':'derrota'}.mp3`,`Missão ${m} · ${r==='win'?'vitória':'derrota'}`)})}}
+// CONFLITO permanece deliberadamente sem áudio.
+function bindEnd(){const v=document.getElementById('missionEndingVideo');if(v&&!v.dataset.nar832fix){v.dataset.nar832fix='1';v.addEventListener('ended',()=>{const m=mission(),r=(window.state&&state.results&&state.results[m]&&state.results[m].result)||'win';play(`m${m}_${r==='win'?'vitoria':'derrota'}.mp3`,`Missão ${m} · ${r==='win'?'vitória':'derrota'}`)})}}
 window.addEventListener('load',bindEnd);setTimeout(bindEnd,400);
 })();
