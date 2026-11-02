@@ -1,82 +1,10 @@
-name: Integrar narracoes Algenib
+name: Integrar narracoes Algenib (arquivo)
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 permissions:
-  contents: write
+  contents: read
 jobs:
-  integrar:
-    if: github.actor != 'github-actions[bot]'
+  info:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Integrar audios e app
-        shell: bash
-        run: |
-          set -e
-          test -f ecos_da_ruptura_narracoes_algenib.zip
-          rm -rf audio/narracao
-          mkdir -p audio/narracao
-          unzip -q ecos_da_ruptura_narracoes_algenib.zip -d audio/narracao
-          test "$(find audio/narracao -type f -name '*.mp3' | wc -l)" -eq 315
-          cp index_v0827.html index_v0828.html
-          python3 - <<'PY'
-          from pathlib import Path
-          p=Path('index_v0828.html')
-          s=p.read_text(encoding='utf-8')
-          s=s.replace('Ecos da Ruptura v0.8.27','Ecos da Ruptura v0.8.28')
-          s=s.replace('BUILD 0.8.27','BUILD 0.8.28')
-          css='''<style id="narracao-v0828">\n.narracaoBox{position:fixed;left:50%;bottom:12px;transform:translateX(-50%);z-index:260;background:#07101df2;border:1px solid #e4bf65;border-radius:14px;padding:8px 10px;display:flex;gap:7px;align-items:center;box-shadow:0 8px 30px #0009}.narracaoBox button{min-height:38px;padding:6px 10px}.narracaoBox .narLabel{font-size:.78rem;color:#ffe4a0;max-width:250px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}@media(max-width:620px){.narracaoBox{left:7px;right:7px;bottom:7px;transform:none;justify-content:center}.narracaoBox .narLabel{display:none}}\n</style>'''
-          js=r'''<script id="narracao-v0828-js">
-          // Narrador oficial: Google Cloud Chirp 3 HD Algenib
-          (()=>{
-            const BASE='audio/narracao/';
-            const nar=new Audio(); nar.preload='metadata';
-            let current='', oldMusicVolume=null;
-            function musicEls(){return [...document.querySelectorAll('audio')].filter(a=>a!==nar && !a.paused)}
-            function duck(on){musicEls().forEach(a=>{if(on){if(a.dataset.preNarVol==null)a.dataset.preNarVol=String(a.volume);a.volume=Math.min(a.volume,.18)}else if(a.dataset.preNarVol!=null){a.volume=Number(a.dataset.preNarVol);delete a.dataset.preNarVol}})}
-            nar.addEventListener('play',()=>duck(true)); nar.addEventListener('pause',()=>{if(nar.ended)duck(false)}); nar.addEventListener('ended',()=>{duck(false);sync()});
-            const box=document.createElement('div');box.className='narracaoBox';box.innerHTML='<span class="narLabel">Narração</span><button class="narPlay">▶ Ouvir</button><button class="narPause">⏸</button><button class="narRestart">↻</button>';
-            document.body.appendChild(box);
-            const label=box.querySelector('.narLabel'),play=box.querySelector('.narPlay');
-            function sync(){play.textContent=nar.paused?'▶ Ouvir':'▶ Tocando';}
-            function setFile(f,labelText){if(!f)return;const src=BASE+f;if(current!==src){nar.pause();duck(false);current=src;nar.src=src;nar.load()}label.textContent=labelText||f;sync()}
-            window.playNarration=function(f,labelText){setFile(f,labelText);nar.play().catch(()=>{});sync()};
-            box.querySelector('.narPlay').onclick=()=>{if(current)nar.play().catch(()=>{});sync()};
-            box.querySelector('.narPause').onclick=()=>{nar.pause();sync()};
-            box.querySelector('.narRestart').onclick=()=>{if(current){nar.currentTime=0;nar.play().catch(()=>{});sync()}};
-            // Contexto da campanha: identifica missão/responsabilidade/nível pelos textos já exibidos no app.
-            const titles={
-              'Fragmentos que Não Deveriam Existir':[1,1],'A Memória Retorna':[1,1],
-              'A Doreen da Terra Morta':[1,2],'A Outra Doreen Tem Testemunhas':[1,2],
-              'A Primeira Conversão':[1,3],'A Conversão Chega ao Centro':[1,3],
-              'O Arquivo dos Convertidos':[2,1],'O Arquivo Respira':[2,1],
-              'Fé contra Memória':[2,2],'A Memória Escolhe um Lado':[2,2],
-              'O Pregador na City':[2,3],'O Sermão Vira Ordem':[2,3],
-              'A Aposta do Grandmaster':[3,1],'A Aposta Cobra Retorno':[3,1],
-              'Campeão ou Peça':[3,2],'O Campeão Recebe uma Coroa':[3,2],
-              'A Ponte dos Mapmakers':[3,3],'A Ponte Encontra o Destino':[3,3],
-              'A Falsificação se Defende':[4,1],'Beyonder Corrige a Cena':[4,2],'O Julgamento Recebe Evidência':[4,3],
-              'A Oferta Tem um Preço':[5,1],'As Páginas Começam a Fechar':[5,2],'O Evangelho do Fim':[5,3]
-            };
-            function infer(){
-              const vis=[...document.querySelectorAll('.modal.show,.tab.on')].map(x=>x.innerText||'').join('\n');
-              let hit=null;for(const [t,mr] of Object.entries(titles))if(vis.includes(t)){hit={t,m:mr[0],r:mr[1]};break}
-              if(hit){const n2=/Nível\s*2|N2|nível 2/i.test(vis)||vis.includes(['','A Memória Retorna','A Outra Doreen Tem Testemunhas','A Conversão Chega ao Centro'][hit.r]||'__');setFile(`m${hit.m}_r${hit.r}_${n2?'n2':'n1'}_cena.mp3`,`${hit.t} · ${n2?'N2':'N1'}`);return}
-              const mt=vis.match(/MISSÃO\s*(\d)|Missão\s*(\d)/i);if(mt){const m=Number(mt[1]||mt[2]);if(m>=1&&m<=5)setFile(`m${m}_abertura.mp3`,`Missão ${m} · abertura`)}
-            }
-            new MutationObserver(()=>setTimeout(infer,30)).observe(document.body,{subtree:true,childList:true,attributes:true,attributeFilter:['class']});
-            setTimeout(infer,400);
-          })();
-          </script>'''
-          s=s.replace('</head>',css+'\n</head>')
-          s=s.replace('</body>',js+'\n</body>')
-          p.write_text(s,encoding='utf-8')
-          Path('index.html').write_text('''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ecos da Ruptura v0.8.28</title><meta http-equiv="refresh" content="0; url=./index_v0828.html"><script>location.replace('./index_v0828.html'+location.search+location.hash);</script></head><body><p>Abrindo Ecos da Ruptura v0.8.28…</p></body></html>''',encoding='utf-8')
-          PY
-          git config user.name github-actions[bot]
-          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add audio/narracao index_v0828.html index.html
-          git commit -m "Integra 315 narracoes Algenib e publica v0.8.28"
-          git push
+      - run: echo "As 315 narracoes ja foram integradas. Workflow arquivado para nao sobrescrever novas versoes do app."
