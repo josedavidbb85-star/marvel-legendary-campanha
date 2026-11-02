@@ -816,7 +816,7 @@ window.addEventListener("load",()=>setTimeout(ensureMission1OpeningVideoButton,1
   box.querySelector('.narPlay').onclick=()=>{if(current)nar.play().catch(()=>{});sync()};
   box.querySelector('.narPause').onclick=()=>{nar.pause();sync()};
   box.querySelector('.narRestart').onclick=()=>{if(current){nar.currentTime=0;nar.play().catch(()=>{});sync()}};
-            // v0.8.32: seleção automática removida. O áudio é definido apenas pelo sincronizador da cena efetivamente ativa.
+            // v0.8.32: inferência global removida; o sincronizador explícito define o áudio.
 
 })();
 </script>
