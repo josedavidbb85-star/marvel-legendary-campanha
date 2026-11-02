@@ -1,0 +1,29 @@
+name: Publicar v0.8.37
+on:
+  push:
+    paths:
+      - '.github/workflows/publicar-v0837.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Criar v0.8.37
+        run: |
+          cp index_v0836.html index_v0837.html
+          sed -i 's/Ecos da Ruptura v0.8.36/Ecos da Ruptura v0.8.37/g' index_v0837.html
+          sed -i 's/BUILD 0.8.36/BUILD 0.8.37/g' index_v0837.html
+          sed -i 's/narracao-sync-v0836.js/narracao-sync-v0837.js/g' index_v0837.html
+          cat > index.html <<'EOF'
+          <!doctype html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=index_v0837.html"><script>location.replace('index_v0837.html'+location.search+location.hash)</script></head><body></body></html>
+          EOF
+      - name: Commit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add index_v0837.html index.html
+          git commit -m 'Publica v0.8.37: N2 narra conclusão narrativa antes do efeito mecânico' || exit 0
+          git push
