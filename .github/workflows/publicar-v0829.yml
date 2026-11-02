@@ -16,6 +16,7 @@ jobs:
         shell: bash
         run: |
           set -e
+          echo "Publicando sincronização narrativa v0.8.29"
           test -f index_v0828.html
           test -f narracao-sync-v0829.js
           cp index_v0828.html index_v0829.html
