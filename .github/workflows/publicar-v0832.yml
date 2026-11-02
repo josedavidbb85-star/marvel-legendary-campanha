@@ -20,20 +20,17 @@ jobs:
           import re
           p=Path('index_v0832.html'); s=p.read_text(encoding='utf-8')
           s=s.replace('Ecos da Ruptura v0.8.31','Ecos da Ruptura v0.8.32').replace('BUILD 0.8.31','BUILD 0.8.32')
-          # Remove o inferidor legado da v0.8.28. Ele varria toda a aba Durante,
-          # encontrava sempre a primeira Responsabilidade e sobrescrevia o áudio atual.
+          # Remove o inferidor legado da v0.8.28, que sempre encontrava a primeira Responsabilidade visível.
           pattern=r"\s*// Contexto da campanha: identifica missão/responsabilidade/nível pelos textos já exibidos no app\.[\s\S]*?setTimeout\(infer,400\);"
-          s,n=re.subn(pattern,"\n            // v0.8.32: seleção automática removida. O áudio é definido apenas pelo sincronizador da cena efetivamente ativa.\n",s,count=1)
+          s,n=re.subn(pattern,"\n            // v0.8.32: inferência global removida; o sincronizador explícito define o áudio.\n",s,count=1)
           if n!=1: raise SystemExit('Bloco legado de inferência não encontrado')
-          # troca o sincronizador 0831 pelo 0832 (mesma API determinística, sem concorrente legado)
           s=s.replace('narracao-sync-v0831.js','narracao-sync-v0832.js')
           p.write_text(s,encoding='utf-8')
           Path('index.html').write_text('''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ecos da Ruptura v0.8.32</title><meta http-equiv="refresh" content="0; url=./index_v0832.html"><script>location.replace('./index_v0832.html'+location.search+location.hash);</script></head><body><p>Abrindo Ecos da Ruptura v0.8.32…</p></body></html>''',encoding='utf-8')
           PY
-          cp narracao-sync-v0831.js narracao-sync-v0832.js
-          sed -i 's/v0.8.31/v0.8.32/g; s/nar831/nar832/g' narracao-sync-v0832.js
+          # narracao-sync-v0832.js já contém a máquina de estados corrigida; não o sobrescrever.
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add index_v0832.html index.html narracao-sync-v0832.js
-          git commit -m 'Publica v0.8.32: remove inferidor legado que prendia áudio na Responsabilidade 1'
+          git commit -m 'Publica v0.8.32: áudio segue a Responsabilidade realmente acionada' || true
           git push
