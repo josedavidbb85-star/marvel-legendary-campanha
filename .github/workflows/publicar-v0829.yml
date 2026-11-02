@@ -1,0 +1,35 @@
+name: Publicar Ecos v0.8.29
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/publicar-v0829.yml']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publicar:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Criar v0.8.29 e promover
+        shell: bash
+        run: |
+          set -e
+          test -f index_v0828.html
+          test -f narracao-sync-v0829.js
+          cp index_v0828.html index_v0829.html
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('index_v0829.html');s=p.read_text(encoding='utf-8')
+          s=s.replace('Ecos da Ruptura v0.8.28','Ecos da Ruptura v0.8.29')
+          s=s.replace('BUILD 0.8.28','BUILD 0.8.29')
+          s=s.replace('</body>','<script src="narracao-sync-v0829.js?v=0829"></script>\n</body>')
+          p.write_text(s,encoding='utf-8')
+          Path('index.html').write_text('''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ecos da Ruptura v0.8.29</title><meta http-equiv="refresh" content="0; url=./index_v0829.html"><script>location.replace('./index_v0829.html'+location.search+location.hash);</script></head><body><p>Abrindo Ecos da Ruptura v0.8.29…</p></body></html>''',encoding='utf-8')
+          PY
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add index_v0829.html index.html
+          git commit -m "Publica v0.8.29 com narracoes sincronizadas"
+          git push
