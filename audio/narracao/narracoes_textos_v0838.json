@@ -1,0 +1,1562 @@
+[
+  {
+    "arquivo": "m1_abertura.mp3",
+    "texto": "A Ruptura terminou, mas o universo não voltou ao silêncio. As quatro Âncoras preservadas continuam emitindo pulsos que nenhum instrumento terrestre consegue explicar. Então cinco ecos surgem além da órbita lunar. Não são naves comuns. Cada um repete sinais que a Terra ainda não transmitiu. Adam Warlock reconhece a assinatura antes de Tony terminar a análise. Magus não criou a Ruptura. Mas alguma coisa nela chamou sua atenção. A equipe parte para o primeiro contato. Pela primeira vez, o perigo não vem de outra Terra. Vem do cosmos que percebeu que a Terra sobreviveu."
+  },
+  {
+    "arquivo": "m1_abertura_cena_1.mp3",
+    "texto": "A Ruptura terminou, mas o universo não voltou ao silêncio. As quatro Âncoras preservadas continuam emitindo pulsos que nenhum instrumento terrestre consegue explicar."
+  },
+  {
+    "arquivo": "m1_abertura_cena_2.mp3",
+    "texto": "Então cinco ecos surgem além da órbita lunar. Não são naves comuns. Cada um repete sinais que a Terra ainda não transmitiu."
+  },
+  {
+    "arquivo": "m1_abertura_cena_3.mp3",
+    "texto": "Adam Warlock reconhece a assinatura antes de Tony terminar a análise. Magus não criou a Ruptura. Mas alguma coisa nela chamou sua atenção."
+  },
+  {
+    "arquivo": "m1_abertura_cena_4.mp3",
+    "texto": "A equipe parte para o primeiro contato. Pela primeira vez, o perigo não vem de outra Terra. Vem do cosmos que percebeu que a Terra sobreviveu."
+  },
+  {
+    "arquivo": "m1_heroi_1.mp3",
+    "texto": "A vitória salvou a realidade, mas Steve não considera o caso encerrado. Ele carrega a lembrança da Convergência e teme que a equipe tenha estabilizado o mundo sem compreender tudo o que ficou do lado de fora. Sua motivação é simples: nenhuma nova decisão sobre vidas inteiras será tomada sem responsabilidade."
+  },
+  {
+    "arquivo": "m1_heroi_2.mp3",
+    "texto": "Tony vê nas quatro Âncoras preservadas uma oportunidade científica e uma culpa pessoal. Ele quer entender por que elas continuam emitindo sinais e provar que a tecnologia criada durante a Ruptura não abriu uma porta que agora não consegue fechar."
+  },
+  {
+    "arquivo": "m1_heroi_3.mp3",
+    "texto": "Warlock reconhece no sinal uma assinatura ligada ao Magus. Para ele, a crise é íntima: qualquer força capaz de usar as cicatrizes dimensionais pode também explorar a divisão entre aquilo que ele é e aquilo que pode se tornar."
+  },
+  {
+    "arquivo": "m1_heroi_4.mp3",
+    "texto": "Quasar chega como sentinela do espaço profundo. Os padrões detectados ao redor da Terra não se comportam como uma invasão comum. Sua prioridade é descobrir se a Terra se tornou um farol cósmico — e, se tornou, quem está vindo em resposta."
+  },
+  {
+    "arquivo": "m1_heroi_5.mp3",
+    "texto": "Nova representa a perspectiva de quem protege rotas e populações que nunca participaram da guerra dimensional. Ele quer impedir que as consequências da Ruptura sejam exportadas para o resto da galáxia."
+  },
+  {
+    "arquivo": "m1_r1_n1_cena.mp3",
+    "texto": "O primeiro Twist faz o sinal se dobrar sobre si mesmo. Captain America reconhece no ruído duas lembranças incompatíveis do Momento da Convergência. Adam Warlock percebe que Magus está usando a própria cicatriz da Convergência como caminho de transmissão."
+  },
+  {
+    "arquivo": "m1_r1_n2_cena.mp3",
+    "texto": "O terceiro rasgo de memória força versões incompatíveis da Convergência a coexistirem."
+  },
+  {
+    "arquivo": "m1_r1_n1_op1.mp3",
+    "texto": "Steve recusa a memória impossível e conduz a equipe pela realidade que todos conseguem confirmar."
+  },
+  {
+    "arquivo": "m1_r1_n1_op1_sucesso.mp3",
+    "texto": "A escolha funciona. +1 efeito das Âncoras."
+  },
+  {
+    "arquivo": "m1_r1_n1_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m1_r1_n1_op2.mp3",
+    "texto": "O responsável usa a lembrança de Steve apenas como coordenada, sem segui-la por completo."
+  },
+  {
+    "arquivo": "m1_r1_n1_op2_sucesso.mp3",
+    "texto": "A escolha funciona. +1 efeito das Âncoras e registre MAPA DA CONVERGÊNCIA."
+  },
+  {
+    "arquivo": "m1_r1_n1_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m1_r1_n1_op3.mp3",
+    "texto": "DESBLOQUEADA PELA CONVERGÊNCIA DO CAPÍTULO VIII. O responsável segue a lembrança incompatível de Captain America até onde a realidade começa a se sobrepor."
+  },
+  {
+    "arquivo": "m1_r1_n1_op3_sucesso.mp3",
+    "texto": "A escolha funciona. registre ECO DA CONVERGÊNCIA e remova 1 Ameaça."
+  },
+  {
+    "arquivo": "m1_r1_n1_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça e Crise = SIM."
+  },
+  {
+    "arquivo": "m1_r1_n2_op1.mp3",
+    "texto": "Usar o padrão reconhecido para impedir que uma das memórias substitua a outra."
+  },
+  {
+    "arquivo": "m1_r1_n2_op1_sucesso.mp3",
+    "texto": "A escolha funciona. +1 efeito das Âncoras."
+  },
+  {
+    "arquivo": "m1_r1_n2_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m1_r1_n2_op2.mp3",
+    "texto": "Comparar os fragmentos da Convergência e convertê-los em evidência contra a transmissão de Magus."
+  },
+  {
+    "arquivo": "m1_r1_n2_op2_sucesso.mp3",
+    "texto": "A escolha funciona. +1 efeito das Âncoras e registre MAPA DA CONVERGÊNCIA."
+  },
+  {
+    "arquivo": "m1_r1_n2_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m1_r1_n2_op3.mp3",
+    "texto": "Acompanhar a memória recorrente até o ponto em que Magus está tentando reescrever a experiência de Steve."
+  },
+  {
+    "arquivo": "m1_r1_n2_op3_sucesso.mp3",
+    "texto": "A escolha funciona. registre ECO DA CONVERGÊNCIA e remova 1 Ameaça."
+  },
+  {
+    "arquivo": "m1_r1_n2_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça e Crise = SIM."
+  },
+  {
+    "arquivo": "m1_r2_n1_cena.mp3",
+    "texto": "A Universal Church of Truth transmite o resgate fracassado como prova de que a Terra precisa de uma verdade única. Entre as imagens, a Igreja recupera registros da Terra Morta — a realidade alternativa visitada durante a Ruptura — e exibe a morte daquela versão de Squirrel Girl como se fosse o destino inevitável de toda resistência. A Doreen da realidade atual está viva. O que pesa sobre a equipe é ter conhecido um mundo em que ela não sobreviveu."
+  },
+  {
+    "arquivo": "m1_r2_n2_cena.mp3",
+    "texto": "A lembrança da Doreen que morreu na Terra Morta deixa de ser apenas uma cicatriz da travessia e passa a funcionar como testemunho contra a tentativa da Igreja de transformar realidades alternativas em profecia."
+  },
+  {
+    "arquivo": "m1_r2_n1_op1.mp3",
+    "texto": "O responsável ignora a provocação da Igreja e prioriza os civis que Doreen teria protegido."
+  },
+  {
+    "arquivo": "m1_r2_n1_op1_sucesso.mp3",
+    "texto": "A escolha funciona. resgate narrativo; +1 efeito das Âncoras."
+  },
+  {
+    "arquivo": "m1_r2_n1_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m1_r2_n1_op2.mp3",
+    "texto": "O responsável preserva os civis e tenta provar que a imagem de Doreen é manipulação."
+  },
+  {
+    "arquivo": "m1_r2_n1_op2_sucesso.mp3",
+    "texto": "A escolha funciona. registre MEMÓRIA DE DOREEN PRESERVADA."
+  },
+  {
+    "arquivo": "m1_r2_n1_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m1_r2_n1_op3.mp3",
+    "texto": "O responsável assume pessoalmente a função que a ausência de Squirrel Girl deixou: salvar primeiro quem ninguém esperaria conseguir salvar."
+  },
+  {
+    "arquivo": "m1_r2_n1_op3_sucesso.mp3",
+    "texto": "A escolha funciona. +uma repetição de teste na Missão 1 e registre LEGADO DE DOREEN."
+  },
+  {
+    "arquivo": "m1_r2_n1_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. Crise = SIM."
+  },
+  {
+    "arquivo": "m1_r2_n2_op1.mp3",
+    "texto": "Usar a existência da Doreen deste mundo para desmontar a ideia de que a morte de sua contraparte era inevitável."
+  },
+  {
+    "arquivo": "m1_r2_n2_op1_sucesso.mp3",
+    "texto": "A escolha funciona. resgate narrativo; +1 efeito das Âncoras."
+  },
+  {
+    "arquivo": "m1_r2_n2_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m1_r2_n2_op2.mp3",
+    "texto": "Separar os registros das duas realidades e provar que a Terra Morta não determina o destino desta Terra."
+  },
+  {
+    "arquivo": "m1_r2_n2_op2_sucesso.mp3",
+    "texto": "A escolha funciona. registre MEMÓRIA DE DOREEN PRESERVADA."
+  },
+  {
+    "arquivo": "m1_r2_n2_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m1_r2_n2_op3.mp3",
+    "texto": "Usar a própria gravação da Terra Morta para expor como a Igreja manipula tragédias de outras realidades."
+  },
+  {
+    "arquivo": "m1_r2_n2_op3_sucesso.mp3",
+    "texto": "A escolha funciona. +uma repetição de teste na Missão 1 e registre LEGADO DE DOREEN."
+  },
+  {
+    "arquivo": "m1_r2_n2_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. Crise = SIM."
+  },
+  {
+    "arquivo": "m1_r3_n1_cena.mp3",
+    "texto": "Os fiéis não chegam gritando. Eles entram repetindo nomes de sobreviventes da Ruptura e oferecendo segurança em troca de submissão. O primeiro convertido carrega uma gravação em que Magus chama a Terra de 'mundo sobrevivente'."
+  },
+  {
+    "arquivo": "m1_r3_n2_cena.mp3",
+    "texto": "A conversão deixa de ser pregação e vira ocupação."
+  },
+  {
+    "arquivo": "m1_r3_n1_op1.mp3",
+    "texto": "Derrubar a transmissão antes que a conversão ganhe um rosto."
+  },
+  {
+    "arquivo": "m1_r3_n1_op1_sucesso.mp3",
+    "texto": "Registre o Legado desta escolha. O responsável recebe 1 Impulso Narrativo para o Nível 2 desta mesma Responsabilidade."
+  },
+  {
+    "arquivo": "m1_r3_n1_op1_falha.mp3",
+    "texto": "Registre a Cicatriz desta escolha. Ela poderá alterar um gatilho ou modificador de uma missão posterior."
+  },
+  {
+    "arquivo": "m1_r3_n1_op2.mp3",
+    "texto": "Deixar o canal aberto tempo suficiente para identificar quem está respondendo."
+  },
+  {
+    "arquivo": "m1_r3_n1_op2_sucesso.mp3",
+    "texto": "Registre o Legado desta escolha. O responsável recebe 1 Impulso Narrativo para o Nível 2 desta mesma Responsabilidade."
+  },
+  {
+    "arquivo": "m1_r3_n1_op2_falha.mp3",
+    "texto": "Registre a Cicatriz desta escolha. Ela poderá alterar um gatilho ou modificador de uma missão posterior."
+  },
+  {
+    "arquivo": "m1_r3_n1_op3.mp3",
+    "texto": "Recusar publicamente que Magus use sobreviventes e mortos como prova de sua profecia."
+  },
+  {
+    "arquivo": "m1_r3_n1_op3_sucesso.mp3",
+    "texto": "Registre o Legado desta escolha. O responsável recebe 1 Impulso Narrativo para o Nível 2 desta mesma Responsabilidade."
+  },
+  {
+    "arquivo": "m1_r3_n1_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. Magus transforma a resposta em novo sermão."
+  },
+  {
+    "arquivo": "m1_r3_n2_op1.mp3",
+    "texto": "Atacar o elo que transforma o primeiro contato em ocupação organizada."
+  },
+  {
+    "arquivo": "m1_r3_n2_op1_sucesso.mp3",
+    "texto": "Registre o Legado de Nível 2 desta escolha. A equipe ganha 1 Impulso Narrativo."
+  },
+  {
+    "arquivo": "m1_r3_n2_op1_falha.mp3",
+    "texto": "Registre a Cicatriz de Nível 2 desta escolha. Ela permanece no Legado da Campanha II."
+  },
+  {
+    "arquivo": "m1_r3_n2_op2.mp3",
+    "texto": "Deixar o sermão avançar o bastante para identificar quem transmite as ordens de Magus."
+  },
+  {
+    "arquivo": "m1_r3_n2_op2_sucesso.mp3",
+    "texto": "Registre o Legado de Nível 2 desta escolha. A equipe ganha 1 Impulso Narrativo."
+  },
+  {
+    "arquivo": "m1_r3_n2_op2_falha.mp3",
+    "texto": "Registre a Cicatriz de Nível 2 desta escolha. Ela permanece no Legado da Campanha II."
+  },
+  {
+    "arquivo": "m1_r3_n2_op3.mp3",
+    "texto": "Confrontar publicamente a promessa de segurança da Igreja com aquilo que a equipe aprendeu na Ruptura."
+  },
+  {
+    "arquivo": "m1_r3_n2_op3_sucesso.mp3",
+    "texto": "Registre o Legado de Nível 2 desta escolha. A equipe ganha 1 Impulso Narrativo."
+  },
+  {
+    "arquivo": "m1_r3_n2_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. Magus transforma a resposta em novo sermão."
+  },
+  {
+    "arquivo": "m1_vitoria.mp3",
+    "texto": "O sinal é decodificado. Magus está seguindo as cicatrizes deixadas pela Ruptura e a Universal Church of Truth já transformou a sobrevivência da Terra em profecia."
+  },
+  {
+    "arquivo": "m1_derrota.mp3",
+    "texto": "A equipe impede o ataque imediato, mas perde a origem do sinal. A Igreja ganha tempo e a próxima missão começa com +1 Ameaça."
+  },
+  {
+    "arquivo": "m2_abertura.mp3",
+    "texto": "A Universal Church of Truth transmite uma mensagem para centenas de sistemas: a Terra sobreviveu porque foi escolhida. A narrativa transforma as Âncoras em relíquias e a Ruptura em julgamento divino. Mundos assustados começam a ouvir. Natasha encontra algo pior que propaganda. Alguns detalhes divulgados pela Igreja nunca foram tornados públicos. Alguém teve acesso aos ecos das realidades perdidas."
+  },
+  {
+    "arquivo": "m2_abertura_cena_1.mp3",
+    "texto": "A Universal Church of Truth transmite uma mensagem para centenas de sistemas: a Terra sobreviveu porque foi escolhida."
+  },
+  {
+    "arquivo": "m2_abertura_cena_2.mp3",
+    "texto": "A narrativa transforma as Âncoras em relíquias e a Ruptura em julgamento divino. Mundos assustados começam a ouvir."
+  },
+  {
+    "arquivo": "m2_abertura_cena_3.mp3",
+    "texto": "Natasha encontra algo pior que propaganda. Alguns detalhes divulgados pela Igreja nunca foram tornados públicos."
+  },
+  {
+    "arquivo": "m2_abertura_cena_4.mp3",
+    "texto": "Alguém teve acesso aos ecos das realidades perdidas."
+  },
+  {
+    "arquivo": "m2_heroi_1.mp3",
+    "texto": "A Igreja fala em seu nome e no de Magus. Warlock quer impedir que a sobrevivência da Terra seja usada como fundamento para uma cruzada cósmica."
+  },
+  {
+    "arquivo": "m2_heroi_2.mp3",
+    "texto": "Moondragon percebe que a fé da Igreja não é apenas ideológica: há uma rede psíquica amplificando certezas e apagando dúvidas. Ela quer romper essa rede sem transformar fiéis em vítimas."
+  },
+  {
+    "arquivo": "m2_heroi_3.mp3",
+    "texto": "Phyla-Vell entra na missão pensando nas populações que ficarão entre a Terra e seus perseguidores. Sua motivação é impedir que a guerra se torne uma sequência de mundos sacrificados."
+  },
+  {
+    "arquivo": "m2_heroi_4.mp3",
+    "texto": "Mar-Vell enxerga o problema como uma crise diplomática e militar. A Terra precisa de aliados antes que os grandes poderes cósmicos decidam que ela é perigosa demais para continuar independente."
+  },
+  {
+    "arquivo": "m2_heroi_5.mp3",
+    "texto": "Natasha entra na missão como agente de inteligência. Enquanto Magus e a Igreja transformam sobrevivência em doutrina, ela procura aquilo que propaganda nenhuma consegue esconder por completo: fontes, rotas, registros e contradições. Sua função é descobrir o que a Igreja sabe de verdade — e como conseguiu saber."
+  },
+  {
+    "arquivo": "m2_r1_n1_cena.mp3",
+    "texto": "A segunda onda de conversões revela que a Igreja não está apenas pregando: ela cataloga sobreviventes, Shards e relatos da Ruptura. Natasha percebe uma estrutura de inteligência escondida sob a liturgia."
+  },
+  {
+    "arquivo": "m2_r1_n2_cena.mp3",
+    "texto": "Os registros roubados começam a se reescrever e revelam ligação direta com Magus."
+  },
+  {
+    "arquivo": "m2_r1_n1_op1.mp3",
+    "texto": "Copiar apenas os registros dos convertidos e sair."
+  },
+  {
+    "arquivo": "m2_r1_n1_op1_sucesso.mp3",
+    "texto": "A escolha funciona. TESTEMUNHOS PRESERVADOS."
+  },
+  {
+    "arquivo": "m2_r1_n1_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m2_r1_n1_op2.mp3",
+    "texto": "Ir além dos nomes e localizar a estrutura de recrutamento."
+  },
+  {
+    "arquivo": "m2_r1_n1_op2_sucesso.mp3",
+    "texto": "A escolha funciona. +1 Shard e ARQUIVO PARCIAL."
+  },
+  {
+    "arquivo": "m2_r1_n1_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m2_r1_n1_op3.mp3",
+    "texto": "Permanecer no núcleo de dados até copiar a cadeia de comando da Igreja."
+  },
+  {
+    "arquivo": "m2_r1_n1_op3_sucesso.mp3",
+    "texto": "A escolha funciona. +1 Shard e ARQUIVO DA IGREJA."
+  },
+  {
+    "arquivo": "m2_r1_n1_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça e Crise = SIM."
+  },
+  {
+    "arquivo": "m2_r1_n2_op1.mp3",
+    "texto": "Comparar os nomes recuperados com novas conversões para descobrir quem foi apagado ou reclassificado pela Igreja."
+  },
+  {
+    "arquivo": "m2_r1_n2_op1_sucesso.mp3",
+    "texto": "A escolha funciona. TESTEMUNHOS PRESERVADOS."
+  },
+  {
+    "arquivo": "m2_r1_n2_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m2_r1_n2_op2.mp3",
+    "texto": "Usar a pista obtida no primeiro acesso para localizar o núcleo que organiza os registros dos convertidos."
+  },
+  {
+    "arquivo": "m2_r1_n2_op2_sucesso.mp3",
+    "texto": "A escolha funciona. +1 Shard e ARQUIVO PARCIAL."
+  },
+  {
+    "arquivo": "m2_r1_n2_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m2_r1_n2_op3.mp3",
+    "texto": "Transformar os dados reunidos em prova de que a conversão é uma operação coordenada, não um movimento espontâneo."
+  },
+  {
+    "arquivo": "m2_r1_n2_op3_sucesso.mp3",
+    "texto": "A escolha funciona. +1 Shard e ARQUIVO DA IGREJA."
+  },
+  {
+    "arquivo": "m2_r1_n2_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça e Crise = SIM."
+  },
+  {
+    "arquivo": "m2_r2_n1_cena.mp3",
+    "texto": "O Master Strike vem acompanhado de uma transmissão que descreve acontecimentos reais da campanha anterior — e acrescenta um detalhe que nenhum dos três jogadores viveu. Moondragon sente milhares de mentes aceitando a versão falsa ao mesmo tempo."
+  },
+  {
+    "arquivo": "m2_r2_n2_cena.mp3",
+    "texto": "Magus oferece uma versão reconfortante de uma falha recente."
+  },
+  {
+    "arquivo": "m2_r2_n1_op1.mp3",
+    "texto": "Recusar a disputa teológica e proteger a missão."
+  },
+  {
+    "arquivo": "m2_r2_n1_op1_sucesso.mp3",
+    "texto": "A escolha funciona. sem escalada."
+  },
+  {
+    "arquivo": "m2_r2_n1_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m2_r2_n1_op2.mp3",
+    "texto": "Usar fatos verificáveis para desmontar a versão da Igreja."
+  },
+  {
+    "arquivo": "m2_r2_n1_op2_sucesso.mp3",
+    "texto": "A escolha funciona. MEMÓRIA CONTESTADA."
+  },
+  {
+    "arquivo": "m2_r2_n1_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m2_r2_n1_op3.mp3",
+    "texto": "Forçar a transmissão a admitir que existem memórias que Magus não controla."
+  },
+  {
+    "arquivo": "m2_r2_n1_op3_sucesso.mp3",
+    "texto": "A escolha funciona. −1 Ameaça e VERDADE CONTRA MAGUS."
+  },
+  {
+    "arquivo": "m2_r2_n1_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. Crise = SIM."
+  },
+  {
+    "arquivo": "m2_r2_n2_op1.mp3",
+    "texto": "Impedir que Magus use a resposta anterior para definir quais lembranças devem ser aceitas como verdade."
+  },
+  {
+    "arquivo": "m2_r2_n2_op1_sucesso.mp3",
+    "texto": "A escolha funciona. sem escalada."
+  },
+  {
+    "arquivo": "m2_r2_n2_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m2_r2_n2_op2.mp3",
+    "texto": "Usar a própria argumentação de Magus contra ele, mostrando onde sua doutrina entra em conflito com os fatos."
+  },
+  {
+    "arquivo": "m2_r2_n2_op2_sucesso.mp3",
+    "texto": "A escolha funciona. MEMÓRIA CONTESTADA."
+  },
+  {
+    "arquivo": "m2_r2_n2_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m2_r2_n2_op3.mp3",
+    "texto": "Levar o confronto iniciado antes ao ponto em que Magus precise revelar o que realmente pretende preservar."
+  },
+  {
+    "arquivo": "m2_r2_n2_op3_sucesso.mp3",
+    "texto": "A escolha funciona. −1 Ameaça e VERDADE CONTRA MAGUS."
+  },
+  {
+    "arquivo": "m2_r2_n2_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. Crise = SIM."
+  },
+  {
+    "arquivo": "m2_r3_n1_cena.mp3",
+    "texto": "Um pregador da Igreja avança até o coração da City e começa a converter civis enquanto a batalha acontece ao redor. Captain Mar-Vell percebe que derrotá-lo é fácil; impedir que sua mensagem sobreviva é outra coisa."
+  },
+  {
+    "arquivo": "m2_r3_n2_cena.mp3",
+    "texto": "O sermão agora organiza rotas, seguidores e ocupação."
+  },
+  {
+    "arquivo": "m2_r3_n1_op1.mp3",
+    "texto": "Priorizar quem está sendo convertido e abrir espaço na City."
+  },
+  {
+    "arquivo": "m2_r3_n1_op1_sucesso.mp3",
+    "texto": "A escolha funciona. Os civis saem antes que a mensagem se fixe."
+  },
+  {
+    "arquivo": "m2_r3_n1_op1_falha.mp3",
+    "texto": "Registre a Cicatriz desta escolha. Ela poderá alterar um gatilho ou modificador de uma missão posterior."
+  },
+  {
+    "arquivo": "m2_r3_n1_op2.mp3",
+    "texto": "Confrontar a mensagem usando os próprios registros da Igreja."
+  },
+  {
+    "arquivo": "m2_r3_n1_op2_sucesso.mp3",
+    "texto": "A escolha funciona. Registre SERMÃO QUEBRADO."
+  },
+  {
+    "arquivo": "m2_r3_n1_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. O pregador antecipa a acusação e inverte a narrativa."
+  },
+  {
+    "arquivo": "m2_r3_n1_op3.mp3",
+    "texto": "Usar o pregador como ponto de entrada para revelar a rede psíquica de conversão."
+  },
+  {
+    "arquivo": "m2_r3_n1_op3_sucesso.mp3",
+    "texto": "A escolha funciona. Moondragon identifica a rede; uma futura responsabilidade contra Magus recebe re-rolagem."
+  },
+  {
+    "arquivo": "m2_r3_n1_op3_falha.mp3",
+    "texto": "Registre a Cicatriz desta escolha. Ela poderá alterar um gatilho ou modificador de uma missão posterior."
+  },
+  {
+    "arquivo": "m2_r3_n2_op1.mp3",
+    "texto": "Usar o espaço conquistado no primeiro confronto para retirar pessoas antes que a ocupação se feche."
+  },
+  {
+    "arquivo": "m2_r3_n2_op1_sucesso.mp3",
+    "texto": "A escolha funciona. Os civis saem antes que a mensagem se fixe."
+  },
+  {
+    "arquivo": "m2_r3_n2_op1_falha.mp3",
+    "texto": "Registre a Cicatriz de Nível 2 desta escolha. Ela permanece no Legado da Campanha II."
+  },
+  {
+    "arquivo": "m2_r3_n2_op2.mp3",
+    "texto": "Atacar a credibilidade construída pela Igreja desde o primeiro sermão."
+  },
+  {
+    "arquivo": "m2_r3_n2_op2_sucesso.mp3",
+    "texto": "A escolha funciona. Registre SERMÃO QUEBRADO."
+  },
+  {
+    "arquivo": "m2_r3_n2_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. O pregador antecipa a acusação e inverte a narrativa."
+  },
+  {
+    "arquivo": "m2_r3_n2_op3.mp3",
+    "texto": "Seguir a estrutura revelada pela ocupação até o agente que coordena os fiéis na City."
+  },
+  {
+    "arquivo": "m2_r3_n2_op3_sucesso.mp3",
+    "texto": "A escolha funciona. Moondragon identifica a rede; uma futura responsabilidade contra Magus recebe re-rolagem."
+  },
+  {
+    "arquivo": "m2_r3_n2_op3_falha.mp3",
+    "texto": "Registre a Cicatriz de Nível 2 desta escolha. Ela permanece no Legado da Campanha II."
+  },
+  {
+    "arquivo": "m2_vitoria.mp3",
+    "texto": "A transmissão é interrompida e o Arquivo revela que a Igreja recebeu mapas de alguém que trata universos como peças de um tabuleiro: o Grandmaster."
+  },
+  {
+    "arquivo": "m2_derrota.mp3",
+    "texto": "A Igreja recua com seus arquivos. O nome do Grandmaster aparece, mas sem contexto. A equipe seguirá a pista em desvantagem."
+  },
+  {
+    "arquivo": "m3_abertura.mp3",
+    "texto": "O Grandmaster não nega ter observado a Ruptura. Pelo contrário: ele a considera fascinante. Para ele, nove capítulos de medo, perdas e escolhas foram um torneio espontâneo entre realidades. Agora ele oferece a informação de que a equipe precisa — desde que aceite jogar conscientemente desta vez. A arena não mede apenas força. Mede o padrão de decisões de David, Bel e Guilherme."
+  },
+  {
+    "arquivo": "m3_abertura_cena_1.mp3",
+    "texto": "O Grandmaster não nega ter observado a Ruptura. Pelo contrário: ele a considera fascinante."
+  },
+  {
+    "arquivo": "m3_abertura_cena_2.mp3",
+    "texto": "Para ele, nove capítulos de medo, perdas e escolhas foram um torneio espontâneo entre realidades."
+  },
+  {
+    "arquivo": "m3_abertura_cena_3.mp3",
+    "texto": "Agora ele oferece a informação de que a equipe precisa — desde que aceite jogar conscientemente desta vez."
+  },
+  {
+    "arquivo": "m3_abertura_cena_4.mp3",
+    "texto": "A arena não mede apenas força. Mede o padrão de decisões de David, Bel e Guilherme."
+  },
+  {
+    "arquivo": "m3_heroi_1.mp3",
+    "texto": "Nova odeia a ideia de transformar catástrofes em entretenimento. Para ele, atravessar a arena é uma obrigação: alguém precisa mostrar que vidas reais não são pontuação."
+  },
+  {
+    "arquivo": "m3_heroi_2.mp3",
+    "texto": "Ronan aceita a missão por razões menos nobres. Se o Grandmaster possui registros da Ruptura, esses dados têm valor estratégico para o Império Kree. Ele coopera, mas ninguém esquece que também está avaliando o que pode levar consigo."
+  },
+  {
+    "arquivo": "m3_heroi_3.mp3",
+    "texto": "Nebula entende jogos manipulados melhor do que gostaria. Sua motivação é encontrar a falha nas regras e usá-la contra quem acredita controlar todos os participantes."
+  },
+  {
+    "arquivo": "m3_heroi_4.mp3",
+    "texto": "Yondu não pretende vencer com elegância. Ele quer sair com a equipe, com as informações e, se possível, com algo valioso que o Grandmaster não perceba que perdeu."
+  },
+  {
+    "arquivo": "m3_heroi_5.mp3",
+    "texto": "Hulk foi uma das figuras ligadas à Convergência final. Fragmentos daquele momento ainda aparecem como lembranças desconexas. Na arena, ele se torna a evidência viva de que o Grandmaster está jogando com histórias que pertencem a pessoas reais."
+  },
+  {
+    "arquivo": "m3_r1_n1_cena.mp3",
+    "texto": "Grandmaster congela a arena por um instante. Para ele, o primeiro Contest foi apenas a abertura: agora quer transformar um dos heróis em protagonista involuntário de uma aposta maior."
+  },
+  {
+    "arquivo": "m3_r1_n2_cena.mp3",
+    "texto": "Grandmaster atribui valor retroativo às escolhas anteriores."
+  },
+  {
+    "arquivo": "m3_r1_n1_op1.mp3",
+    "texto": "Não oferecer ao Grandmaster o drama que ele deseja."
+  },
+  {
+    "arquivo": "m3_r1_n1_op1_sucesso.mp3",
+    "texto": "A escolha funciona. +1 Shard."
+  },
+  {
+    "arquivo": "m3_r1_n1_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m3_r1_n1_op2.mp3",
+    "texto": "Aceitar um desafio restrito para obter informação."
+  },
+  {
+    "arquivo": "m3_r1_n1_op2_sucesso.mp3",
+    "texto": "A escolha funciona. −1 Ameaça."
+  },
+  {
+    "arquivo": "m3_r1_n1_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m3_r1_n1_op3.mp3",
+    "texto": "Aceitar a aposta para quebrar a lógica do Grandmaster diante dos Elders."
+  },
+  {
+    "arquivo": "m3_r1_n1_op3_sucesso.mp3",
+    "texto": "A escolha funciona. FAVOR DOS ELDERS."
+  },
+  {
+    "arquivo": "m3_r1_n1_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça e Crise = SIM."
+  },
+  {
+    "arquivo": "m3_r1_n2_op1.mp3",
+    "texto": "Usar o precedente criado no primeiro desafio para limitar o que Grandmaster pode exigir agora."
+  },
+  {
+    "arquivo": "m3_r1_n2_op1_sucesso.mp3",
+    "texto": "A escolha funciona. +1 Shard."
+  },
+  {
+    "arquivo": "m3_r1_n2_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m3_r1_n2_op2.mp3",
+    "texto": "Transformar a segunda rodada do jogo em uma disputa sobre informação, não sobre submissão."
+  },
+  {
+    "arquivo": "m3_r1_n2_op2_sucesso.mp3",
+    "texto": "A escolha funciona. −1 Ameaça."
+  },
+  {
+    "arquivo": "m3_r1_n2_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m3_r1_n2_op3.mp3",
+    "texto": "Usar as regras que ele impôs para colocar sua autoridade e seus dados em risco."
+  },
+  {
+    "arquivo": "m3_r1_n2_op3_sucesso.mp3",
+    "texto": "A escolha funciona. FAVOR DOS ELDERS."
+  },
+  {
+    "arquivo": "m3_r1_n2_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça e Crise = SIM."
+  },
+  {
+    "arquivo": "m3_r2_n1_cena.mp3",
+    "texto": "O Elder recém-chegado aponta para um dos heróis e o chama de 'campeão'. A palavra não é elogio: é uma tentativa de definir o papel que aquela pessoa deverá desempenhar no jogo."
+  },
+  {
+    "arquivo": "m3_r2_n2_cena.mp3",
+    "texto": "Outro Elder confirma o campeão e ameaça transformar função temporária em identidade."
+  },
+  {
+    "arquivo": "m3_r2_n1_op1.mp3",
+    "texto": "Não aceitar ser transformado em peça."
+  },
+  {
+    "arquivo": "m3_r2_n1_op1_sucesso.mp3",
+    "texto": "A escolha funciona. +1 Shard."
+  },
+  {
+    "arquivo": "m3_r2_n1_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m3_r2_n1_op2.mp3",
+    "texto": "Aceitar o papel apenas para negar ao Grandmaster um vencedor."
+  },
+  {
+    "arquivo": "m3_r2_n1_op2_sucesso.mp3",
+    "texto": "A escolha funciona. JOGO INTERROMPIDO."
+  },
+  {
+    "arquivo": "m3_r2_n1_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m3_r2_n1_op3.mp3",
+    "texto": "Usar o próprio jogo para demonstrar que a equipe não é propriedade do Elder."
+  },
+  {
+    "arquivo": "m3_r2_n1_op3_sucesso.mp3",
+    "texto": "A escolha funciona. JOGO QUEBRADO e −1 Ameaça."
+  },
+  {
+    "arquivo": "m3_r2_n1_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. Crise = SIM."
+  },
+  {
+    "arquivo": "m3_r2_n2_op1.mp3",
+    "texto": "Impedir que o resultado anterior seja usado para transformar o responsável em campeão oficial do jogo."
+  },
+  {
+    "arquivo": "m3_r2_n2_op1_sucesso.mp3",
+    "texto": "A escolha funciona. +1 Shard."
+  },
+  {
+    "arquivo": "m3_r2_n2_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m3_r2_n2_op2.mp3",
+    "texto": "Aceitar temporariamente a posição criada no primeiro confronto para alcançar áreas ou informações restritas."
+  },
+  {
+    "arquivo": "m3_r2_n2_op2_sucesso.mp3",
+    "texto": "A escolha funciona. JOGO INTERROMPIDO."
+  },
+  {
+    "arquivo": "m3_r2_n2_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m3_r2_n2_op3.mp3",
+    "texto": "Virar a lógica do torneio contra Grandmaster e questionar quem realmente tem autoridade para nomear vencedores."
+  },
+  {
+    "arquivo": "m3_r2_n2_op3_sucesso.mp3",
+    "texto": "A escolha funciona. JOGO QUEBRADO e −1 Ameaça."
+  },
+  {
+    "arquivo": "m3_r2_n2_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. Crise = SIM."
+  },
+  {
+    "arquivo": "m3_r3_n1_cena.mp3",
+    "texto": "A estrutura não ataca imediatamente. Ela começa a medir a realidade, projetando linhas entre a arena do Grandmaster e um ponto que não deveria existir. Yondu reconhece o comportamento de algo que prepara uma rota, não uma invasão."
+  },
+  {
+    "arquivo": "m3_r3_n2_cena.mp3",
+    "texto": "A estrutura se alinha a uma coordenada ligada à Ruptura."
+  },
+  {
+    "arquivo": "m3_r3_n1_op1.mp3",
+    "texto": "Forçar os construtores a medir uma rota falsa."
+  },
+  {
+    "arquivo": "m3_r3_n1_op1_sucesso.mp3",
+    "texto": "Registre o Legado desta escolha. O responsável recebe 1 Impulso Narrativo para o Nível 2 desta mesma Responsabilidade."
+  },
+  {
+    "arquivo": "m3_r3_n1_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. Os Mapmakers obtêm uma leitura parcial."
+  },
+  {
+    "arquivo": "m3_r3_n1_op2.mp3",
+    "texto": "Usar o processo dos Sidera Maris para descobrir o destino da rota."
+  },
+  {
+    "arquivo": "m3_r3_n1_op2_sucesso.mp3",
+    "texto": "A escolha funciona. Registre COORDENADA DOS MAPMAKERS."
+  },
+  {
+    "arquivo": "m3_r3_n1_op2_falha.mp3",
+    "texto": "Registre a Cicatriz desta escolha. Ela poderá alterar um gatilho ou modificador de uma missão posterior."
+  },
+  {
+    "arquivo": "m3_r3_n1_op3.mp3",
+    "texto": "Destruir a lógica espacial antes que Grandmaster a incorpore ao jogo."
+  },
+  {
+    "arquivo": "m3_r3_n1_op3_sucesso.mp3",
+    "texto": "A escolha funciona. Registre PONTE QUEBRADA e remova 1 Ameaça."
+  },
+  {
+    "arquivo": "m3_r3_n1_op3_falha.mp3",
+    "texto": "Registre a Cicatriz desta escolha. Ela poderá alterar um gatilho ou modificador de uma missão posterior."
+  },
+  {
+    "arquivo": "m3_r3_n2_op1.mp3",
+    "texto": "Usar o que foi aprendido sobre a geometria dos Mapmakers para afastar a estrutura de seu destino atual."
+  },
+  {
+    "arquivo": "m3_r3_n2_op1_sucesso.mp3",
+    "texto": "Registre o Legado de Nível 2 desta escolha. A equipe ganha 1 Impulso Narrativo."
+  },
+  {
+    "arquivo": "m3_r3_n2_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. Os Mapmakers obtêm uma leitura parcial."
+  },
+  {
+    "arquivo": "m3_r3_n2_op2.mp3",
+    "texto": "Seguir a rota revelada no primeiro contato e descobrir o que existe do outro lado da ponte."
+  },
+  {
+    "arquivo": "m3_r3_n2_op2_sucesso.mp3",
+    "texto": "A escolha funciona. Registre COORDENADA DOS MAPMAKERS."
+  },
+  {
+    "arquivo": "m3_r3_n2_op2_falha.mp3",
+    "texto": "Registre a Cicatriz de Nível 2 desta escolha. Ela permanece no Legado da Campanha II."
+  },
+  {
+    "arquivo": "m3_r3_n2_op3.mp3",
+    "texto": "Inserir uma referência própria na medição dos Mapmakers para descobrir para onde eles pretendem conduzir a realidade."
+  },
+  {
+    "arquivo": "m3_r3_n2_op3_sucesso.mp3",
+    "texto": "A escolha funciona. Registre PONTE QUEBRADA e remova 1 Ameaça."
+  },
+  {
+    "arquivo": "m3_r3_n2_op3_falha.mp3",
+    "texto": "Registre a Cicatriz de Nível 2 desta escolha. Ela permanece no Legado da Campanha II."
+  },
+  {
+    "arquivo": "m3_vitoria.mp3",
+    "texto": "O Grandmaster abre a passagem. Antes de fazê-lo, revela que o verdadeiro interessado nas sobras da Ruptura não quer conquistar uma realidade. Quer aprender a fabricar uma."
+  },
+  {
+    "arquivo": "m3_derrota.mp3",
+    "texto": "A equipe escapa, mas o Grandmaster vende os padrões de decisão observados durante a campanha. O próximo inimigo saberá mais sobre vocês."
+  },
+  {
+    "arquivo": "m4_abertura.mp3",
+    "texto": "A rota do Grandmaster termina diante de um planeta vivo, populoso e impossível. Seus habitantes têm memórias, famílias, arquivos e uma história de milhares de anos. Mas o planeta não existia antes da Ruptura. O Beyonder não esconde sua presença. Ele quer saber se uma realidade fabricada é menos real quando ninguém dentro dela percebe a diferença. A pergunta atinge diretamente as derrotas da primeira campanha: o Arquivo Jones e o Registro Genético Estável foram perdidos. A equipe não possui todas as ferramentas que gostaria de ter."
+  },
+  {
+    "arquivo": "m4_abertura_cena_1.mp3",
+    "texto": "A rota do Grandmaster termina diante de um planeta vivo, populoso e impossível."
+  },
+  {
+    "arquivo": "m4_abertura_cena_2.mp3",
+    "texto": "Seus habitantes têm memórias, famílias, arquivos e uma história de milhares de anos. Mas o planeta não existia antes da Ruptura."
+  },
+  {
+    "arquivo": "m4_abertura_cena_3.mp3",
+    "texto": "O Beyonder não esconde sua presença. Ele quer saber se uma realidade fabricada é menos real quando ninguém dentro dela percebe a diferença."
+  },
+  {
+    "arquivo": "m4_abertura_cena_4.mp3",
+    "texto": "A pergunta atinge diretamente as derrotas da primeira campanha: o Arquivo Jones e o Registro Genético Estável foram perdidos. A equipe não possui todas as ferramentas que gostaria de ter."
+  },
+  {
+    "arquivo": "m4_heroi_1.mp3",
+    "texto": "Quasar detecta um planeta que não consta de nenhum mapa anterior à Ruptura. Seu dever é determinar se ele é ameaça, sobrevivente ou algo completamente novo."
+  },
+  {
+    "arquivo": "m4_heroi_2.mp3",
+    "texto": "Mar-Vell vê bilhões de habitantes que não podem ser tratados como experimento, mesmo que sua história tenha sido artificialmente criada."
+  },
+  {
+    "arquivo": "m4_heroi_3.mp3",
+    "texto": "Moondragon sente memórias consistentes em pessoas que, segundo os registros, não existiam dias atrás. Isso desafia a própria ideia de identidade que guiou a campanha anterior."
+  },
+  {
+    "arquivo": "m4_heroi_4.mp3",
+    "texto": "Tony encontra no planeta soluções tecnológicas que parecem evoluções das Âncoras. Ele precisa encarar a possibilidade de que suas próprias pesquisas tenham ensinado alguém a estabilizar mundos artificiais."
+  },
+  {
+    "arquivo": "m4_heroi_5.mp3",
+    "texto": "Natasha não procura a explicação mais bonita. Procura a mentira operacional: quem controla o mundo, quem ganha com ele e qual detalhe foi escondido para fazê-lo parecer perfeito."
+  },
+  {
+    "arquivo": "m4_r1_n1_cena.mp3",
+    "texto": "O ataque à Nova Corps deixa para trás registros perfeitos demais: nenhuma assinatura faltando, nenhuma testemunha discordando. Quasar entende que a ausência de erro é, por si só, uma anomalia."
+  },
+  {
+    "arquivo": "m4_r1_n2_cena.mp3",
+    "texto": "A realidade fabricada começa a apagar suas próprias inconsistências."
+  },
+  {
+    "arquivo": "m4_r1_n1_op1.mp3",
+    "texto": "Registrar a inconsistência sem confrontá-la."
+  },
+  {
+    "arquivo": "m4_r1_n1_op1_sucesso.mp3",
+    "texto": "A escolha funciona. ANOMALIA IDENTIFICADA."
+  },
+  {
+    "arquivo": "m4_r1_n1_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m4_r1_n1_op2.mp3",
+    "texto": "Forçar uma pequena inconsistência verificável."
+  },
+  {
+    "arquivo": "m4_r1_n1_op2_sucesso.mp3",
+    "texto": "A escolha funciona. −1 Ameaça."
+  },
+  {
+    "arquivo": "m4_r1_n1_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m4_r1_n1_op3.mp3",
+    "texto": "Produzir evidência que nem Beyonder consegue harmonizar."
+  },
+  {
+    "arquivo": "m4_r1_n1_op3_sucesso.mp3",
+    "texto": "A escolha funciona. VERDADE DA RECONSTRUÇÃO."
+  },
+  {
+    "arquivo": "m4_r1_n1_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça e Crise = SIM."
+  },
+  {
+    "arquivo": "m4_r1_n2_op1.mp3",
+    "texto": "Transformar a evidência reunida antes em um ponto estável que Beyonder não consiga corrigir sem se revelar."
+  },
+  {
+    "arquivo": "m4_r1_n2_op1_sucesso.mp3",
+    "texto": "A escolha funciona. ANOMALIA IDENTIFICADA."
+  },
+  {
+    "arquivo": "m4_r1_n2_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m4_r1_n2_op2.mp3",
+    "texto": "Confrontar a falsificação atual com as cicatrizes reais deixadas pela Ruptura."
+  },
+  {
+    "arquivo": "m4_r1_n2_op2_sucesso.mp3",
+    "texto": "A escolha funciona. −1 Ameaça."
+  },
+  {
+    "arquivo": "m4_r1_n2_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m4_r1_n2_op3.mp3",
+    "texto": "Introduzir uma inconsistência baseada na descoberta anterior e obrigar a realidade fabricada a responder."
+  },
+  {
+    "arquivo": "m4_r1_n2_op3_sucesso.mp3",
+    "texto": "A escolha funciona. VERDADE DA RECONSTRUÇÃO."
+  },
+  {
+    "arquivo": "m4_r1_n2_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça e Crise = SIM."
+  },
+  {
+    "arquivo": "m4_r2_n1_cena.mp3",
+    "texto": "Por alguns segundos, o HQ mostra heróis que ninguém recrutou e a City parece ter sido salva antes da equipe chegar. Beyonder não cria uma simples ilusão: ele testa uma versão alternativa da realidade."
+  },
+  {
+    "arquivo": "m4_r2_n2_cena.mp3",
+    "texto": "A City permanece alterada e a realidade alternativa ganha continuidade histórica."
+  },
+  {
+    "arquivo": "m4_r2_n1_op1.mp3",
+    "texto": "Esperar a alteração passar."
+  },
+  {
+    "arquivo": "m4_r2_n1_op1_sucesso.mp3",
+    "texto": "A escolha funciona. linha de realidade preservada."
+  },
+  {
+    "arquivo": "m4_r2_n1_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m4_r2_n1_op2.mp3",
+    "texto": "Usar tecnologia para provar que duas versões coexistem."
+  },
+  {
+    "arquivo": "m4_r2_n1_op2_sucesso.mp3",
+    "texto": "A escolha funciona. FALHA NA FABRICAÇÃO."
+  },
+  {
+    "arquivo": "m4_r2_n1_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m4_r2_n1_op3.mp3",
+    "texto": "Forçar a entidade a intervir diretamente e revelar o artifício."
+  },
+  {
+    "arquivo": "m4_r2_n1_op3_sucesso.mp3",
+    "texto": "A escolha funciona. −1 Ameaça e EXPOSIÇÃO DO BEYONDER."
+  },
+  {
+    "arquivo": "m4_r2_n1_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. Crise = SIM."
+  },
+  {
+    "arquivo": "m4_r2_n2_op1.mp3",
+    "texto": "Proteger a inconsistência criada antes para impedir que Beyonder apague a evidência de sua intervenção."
+  },
+  {
+    "arquivo": "m4_r2_n2_op1_sucesso.mp3",
+    "texto": "A escolha funciona. linha de realidade preservada."
+  },
+  {
+    "arquivo": "m4_r2_n2_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m4_r2_n2_op2.mp3",
+    "texto": "Reproduzir o erro detectado em outro ponto e observar como Beyonder tenta corrigi-lo."
+  },
+  {
+    "arquivo": "m4_r2_n2_op2_sucesso.mp3",
+    "texto": "A escolha funciona. FALHA NA FABRICAÇÃO."
+  },
+  {
+    "arquivo": "m4_r2_n2_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m4_r2_n2_op3.mp3",
+    "texto": "Usar a reação provocada no primeiro confronto como trilha até o mecanismo que sustenta o mundo fabricado."
+  },
+  {
+    "arquivo": "m4_r2_n2_op3_sucesso.mp3",
+    "texto": "A escolha funciona. −1 Ameaça e EXPOSIÇÃO DO BEYONDER."
+  },
+  {
+    "arquivo": "m4_r2_n2_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. Crise = SIM."
+  },
+  {
+    "arquivo": "m4_r3_n1_cena.mp3",
+    "texto": "A presença Celestial faz os sensores de Tony e Quasar discordarem sobre a massa do próprio planeta. O ser não veio apenas combater: veio observar se esta Terra reconstruída ainda corresponde àquela que deveria existir."
+  },
+  {
+    "arquivo": "m4_r3_n2_cena.mp3",
+    "texto": "As ações da equipe tornam-se evidência num julgamento cósmico."
+  },
+  {
+    "arquivo": "m4_r3_n1_op1.mp3",
+    "texto": "Não desafiar o Celestial; registrar como ele mede a Terra."
+  },
+  {
+    "arquivo": "m4_r3_n1_op1_sucesso.mp3",
+    "texto": "Registre o Legado desta escolha. O responsável recebe 1 Impulso Narrativo para o Nível 2 desta mesma Responsabilidade."
+  },
+  {
+    "arquivo": "m4_r3_n1_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. O padrão muda antes de ser compreendido."
+  },
+  {
+    "arquivo": "m4_r3_n1_op2.mp3",
+    "texto": "Cruzar a leitura Celestial com os registros da Ruptura."
+  },
+  {
+    "arquivo": "m4_r3_n1_op2_sucesso.mp3",
+    "texto": "A escolha funciona. Registre MEDIDA CELESTIAL."
+  },
+  {
+    "arquivo": "m4_r3_n1_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. Os dados se contradizem e aumentam a Ameaça."
+  },
+  {
+    "arquivo": "m4_r3_n1_op3.mp3",
+    "texto": "Obrigar o Celestial a reagir à realidade fabricada por Beyonder."
+  },
+  {
+    "arquivo": "m4_r3_n1_op3_sucesso.mp3",
+    "texto": "Registre o Legado desta escolha. O responsável recebe 1 Impulso Narrativo para o Nível 2 desta mesma Responsabilidade."
+  },
+  {
+    "arquivo": "m4_r3_n1_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. O Celestial considera a intervenção hostil; Crise = SIM."
+  },
+  {
+    "arquivo": "m4_r3_n2_op1.mp3",
+    "texto": "Entregar ao Celestial a prova construída no primeiro contato e exigir que ela seja considerada no julgamento."
+  },
+  {
+    "arquivo": "m4_r3_n2_op1_sucesso.mp3",
+    "texto": "Registre o Legado de Nível 2 desta escolha. A equipe ganha 1 Impulso Narrativo."
+  },
+  {
+    "arquivo": "m4_r3_n2_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. O padrão muda antes de ser compreendido."
+  },
+  {
+    "arquivo": "m4_r3_n2_op2.mp3",
+    "texto": "Comparar o que o Celestial observou com aquilo que a equipe descobriu sobre a realidade fabricada."
+  },
+  {
+    "arquivo": "m4_r3_n2_op2_sucesso.mp3",
+    "texto": "A escolha funciona. Registre MEDIDA CELESTIAL."
+  },
+  {
+    "arquivo": "m4_r3_n2_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. Os dados se contradizem e aumentam a Ameaça."
+  },
+  {
+    "arquivo": "m4_r3_n2_op3.mp3",
+    "texto": "Usar a contradição revelada antes para impedir que o Celestial permaneça apenas como observador."
+  },
+  {
+    "arquivo": "m4_r3_n2_op3_sucesso.mp3",
+    "texto": "Registre o Legado de Nível 2 desta escolha. A equipe ganha 1 Impulso Narrativo."
+  },
+  {
+    "arquivo": "m4_r3_n2_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. O Celestial considera a intervenção hostil; Crise = SIM."
+  },
+  {
+    "arquivo": "m4_vitoria.mp3",
+    "texto": "O mundo não desaparece quando sua origem é exposta. O Beyonder provou que consegue criar uma realidade estável. Agora falta descobrir por que ele precisa das Âncoras da Terra."
+  },
+  {
+    "arquivo": "m4_derrota.mp3",
+    "texto": "A equipe protege a população, mas não descobre o mecanismo de criação. O Beyonder segue para a Terra com vantagem."
+  },
+  {
+    "arquivo": "m5_abertura.mp3",
+    "texto": "As quatro Âncoras preservadas começam a pulsar ao mesmo tempo. Magus quer usá-las para fixar uma verdade. O Beyonder quer usá-las para fabricar infinitas verdades. O Grandmaster só quer assistir ao resultado. A equipe chega ao ponto em que a primeira campanha nunca permitiu chegar: não há apenas uma realidade para salvar. Há uma tecnologia capaz de decidir como realidades futuras poderão existir. A última missão não pergunta quem é forte o bastante para vencer. Pergunta quem terá o direito de escolher depois da vitória."
+  },
+  {
+    "arquivo": "m5_abertura_cena_1.mp3",
+    "texto": "As quatro Âncoras preservadas começam a pulsar ao mesmo tempo."
+  },
+  {
+    "arquivo": "m5_abertura_cena_2.mp3",
+    "texto": "Magus quer usá-las para fixar uma verdade. O Beyonder quer usá-las para fabricar infinitas verdades. O Grandmaster só quer assistir ao resultado."
+  },
+  {
+    "arquivo": "m5_abertura_cena_3.mp3",
+    "texto": "A equipe chega ao ponto em que a primeira campanha nunca permitiu chegar: não há apenas uma realidade para salvar. Há uma tecnologia capaz de decidir como realidades futuras poderão existir."
+  },
+  {
+    "arquivo": "m5_abertura_cena_4.mp3",
+    "texto": "A última missão não pergunta quem é forte o bastante para vencer. Pergunta quem terá o direito de escolher depois da vitória."
+  },
+  {
+    "arquivo": "m5_heroi_1.mp3",
+    "texto": "Warlock chega ao fim entendendo que Magus representa uma resposta possível à crise: impor uma verdade absoluta. Ele luta para provar que identidade não precisa ser reduzida a uma única versão."
+  },
+  {
+    "arquivo": "m5_heroi_2.mp3",
+    "texto": "Steve traz a pergunta moral que atravessou as duas campanhas. Sobreviver não basta se a sobrevivência exigir que alguém decida silenciosamente quais vidas são descartáveis."
+  },
+  {
+    "arquivo": "m5_heroi_3.mp3",
+    "texto": "Nova representa todos os mundos que agora sabem o que aconteceu com a Terra. Ele quer impedir que a solução final transforme o planeta num risco permanente para o cosmos."
+  },
+  {
+    "arquivo": "m5_heroi_4.mp3",
+    "texto": "Phyla-Vell insiste que a solução deve proteger quem não está na sala tomando a decisão. Sua motivação é fazer com que civis e mundos distantes não paguem pela vitória dos heróis."
+  },
+  {
+    "arquivo": "m5_heroi_5.mp3",
+    "texto": "Tony finalmente encara a consequência completa das Âncoras. Elas salvaram o mundo, mas também provaram que realidade pode ser medida, comparada e reconstruída. Ele precisa decidir se a máquina deve existir depois da vitória."
+  },
+  {
+    "arquivo": "m5_r1_n1_cena.mp3",
+    "texto": "Ferido pela primeira vez, Beyonder deixa de falar como observador. Ele oferece uma realidade estável, sem Ruptura e sem perdas — desde que seja ele a decidir qual história continuará existindo."
+  },
+  {
+    "arquivo": "m5_r1_n2_cena.mp3",
+    "texto": "Beyonder afirma que estabilizar a realidade exige declarar uma parte da história inválida."
+  },
+  {
+    "arquivo": "m5_r1_n1_op1.mp3",
+    "texto": "Defender a realidade atual sem tentar melhorá-la."
+  },
+  {
+    "arquivo": "m5_r1_n1_op1_sucesso.mp3",
+    "texto": "A escolha funciona. REALIDADE COMPARTILHADA."
+  },
+  {
+    "arquivo": "m5_r1_n1_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m5_r1_n1_op2.mp3",
+    "texto": "Usar o legado acumulado para limitar as opções de Beyonder."
+  },
+  {
+    "arquivo": "m5_r1_n1_op2_sucesso.mp3",
+    "texto": "A escolha funciona. −1 Ameaça."
+  },
+  {
+    "arquivo": "m5_r1_n1_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m5_r1_n1_op3.mp3",
+    "texto": "Transformar perdas e vitórias da campanha em argumento contra uma realidade escolhida por outro."
+  },
+  {
+    "arquivo": "m5_r1_n1_op3_sucesso.mp3",
+    "texto": "A escolha funciona. EPÍLOGO EXPANDIDO."
+  },
+  {
+    "arquivo": "m5_r1_n1_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça e Crise = SIM."
+  },
+  {
+    "arquivo": "m5_r1_n2_op1.mp3",
+    "texto": "Responder à oferta final de Beyonder reafirmando a decisão tomada no primeiro confronto."
+  },
+  {
+    "arquivo": "m5_r1_n2_op1_sucesso.mp3",
+    "texto": "A escolha funciona. REALIDADE COMPARTILHADA."
+  },
+  {
+    "arquivo": "m5_r1_n2_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m5_r1_n2_op2.mp3",
+    "texto": "Transformar o legado acumulado em prova de que nenhuma realidade perfeita justifica apagar a história vivida."
+  },
+  {
+    "arquivo": "m5_r1_n2_op2_sucesso.mp3",
+    "texto": "A escolha funciona. −1 Ameaça."
+  },
+  {
+    "arquivo": "m5_r1_n2_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m5_r1_n2_op3.mp3",
+    "texto": "Forçar Beyonder a encarar o preço da realidade que ele oferece e aquilo que precisaria ser eliminado para criá-la."
+  },
+  {
+    "arquivo": "m5_r1_n2_op3_sucesso.mp3",
+    "texto": "A escolha funciona. EPÍLOGO EXPANDIDO."
+  },
+  {
+    "arquivo": "m5_r1_n2_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça e Crise = SIM."
+  },
+  {
+    "arquivo": "m5_r2_n1_cena.mp3",
+    "texto": "As possibilidades se alinham como páginas: numa, Squirrel Girl vive; noutra, as Âncoras perdidas jamais existiram. Captain America entende que a tentação final não é poder, mas corrigir o passado."
+  },
+  {
+    "arquivo": "m5_r2_n2_cena.mp3",
+    "texto": "Realidades alternativas começam a desaparecer antes que possam ser comparadas."
+  },
+  {
+    "arquivo": "m5_r2_n1_op1.mp3",
+    "texto": "Não corrigir o passado, apenas impedir nova ruptura."
+  },
+  {
+    "arquivo": "m5_r2_n1_op1_sucesso.mp3",
+    "texto": "A escolha funciona. HISTÓRIA PRESERVADA."
+  },
+  {
+    "arquivo": "m5_r2_n1_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m5_r2_n1_op2.mp3",
+    "texto": "Usar a memória coletiva para manter uma única linha de realidade."
+  },
+  {
+    "arquivo": "m5_r2_n1_op2_sucesso.mp3",
+    "texto": "A escolha funciona. −1 Ameaça."
+  },
+  {
+    "arquivo": "m5_r2_n1_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m5_r2_n1_op3.mp3",
+    "texto": "Aceitar que uma história real também contém aquilo que vocês não conseguiram salvar."
+  },
+  {
+    "arquivo": "m5_r2_n1_op3_sucesso.mp3",
+    "texto": "A escolha funciona. HISTÓRIA ASSUMIDA."
+  },
+  {
+    "arquivo": "m5_r2_n1_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. Crise = SIM."
+  },
+  {
+    "arquivo": "m5_r2_n2_op1.mp3",
+    "texto": "Impedir que o desfecho transforme a história anterior em uma única versão limpa e definitiva."
+  },
+  {
+    "arquivo": "m5_r2_n2_op1_sucesso.mp3",
+    "texto": "A escolha funciona. HISTÓRIA PRESERVADA."
+  },
+  {
+    "arquivo": "m5_r2_n2_op1_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m5_r2_n2_op2.mp3",
+    "texto": "Usar o que foi preservado no primeiro confronto para manter juntas lembranças incompatíveis sem apagar nenhuma delas."
+  },
+  {
+    "arquivo": "m5_r2_n2_op2_sucesso.mp3",
+    "texto": "A escolha funciona. −1 Ameaça."
+  },
+  {
+    "arquivo": "m5_r2_n2_op2_falha.mp3",
+    "texto": "A tentativa cobra seu preço. +1 Ameaça."
+  },
+  {
+    "arquivo": "m5_r2_n2_op3.mp3",
+    "texto": "Completar a história incluindo fracassos, ausências e consequências que uma versão perfeita tentaria remover."
+  },
+  {
+    "arquivo": "m5_r2_n2_op3_sucesso.mp3",
+    "texto": "A escolha funciona. HISTÓRIA ASSUMIDA."
+  },
+  {
+    "arquivo": "m5_r2_n2_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. Crise = SIM."
+  },
+  {
+    "arquivo": "m5_r3_n1_cena.mp3",
+    "texto": "A Igreja percebe que o fim está próximo e anuncia que qualquer resultado provará Magus: vitória significará eleição; derrota significará julgamento. Phyla-Vell decide que a equipe precisa quebrar essa narrativa antes do golpe final."
+  },
+  {
+    "arquivo": "m5_r3_n2_cena.mp3",
+    "texto": "A Igreja transmite uma profecia final capaz de reivindicar qualquer desfecho."
+  },
+  {
+    "arquivo": "m5_r3_n1_op1.mp3",
+    "texto": "Impedir que a Igreja transforme o desfecho em prova automática de Magus."
+  },
+  {
+    "arquivo": "m5_r3_n1_op1_sucesso.mp3",
+    "texto": "A escolha funciona. Os fiéis hesitam pela primeira vez."
+  },
+  {
+    "arquivo": "m5_r3_n1_op1_falha.mp3",
+    "texto": "Registre a Cicatriz desta escolha. Ela poderá alterar um gatilho ou modificador de uma missão posterior."
+  },
+  {
+    "arquivo": "m5_r3_n1_op2.mp3",
+    "texto": "Usar os sobreviventes da campanha como prova de que nenhuma entidade escolheu por eles."
+  },
+  {
+    "arquivo": "m5_r3_n1_op2_sucesso.mp3",
+    "texto": "A escolha funciona. Registre TESTEMUNHAS DO PRESENTE."
+  },
+  {
+    "arquivo": "m5_r3_n1_op2_falha.mp3",
+    "texto": "Registre a Cicatriz desta escolha. Ela poderá alterar um gatilho ou modificador de uma missão posterior."
+  },
+  {
+    "arquivo": "m5_r3_n1_op3.mp3",
+    "texto": "Transmitir para os sistemas a história completa da Ruptura, incluindo perdas e fracassos."
+  },
+  {
+    "arquivo": "m5_r3_n1_op3_sucesso.mp3",
+    "texto": "Registre o Legado desta escolha. O responsável recebe 1 Impulso Narrativo para o Nível 2 desta mesma Responsabilidade."
+  },
+  {
+    "arquivo": "m5_r3_n1_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. Beyonder interfere na transmissão; Crise permanece SIM."
+  },
+  {
+    "arquivo": "m5_r3_n2_op1.mp3",
+    "texto": "Atacar o último elo que permite à Igreja afirmar que todos os acontecimentos conduziam inevitavelmente a Magus."
+  },
+  {
+    "arquivo": "m5_r3_n2_op1_sucesso.mp3",
+    "texto": "A escolha funciona. Os fiéis hesitam pela primeira vez."
+  },
+  {
+    "arquivo": "m5_r3_n2_op1_falha.mp3",
+    "texto": "Registre a Cicatriz de Nível 2 desta escolha. Ela permanece no Legado da Campanha II."
+  },
+  {
+    "arquivo": "m5_r3_n2_op2.mp3",
+    "texto": "Usar sobreviventes e registros preservados para responder à interpretação construída no primeiro confronto."
+  },
+  {
+    "arquivo": "m5_r3_n2_op2_sucesso.mp3",
+    "texto": "A escolha funciona. Registre TESTEMUNHAS DO PRESENTE."
+  },
+  {
+    "arquivo": "m5_r3_n2_op2_falha.mp3",
+    "texto": "Registre a Cicatriz de Nível 2 desta escolha. Ela permanece no Legado da Campanha II."
+  },
+  {
+    "arquivo": "m5_r3_n2_op3.mp3",
+    "texto": "Encerrar o Evangelho mostrando que a verdade da campanha contém escolhas, falhas e contradições que nenhuma profecia previa."
+  },
+  {
+    "arquivo": "m5_r3_n2_op3_sucesso.mp3",
+    "texto": "Registre o Legado de Nível 2 desta escolha. A equipe ganha 1 Impulso Narrativo."
+  },
+  {
+    "arquivo": "m5_r3_n2_op3_falha.mp3",
+    "texto": "A tentativa cobra seu preço. Beyonder interfere na transmissão; Crise permanece SIM."
+  },
+  {
+    "arquivo": "m5_vitoria.mp3",
+    "texto": "A Ruptura deixa de ser uma ferida aberta. O desfecho final será determinado pelas escolhas, vitórias, derrotas, Responsabilidades e legados registrados nas cinco missões."
+  },
+  {
+    "arquivo": "m5_derrota.mp3",
+    "texto": "A equipe impede a destruição imediata, mas não encerra o problema. O universo sobrevive sabendo que as Âncoras ainda existem — e que outros virão procurá-las."
+  },
+  {
+    "arquivo": "m1_r1_n2_fechamento_sucesso.mp3",
+    "texto": "As duas memórias continuam existindo, mas deixam de disputar o mesmo espaço. Steve aceita que recordar a Convergência não significa descobrir uma versão perfeita do passado. A equipe fecha a frequência usada por Magus e transforma a contradição em testemunho: a Ruptura aconteceu, e nenhuma força externa decidirá qual lembrança merece sobreviver."
+  },
+  {
+    "arquivo": "m1_r1_n2_fechamento_falha.mp3",
+    "texto": "A frequência é interrompida tarde demais para deixar a memória intacta. Steve permanece funcional, mas uma das versões da Convergência passa a surgir primeiro sempre que ele tenta recordar aquele instante. Magus não controla sua mente — porém deixou nela uma cicatriz que a equipe terá de carregar."
+  },
+  {
+    "arquivo": "m1_r2_n2_fechamento_sucesso.mp3",
+    "texto": "Os testemunhos sobrevivem à manipulação. A equipe estabelece publicamente a diferença que a Igreja tentou apagar: a Squirrel Girl da Terra Morta morreu; a Doreen desta realidade está viva. O que permanece é a memória de uma possibilidade terrível, não a ausência da heroína. A outra Doreen deixa de ser uma arma do inimigo e passa a ser testemunho das realidades que a Ruptura expôs."
+  },
+  {
+    "arquivo": "m1_r2_n2_fechamento_falha.mp3",
+    "texto": "A equipe salva o que consegue, mas parte do testemunho já foi absorvida pela doutrina. A Igreja continua confundindo deliberadamente a Doreen morta da Terra Morta com a Squirrel Girl viva desta realidade. A equipe impede que a falsificação se torne verdade absoluta, mas não consegue apagar sua circulação entre os convertidos."
+  },
+  {
+    "arquivo": "m1_r3_n2_fechamento_sucesso.mp3",
+    "texto": "A rede de conversão é quebrada antes de se consolidar. Alguns fiéis fogem, outros simplesmente param de repetir as palavras de Magus. A equipe entende que não venceu uma crença; impediu que uma operação de ocupação se escondesse atrás dela. A City volta a ser território disputado por pessoas, não por uma verdade única."
+  },
+  {
+    "arquivo": "m1_r3_n2_fechamento_falha.mp3",
+    "texto": "A ocupação é interrompida, mas tarde demais para desaparecer. Pequenos núcleos da Igreja permanecem espalhados e levam consigo nomes e relatos. A City não caiu, porém a Universal Church of Truth deixa de ser uma ameaça distante: agora possui raízes entre aqueles que sobreviveram."
+  },
+  {
+    "arquivo": "m2_r1_n2_fechamento_sucesso.mp3",
+    "texto": "A equipe isola o núcleo que reorganizava os registros e preserva uma cópia antes que a Igreja a apague. O arquivo deixa de ser apenas evidência de conversão: revela um método de seleção. Alguém procura sobreviventes capazes de permanecer inteiros quando a realidade muda — e essa descoberta aponta para forças mais antigas que Magus."
+  },
+  {
+    "arquivo": "m2_r1_n2_fechamento_falha.mp3",
+    "texto": "O núcleo se fecha e destrói parte dos próprios registros. Ainda assim, o padrão ficou visível por tempo suficiente: a Igreja selecionava sobreviventes segundo critérios que não compreendia completamente. A equipe perde nomes, mas conserva a certeza de que existe outro observador por trás do culto."
+  },
+  {
+    "arquivo": "m2_r2_n2_fechamento_sucesso.mp3",
+    "texto": "A lembrança permanece imperfeita, mas continua pertencendo a quem a viveu. Magus perde a possibilidade de usá-la como prova. O responsável não precisa decidir qual memória é absolutamente verdadeira; basta recusar que outra pessoa transforme sua incerteza em obediência."
+  },
+  {
+    "arquivo": "m2_r2_n2_fechamento_falha.mp3",
+    "texto": "Magus não conquista a vontade do responsável, mas consegue deixar sua interpretação presa à lembrança. A partir dali, recordar aquele episódio também significa ouvir a explicação do inimigo. A fé não venceu a memória — tornou-se uma sombra dentro dela."
+  },
+  {
+    "arquivo": "m2_r3_n2_fechamento_sucesso.mp3",
+    "texto": "A cadeia de ordens é quebrada e os convertidos deixam de agir como extensão automática da Igreja. Alguns permanecem fiéis, mas voltam a decidir individualmente. Para a equipe, essa diferença é a vitória: uma crença pode sobreviver; o mecanismo de controle, não."
+  },
+  {
+    "arquivo": "m2_r3_n2_fechamento_falha.mp3",
+    "texto": "As ordens são interrompidas apenas depois de cumprirem parte de seu objetivo. A Igreja perde coordenação imediata, mas prova que consegue mobilizar pessoas comuns como força de campo. O próximo inimigo encontrará uma galáxia onde ideias também podem funcionar como tropas."
+  },
+  {
+    "arquivo": "m3_r1_n2_fechamento_sucesso.mp3",
+    "texto": "O Grandmaster aceita o resultado com um sorriso que não significa rendição. A dívida está paga, e o responsável deixa a mesa como participante que recusou tornar-se propriedade do jogo. Para um Elder, isso talvez seja apenas entretenimento. Para a equipe, é a prova de que regras impostas também podem ser usadas contra quem as criou."
+  },
+  {
+    "arquivo": "m3_r1_n2_fechamento_falha.mp3",
+    "texto": "A cobrança termina nos termos do Grandmaster. Ele não leva o responsável como prêmio, mas registra a dívida como parte de uma partida maior. A equipe sai do jogo, porém com a desagradável certeza de que, para os Imortais, algumas derrotas continuam valendo mesmo depois que o tabuleiro é recolhido."
+  },
+  {
+    "arquivo": "m3_r2_n2_fechamento_sucesso.mp3",
+    "texto": "A coroa perde seu poder no instante em que o responsável recusa o papel que vinha junto dela. O título pode continuar sendo repetido pelos Elders, mas deixa de definir qualquer obrigação. A equipe aprende que o Grandmaster não controla apenas combates: ele tenta controlar identidades."
+  },
+  {
+    "arquivo": "m3_r2_n2_fechamento_falha.mp3",
+    "texto": "O responsável rompe a obrigação imediata, mas não consegue impedir que o título se espalhe. Para os Elders, ele agora é um campeão reconhecido, queira ou não. A coroa não permanece na cabeça; permanece na reputação."
+  },
+  {
+    "arquivo": "m3_r3_n2_fechamento_sucesso.mp3",
+    "texto": "A equipe interfere no último alinhamento e conserva as coordenadas sem permitir que a ponte permaneça aberta. O destino apontado pelos Mapmakers existe — e alguém além deles o conhece. O mapa se torna a primeira pista concreta para um mundo que parece ter sido construído depois da Ruptura, não descoberto."
+  },
+  {
+    "arquivo": "m3_r3_n2_fechamento_falha.mp3",
+    "texto": "A ponte se fecha antes que a equipe controle o alinhamento. Ainda assim, por alguns segundos, o destino existe nos instrumentos: uma região impossível, organizada demais para ser natural. A coordenada é incompleta, mas suficiente para continuar a perseguição."
+  },
+  {
+    "arquivo": "m4_r1_n2_fechamento_sucesso.mp3",
+    "texto": "A memória fabricada desmorona não porque contém um erro, mas porque o responsável aceita que uma lembrança verdadeira não precisa ser perfeita. O mundo perde sua melhor ferramenta de sedução. A equipe segue adiante carregando lacunas reais em vez de certezas construídas por outra vontade."
+  },
+  {
+    "arquivo": "m4_r1_n2_fechamento_falha.mp3",
+    "texto": "A falsificação é rompida, mas deixa resíduos difíceis de separar das lembranças autênticas. O responsável sabe que escapou de uma mentira e, ainda assim, não consegue apontar exatamente onde ela termina. O mundo fabricado perde o controle da cena, mas conserva uma pequena presença dentro da memória."
+  },
+  {
+    "arquivo": "m4_r2_n2_fechamento_sucesso.mp3",
+    "texto": "Beyonder compreende, talvez pela primeira vez, que coerência não é o mesmo que verdade. A cena perfeita perde força quando o responsável escolhe uma realidade imperfeita que não foi escrita para ele. O mundo fabricado começa a apresentar rachaduras que nenhuma correção consegue esconder."
+  },
+  {
+    "arquivo": "m4_r2_n2_fechamento_falha.mp3",
+    "texto": "A cena é quebrada, mas somente depois de produzir uma dúvida real. Beyonder registra o resultado como aprendizado. A equipe escapa daquela versão do mundo, porém sabe que a próxima falsificação poderá nascer ainda mais convincente."
+  },
+  {
+    "arquivo": "m4_r3_n2_fechamento_sucesso.mp3",
+    "texto": "O julgamento não termina com absolvição. Termina com insuficiência de certeza. Para seres acostumados a medir civilizações, admitir que a Terra não cabe em um único veredito é uma concessão enorme. A equipe conquista tempo — e transforma suas próprias contradições em evidência de liberdade."
+  },
+  {
+    "arquivo": "m4_r3_n2_fechamento_falha.mp3",
+    "texto": "Os Celestials não executam uma sentença imediata, mas registram um veredito desfavorável. A Terra continua existindo sob observação. O julgamento terminou apenas no sentido formal; suas consequências agora fazem parte do horizonte cósmico da campanha."
+  },
+  {
+    "arquivo": "m5_r1_n2_fechamento_sucesso.mp3",
+    "texto": "A oferta é encerrada sem apagar nenhuma perda. Beyonder finalmente encontra um limite que não consegue comprar: a equipe prefere carregar consequências reais a receber uma história corrigida por alguém de fora. O último direito de escolha permanece com aqueles que terão de viver com o resultado."
+  },
+  {
+    "arquivo": "m5_r1_n2_fechamento_falha.mp3",
+    "texto": "A proposta é rejeitada tarde demais para sair sem custo. Beyonder não reescreve toda a história, mas prova que certas perdas ainda podem ser usadas como moeda. A equipe preserva o futuro e leva consigo a dúvida sobre o que teria sido possível recuperar."
+  },
+  {
+    "arquivo": "m5_r2_n2_fechamento_sucesso.mp3",
+    "texto": "A história não termina limpa. Permanecem vitórias, falhas, mortos, dívidas e lembranças incompatíveis. É justamente essa imperfeição que impede o fechamento artificial. A campanha conserva múltiplas vozes e recusa um final que só funcionaria apagando partes do caminho."
+  },
+  {
+    "arquivo": "m5_r2_n2_fechamento_falha.mp3",
+    "texto": "As páginas são reabertas, mas algumas margens ficam vazias. A equipe sabe que algo foi perdido na tentativa de condensar a campanha, mesmo sem conseguir nomear tudo. O final continua pertencendo aos heróis — apenas não contém mais cada detalhe do percurso."
+  },
+  {
+    "arquivo": "m5_r3_n2_fechamento_sucesso.mp3",
+    "texto": "O Evangelho perde sua força quando a equipe demonstra que conhecer os acontecimentos não significa possuir seu significado. A Igreja pode registrar a Ruptura, Magus e o fim da campanha, mas não pode transformar escolhas livres em profecia retroativa. O futuro volta a ser uma página aberta."
+  },
+  {
+    "arquivo": "m5_r3_n2_fechamento_falha.mp3",
+    "texto": "O Evangelho não se torna verdade, mas sobrevive como versão poderosa dos acontecimentos. Seguidores levarão essa narrativa para outros mundos. A equipe encerra a crise sabendo que salvar a realidade não significa controlar todas as histórias que serão contadas sobre ela."
+  }
+]
