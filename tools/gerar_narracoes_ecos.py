@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-import base64,json,os,subprocess,time,urllib.request,zipfile
+import base64,json,os,re,subprocess,time,urllib.request,zipfile
 VOICE='pt-BR-Chirp3-HD-Algenib'; PROJECT='ecos-da-ruptura'; OUT='audio_narracao'
-SRC='https://raw.githubusercontent.com/josedavidbb85-star/marvel-legendary-campanha/main/index_v0827.html'
+SRC='https://raw.githubusercontent.com/josedavidbb85-star/marvel-legendary-campanha/main/index_v0838.html'
 s=urllib.request.urlopen(SRC).read().decode('utf-8')
 def obj(name):
  st=s.index('const '+name+'=')+len('const '+name+'='); op=s[st]; cl={'{':'}','[':']'}[op]; d=0; q=False; esc=False
@@ -19,9 +19,16 @@ def obj(name):
     if d==0:return json.loads(s[st:i+1])
 DATA=obj('DATA'); TESTS=obj('TESTS'); items=[]
 def add(fn,text):
- if text and text.strip():items.append((fn,text.strip()))
+ if text and text.strip():items.append((fn,re.sub(r'<[^>]+>','',text).strip()))
+# Áudios já existentes + novos áudios por campo narrativo.
 for m in DATA['missions']:
- mid=m['id']; add(f'm{mid}_abertura.mp3',' '.join(m.get('story',[])))
+ mid=m['id']
+ # Abertura antiga completa (mantida por compatibilidade).
+ add(f'm{mid}_abertura.mp3',' '.join(m.get('story',[])))
+ # Montagem acessada pela aba Campanha: um áudio por quadro/texto.
+ for si,text in enumerate(m.get('story',[]),1): add(f'm{mid}_abertura_cena_{si}.mp3',text)
+ # Aba Heróis e quadros de herói da montagem: exatamente o texto exibido.
+ for hi,h in enumerate(m.get('heroes',[]),1): add(f'm{mid}_heroi_{hi}.mp3',h[1])
  for ri,r in enumerate(m['responsibilities'],1):
   add(f'm{mid}_r{ri}_n1_cena.mp3',r['scene']); add(f'm{mid}_r{ri}_n2_cena.mp3',r['level2']['scene'])
   for lv,key in [('n1',f'{mid}-{ri-1}'),('n2',f'{mid}-{ri-1}-L2')]:
@@ -30,7 +37,18 @@ for m in DATA['missions']:
     add(f'm{mid}_r{ri}_{lv}_op{ci}_sucesso.mp3',c.get('successNarrative') or c.get('success',''))
     add(f'm{mid}_r{ri}_{lv}_op{ci}_falha.mp3',c.get('failNarrative') or c.get('fail',''))
  add(f'm{mid}_vitoria.mp3',m.get('win','')); add(f'm{mid}_derrota.mp3',m.get('loss',''))
+# Fechamentos N2: o texto falado é exatamente o texto de "Fechamento desta Responsabilidade".
+epis=re.findall(r'epilogue:\{success:"((?:\\.|[^"\\])*)",fail:"((?:\\.|[^"\\])*)"\}',s)
+if len(epis)!=15: raise RuntimeError(f'Esperados 15 epílogos de Responsabilidade; encontrados {len(epis)}')
+for idx,(succ,fail) in enumerate(epis):
+ mid=idx//3+1; ri=idx%3+1
+ succ=json.loads('"'+succ+'"'); fail=json.loads('"'+fail+'"')
+ add(f'm{mid}_r{ri}_n2_fechamento_sucesso.mp3',succ)
+ add(f'm{mid}_r{ri}_n2_fechamento_falha.mp3',fail)
+# Manifesto auditável: arquivo -> texto exato usado na síntese.
 os.makedirs(OUT,exist_ok=True)
+with open('narracoes_textos_v0838.json','w',encoding='utf-8') as f:
+ json.dump([{'arquivo':fn,'texto':text} for fn,text in items],f,ensure_ascii=False,indent=2)
 def tok():return subprocess.check_output(['gcloud','auth','print-access-token'],text=True).strip()
 def synth(text,path):
  body=json.dumps({'input':{'text':text},'voice':{'languageCode':'pt-BR','name':VOICE},'audioConfig':{'audioEncoding':'MP3'}},ensure_ascii=False).encode()
@@ -46,7 +64,8 @@ for i,(fn,text) in enumerate(items,1):
  path=os.path.join(OUT,fn)
  if os.path.exists(path) and os.path.getsize(path)>1000:print(f'[{i}/{len(items)}] já existe {fn}');continue
  print(f'[{i}/{len(items)}] {fn}');synth(text,path);time.sleep(.12)
-zipname='ecos_da_ruptura_narracoes_algenib.zip'
+zipname='ecos_da_ruptura_narracoes_algenib_v0838.zip'
 with zipfile.ZipFile(zipname,'w',zipfile.ZIP_DEFLATED) as z:
  for fn,_ in items:z.write(os.path.join(OUT,fn),fn)
+ z.write('narracoes_textos_v0838.json','narracoes_textos_v0838.json')
 print(f'CONCLUÍDO: {len(items)} áudios | {zipname}')
