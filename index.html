@@ -1,1 +1,32 @@
-<!doctype html><html><head><meta charset="utf-8"><meta http-equiv="refresh" content="0; url=index_v0838.html"><script>location.replace('index_v0838.html'+location.search+location.hash)</script></head><body></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ecos da Ruptura</title>
+</head>
+<body style="margin:0;background:#040812;color:#f3f7ff;font-family:system-ui;display:grid;place-items:center;min-height:100vh">
+<div id="loading">Carregando Ecos da Ruptura...</div>
+<script>
+(async()=>{
+  try{
+    const r=await fetch('index_v0838.html?app=20261103b',{cache:'no-store'});
+    let h=await r.text();
+
+    // Remove referências de versão que aparecem para o jogador.
+    h=h.replace(/Ecos da Ruptura\s*[—–-]?\s*v0\.8\.38/gi,'Ecos da Ruptura');
+    h=h.replace(/Ecos da Ruptura\s*[—–-]?\s*vers[aã]o\s*0\.8\.38/gi,'Ecos da Ruptura');
+
+    // Força o navegador a carregar o controlador de narração atualizado.
+    h=h.replace(/narracao-sync-v0838\.js(?:\?[^"']*)?/g,'narracao-sync-v0838.js?app=20261103b');
+
+    document.open();
+    document.write(h);
+    document.close();
+  }catch(e){
+    document.getElementById('loading').textContent='Não foi possível carregar o aplicativo. Atualize a página.';
+  }
+})();
+</script>
+</body>
+</html>
