@@ -40,6 +40,10 @@
     "texto": "Nova representa a perspectiva de quem protege rotas e populações que nunca participaram da guerra dimensional. Ele quer impedir que as consequências da Ruptura sejam exportadas para o resto da galáxia."
   },
   {
+    "arquivo": "m1_conflito.mp3",
+    "texto": "Magus não está apenas explorando a cicatriz deixada pela Ruptura: ele reconhece nela um caminho para transformar a instabilidade da realidade em revelação religiosa. A Universal Church of Truth chega primeiro como força de ocupação e conversão, enquanto o Scheme Turn the Soul of Adam Warlock torna a ameaça pessoal: se Adam aceitar a lógica de Magus, a equipe não perderá apenas uma batalha, mas a referência moral capaz de distinguir salvação de submissão."
+  },
+  {
     "arquivo": "m1_r1_n1_cena.mp3",
     "texto": "O primeiro Twist faz o sinal se dobrar sobre si mesmo. Captain America reconhece no ruído duas lembranças incompatíveis do Momento da Convergência. Adam Warlock percebe que Magus está usando a própria cicatriz da Convergência como caminho de transmissão."
   },
@@ -326,6 +330,10 @@
   {
     "arquivo": "m2_heroi_5.mp3",
     "texto": "Natasha entra na missão como agente de inteligência. Enquanto Magus e a Igreja transformam sobrevivência em doutrina, ela procura aquilo que propaganda nenhuma consegue esconder por completo: fontes, rotas, registros e contradições. Sua função é descobrir o que a Igreja sabe de verdade — e como conseguiu saber."
+  },
+  {
+    "arquivo": "m2_conflito.mp3",
+    "texto": "A Igreja aprendeu com o primeiro contato. Agora ela não precisa conquistar a Terra inteira; basta convencer sobreviventes de que a Ruptura provou a necessidade de uma única verdade. Magus usa a Universal Church of Truth para recolher testemunhos, relíquias e Shards, enquanto Turn the Soul of Adam Warlock pressiona Adam a responder à fé com poder. A missão é tanto uma operação de campo quanto uma disputa sobre quem dará sentido ao que aconteceu."
   },
   {
     "arquivo": "m2_r1_n1_cena.mp3",
@@ -616,6 +624,10 @@
     "texto": "Hulk foi uma das figuras ligadas à Convergência final. Fragmentos daquele momento ainda aparecem como lembranças desconexas. Na arena, ele se torna a evidência viva de que o Grandmaster está jogando com histórias que pertencem a pessoas reais."
   },
   {
+    "arquivo": "m3_conflito.mp3",
+    "texto": "Grandmaster percebe a crise como aquilo que ele sempre procura: um jogo que ainda não foi jogado. The Contest of Champions converte decisões cósmicas em competição e os Elders tratam a sobrevivência como aposta. Os capangas mantêm as rotas e arenas funcionando; a equipe precisa vencer sem aceitar a premissa de que vidas e mundos são apenas peças."
+  },
+  {
     "arquivo": "m3_r1_n1_cena.mp3",
     "texto": "Grandmaster congela a arena por um instante. Para ele, o primeiro Contest foi apenas a abertura: agora quer transformar um dos heróis em protagonista involuntário de uma aposta maior."
   },
@@ -902,6 +914,10 @@
   {
     "arquivo": "m4_heroi_5.mp3",
     "texto": "Natasha não procura a explicação mais bonita. Procura a mentira operacional: quem controla o mundo, quem ganha com ele e qual detalhe foi escondido para fazê-lo parecer perfeito."
+  },
+  {
+    "arquivo": "m4_conflito.mp3",
+    "texto": "The Beyonder encontra na reconstrução imperfeita da realidade um laboratório. Destroy the Nova Corps remove justamente a instituição capaz de comparar relatos de diferentes sistemas e perceber que certos mundos foram 'fabricados'. From Beyond fornece agentes e fenômenos que tornam o falso plausível. O perigo é uma realidade coerente demais para ser questionada."
   },
   {
     "arquivo": "m4_r1_n1_cena.mp3",
@@ -1192,6 +1208,10 @@
     "texto": "Tony finalmente encara a consequência completa das Âncoras. Elas salvaram o mundo, mas também provaram que realidade pode ser medida, comparada e reconstruída. Ele precisa decidir se a máquina deve existir depois da vitória."
   },
   {
+    "arquivo": "m5_conflito.mp3",
+    "texto": "Na última missão, The Beyonder já não observa de fora: ele testa se a realidade estabilizada merece permanecer. Annihilation: Conquest transforma a pressão cósmica em guerra total, enquanto forças de From Beyond e a Igreja exploram cada fissura. O confronto final decide se a nova estabilidade será defendida como uma história compartilhada ou reescrita por uma vontade superior."
+  },
+  {
     "arquivo": "m5_r1_n1_cena.mp3",
     "texto": "Ferido pela primeira vez, Beyonder deixa de falar como observador. Ele oferece uma realidade estável, sem Ruptura e sem perdas — desde que seja ele a decidir qual história continuará existindo."
   },
@@ -1438,6 +1458,126 @@
   {
     "arquivo": "m5_derrota.mp3",
     "texto": "A equipe impede a destruição imediata, mas não encerra o problema. O universo sobrevive sabendo que as Âncoras ainda existem — e que outros virão procurá-las."
+  },
+  {
+    "arquivo": "m1_r1_n2_cena_sucesso_n1.mp3",
+    "texto": "A interferência que antes parecia apenas ruído agora se organiza ao redor da memória preservada. O contato do primeiro episódio ensinou Magus a procurar exatamente a fissura que a equipe conseguiu conter. Quando o quarto Twist acontece, Captain America não vê novas lembranças ao acaso: ele reconhece a continuação da mesma memória impossível, agora tentando substituir a versão que ele decidiu preservar."
+  },
+  {
+    "arquivo": "m1_r1_n2_cena_falha_n1.mp3",
+    "texto": "A memória que escapou ao controle no primeiro episódio não desapareceu. Magus a manteve aberta como uma frequência. No quarto Twist, a lembrança retorna mais nítida e mais perigosa: Steve percebe que uma das versões da Convergência está começando a ocupar o lugar da outra, como se a realidade estivesse escolhendo por ele."
+  },
+  {
+    "arquivo": "m1_r2_n2_cena_sucesso_n1.mp3",
+    "texto": "A forma como a equipe respondeu à memória da Doreen da Terra Morta impediu que aquela morte fosse reduzida a propaganda. A Igreja, porém, aprendeu com a reação. Quando o quarto Bystander é capturado, os fiéis apresentam testemunhas e registros de realidades alternativas para sustentar que a morte de Squirrel Girl seria um destino inevitável em qualquer mundo."
+  },
+  {
+    "arquivo": "m1_r2_n2_cena_falha_n1.mp3",
+    "texto": "A primeira tentativa de explicar a diferença entre as duas Doreens deixou espaço para a Igreja ocupar. Quando o quarto Bystander é capturado, o culto mistura testemunhos e fragmentos da Terra Morta para construir uma versão conveniente: se uma Squirrel Girl morreu, todas estariam condenadas. A memória de outra realidade agora ganhou uma narrativa inimiga."
+  },
+  {
+    "arquivo": "m1_r3_n2_cena_sucesso_n1.mp3",
+    "texto": "A primeira conversão foi contida antes que se tornasse exemplo. A Igreja muda de método. Quando o quinto fiel entra na City, ele não procura novos convertidos nas bordas: leva nomes, rotas e promessas diretamente ao centro da operação, usando tudo o que observou na resposta anterior da equipe."
+  },
+  {
+    "arquivo": "m1_r3_n2_cena_falha_n1.mp3",
+    "texto": "A hesitação diante da primeira conversão deu à Igreja tempo para aprender a linguagem da City. No quinto ingresso, os fiéis já não parecem visitantes. Eles sabem quem abordar, quais perdas mencionar e quais medos explorar. A pregação virou presença organizada."
+  },
+  {
+    "arquivo": "m2_r1_n2_cena_sucesso_n1.mp3",
+    "texto": "O primeiro acesso ao arquivo revelou que os convertidos eram catalogados, não apenas doutrinados. A Igreja percebe a intrusão e reage. No quinto Twist, o arquivo muda de comportamento: registros antes estáticos começam a se reorganizar, cruzando memórias, perdas e sobreviventes como se procurassem responder à investigação da equipe."
+  },
+  {
+    "arquivo": "m2_r1_n2_cena_falha_n1.mp3",
+    "texto": "A tentativa incompleta de compreender o arquivo deixou rastros. No quinto Twist, o sistema litúrgico reconhece a assinatura da invasão anterior e reorganiza seus registros ao redor dela. O arquivo parece respirar porque agora está procurando quem tentou lê-lo."
+  },
+  {
+    "arquivo": "m2_r2_n2_cena_sucesso_n1.mp3",
+    "texto": "No primeiro confronto, a memória resistiu à tentativa de ser transformada em fé. Magus responde pessoalmente. No terceiro Master Strike, ele não oferece uma mentira nova: força o responsável a encarar a lembrança que escolheu preservar e apresenta uma interpretação capaz de torná-la fundamento da doutrina."
+  },
+  {
+    "arquivo": "m2_r2_n2_cena_falha_n1.mp3",
+    "texto": "A primeira disputa deixou uma memória sem dono claro. Magus a encontra. No terceiro Master Strike, ele a devolve ao responsável já interpretada, organizada e carregada de sentido religioso. O perigo não é esquecer o que aconteceu, mas passar a lembrar pelos termos do inimigo."
+  },
+  {
+    "arquivo": "m2_r3_n2_cena_sucesso_n1.mp3",
+    "texto": "O primeiro pregador foi impedido de transformar presença em autoridade. A Igreja reage tornando o sermão operacional. Quando o quinto Henchman entra na City, ele traz instruções: rotas de evacuação falsas, nomes de simpatizantes e ordens para que os convertidos ajam como uma única estrutura."
+  },
+  {
+    "arquivo": "m2_r3_n2_cena_falha_n1.mp3",
+    "texto": "O primeiro sermão encontrou espaço suficiente para produzir seguidores. Quando o quinto Henchman entra na City, ele não precisa convencer ninguém. Distribui ordens. Os convertidos passam a bloquear rotas e proteger ativos da Igreja, transformando discurso em comando."
+  },
+  {
+    "arquivo": "m3_r1_n2_cena_sucesso_n1.mp3",
+    "texto": "A primeira aposta foi vencida sem que o Grandmaster obtivesse o resultado que esperava. Para ele, isso não encerra o jogo; aumenta o valor da mesa. Na quarta resolução do Contest of Champions, ele cobra retorno e altera a aposta para incluir não apenas a vitória, mas o significado da decisão tomada pelo responsável no primeiro confronto."
+  },
+  {
+    "arquivo": "m3_r1_n2_cena_falha_n1.mp3",
+    "texto": "A primeira aposta terminou com vantagem para o Grandmaster. Ele guarda a dívida como parte do espetáculo. Na quarta resolução do Contest of Champions, a cobrança chega: a escolha anterior é apresentada como precedente, e o responsável precisa provar que ainda controla o próprio papel no jogo."
+  },
+  {
+    "arquivo": "m3_r2_n2_cena_sucesso_n1.mp3",
+    "texto": "O responsável recusou ser reduzido a uma peça e, justamente por isso, chamou a atenção dos Elders. Quando o quarto deles entra na City, chega trazendo um título: campeão. A coroa não é homenagem; é uma tentativa de transformar a resistência anterior em função dentro do espetáculo."
+  },
+  {
+    "arquivo": "m3_r2_n2_cena_falha_n1.mp3",
+    "texto": "A primeira disputa deixou o responsável marcado como peça valiosa. Quando o quarto Elder entra na City, a marca recebe um nome e uma coroa. O título de campeão parece prestigioso, mas carrega a expectativa de que o escolhido passe a agir segundo o papel escrito pelos Imortais."
+  },
+  {
+    "arquivo": "m3_r3_n2_cena_sucesso_n1.mp3",
+    "texto": "A primeira ponte dos Mapmakers foi compreendida antes de cumprir seu propósito. O traçado, porém, não desapareceu. Quando o quinto Sidera Maris entra na City, os segmentos anteriores se alinham e revelam o destino que estavam tentando alcançar: não um lugar comum, mas uma coordenada que só existe porque a Ruptura alterou o mapa do cosmos."
+  },
+  {
+    "arquivo": "m3_r3_n2_cena_falha_n1.mp3",
+    "texto": "A primeira ponte permaneceu incompleta aos olhos da equipe, mas não aos dos Mapmakers. Quando o quinto Sidera Maris entra na City, os trechos dispersos se conectam. Só então fica claro que cada movimento anterior já fazia parte de uma rota para uma coordenada nascida da Ruptura."
+  },
+  {
+    "arquivo": "m4_r1_n2_cena_sucesso_n1.mp3",
+    "texto": "A primeira memória perfeita foi reconhecida como falsificação, mas o mundo fabricado aprendeu com a rejeição. No quarto Twist, ele não repete a lembrança: corrige os detalhes que denunciaram a fraude e oferece uma versão mais íntima, construída a partir da reação anterior do responsável."
+  },
+  {
+    "arquivo": "m4_r1_n2_cena_falha_n1.mp3",
+    "texto": "A primeira falsificação encontrou uma brecha. No quarto Twist, o mundo usa essa brecha para se aperfeiçoar. A nova lembrança contém as correções que o responsável desejaria encontrar, como se a realidade tivesse observado a dúvida e decidido responder a ela."
+  },
+  {
+    "arquivo": "m4_r2_n2_cena_sucesso_n1.mp3",
+    "texto": "O responsável recusou a primeira versão do mundo que queria ser verdade. Beyonder interpreta isso como defeito de construção. No terceiro Master Strike, ele corrige a cena: remove contradições, reposiciona pessoas e oferece exatamente aquilo que a escolha anterior demonstrou que o responsável valorizava."
+  },
+  {
+    "arquivo": "m4_r2_n2_cena_falha_n1.mp3",
+    "texto": "A primeira versão do mundo quase conseguiu se impor. Beyonder não desperdiça o experimento. No terceiro Master Strike, ele reconstrói a cena usando a hesitação anterior como dado de projeto. Desta vez, a realidade falsa sabe o que precisa oferecer para parecer inevitável."
+  },
+  {
+    "arquivo": "m4_r3_n2_cena_sucesso_n1.mp3",
+    "texto": "O primeiro julgamento Celestial não encontrou evidência suficiente para reduzir a Terra a um veredito simples. No quinto Celestial, o julgamento retorna com um dossiê: decisões, perdas e contradições observadas desde então, incluindo a resposta dada pelo responsável no primeiro nível."
+  },
+  {
+    "arquivo": "m4_r3_n2_cena_falha_n1.mp3",
+    "texto": "O primeiro julgamento deixou a Terra em posição vulnerável. Quando o quinto Celestial entra na City, ele traz evidências acumuladas para confirmar a suspeita anterior. Cada decisão da equipe é apresentada não como contexto, mas como prova de que a espécie deve receber um veredito definitivo."
+  },
+  {
+    "arquivo": "m5_r1_n2_cena_sucesso_n1.mp3",
+    "texto": "A primeira oferta de Beyonder foi recusada sem que ele conseguisse transformar escolha em concessão. Ao cair a quarta Tactic, ele retorna ao mesmo responsável com uma proposta diferente: não promete poder, mas a possibilidade de desfazer uma consequência concreta da campanha. A oferta agora tem um preço porque sabe exatamente o que dói."
+  },
+  {
+    "arquivo": "m5_r1_n2_cena_falha_n1.mp3",
+    "texto": "A primeira oferta deixou claro onde a vontade do responsável pode ser pressionada. Na quarta Tactic, Beyonder abandona promessas abstratas e oferece reparar uma consequência real da campanha. O preço não é declarado de imediato; está escondido no direito de ele decidir o que será reescrito em troca."
+  },
+  {
+    "arquivo": "m5_r2_n2_cena_sucesso_n1.mp3",
+    "texto": "No primeiro confronto, a equipe conseguiu preservar uma versão da própria história sem entregá-la ao inimigo. No quinto Twist, as páginas começam a fechar: eventos da campanha são condensados em uma única sequência, e tudo o que não cabe nela começa a desaparecer das margens."
+  },
+  {
+    "arquivo": "m5_r2_n2_cena_falha_n1.mp3",
+    "texto": "A primeira tentativa de decidir o que ficaria na história deixou lacunas. No quinto Twist, essas lacunas começam a ser preenchidas automaticamente. As páginas se fecham ao redor de uma versão conveniente dos acontecimentos, eliminando contradições, fracassos e escolhas que não combinam com o final que está sendo imposto."
+  },
+  {
+    "arquivo": "m5_r3_n2_cena_sucesso_n1.mp3",
+    "texto": "A primeira profecia foi enfrentada como interpretação, não como destino. Quando o quinto fiel entra na City, a Universal Church of Truth apresenta sua versão final: um Evangelho do Fim que incorpora acontecimentos reais da campanha e os reorganiza para provar que tudo sempre conduziu a este momento."
+  },
+  {
+    "arquivo": "m5_r3_n2_cena_falha_n1.mp3",
+    "texto": "A primeira profecia encontrou acontecimentos suficientes para parecer convincente. Quando o quinto fiel entra na City, a Igreja fecha sua doutrina em um Evangelho do Fim. Vitórias e derrotas da equipe são reorganizadas como etapas inevitáveis de uma história que Magus afirma ter compreendido desde o início."
   },
   {
     "arquivo": "m1_r1_n2_fechamento_sucesso.mp3",
