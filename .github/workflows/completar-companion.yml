@@ -1,0 +1,44 @@
+name: Completar Companion PWA
+on:
+  push:
+    paths:
+      - '.github/workflows/completar-companion.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  completar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Integrar campanha completa ao Companion
+        run: |
+          cp index_v0838.html companion/index.html
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('companion/index.html')
+          s=p.read_text(encoding='utf-8')
+          s=s.replace('<head>', '<head><base href="../"><meta name="theme-color" content="#050912"><link rel="manifest" href="companion/manifest.webmanifest">', 1)
+          s=s.replace('</body>', '''<script>
+          // Companion PWA: mantém todos os recursos da campanha completa e permite instalação/offline.
+          if ('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.serviceWorker.register('companion/sw.js',{scope:'./companion/'}).catch(()=>{}));
+          </script></body>''', 1)
+          s=s.replace('Ecos da Ruptura v0.8.38','Ecos da Ruptura — Companion Completo')
+          p.write_text(s,encoding='utf-8')
+          PY
+      - name: Atualizar cache offline
+        run: |
+          cat > companion/sw.js <<'EOF'
+          const CACHE='ecos-companion-completo-v1';
+          const CORE=['./','../index_v0838.html','../narracao-sync-v0838.js'];
+          self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE).catch(()=>{})).then(()=>self.skipWaiting())));
+          self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
+          self.addEventListener('fetch',e=>{if(e.request.method!=='GET')return;e.respondWith(fetch(e.request).then(r=>{const x=r.clone();caches.open(CACHE).then(c=>c.put(e.request,x)).catch(()=>{});return r}).catch(()=>caches.match(e.request).then(r=>r||caches.match('./'))))});
+          EOF
+      - name: Commit
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add companion/index.html companion/sw.js
+          git commit -m 'Companion completo: integra campanha, responsabilidades, audio, videos e saves' || exit 0
+          git push
