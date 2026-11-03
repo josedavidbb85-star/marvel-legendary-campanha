@@ -1,47 +1,33 @@
-// Ecos da Ruptura v0.8.38 — sincronização de narração por ações explícitas
+// Ecos da Ruptura v0.8.38 — narração contextual por campos
 (()=>{
 'use strict';
 const norm=s=>(s||'').replace(/\s+/g,' ').trim();
-let activeResp=null,lastChoice={},lastSig='',openingKey='';
-function mission(){return Number(window.viewMission||(window.state&&state.current)||1)}
+let activeResp=null,lastChoice={},lastSig='',cineLocalIndex=0;
+function mission(){try{return Number(typeof M==='function'?M().id:(state.current||1))}catch(e){return 1}}
 function rs(i){try{return typeof window.respState==='function'?window.respState(i):null}catch(e){return null}}
 function lev(i){const s=rs(i)||{};return Number(s.level)===2?2:1}
 function key(i,n=lev(i)){return `m${mission()}_r${Number(i)+1}_n${n}`}
 function label(i,n,s){return `Missão ${mission()} · Responsabilidade ${Number(i)+1} · N${n} · ${s}`}
 function playFile(file,labelText,sig){if(sig&&sig===lastSig)return;lastSig=sig||file;if(window.playNarration)window.playNarration(file,labelText)}
-function scene(i,n){n=Number(n)||lev(i);activeResp=Number(i);playFile(`${key(i,n)}_cena.mp3`,label(i,n,'cena'),`scene|${key(i,n)}`)}
+function localBtn(file,labelText,extra=''){return `<button type="button" class="narLocal ${extra}" data-nar-file="${file}" data-nar-label="${labelText}">▶ Ouvir narração</button>`}
+function bindLocal(root=document){root.querySelectorAll&&root.querySelectorAll('.narLocal').forEach(b=>{if(b.dataset.bound)return;b.dataset.bound='1';b.onclick=e=>{e.preventDefault();e.stopPropagation();lastSig='';playFile(b.dataset.narFile,b.dataset.narLabel,'local|'+b.dataset.narFile+'|'+Date.now())}})}
+function hideGlobal(){const b=document.querySelector('.narracaoBox');if(b)b.style.display='none'}
+function decorateHeroes(){const box=document.getElementById('heroesContent');if(!box)return;box.querySelectorAll('.heroCard').forEach((card,i)=>{if(card.querySelector('.narHero'))return;const p=card.querySelector('p.story');if(!p)return;p.insertAdjacentHTML('afterend',localBtn(`m${mission()}_heroi_${i+1}.mp3`,`Missão ${mission()} · ${card.querySelector('h2')?.textContent||'Herói'}`,'narHero'))});bindLocal(box)}
+function cineFile(){try{const x=window.M?M():null;if(!x)return null;const idx=Number(cineLocalIndex||0),storyN=x.story.length;if(idx<storyN)return [`m${mission()}_abertura_cena_${idx+1}.mp3`,`Missão ${mission()} · abertura · cena ${idx+1}`];return [`m${mission()}_heroi_${idx-storyN+1}.mp3`,`Missão ${mission()} · abertura · ${x.heroes[idx-storyN]?.[0]||'herói'}`]}catch(e){return null}}
+function decorateCine(auto=false){const t=document.getElementById('cineText');if(!t)return;document.querySelectorAll('#opening .narCine').forEach(b=>b.remove());const f=cineFile();if(!f)return;t.insertAdjacentHTML('afterend',localBtn(f[0],f[1],'narCine'));bindLocal(document.getElementById('opening'));if(auto){lastSig='';playFile(f[0],f[1],'cine|'+f[0]+'|'+Date.now())}}
+function scene(i,n){n=Number(n)||lev(i);activeResp=Number(i);playFile(`${key(i,n)}_cena.mp3`,label(i,n,'cena'),`scene|${key(i,n)}`);setTimeout(()=>decorateResp(i,'scene'),40)}
 function parse(code,name){const m=(code||'').match(new RegExp(name+'\\((\\d+)'));return m?Number(m[1]):null}
 function opNumber(i,id,n=lev(i)){try{const t=window.TESTS&&TESTS[n===2?`${mission()}-${i}-L2`:`${mission()}-${i}`];if(!t)return 0;const p=t.choices.findIndex(c=>String(c.id)===String(id));return p<0?0:p+1}catch(e){return 0}}
-function bindRestart(){const box=document.querySelector('.narracaoBox'),r=box&&box.querySelector('.narRestart');if(!r||r.dataset.fixed)return;r.dataset.fixed='1';r.textContent='↶ Voltar';r.title='Voltar ao início e aguardar Ouvir';r.onclick=()=>{document.querySelectorAll('audio').forEach(a=>{a.pause();try{a.currentTime=0}catch(e){}})}}
-function choice(i,id){const n=lev(i),op=opNumber(i,id,n);if(!op)return;lastChoice[key(i,n)]=op;playFile(`${key(i,n)}_op${op}.mp3`,label(i,n,`escolha ${op}`),`choice|${key(i,n)}|${op}`)}
-function narrativeConclusion(i,result){const kk=key(i,2),suffix=result==='sucesso'?'sucesso':'falha';/* O resultado mecânico fica silencioso; o arquivo abaixo contém somente o texto de “Fechamento desta Responsabilidade”. */playFile(`${kk}_fechamento_${suffix}.mp3`,label(i,2,`fechamento — ${suffix}`),`closing|${kk}|${suffix}`)}
-let snaps={};
-function snap(i){const s=rs(i)||{};return {level:Number(s.level)||1,stage:s.stage||'',result:s.result||'',choice:s.choice||'',player:s.player||s.responsible||(s.level1Record&&s.level1Record.player)||''}}
-function inspectResult(i,before){const now=snap(i),old=before||snaps[i]||{};snaps[i]=now;if(now.result&&now.result!==old.result){const finished=Number(old.level||now.level)||1;if(finished===2){const result=norm(now.result).toLowerCase().includes('sucesso')?'sucesso':'falha';narrativeConclusion(i,result)}/* N1: deliberadamente sem áudio de conclusão */}}
+function choice(i,id){const n=lev(i),op=opNumber(i,id,n);if(!op)return;lastChoice[key(i,n)]=op;playFile(`${key(i,n)}_op${op}.mp3`,label(i,n,`escolha ${op}`),`choice|${key(i,n)}|${op}`);setTimeout(()=>decorateResp(i,'choice',op),40)}
+function closingFile(i,result){return `${key(i,2)}_fechamento_${result}.mp3`}
+function narrativeConclusion(i,result){const f=closingFile(i,result);playFile(f,label(i,2,`fechamento — ${result}`),`closing|${key(i,2)}|${result}`);setTimeout(()=>decorateResp(i,'closing',0,result),50)}
+function decorateResp(i,kind,op=0,result=''){const box=document.getElementById('respBox');if(!box)return;box.querySelectorAll('.narResp').forEach(b=>b.remove());let stories=[...box.querySelectorAll('p.story')],target=null,file='',lab='';if(kind==='closing'){const h=[...box.querySelectorAll('h2')].find(x=>norm(x.textContent).toLowerCase().includes('fechamento desta responsabilidade'));target=h&&h.parentElement.querySelector('p.story');file=closingFile(i,result);lab=label(i,2,`fechamento — ${result}`)}else if(kind==='scene'){target=stories[0];file=`${key(i)}_cena.mp3`;lab=label(i,lev(i),'cena')}else if(kind==='choice'){target=stories[stories.length-1]||stories[0];file=`${key(i)}_op${op}.mp3`;lab=label(i,lev(i),`escolha ${op}`)}if(target){target.insertAdjacentHTML('afterend',localBtn(file,lab,'narResp'));bindLocal(box)}}
+let snaps={};function snap(i){const s=rs(i)||{};return {level:Number(s.level)||1,stage:s.stage||'',result:s.result||'',choice:s.choice||'',player:s.player||s.responsible||(s.level1Record&&s.level1Record.player)||''}}
+function inspectResult(i,before){const now=snap(i),old=before||snaps[i]||{};snaps[i]=now;if(now.result&&now.result!==old.result){const finished=Number(old.level||now.level)||1;if(finished===2){const result=norm(now.result).toLowerCase().includes('sucesso')?'sucesso':'falha';narrativeConclusion(i,result)}}}
 function inspectAll(before){for(let i=0;i<3;i++)inspectResult(i,before&&before[i])}
-function openingFor(m){m=Number(m)||mission();const k=`m${m}_abertura`;if(openingKey===k)return;openingKey=k;playFile(`${k}.mp3`,`Missão ${m} · abertura`,`opening|${k}`)}
-document.addEventListener('click',e=>{
- bindRestart();
- const b=e.target.closest&&e.target.closest('button');if(!b)return;
- const code=b.getAttribute('onclick')||'',txt=norm(b.textContent).toLowerCase();
- // A abertura é iniciada diretamente pelo gesto do usuário. Isso evita o bloqueio do áudio
- // que alguns navegadores móveis aplicam quando tentamos iniciar a narração apenas no evento play do vídeo.
- if(code.includes("playMissionVideo('opening'")||code.includes('playMissionVideo("opening"')||txt.includes('vídeo de abertura')||txt.includes('video de abertura')){
-   const mm=(code.match(/playMissionVideo\(['\"]opening['\"]\s*,\s*(\d+)/)||[])[1];
-   openingFor(mm||mission());
- }
- const before=[snap(0),snap(1),snap(2)];
- let i=parse(code,'startResp');
- if(i!=null){activeResp=i;const s=before[i];if(Number(s.level)===2)setTimeout(()=>scene(i,2),120);snaps[i]=s;return;}
- if(txt.includes('confirmar responsável')||txt.includes('confirmar responsavel')){const q=activeResp;setTimeout(()=>{if(q!=null){snaps[q]=snap(q);scene(q,1)}},150);return;}
- i=parse(code,'chooseResp');
- if(i!=null){activeResp=i;const m=code.match(/chooseResp\(\d+\s*,\s*['\"]([^'\"]+)/);choice(i,m&&m[1]);setTimeout(()=>inspectAll(before),120);return;}
- setTimeout(()=>inspectAll(before),140);
-},true);
-function opening(v){if(!v||v.id!=='missionVideoPlayer'||(v.dataset.kind||'').toLowerCase()!=='opening')return;openingFor(Number(v.dataset.mission)||mission())}
-document.addEventListener('play',e=>{if(e.target instanceof HTMLVideoElement)opening(e.target)},true);
-window.addEventListener('load',()=>{bindRestart();for(let i=0;i<3;i++)snaps[i]=snap(i)});setTimeout(bindRestart,300);
-// Fluxo: abertura narra junto ao acionamento do vídeo; N1 narra após confirmar responsável; escolha N1 narra;
-// resultado N1 não narra; N2 narra somente no gatilho físico; escolha N2 narra; resultado mecânico N2 fica silencioso;
-// o bloco “Fechamento desta Responsabilidade” é a única narração após o N2. Conflitos continuam sem narração.
+document.addEventListener('click',e=>{const b=e.target.closest&&e.target.closest('button');if(!b)return;if(b.classList.contains('narLocal'))return;const code=b.getAttribute('onclick')||'',txt=norm(b.textContent).toLowerCase();const before=[snap(0),snap(1),snap(2)];let i=parse(code,'startResp');if(i!=null){activeResp=i;const s=before[i];if(Number(s.level)===2)setTimeout(()=>scene(i,2),120);snaps[i]=s;return}if(txt.includes('confirmar responsável')||txt.includes('confirmar responsavel')){const q=activeResp;setTimeout(()=>{if(q!=null){snaps[q]=snap(q);scene(q,1)}},150);return}i=parse(code,'chooseResp');if(i!=null){activeResp=i;const m=code.match(/chooseResp\(\d+\s*,\s*['\"]([^'\"]+)/);choice(i,m&&m[1]);setTimeout(()=>inspectAll(before),120);return}if(code.includes('openCine(')){cineLocalIndex=0;setTimeout(()=>decorateCine(true),80);return}if(b.id==='next'){try{const x=M(),max=x.story.length+x.heroes.length-1;cineLocalIndex=Math.min(max,cineLocalIndex+1)}catch(e){}setTimeout(()=>decorateCine(true),40);return}if(b.id==='prev'){cineLocalIndex=Math.max(0,cineLocalIndex-1);setTimeout(()=>decorateCine(true),40);return}setTimeout(()=>{inspectAll(before);decorateHeroes()},140)},true);
+// A abertura aqui é a montagem narrativa da aba Campanha, não o vídeo da Preparação.
+// O vídeo cinematográfico não dispara narração paralela.
+document.addEventListener('play',e=>{if(e.target instanceof HTMLVideoElement)return},true);
+window.addEventListener('load',()=>{hideGlobal();decorateHeroes();setTimeout(()=>{if(document.getElementById('opening')?.classList.contains('show'))decorateCine(false)},250);for(let i=0;i<3;i++)snaps[i]=snap(i)});setInterval(()=>{hideGlobal();decorateHeroes();bindLocal(document)},900);
 })();
