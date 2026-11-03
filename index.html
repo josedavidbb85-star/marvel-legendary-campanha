@@ -10,15 +10,17 @@
 <script>
 (async()=>{
   try{
-    const r=await fetch('index_v0838.html?app=20261103b',{cache:'no-store'});
+    const stamp='20261103c';
+    const r=await fetch('index_v0838.html?app='+stamp,{cache:'no-store'});
     let h=await r.text();
 
-    // Remove referências de versão que aparecem para o jogador.
+    // Remove referências de versão da interface, inclusive na aba Campanha.
     h=h.replace(/Ecos da Ruptura\s*[—–-]?\s*v0\.8\.38/gi,'Ecos da Ruptura');
     h=h.replace(/Ecos da Ruptura\s*[—–-]?\s*vers[aã]o\s*0\.8\.38/gi,'Ecos da Ruptura');
+    h=h.replace(/\s*[—–-]?\s*v0\.8\.38\b/gi,'');
 
-    // Força o navegador a carregar o controlador de narração atualizado.
-    h=h.replace(/narracao-sync-v0838\.js(?:\?[^"']*)?/g,'narracao-sync-v0838.js?app=20261103b');
+    // Força sempre o controlador novo dos botões de narração.
+    h=h.replace(/narracao-sync-v0838\.js(?:\?[^"']*)?/g,'narracao-sync-v0838.js?app='+stamp);
 
     document.open();
     document.write(h);
