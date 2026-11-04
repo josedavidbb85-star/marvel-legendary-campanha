@@ -683,7 +683,7 @@ renderAll();if(!state.openingSeen[state.current]){state.openingSeen[state.curren
  <div class="missionVideoControls"><button onclick="closeMissionVideo()">FECHAR VÍDEO</button></div>
 </div>
 <script>
-const MISSION_VIDEOS={1:{opening:"1000274259_github.mp4",ending:"1000274262_github.mp4"},2:{opening:"1000274260_github.mp4",ending:"1000274261_github.mp4"},3:{opening:"Missão 3 - abertura.mp4",ending:"Missão 3 - encerramento.mp4"},4:{opening:"Missão 4 - abertura.mp4",ending:"Missão 4 - encerramento.mp4"},5:{opening:"Missao_5_abertura_completo_abaixo_25MB.mp4",ending:"Missao_5_encerramento_completo_abaixo_25MB.mp4"}};
+const MISSION_VIDEOS={1:{opening:"1000274259_github.mp4",ending:"1000274262_github.mp4"},2:{opening:"1000274260_github.mp4",ending:"1000274261_github.mp4"},3:{opening:"Miss%25C3%25A3o%25203%2520-%2520abertura.mp4",ending:"Missão 3 - encerramento.mp4"},4:{opening:"Missão 4 - abertura.mp4",ending:"Missão 4 - encerramento.mp4"},5:{opening:"Missao_5_abertura_completo_abaixo_25MB.mp4",ending:"Missao_5_encerramento_completo_abaixo_25MB.mp4"}};
 function playMissionVideo(kind,mission){
  mission=Number(mission||viewMission||state.current||1);
  const src=MISSION_VIDEOS[mission]&&MISSION_VIDEOS[mission][kind]; if(!src)return false;
