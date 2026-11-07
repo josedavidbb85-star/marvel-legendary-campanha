@@ -21,23 +21,23 @@
   },
   {
     "arquivo": "m1_heroi_1.mp3",
-    "texto": "A vitória salvou a realidade, mas Steve não considera o caso encerrado. Ele carrega a lembrança da Convergência e teme que a equipe tenha estabilizado o mundo sem compreender tudo o que ficou do lado de fora. Sua motivação é simples: nenhuma nova decisão sobre vidas inteiras será tomada sem responsabilidade."
+    "texto": "Steve protege a Terra após a Convergência e insiste que nenhuma nova decisão sobre vidas inteiras seja tomada sem responsabilidade."
   },
   {
     "arquivo": "m1_heroi_2.mp3",
-    "texto": "Tony vê nas quatro Âncoras preservadas uma oportunidade científica e uma culpa pessoal. Ele quer entender por que elas continuam emitindo sinais e provar que a tecnologia criada durante a Ruptura não abriu uma porta que agora não consegue fechar."
+    "texto": "Tony investiga as quatro Âncoras preservadas e teme que sua tecnologia tenha transformado a Terra num farol para ameaças cósmicas."
   },
   {
     "arquivo": "m1_heroi_3.mp3",
-    "texto": "Warlock reconhece no sinal uma assinatura ligada ao Magus. Para ele, a crise é íntima: qualquer força capaz de usar as cicatrizes dimensionais pode também explorar a divisão entre aquilo que ele é e aquilo que pode se tornar."
+    "texto": "Phyla-Vell observa as rotas ameaçadas pelo sinal. Ela quer impedir que a Ruptura se espalhe para populações que não participaram da Convergência."
   },
   {
     "arquivo": "m1_heroi_4.mp3",
-    "texto": "Quasar chega como sentinela do espaço profundo. Os padrões detectados ao redor da Terra não se comportam como uma invasão comum. Sua prioridade é descobrir se a Terra se tornou um farol cósmico — e, se tornou, quem está vindo em resposta."
+    "texto": "Quasar rastreia o sinal no espaço profundo e procura determinar quem respondeu ao chamado das Âncoras."
   },
   {
     "arquivo": "m1_heroi_5.mp3",
-    "texto": "Nova representa a perspectiva de quem protege rotas e populações que nunca participaram da guerra dimensional. Ele quer impedir que as consequências da Ruptura sejam exportadas para o resto da galáxia."
+    "texto": "Nova representa a proteção dos mundos distantes e tenta impedir que as consequências da Ruptura se propaguem pela galáxia."
   },
   {
     "arquivo": "m1_r1_n1_cena.mp3",
@@ -309,23 +309,23 @@
   },
   {
     "arquivo": "m2_heroi_1.mp3",
-    "texto": "A Igreja fala em seu nome e no de Magus. Warlock quer impedir que a sobrevivência da Terra seja usada como fundamento para uma cruzada cósmica."
+    "texto": "Quasar segue a origem cósmica dos registros da Igreja e procura identificar os observadores que receberam seus sinais."
   },
   {
     "arquivo": "m2_heroi_2.mp3",
-    "texto": "Moondragon percebe que a fé da Igreja não é apenas ideológica: há uma rede psíquica amplificando certezas e apagando dúvidas. Ela quer romper essa rede sem transformar fiéis em vítimas."
+    "texto": "Moondragon sente uma rede psíquica que amplifica a fé e apaga dúvidas. Ela quer romper a influência sem ferir os fiéis."
   },
   {
     "arquivo": "m2_heroi_3.mp3",
-    "texto": "Phyla-Vell entra na missão pensando nas populações que ficarão entre a Terra e seus perseguidores. Sua motivação é impedir que a guerra se torne uma sequência de mundos sacrificados."
+    "texto": "Phyla-Vell quer impedir que a doutrina da Igreja provoque uma guerra entre mundos inocentes."
   },
   {
     "arquivo": "m2_heroi_4.mp3",
-    "texto": "Mar-Vell enxerga o problema como uma crise diplomática e militar. A Terra precisa de aliados antes que os grandes poderes cósmicos decidam que ela é perigosa demais para continuar independente."
+    "texto": "Mar-Vell busca aliados para a Terra antes que os grandes poderes cósmicos decidam que ela se tornou uma ameaça."
   },
   {
     "arquivo": "m2_heroi_5.mp3",
-    "texto": "Natasha entra na missão como agente de inteligência. Enquanto Magus e a Igreja transformam sobrevivência em doutrina, ela procura aquilo que propaganda nenhuma consegue esconder por completo: fontes, rotas, registros e contradições. Sua função é descobrir o que a Igreja sabe de verdade — e como conseguiu saber."
+    "texto": "Natasha procura os arquivos, rotas e contradições que a propaganda da Igreja tenta ocultar."
   },
   {
     "arquivo": "m2_r1_n1_cena.mp3",
@@ -597,23 +597,23 @@
   },
   {
     "arquivo": "m3_heroi_1.mp3",
-    "texto": "Nova odeia a ideia de transformar catástrofes em entretenimento. Para ele, atravessar a arena é uma obrigação: alguém precisa mostrar que vidas reais não são pontuação."
+    "texto": "Nova se recusa a transformar vidas em pontuação e enfrenta o espetáculo do Grandmaster."
   },
   {
     "arquivo": "m3_heroi_2.mp3",
-    "texto": "Ronan aceita a missão por razões menos nobres. Se o Grandmaster possui registros da Ruptura, esses dados têm valor estratégico para o Império Kree. Ele coopera, mas ninguém esquece que também está avaliando o que pode levar consigo."
+    "texto": "Ronan quer obter os registros da Ruptura para compreender seu valor estratégico para os Kree."
   },
   {
     "arquivo": "m3_heroi_3.mp3",
-    "texto": "Nebula entende jogos manipulados melhor do que gostaria. Sua motivação é encontrar a falha nas regras e usá-la contra quem acredita controlar todos os participantes."
+    "texto": "Nebula procura falhas nas regras manipuladas da competição e pretende usá-las contra seu anfitrião."
   },
   {
     "arquivo": "m3_heroi_4.mp3",
-    "texto": "Yondu não pretende vencer com elegância. Ele quer sair com a equipe, com as informações e, se possível, com algo valioso que o Grandmaster não perceba que perdeu."
+    "texto": "Yondu quer escapar com a equipe e com informações que o Grandmaster não pretendia entregar."
   },
   {
     "arquivo": "m3_heroi_5.mp3",
-    "texto": "Hulk foi uma das figuras ligadas à Convergência final. Fragmentos daquele momento ainda aparecem como lembranças desconexas. Na arena, ele se torna a evidência viva de que o Grandmaster está jogando com histórias que pertencem a pessoas reais."
+    "texto": "Hulk carrega lembranças da Convergência e é a prova viva de que o torneio manipula histórias reais."
   },
   {
     "arquivo": "m3_r1_n1_cena.mp3",
@@ -857,11 +857,11 @@
   },
   {
     "arquivo": "m3_vitoria.mp3",
-    "texto": "O Grandmaster abre a passagem. Antes de fazê-lo, revela que o verdadeiro interessado nas sobras da Ruptura não quer conquistar uma realidade. Quer aprender a fabricar uma."
+    "texto": "A arena silencia. Grandmaster contempla os resultados como se cada escolha fosse apenas mais uma aposta. Nova recusa transformar vidas em pontuação, enquanto Nebula identifica a armadilha final nas regras do jogo. Ronan exige os registros prometidos. Yondu encontra a rota escondida entre os mapas dos Bridge Builders, e Hulk reconhece ecos da Convergência. Desta vez, porém, a equipe escolhe o próprio caminho. O Grandmaster abre a passagem e revela que o verdadeiro interessado nas sobras da Ruptura não deseja conquistar uma realidade. Deseja aprender a fabricar uma. A trilha conduz ao Beyonder e a um planeta impossível."
   },
   {
     "arquivo": "m3_derrota.mp3",
-    "texto": "A equipe escapa, mas o Grandmaster vende os padrões de decisão observados durante a campanha. O próximo inimigo saberá mais sobre vocês."
+    "texto": "A equipe escapa da arena, mas o Grandmaster conserva a vantagem. Os Elders recolhem os registros da disputa, e as escolhas de David, Bel e Guilherme tornam-se dados de uma aposta maior. Nova protege a retirada, Ronan percebe o valor estratégico das informações perdidas, Nebula procura uma saída nas falhas das regras e Yondu conduz os heróis enquanto Hulk segura os perseguidores. O Grandmaster vende os padrões de decisão observados durante a campanha. A rota ainda conduz ao Beyonder, mas o próximo inimigo já saberá mais sobre a equipe do que deveria."
   },
   {
     "arquivo": "m4_abertura.mp3",
@@ -885,23 +885,23 @@
   },
   {
     "arquivo": "m4_heroi_1.mp3",
-    "texto": "Quasar detecta um planeta que não consta de nenhum mapa anterior à Ruptura. Seu dever é determinar se ele é ameaça, sobrevivente ou algo completamente novo."
+    "texto": "Quasar detecta um planeta ausente de todos os mapas anteriores à Ruptura e tenta compreender sua origem."
   },
   {
     "arquivo": "m4_heroi_2.mp3",
-    "texto": "Mar-Vell vê bilhões de habitantes que não podem ser tratados como experimento, mesmo que sua história tenha sido artificialmente criada."
+    "texto": "Mar-Vell insiste que os bilhões de habitantes desse planeta não podem ser tratados como cobaias."
   },
   {
     "arquivo": "m4_heroi_3.mp3",
-    "texto": "Moondragon sente memórias consistentes em pessoas que, segundo os registros, não existiam dias atrás. Isso desafia a própria ideia de identidade que guiou a campanha anterior."
+    "texto": "Moondragon percebe memórias consistentes em pessoas que não existiam dias antes e questiona o que torna uma vida real."
   },
   {
     "arquivo": "m4_heroi_4.mp3",
-    "texto": "Tony encontra no planeta soluções tecnológicas que parecem evoluções das Âncoras. Ele precisa encarar a possibilidade de que suas próprias pesquisas tenham ensinado alguém a estabilizar mundos artificiais."
+    "texto": "Tony encontra tecnologias semelhantes às Âncoras e teme ter inspirado a construção de mundos artificiais."
   },
   {
     "arquivo": "m4_heroi_5.mp3",
-    "texto": "Natasha não procura a explicação mais bonita. Procura a mentira operacional: quem controla o mundo, quem ganha com ele e qual detalhe foi escondido para fazê-lo parecer perfeito."
+    "texto": "Nova investiga o desaparecimento dos registros de sua corporação e percebe que o Scheme transforma os próprios defensores da galáxia em alvos. Cada Centurion perdido aproxima o planeta da destruição."
   },
   {
     "arquivo": "m4_r1_n1_cena.mp3",
@@ -1145,11 +1145,11 @@
   },
   {
     "arquivo": "m4_vitoria.mp3",
-    "texto": "O mundo não desaparece quando sua origem é exposta. O Beyonder provou que consegue criar uma realidade estável. Agora falta descobrir por que ele precisa das Âncoras da Terra."
+    "texto": "A verdade é revelada, mas o planeta não desaparece. Suas cidades continuam iluminadas e seus habitantes continuam vivendo. Quasar confirma o impossível: a realidade fabricada é estável. Mar-Vell se recusa a tratar bilhões de pessoas como um experimento. Moondragon percebe que aquelas memórias são vividas como reais. Natasha procura o mecanismo oculto, enquanto Tony identifica uma assinatura tecnológica próxima das Âncoras. O Beyonder demonstrou que consegue criar um mundo. Agora volta sua atenção à Terra. Resta descobrir por que precisa das Âncoras que sobreviveram à Ruptura."
   },
   {
     "arquivo": "m4_derrota.mp3",
-    "texto": "A equipe protege a população, mas não descobre o mecanismo de criação. O Beyonder segue para a Terra com vantagem."
+    "texto": "A equipe protege a população, mas não consegue descobrir como o planeta foi criado. As cidades permanecem de pé, enquanto o mecanismo que sustenta aquela realidade continua desconhecido. Quasar não encontra uma origem natural para o mundo. Moondragon sente a inquietação de seus habitantes, Mar-Vell insiste em protegê-los, e Tony e Natasha precisam abandonar pistas importantes. O Beyonder segue para a Terra com vantagem. As Âncoras continuam sendo seu objetivo, e a equipe terá apenas mais uma oportunidade de impedir que ele determine o destino das realidades."
   },
   {
     "arquivo": "m5_abertura.mp3",
@@ -1173,23 +1173,23 @@
   },
   {
     "arquivo": "m5_heroi_1.mp3",
-    "texto": "Warlock chega ao fim entendendo que Magus representa uma resposta possível à crise: impor uma verdade absoluta. Ele luta para provar que identidade não precisa ser reduzida a uma única versão."
+    "texto": "Warlock enfrenta a tentação de impor uma verdade absoluta e defende a existência de identidades diferentes."
   },
   {
     "arquivo": "m5_heroi_2.mp3",
-    "texto": "Steve traz a pergunta moral que atravessou as duas campanhas. Sobreviver não basta se a sobrevivência exigir que alguém decida silenciosamente quais vidas são descartáveis."
+    "texto": "Steve insiste que salvar a realidade não pode significar escolher silenciosamente quem será sacrificado."
   },
   {
     "arquivo": "m5_heroi_3.mp3",
-    "texto": "Nova representa todos os mundos que agora sabem o que aconteceu com a Terra. Ele quer impedir que a solução final transforme o planeta num risco permanente para o cosmos."
+    "texto": "Nova protege os mundos ameaçados pela Ruptura e pelas forças que procuram dominar suas Âncoras."
   },
   {
     "arquivo": "m5_heroi_4.mp3",
-    "texto": "Phyla-Vell insiste que a solução deve proteger quem não está na sala tomando a decisão. Sua motivação é fazer com que civis e mundos distantes não paguem pela vitória dos heróis."
+    "texto": "Phyla-Vell defende os civis e os mundos distantes que pagarão o preço de uma solução precipitada."
   },
   {
     "arquivo": "m5_heroi_5.mp3",
-    "texto": "Tony finalmente encara a consequência completa das Âncoras. Elas salvaram o mundo, mas também provaram que realidade pode ser medida, comparada e reconstruída. Ele precisa decidir se a máquina deve existir depois da vitória."
+    "texto": "Tony precisa decidir o destino das Âncoras que salvaram a Terra e tornaram possível manipular realidades."
   },
   {
     "arquivo": "m5_r1_n1_cena.mp3",
@@ -1433,11 +1433,11 @@
   },
   {
     "arquivo": "m5_vitoria.mp3",
-    "texto": "A Ruptura deixa de ser uma ferida aberta. O desfecho final será determinado pelas escolhas, vitórias, derrotas, Responsabilidades e legados registrados nas cinco missões."
+    "texto": "O confronto final termina, e a Ruptura deixa de ser uma ferida aberta no universo. As Âncoras já não irradiam o mesmo chamado. Pela primeira vez desde a Convergência, o silêncio não anuncia uma ameaça imediata. A vitória não apaga as escolhas de David, Bel e Guilherme. Responsabilidades cumpridas ou abandonadas, mundos preservados e registros perdidos determinaram o preço da sobrevivência. A Terra permanece, assim como as realidades que conseguiram resistir. A equipe encerra a campanha sabendo que salvou mais do que um planeta: defendeu o direito de cada mundo continuar sua própria história."
   },
   {
     "arquivo": "m5_derrota.mp3",
-    "texto": "A equipe impede a destruição imediata, mas não encerra o problema. O universo sobrevive sabendo que as Âncoras ainda existem — e que outros virão procurá-las."
+    "texto": "A destruição imediata é impedida, mas a Ruptura não foi resolvida por completo. As Âncoras continuam existindo e seus sinais atravessam o cosmos. As perdas acumuladas tornam-se parte do futuro. Cada escolha deixou uma marca; cada Responsabilidade não cumprida representa uma possibilidade que continua aberta. O universo sobrevive, mas não encontra paz. Outros observadores virão procurar as Âncoras. Para David, Bel e Guilherme, a campanha termina sem a certeza de que a próxima batalha poderá ser evitada."
   },
   {
     "arquivo": "m1_r1_n2_fechamento_sucesso.mp3",
@@ -1558,5 +1558,13 @@
   {
     "arquivo": "m5_r3_n2_fechamento_falha.mp3",
     "texto": "O Evangelho não se torna verdade, mas sobrevive como versão poderosa dos acontecimentos. Seguidores levarão essa narrativa para outros mundos. A equipe encerra a crise sabendo que salvar a realidade não significa controlar todas as histórias que serão contadas sobre ela."
+  },
+  {
+    "arquivo": "m3_heroi_6.mp3",
+    "texto": "Quasar descobre que as arenas do Grandmaster estão conectadas por rotas cósmicas artificiais. Sua missão é mapear essas passagens e impedir que a competição abra novos caminhos para a Ruptura."
+  },
+  {
+    "arquivo": "m5_heroi_6.mp3",
+    "texto": "Hulk retorna à linha de frente carregando os ecos da Convergência. Contra a conquista dos Phalanx, sua força precisa proteger os heróis infectados em vez de destruí-los."
   }
 ]
