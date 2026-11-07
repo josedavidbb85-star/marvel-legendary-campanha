@@ -670,7 +670,7 @@ renderAll();if(!state.openingSeen[state.current]){state.openingSeen[state.curren
 <div id="missionEndingPanel" class="missionEndingPanel">
 <div class="missionEndingShell"><div class="endingVideoColumn"><video id="missionEndingVideo" playsinline controls preload="metadata"></video></div>
 <div class="endingNarrativeColumn"><span id="endingPanelEyebrow" class="endingEyebrow">ECOS DA RUPTURA</span><h1 id="endingPanelTitle">Encerramento</h1>
-<div id="endingPanelBody" class="endingPanelBody"></div><button class="gold" onclick="closeMissionEndingPanel()">CONTINUAR A CAMPANHA</button></div></div></div><div id="missionEndingText" class="endingTextOverlay">
+<div id="endingPanelBody" class="endingPanelBody"></div><div style="margin:12px 0"><button id="endingNarrationBtn" onclick="toggleEndingNarration()" type="button">▶ OUVIR NARRAÇÃO DO DESFECHO</button><audio id="endingNarrationAudio" preload="none"></audio></div><button class="gold" onclick="closeMissionEndingPanel()">CONTINUAR A CAMPANHA</button></div></div></div><div id="missionEndingText" class="endingTextOverlay">
  <div class="endingTextCard">
    <span class="endingEyebrow">ECOS DA RUPTURA • MISSÃO 1</span>
    <h1 id="endingTextTitle">Encerramento</h1>
@@ -725,6 +725,42 @@ function endingNarrativeData(mission){
     "Mesmo incompletos, os dados recuperados mostram que a Igreja procurava pessoas capazes de resistir a mudanças da realidade. Entre fragmentos corrompidos surge a referência a uma competição organizada por seres antigos, onde mundos e campeões são tratados como peças.",
     "A equipe segue essa pista sob pressão. O próximo confronto começa com +1 Ameaça: alguém já sabe que os heróis estão chegando. O caminho conduz ao Grandmaster e ao Jogo dos Imortais."
    ]]
+  },
+  3:{
+   win:["ECOS DA RUPTURA • MISSÃO 3","A Passagem do Grandmaster",[
+    "A arena silencia. Grandmaster contempla os resultados como se cada escolha fosse apenas mais uma aposta. Nova recusa transformar vidas em pontuação, enquanto Nebula identifica a armadilha final nas regras do jogo.",
+    "Ronan exige os registros prometidos. Yondu encontra a rota escondida entre os mapas dos Bridge Builders, e Hulk reconhece ecos da Convergência. Desta vez, porém, a equipe escolhe o próprio caminho.",
+    "O Grandmaster abre a passagem e revela que o verdadeiro interessado nas sobras da Ruptura não deseja conquistar uma realidade. Deseja aprender a fabricar uma. A trilha conduz ao Beyonder e a um planeta impossível."
+   ]],
+   loss:["ECOS DA RUPTURA • MISSÃO 3","O Jogo Continua",[
+    "A equipe escapa da arena, mas o Grandmaster conserva a vantagem. Os Elders recolhem os registros da disputa, e as escolhas de David, Bel e Guilherme tornam-se dados de uma aposta maior.",
+    "Nova protege a retirada, Ronan percebe o valor estratégico das informações perdidas, Nebula procura uma saída nas falhas das regras e Yondu conduz os heróis enquanto Hulk segura os perseguidores.",
+    "O Grandmaster vende os padrões de decisão observados durante a campanha. A rota ainda conduz ao Beyonder, mas o próximo inimigo já saberá mais sobre a equipe do que deveria."
+   ]]
+  },
+  4:{
+   win:["ECOS DA RUPTURA • MISSÃO 4","O Mundo Permanece",[
+    "A verdade é revelada, mas o planeta não desaparece. Suas cidades continuam iluminadas e seus habitantes continuam vivendo. Quasar confirma o impossível: a realidade fabricada é estável.",
+    "Mar-Vell se recusa a tratar bilhões de pessoas como um experimento. Moondragon percebe que aquelas memórias são vividas como reais. Natasha procura o mecanismo oculto, enquanto Tony identifica uma assinatura tecnológica próxima das Âncoras.",
+    "O Beyonder demonstrou que consegue criar um mundo. Agora volta sua atenção à Terra. Resta descobrir por que precisa das Âncoras que sobreviveram à Ruptura."
+   ]],
+   loss:["ECOS DA RUPTURA • MISSÃO 4","A Verdade Incompleta",[
+    "A equipe protege a população, mas não consegue descobrir como o planeta foi criado. As cidades permanecem de pé, enquanto o mecanismo que sustenta aquela realidade continua desconhecido.",
+    "Quasar não encontra uma origem natural para o mundo. Moondragon sente a inquietação de seus habitantes, Mar-Vell insiste em protegê-los, e Tony e Natasha precisam abandonar pistas importantes.",
+    "O Beyonder segue para a Terra com vantagem. As Âncoras continuam sendo seu objetivo, e a equipe terá apenas mais uma oportunidade de impedir que ele determine o destino das realidades."
+   ]]
+  },
+  5:{
+   win:["ECOS DA RUPTURA • MISSÃO 5","O Eco que Permanece",[
+    "O confronto final termina, e a Ruptura deixa de ser uma ferida aberta no universo. As Âncoras já não irradiam o mesmo chamado. Pela primeira vez desde a Convergência, o silêncio não anuncia uma ameaça imediata.",
+    "A vitória não apaga as escolhas de David, Bel e Guilherme. Responsabilidades cumpridas ou abandonadas, mundos preservados e registros perdidos determinaram o preço da sobrevivência.",
+    "A Terra permanece, assim como as realidades que conseguiram resistir. A equipe encerra a campanha sabendo que salvou mais do que um planeta: defendeu o direito de cada mundo continuar sua própria história."
+   ]],
+   loss:["ECOS DA RUPTURA • MISSÃO 5","Sobreviver Não É Encerrar",[
+    "A destruição imediata é impedida, mas a Ruptura não foi resolvida por completo. As Âncoras continuam existindo e seus sinais atravessam o cosmos.",
+    "As perdas acumuladas tornam-se parte do futuro. Cada escolha deixou uma marca; cada Responsabilidade não cumprida representa uma possibilidade que continua aberta.",
+    "O universo sobrevive, mas não encontra paz. Outros observadores virão procurar as Âncoras. Para David, Bel e Guilherme, a campanha termina sem a certeza de que a próxima batalha poderá ser evitada."
+   ]]
   }
  };
  const a=(D[mission]&&D[mission][result])||(D[mission]&&D[mission].win)||["ECOS DA RUPTURA","Encerramento",["O confronto terminou."]];
@@ -734,10 +770,11 @@ function showMissionEndingPanel(mission){
  const cfg=MISSION_VIDEOS[mission],d=endingNarrativeData(mission);if(!cfg||!cfg.ending)return;
  document.getElementById("endingPanelEyebrow").textContent=d.eyebrow;document.getElementById("endingPanelTitle").textContent=d.title;
  document.getElementById("endingPanelBody").innerHTML=d.paragraphs.map(p=>`<p>${p}</p>`).join("");
- const v=document.getElementById("missionEndingVideo");v.src=cfg.ending;v.currentTime=0;document.getElementById("missionEndingPanel").style.display="flex";
+ const a=document.getElementById("endingNarrationAudio"),b=document.getElementById("endingNarrationBtn");if(a){a.pause();a.src=`audio/narracao/m${mission}_${result==="loss"?"derrota":"vitoria"}.mp3`;a.load()}if(b)b.textContent="▶ OUVIR NARRAÇÃO DO DESFECHO"; const v=document.getElementById("missionEndingVideo");v.src=cfg.ending;v.currentTime=0;document.getElementById("missionEndingPanel").style.display="flex";
  try{document.querySelectorAll("audio").forEach(a=>a.pause())}catch(e){} const q=v.play();if(q&&q.catch)q.catch(()=>{});
 }
-function closeMissionEndingPanel(){const p=document.getElementById("missionEndingPanel"),v=document.getElementById("missionEndingVideo");if(v){v.pause();v.removeAttribute("src");v.load()}if(p)p.style.display="none";}
+function toggleEndingNarration(){const a=document.getElementById("endingNarrationAudio"),b=document.getElementById("endingNarrationBtn");if(!a)return;if(a.paused){a.play().then(()=>{if(b)b.textContent="⏸ PAUSAR NARRAÇÃO"}).catch(()=>{})}else{a.pause();if(b)b.textContent="▶ OUVIR NARRAÇÃO DO DESFECHO"}}
+function closeMissionEndingPanel(){const p=document.getElementById("missionEndingPanel"),v=document.getElementById("missionEndingVideo");if(v){v.pause();v.removeAttribute("src");v.load()}const a=document.getElementById("endingNarrationAudio");if(a)a.pause();if(p)p.style.display="none";}
 function showMission1EndingText(){
  const eye=document.querySelector("#missionEndingText .endingEyebrow");if(eye)eye.textContent="ECOS DA RUPTURA • MISSÃO 1";
  const result=(state.results&&state.results[1]&&state.results[1].result)||'win';
