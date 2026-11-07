@@ -767,6 +767,7 @@ function endingNarrativeData(mission){
  return {eyebrow:a[0],title:a[1],paragraphs:a[2]};
 }
 function showMissionEndingPanel(mission){
+ const result=(state.results&&state.results[mission]&&state.results[mission].result)||"win";
  const cfg=MISSION_VIDEOS[mission],d=endingNarrativeData(mission);if(!cfg||!cfg.ending)return;
  document.getElementById("endingPanelEyebrow").textContent=d.eyebrow;document.getElementById("endingPanelTitle").textContent=d.title;
  document.getElementById("endingPanelBody").innerHTML=d.paragraphs.map(p=>`<p>${p}</p>`).join("");
