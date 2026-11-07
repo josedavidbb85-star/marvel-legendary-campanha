@@ -781,22 +781,16 @@ function showMissionEndingPanel(mission){
  const a=document.getElementById("endingNarrationAudio"),b=document.getElementById("endingNarrationBtn");if(a){a.pause();a.src=`audio/narracao/m${mission}_${result==="loss"?"derrota":"vitoria"}.mp3`;a.load()}if(b)b.textContent="▶ OUVIR NARRAÇÃO COMPLETA"; const v=document.getElementById("missionEndingVideo");v.src=cfg.ending;v.currentTime=0;document.getElementById("missionEndingPanel").style.display="flex";
  try{document.querySelectorAll("audio").forEach(a=>a.pause())}catch(e){} const q=v.play();if(q&&q.catch)q.catch(()=>{});
 }
-let endingSpeech=null;
 function toggleEndingNarration(){
  const audio=document.getElementById("endingNarrationAudio"),btn=document.getElementById("endingNarrationBtn");
- if(!btn)return;
- if("speechSynthesis" in window){
-  if(window.speechSynthesis.speaking){window.speechSynthesis.cancel();endingSpeech=null;btn.textContent="▶ OUVIR NARRAÇÃO COMPLETA";return}
-  if(audio)audio.pause();
-  const d=endingNarrativeData(Number(viewMission));
-  endingSpeech=new SpeechSynthesisUtterance(d.title+". "+d.paragraphs.join(" "));
-  endingSpeech.lang="pt-BR";endingSpeech.rate=0.91;endingSpeech.pitch=0.85;
-  const voices=window.speechSynthesis.getVoices();
-  endingSpeech.voice=voices.find(v=>v.lang.toLowerCase()==="pt-br"&&/google|natural|neural|premium/i.test(v.name))||voices.find(v=>v.lang.toLowerCase()==="pt-br")||null;
-  endingSpeech.onend=endingSpeech.onerror=()=>{btn.textContent="▶ OUVIR NARRAÇÃO COMPLETA";endingSpeech=null};
-  window.speechSynthesis.speak(endingSpeech);btn.textContent="■ PARAR NARRAÇÃO COMPLETA";
- }else if(audio){if(audio.paused){audio.play().catch(()=>{});btn.textContent="⏸ PAUSAR RESUMO"}else{audio.pause();btn.textContent="▶ OUVIR RESUMO"}}
+ if(!audio||!btn)return;
+ if(audio.paused){audio.play().then(()=>btn.textContent="⏸ PAUSAR NARRAÇÃO COMPLETA").catch(()=>{btn.textContent="▶ OUVIR NARRAÇÃO COMPLETA"})}
+ else{audio.pause();btn.textContent="▶ OUVIR NARRAÇÃO COMPLETA"}
 }
+document.addEventListener("DOMContentLoaded",()=>{
+ const a=document.getElementById("endingNarrationAudio"),b=document.getElementById("endingNarrationBtn");
+ if(a){a.addEventListener("ended",()=>{if(b)b.textContent="▶ OUVIR NARRAÇÃO COMPLETA"})}
+});
 function closeMissionEndingPanel(){const p=document.getElementById("missionEndingPanel"),v=document.getElementById("missionEndingVideo");if(v){v.pause();v.removeAttribute("src");v.load()}const a=document.getElementById("endingNarrationAudio");if(a)a.pause();if("speechSynthesis" in window)window.speechSynthesis.cancel();if(p)p.style.display="none";}
 function showMission1EndingText(){
  const eye=document.querySelector("#missionEndingText .endingEyebrow");if(eye)eye.textContent="ECOS DA RUPTURA • MISSÃO 1";
