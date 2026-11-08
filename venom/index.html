@@ -310,6 +310,19 @@ background:#0a1119;flex:0 0 auto}
 #view-detalhe .mission-panel[data-panel="jogo"]>.card{display:block!important;width:100%!important}
 #view-detalhe .venom-gatilhos-jump{display:block!important;width:100%;margin:8px 0 12px!important;padding:12px!important;background:#e5b933!important;color:#111!important;border:2px solid #111!important;border-radius:8px!important;font-size:16px!important;font-weight:800!important}
 }
+</style><style id="venom-mobile-tabs-visible-v2">
+@media(max-width:700px){
+#view-detalhe.view.active{padding:4px 6px 0!important}
+#chapterDetail>.lead{max-height:22px!important;overflow:hidden!important}
+#chapterDetail>.eyebrow,#chapterDetail>h2{margin:1px 0!important}
+#chapterDetail .mission-tabbar{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:5px!important;overflow:visible!important;flex-wrap:unset!important;flex-shrink:0!important;margin:8px 0!important;padding:5px 0!important;position:relative!important;z-index:20!important;background:#090f17!important}
+#chapterDetail .mission-tabbar button{display:block!important;min-width:0!important;width:100%!important;white-space:normal!important;padding:12px 2px!important;line-height:1.2!important;font-size:clamp(11px,3vw,15px)!important;border:2px solid #718d96!important;border-radius:7px!important;background:#18232c!important;color:#fff!important;box-shadow:0 3px 0 #040608!important}
+#chapterDetail .mission-tabbar button.active{background:#f4ca3b!important;color:#111!important;border-color:#fff!important}
+#chapterDetail .mission-tabbar button[data-mission-tab="jogo"]{border-color:#f4ca3b!important}
+#chapterDetail .mission-tabbar button[data-mission-tab="jogo"].active{background:#f4ca3b!important;color:#111!important}
+#chapterDetail .mission-panels{min-height:0!important;overflow-y:auto!important;-webkit-overflow-scrolling:touch!important}
+#view-capitulos .venom-open-mission-guide{display:block!important;font-size:15px!important;line-height:1.45!important;color:#ffde7b!important;margin:10px 0!important}
+}
 </style></head><body>
 <header class="top"><div class="shell topinner"><div class="brand">LEGENDARY <span>● VENOM</span></div><nav aria-label="Navegação" class="nav"><button data-view="capitulos">Missões</button><button data-view="prologo">Prólogo</button><button data-view="campanha">Campanha</button><button data-view="regras">Regras</button></nav><div class="mode-buttons"><button onclick="setVenomMode('mobile')">📱 Celular</button><button onclick="setVenomMode('notebook')">💻 Notebook</button></div></div></header>
 <section class="hero"><div class="shell"><div class="eyebrow">Uma campanha original • Core Set + Venom</div><h1>A FOME QUE<br/><em>NOS CONSOME</em></h1><p>Cinco missões cooperativas. Uma investigação em Nova York. Cada descoberta deve ser conquistada durante a partida.</p><div class="hero-actions"><button class="btn" onclick="showView('prologo')">Ler o prólogo</button><button class="btn secondary" onclick="showView('capitulos')">Ver as 5 missões</button></div></div></section>
