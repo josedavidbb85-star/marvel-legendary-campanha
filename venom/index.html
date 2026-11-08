@@ -162,7 +162,7 @@ async function venomToggleMusic(){if(!venomMusic.paused){venomMusic.pause();veno
 function venomPlayFx(kind){if(!venomSound.fx)return;const n=VENOM_AUDIO_FX[kind]||1;venomFxAudio.pause();venomFxAudio.src=venomAudioPath('fx_'+n+'.mp3');venomFxAudio.currentTime=0;venomFxAudio.volume=Math.min(1,venomSound.volume/100*1.5);venomFxAudio.play().catch(()=>{});}
 
 /* v29 — efeitos personalizados e narração sequencial */
-const VENOM_CUSTOM_FX={David:'vai-teia.mp3',Guilherme:'iron-man-suit-up-sound-effects-free.mp3',Bel:'avengers_assemble_cap.mp3',n2:'spiderman-meme-song.mp3',spiderFail:'e-quem-disse-que-isso-e-problema-meu.mp3',win1:'the-amazing-spider-man-ringtone.mp3',winOther:'marvel-studios-fanfare-hd.mp3'};
+const VENOM_CUSTOM_FX={David:'lets-go-partner-wolverine-mvc2.mp3',Guilherme:'iron-man-suit-up-sound-effects-free.mp3',Bel:'vai-teia.mp3',n2:'spiderman-meme-song.mp3',spiderFail:'e-quem-disse-que-isso-e-problema-meu.mp3',win1:'the-amazing-spider-man-ringtone.mp3',winOther:'marvel-studios-fanfare-hd.mp3'};
 let venomSequenceToken=0;
 function venomCustomFx(kind,after){
  const token=++venomSequenceToken;
