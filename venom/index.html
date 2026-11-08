@@ -170,7 +170,35 @@ h4{font-size:21px}
  .nav button{font-size:15px}
 }
 </style>
-</head><body>
+<style id="venom-comic-redesign">
+body{background:#080c14 url('assets/symbiote-comic-bg.svg') center top/cover fixed no-repeat!important}
+body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:#02040bb8}
+.top{background:#080b13ed!important;border-bottom:3px solid #bd2634!important;box-shadow:0 8px 28px #000b}
+.topinner{min-height:74px!important}
+.brand{font-size:clamp(19px,2.3vw,28px)!important;color:white;text-shadow:3px 3px #a7192c;letter-spacing:.06em!important}
+.brand span{color:#d3ff67!important}
+.nav button{background:#121924!important;border:2px solid #8795a0!important;border-radius:5px!important;color:#f4f1e6!important;box-shadow:3px 3px 0 #000!important;text-transform:uppercase;padding:9px 13px!important}
+.nav button.active,.nav button:hover{background:#ffd032!important;color:#111!important;border-color:#fff!important}
+.hero{min-height:260px!important;border-bottom:4px solid #d52c39!important;background:linear-gradient(90deg,#04070cdd,#0c13228a)!important}
+.hero:before{opacity:.18!important}.hero:after{opacity:.10!important;color:#fff!important}
+.hero .shell{padding-top:32px!important;padding-bottom:30px!important}
+.hero h1{font-size:clamp(42px,6vw,76px)!important;letter-spacing:.025em!important;color:#fff;text-shadow:4px 5px 0 #7c1827,8px 9px 0 #050608}
+.hero h1 em{color:#f3e9d5!important}.hero p{color:#f3eee1!important;font-weight:700}
+.layout{background:#090e17e6!important;border-left:4px solid #7c1c29;border-right:4px solid #7c1c29;box-shadow:0 0 0 5px #050709,0 10px 50px #000c;min-height:65vh;padding:20px 18px 65px!important}
+.card,.chapter-card{background:linear-gradient(155deg,#182331f5,#0a111bf5)!important;border:2px solid #7a8790!important;border-radius:8px!important;box-shadow:5px 5px 0 #04070b!important}
+.card h3,.section-head h2,.chapter-card h3{color:#fff!important;text-shadow:2px 3px 0 #7d1c2b}
+.card .tag,.eyebrow{color:#ffd53d!important}
+.btn{border:2px solid #07090d!important;border-radius:5px!important;box-shadow:3px 3px 0 #000!important;background:#ffce29!important;color:#0a0a0a!important}
+.btn.secondary{background:#182534!important;color:#f5f4ec!important;border-color:#81909c!important}
+.btn.danger{background:#a92935!important;color:#fff!important}
+.storypart{background:#f3ecdb!important;border:3px solid #11151a!important;border-radius:7px;padding:20px!important;margin-bottom:14px!important;box-shadow:5px 5px 0 #05070a!important}
+.storypart h3{color:#8b1e29!important;text-shadow:none!important}.storypart p{color:#1a1c22!important}.storypart .eyebrow{color:#a21f30!important}
+#view-detalhe .mission-tabbar button{border:2px solid #8e9ca8!important;border-radius:4px!important;background:#17202e!important;color:#f7f3e7!important;box-shadow:2px 2px 0 #000}
+#view-detalhe .mission-tabbar button.active{background:#ffd02e!important;color:#101010!important;border-color:#fff!important}
+#view-detalhe [data-panel="jogo"] .card{border-left:5px solid #e33c43!important}
+input,select,textarea{background:#121b28;color:#fff;border:2px solid #65798b;border-radius:4px}
+@media(max-width:700px){body{background-attachment:scroll!important;background-position:60% top!important}.topinner{flex-wrap:wrap;padding:8px 0!important}.nav{width:100%;padding-bottom:4px}.nav button{padding:6px 9px!important}.hero{min-height:190px!important}.hero .shell{padding-top:20px!important;padding-bottom:18px!important}.layout{padding:12px 10px 45px!important;border-left-width:2px;border-right-width:2px}.card{box-shadow:2px 2px 0 #04070b!important}}
+</style></head><body>
 <header class="top"><div class="shell topinner"><div class="brand">LEGENDARY <span>● VENOM</span></div><nav aria-label="Navegação" class="nav"><button data-view="capitulos">Missões</button><button data-view="prologo">Prólogo</button><button data-view="campanha">Campanha</button><button data-view="regras">Regras</button></nav><div class="mode-buttons"><button onclick="setVenomMode('mobile')">📱 Celular</button><button onclick="setVenomMode('notebook')">💻 Notebook</button></div></div></header>
 <section class="hero"><div class="shell"><div class="eyebrow">Uma campanha original • Core Set + Venom</div><h1>A FOME QUE<br/><em>NOS CONSOME</em></h1><p>Cinco missões cooperativas. Uma investigação em Nova York. Cada descoberta deve ser conquistada durante a partida.</p><div class="hero-actions"><button class="btn" onclick="showView('prologo')">Ler o prólogo</button><button class="btn secondary" onclick="showView('capitulos')">Ver as 5 missões</button></div></div></section>
 <main class="shell layout"><section class="view" id="view-inicio"><div class="section-head"><span class="eyebrow">Visão geral</span><h2>Uma cidade. Cinco vozes. Uma fome.</h2><p>História independente, com sementes narrativas para uma conexão futura com <em>A Ruptura das Dimensões</em>. Cooperação Full Coop, sem utilizar componentes de outras expansões.</p></div><div class="grid"><div class="card stat"><b>05</b><small>Missões narrativas</small></div><div class="card stat"><b>02</b><small>Modos de visualização</small></div><div class="card stat"><b>02</b><small>Caixas utilizadas</small></div></div><div class="card"><h3>Os três atos</h3><p><span class="tag">I · A infecção</span><br/>Desaparecimentos, experimentos e o colapso da segurança pública. O horror nasce nas ruas.</p><p>As revelações deste ato serão apresentadas somente durante as missões.</p></div><div class="card"><h3>Como usar este aplicativo</h3><p>Leia o prólogo, abra a missão correspondente, confira a lista de componentes e registre vitória ou derrota. Os indicadores e os resultados ficam salvos automaticamente neste navegador. É possível exportar e importar o progresso em JSON para migrar futuramente para GitHub ou outra plataforma.</p><p class="note"><strong>Versão revisada com efeitos dos Schemes e Responsabilidades no padrão atual de Ecos:</strong> a preparação específica de cada Scheme está descrita na missão. Symbiotic Absorption exige Mastermind Drained e vilões extras; Secret Invasion exige seis heróis. Confirme a carta física antes de jogar.</p></div></section>
