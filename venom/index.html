@@ -748,12 +748,11 @@ function venomResponsible(id,i){
 }
 function showVenomPlayerPopup(name,triggerIndex){
  name=venomNormalizePlayer(name);
- venomCustomFx(name);
  const img=VENOM_PLAYER_PORTRAITS[name];if(!img)return;
  let modal=document.getElementById('venomPlayerModal');
  if(!modal){modal=document.createElement('div');modal.id='venomPlayerModal';modal.className='venom-modal-backdrop';modal.addEventListener('click',e=>{if(e.target===modal)modal.remove()});document.body.appendChild(modal)}
  const context=Number.isInteger(triggerIndex)?`<p>Responsável pela Situação ${triggerIndex+1} · ${getSituation(currentChapter,triggerIndex).levels?.[1]?.result?'Nível 2':'Nível 1'}</p>`:'<p>Integrante da equipe</p>';
- modal.innerHTML=`<div class="venom-modal-card" role="dialog" aria-modal="true" aria-label="${name} — herói da campanha"><button type="button" class="venom-modal-close" onclick="document.getElementById('venomPlayerModal')?.remove()">✕</button><img src="${img}" alt="${name} como herói"><div class="venom-modal-label"><strong>${name}</strong>${context}<button class="btn small" onclick="document.getElementById('venomPlayerModal')?.remove();if(Number.isInteger(${triggerIndex}))venomNarrateEvent(currentChapter,${triggerIndex},getSituation(currentChapter,${triggerIndex}).levels?.[1]?.result?2:1,'gatilho')">Continuar e narrar gatilho</button></div></div>`;
+ modal.innerHTML=`<div class="venom-modal-card" role="dialog" aria-modal="true" aria-label="${name} — herói da campanha"><button type="button" class="venom-modal-close" onclick="document.getElementById('venomPlayerModal')?.remove()">✕</button><img src="${img}" alt="${name} como herói"><div class="venom-modal-label"><strong>${name}</strong>${context}<button class="btn small" onclick="document.getElementById('venomPlayerModal')?.remove();if(Number.isInteger(${triggerIndex})){const level=getSituation(currentChapter,${triggerIndex}).levels?.[1]?.result?2:1;venomCustomFx('${name}',()=>venomNarrateEvent(currentChapter,${triggerIndex},level,'gatilho'))}else venomCustomFx('${name}')">Continuar e narrar gatilho</button></div></div>`;
 }
 function setVenomActivePlayer(v){venomActivePlayer=v;const el=document.getElementById('ecosResponsibilities');if(el)el.innerHTML=renderEcosResponsibilities(currentChapter)}
 function renderSituationLevel(id,i,level){const def=venomSituation(id,i),st=getSituation(id,i),x=st.levels[level]||{},prior=st.levels[1]||{},locked=level===2&&!prior.result,player=level===2?prior.player||'':(x.result?x.player:venomResponsible(id,i));
