@@ -237,6 +237,33 @@ opacity:.9}
 body{background-attachment:scroll!important}
 #view-inicio:before,#view-prologo:before,#view-capitulos:before,#view-campanha:before,#view-regras:before,#view-detalhe:before{background-position:center top;background-size:cover}
 }
+</style><style id="venom-situation-comic-cards">
+/* Three distinct illustrations as full-card backgrounds, text layered above. */
+#view-detalhe .situation-selector-grid .situation-selector{
+ position:relative;isolation:isolate;overflow:hidden;
+ background-color:#101925!important;
+ background-image:linear-gradient(90deg,rgba(5,9,16,.93) 0%,rgba(5,9,16,.83) 55%,rgba(5,9,16,.58) 100%),url('assets/symbiote-lab.svg')!important;
+ background-size:cover!important;background-position:center!important;
+ border:2px solid #859ba6!important;border-left:5px solid #e5b93a!important;
+ box-shadow:3px 4px 0 #030509!important;
+ min-height:118px;padding:14px 16px!important;
+ text-align:left;text-shadow:0 2px 3px #000,1px 1px 2px #000;
+}
+#view-detalhe .situation-selector-grid .situation-selector:nth-child(2){
+ background-image:linear-gradient(90deg,rgba(5,9,16,.93) 0%,rgba(5,9,16,.83) 55%,rgba(5,9,16,.58) 100%),url('assets/symbiote-city.svg')!important;
+}
+#view-detalhe .situation-selector-grid .situation-selector:nth-child(3){
+ background-image:linear-gradient(90deg,rgba(5,9,16,.93) 0%,rgba(5,9,16,.83) 55%,rgba(5,9,16,.58) 100%),url('assets/symbiote-eyes.svg')!important;
+}
+#view-detalhe .situation-selector-grid .situation-selector>*{position:relative;z-index:1;color:#fff!important}
+#view-detalhe .situation-selector-grid .situation-selector small{color:#ffdd6b!important;font-weight:800}
+#view-detalhe .situation-selector-grid .situation-selector strong{color:#fff!important;font-size:clamp(16px,1.65vw,21px);line-height:1.25}
+#view-detalhe .situation-selector-grid .situation-selector span{color:#e7f0ee!important}
+#view-detalhe .situation-selector-grid .situation-selector.active{
+ border-color:#ffe07a!important;border-left-color:#ffcf30!important;
+ box-shadow:0 0 0 2px #ffce30,3px 4px 0 #030509!important
+}
+@media(max-width:650px){#view-detalhe .situation-selector-grid .situation-selector{min-height:100px;padding:11px!important}}
 </style></head><body>
 <header class="top"><div class="shell topinner"><div class="brand">LEGENDARY <span>● VENOM</span></div><nav aria-label="Navegação" class="nav"><button data-view="capitulos">Missões</button><button data-view="prologo">Prólogo</button><button data-view="campanha">Campanha</button><button data-view="regras">Regras</button></nav><div class="mode-buttons"><button onclick="setVenomMode('mobile')">📱 Celular</button><button onclick="setVenomMode('notebook')">💻 Notebook</button></div></div></header>
 <section class="hero"><div class="shell"><div class="eyebrow">Uma campanha original • Core Set + Venom</div><h1>A FOME QUE<br/><em>NOS CONSOME</em></h1><p>Cinco missões cooperativas. Uma investigação em Nova York. Cada descoberta deve ser conquistada durante a partida.</p><div class="hero-actions"><button class="btn" onclick="showView('prologo')">Ler o prólogo</button><button class="btn secondary" onclick="showView('capitulos')">Ver as 5 missões</button></div></div></section>
