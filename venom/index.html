@@ -446,7 +446,7 @@ function venomResponsible(id,i){
 }
 function showVenomPlayerPopup(name,triggerIndex){
  name=venomNormalizePlayer(name);
- if(Number.isInteger(triggerIndex))venomCustomFx(name);else venomPlayFx("hero");
+ venomCustomFx(name);
  const img=VENOM_PLAYER_PORTRAITS[name];if(!img)return;
  let modal=document.getElementById('venomPlayerModal');
  if(!modal){modal=document.createElement('div');modal.id='venomPlayerModal';modal.className='venom-modal-backdrop';modal.addEventListener('click',e=>{if(e.target===modal)modal.remove()});document.body.appendChild(modal)}
