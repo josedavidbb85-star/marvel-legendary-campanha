@@ -160,6 +160,31 @@ function venomSetFx(v){venomSound.fx=!!v;if(!v)venomFxAudio.pause();venomAudioSt
 function venomStopMusic(){venomMusic.pause();venomMusic.currentTime=0;venomSound.playing=false;document.getElementById('venomMusicToggle').textContent='▶ Música';venomAudioStatus('Trilha interrompida.');}
 async function venomToggleMusic(){if(!venomMusic.paused){venomMusic.pause();venomSound.playing=false;document.getElementById('venomMusicToggle').textContent='▶ Música';venomAudioStatus('Trilha pausada.');return}const i=Number(document.getElementById('venomMusicSelect').value);if(venomMusic.dataset.track!==String(i)){venomMusic.src=venomAudioPath(VENOM_AUDIO_MUSIC[i]);venomMusic.dataset.track=String(i)}venomMusic.volume=venomSound.volume/100;try{await venomMusic.play();venomSound.playing=true;document.getElementById('venomMusicToggle').textContent='Ⅱ Pausar';venomAudioStatus('Trilha em reprodução.')}catch(e){venomAudioStatus('Não foi possível tocar. Abra o HTML dentro da pasta extraída, com a subpasta audio.')}}
 function venomPlayFx(kind){if(!venomSound.fx)return;const n=VENOM_AUDIO_FX[kind]||1;venomFxAudio.pause();venomFxAudio.src=venomAudioPath('fx_'+n+'.mp3');venomFxAudio.currentTime=0;venomFxAudio.volume=Math.min(1,venomSound.volume/100*1.5);venomFxAudio.play().catch(()=>{});}
+
+/* v29 — efeitos personalizados e narração sequencial */
+const VENOM_CUSTOM_FX={David:'vai-teia.mp3',Guilherme:'iron-man-suit-up-sound-effects-free.mp3',Bel:'avengers_assemble_cap.mp3',n2:'spiderman-meme-song.mp3',spiderFail:'e-quem-disse-que-isso-e-problema-meu.mp3',win1:'the-amazing-spider-man-ringtone.mp3',winOther:'marvel-studios-fanfare-hd.mp3'};
+let venomSequenceToken=0;
+function venomCustomFx(kind,after){
+ const token=++venomSequenceToken;
+ if(typeof vnPlayer!=='undefined'&&!vnPlayer.paused)vnPlayer.pause();
+ venomFxAudio.pause();venomFxAudio.onended=null;venomFxAudio.onerror=null;
+ const done=()=>{if(token===venomSequenceToken&&typeof after==='function')after()};
+ if(!venomSound.fx||!VENOM_CUSTOM_FX[kind]){done();return}
+ venomFxAudio.src='efeitos/'+encodeURIComponent(VENOM_CUSTOM_FX[kind]);
+ venomFxAudio.currentTime=0;venomFxAudio.volume=Math.min(1,venomSound.volume/100*1.5);
+ venomFxAudio.onended=done;venomFxAudio.onerror=done;
+ venomFxAudio.play().catch(done);
+}
+function venomOutcomeNarration(id,i,level,path,result){
+ const mission=Number(id),key='M'+String(mission).padStart(2,'0')+'_S'+(Number(i)+1)+'_N'+level+'_escolha'+(Number(path)+1)+'_'+(result==='success'?'sucesso':'falha');
+ if(typeof VN_TRACKS!=='undefined'&&VN_TRACKS.some(t=>t.id===key&&t.mission===mission))vnPlay(key,mission);
+}
+function venomIsSpiderSituation(id,i){
+ const def=typeof venomSituation==='function'?venomSituation(id,i):null;
+ const text=[def?.scenes?.join(' '),def?.criterion,def?.triggers?.join(' '),def?.paths?.map(p=>p.join(' ')).join(' ')].join(' ');
+ return /spider.man|homem.aranha|peter parker|peter\b|aranha/i.test(text);
+}
+
 function venomInitAudio(){const select=document.getElementById('venomMusicSelect');if(!select)return;select.value=String(venomSound.music);select.addEventListener('change',()=>{venomSound.music=Number(select.value);venomAudioStore();const playing=!venomMusic.paused;venomMusic.pause();venomMusic.src=venomAudioPath(VENOM_AUDIO_MUSIC[venomSound.music]);venomMusic.dataset.track=String(venomSound.music);if(playing)venomToggleMusic()});document.getElementById('venomMusicVolume').value=venomSound.volume;document.getElementById('venomFxEnabled').checked=venomSound.fx;venomSetMusicVolume(venomSound.volume);venomMusic.addEventListener('error',()=>venomAudioStatus('Arquivo musical não encontrado. Mantenha a pasta audio ao lado do HTML.'));}
 document.addEventListener('DOMContentLoaded',venomInitAudio);
 
@@ -355,7 +380,7 @@ function getSituation(id,i){const r=getEcosResp(id);r.situations[i] ||= {levels:
 let venomTriggerExpanded=false;
 let venomActivePlayer='Bel';
 function selectSituation(i){selectedSituation=i;venomTriggerExpanded=true;const el=document.getElementById('ecosResponsibilities');if(el)el.innerHTML=renderEcosResponsibilities(currentChapter);const st=getSituation(currentChapter,i);const player=st.levels?.[1]?.player||venomResponsible(currentChapter,i);showVenomPlayerPopup(player,i)}
-function setSituationField(id,i,level,key,value){const st=getSituation(id,i);st.levels[level] ||= {};st.levels[level][key]=value;if(level===1&&key==='player'&&st.levels[2])st.levels[2].player=value;if(['path','player','hasWound','hasSymbiote'].includes(key)){delete st.levels[level].result;delete st.levels[level].die;if(level===1){delete st.levels[2];delete st.legacy}}persist();const el=document.getElementById('ecosResponsibilities');if(el)el.innerHTML=renderEcosResponsibilities(id)}
+function setSituationField(id,i,level,key,value){if(key==='player'&&['David','Davi','Bel','Guilherme'].includes(value))venomCustomFx(value==='Davi'?'David':value);const st=getSituation(id,i);st.levels[level] ||= {};st.levels[level][key]=value;if(level===1&&key==='player'&&st.levels[2])st.levels[2].player=value;if(['path','player','hasWound','hasSymbiote'].includes(key)){delete st.levels[level].result;delete st.levels[level].die;if(level===1){delete st.levels[2];delete st.legacy}}persist();const el=document.getElementById('ecosResponsibilities');if(el)el.innerHTML=renderEcosResponsibilities(id)}
 // Condições opcionais e verificáveis em mesa; textos narrativos e áudios intactos.
 const VENOM_THEMATIC_MODIFIERS={"1":[[["Amostra rastreada","O responsável jogou uma carta de Black Widow ou Nick Fury neste turno (+2)",2],["Material contaminado","Há uma Wound na mão do responsável (−1)",-1]],[["Rede de proteção","O responsável jogou uma carta de Spider-Man neste turno (+2)",2],["Civis expostos","Há um vilão com Bystander capturado na Cidade (−1)",-1]],[["Canal seguro","O responsável jogou uma carta de Iron Man ou Nick Fury neste turno (+2)",2],["Sinal interrompido","O responsável descartou uma carta por efeito inimigo neste turno (−1)",-1]]],"2":[[["Rastro de Wolverine","O responsável revelou ou jogou uma carta de Wolverine neste turno (+2)",2],["Arquivo comprometido","Ocorreu um Scheme Twist nesta rodada (−1)",-1]],[["Extração coordenada","O responsável jogou uma carta de Black Widow ou Venompool neste turno (+2)",2],["Reféns expostos","Há um vilão com Bystander capturado na Cidade (−1)",-1]],[["Invasão de Stark","O responsável jogou uma carta de Iron Man neste turno (+2)",2],["Segurança reforçada","Há pelo menos dois vilões na Cidade (−1)",-1]]],"3":[[["Voz do hospedeiro","O responsável jogou uma carta de Venom neste turno (+2)",2],["Identidade instável","O responsável possui uma Wound na mão (−1)",-1]],[["Leitura psíquica","O responsável jogou uma carta de Emma Frost neste turno (+2)",2],["Memória fragmentada","O responsável descartou uma carta por efeito inimigo nesta rodada (−1)",-1]],[["Absorção controlada","O responsável jogou uma carta de Rogue neste turno (+2)",2],["Fusão acelerada","Há três ou mais vilões na Cidade (−1)",-1]]],"4":[[["Visão extradimensional","O responsável jogou uma carta de Venomized Dr. Strange neste turno (+2)",2],["Infiltração ativa","Um vilão escapou nesta rodada (−1)",-1]],[["Rastreamento espacial","O responsável jogou uma carta de Venom Rocket neste turno (+2)",2],["Civis sob suspeita","Há um vilão com Bystander capturado na Cidade (−1)",-1]],[["Protocolo de confiança","O responsável jogou uma carta de Black Widow ou Cyclops neste turno (+2)",2],["Ordem falsa","Ocorreu um Scheme Twist nesta rodada (−1)",-1]]],"5":[[["Vínculo preservado","O responsável jogou uma carta de Venom ou Carnage neste turno (+2)",2],["Fome crescente","O responsável tem uma Wound na mão (−1)",-1]],[["Portal identificado","O responsável jogou uma carta de Venomized Dr. Strange ou Venom Rocket neste turno (+2)",2],["Linha rompida","Um vilão escapou nesta rodada (−1)",-1]],[["Última resistência","O responsável jogou uma carta de Venompool neste turno (+2)",2],["Hospedeiros cercados","Há um vilão com Bystander capturado na Cidade (−1)",-1]]]};
 function venomThematicOptions(id,i,level){return VENOM_THEMATIC_MODIFIERS[id]?.[i]||[]}
@@ -403,6 +428,9 @@ function finishSituationTest(id,i,level){const st=getSituation(id,i),x=st.levels
  const stats=venomTestStats(id,i,level);const target=stats.base;x.player=player;x.die=die;x.target=target;x.impulse=level===2&&prior.result==='success'?1:0;x.modifier=stats.total;x.result=die+stats.total>=target?'success':'failure';st.levels[level]=x;
  if(x.result==='failure'&&!x.threatApplied){x.threatApplied=true;const e=ensureEcos();e.threat=(e.threat||0)+1;while(e.threat>=3){e.threat-=3;alert('ESCALADA DA AMEAÇA: revele e resolva uma carta adicional do Villain Deck.')}}
  if(level===2)st.legacy={path:x.path,result:x.result,previous:prior.result};persist();const el=document.getElementById('ecosResponsibilities');if(el)el.innerHTML=renderEcosResponsibilities(id);
+ const fx=x.result==='success'&&level===2?'n2':x.result==='failure'&&venomIsSpiderSituation(id,i)?'spiderFail':null;
+ if(fx)venomCustomFx(fx,()=>venomOutcomeNarration(id,i,level,x.path,x.result));
+ else venomOutcomeNarration(id,i,level,x.path,x.result);
 }
 function venomNormalizePlayer(name){return name==='Davi'?'David':name}
 function venomMigratePlayerNames(){
@@ -417,8 +445,8 @@ function venomResponsible(id,i){
  return [...PLAYER_PRESETS.slice(start),...PLAYER_PRESETS.slice(0,start)].find(p=>counts[p]===min);
 }
 function showVenomPlayerPopup(name,triggerIndex){
- venomPlayFx("hero");
  name=venomNormalizePlayer(name);
+ if(Number.isInteger(triggerIndex))venomCustomFx(name);else venomPlayFx("hero");
  const img=VENOM_PLAYER_PORTRAITS[name];if(!img)return;
  let modal=document.getElementById('venomPlayerModal');
  if(!modal){modal=document.createElement('div');modal.id='venomPlayerModal';modal.className='venom-modal-backdrop';modal.addEventListener('click',e=>{if(e.target===modal)modal.remove()});document.body.appendChild(modal)}
@@ -439,7 +467,7 @@ function threatBefore(id){return save.ecos?.threat||0}
 function setResponsibility(id,key,val){save.responsibilities ||= {};save.responsibilities[id] ||= {};save.responsibilities[id][key]=val;persist();}
 function setIntensified(id,val){save.intensified ||= {};save.intensified[id]=!!val;persist()}
 function saveNote(id,value){save.notes[id]=value;persist()}
-function setResult(id,value){if(value==='win')venomPlayFx('success');else if(value==='loss')venomPlayFx('failure');if(value==='none')delete save.results[id];else save.results[id]=value;persist();renderChapters();openChapter(id)}
+function setResult(id,value){if(value==='win')venomCustomFx(Number(id)===1?'win1':'winOther');else if(value==='loss')venomPlayFx('failure');if(value==='none')delete save.results[id];else save.results[id]=value;persist();renderChapters();openChapter(id)}
 function scores(){let out={'Conhecimento':0,'Confiança':0,'Contenção':0};for(const c of DATA.chapters){if(save.results[c.id]==='win')out[c.indicator]=Math.min(4,out[c.indicator]+1)}return out}
 function renderCampaign(){let s=scores();document.getElementById('tracker').innerHTML=Object.entries(s).map(([k,v])=>`<div class="card track"><span class="tag">${escapeHtml(k)}</span><div class="value">${v}<small style="font-size:15px;color:#9cad9d"> / 4</small></div><div class="progress">${Array.from({length:4},(_,i)=>`<span class="${i<v?'on':''}"></span>`).join('')}</div><small class="muted">Pontos obtidos por vitórias</small></div>`).join('');document.getElementById('resultSummary').innerHTML='<p class="note">Legado dos gatilhos concluídos: <strong>'+venomPriorLegacy(6).good+' positivos / '+venomPriorLegacy(6).bad+' cicatrizes</strong>. Os testes futuros recebem bônus limitado a ±2 conforme o saldo. Esta é uma regra caseira.</p><p class="note">Ameaça acumulada para a próxima missão: <strong>'+threatBefore(6)+'</strong></p>'+DATA.chapters.map(c=>`<div style="display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid #31433e"><span>${c.id}. ${escapeHtml(c.title)}</span><strong style="color:${save.results[c.id]==='win'?'#a9e96a':save.results[c.id]==='loss'?'#f26c68':'#a3b2ae'}">${save.results[c.id]==='win'?'Vitória':save.results[c.id]==='loss'?'Derrota':'Pendente'}</strong></div>`).join('');let last=save.results[5],best=Object.values(s).every(x=>x>=1)&&Object.values(s).reduce((a,b)=>a+b,0)>=4;document.getElementById('ending').innerHTML=last==='win'?(best?'<h3 style="color:var(--acid)">Final I — A Simbiose</h3><p>Poison Thanos foi derrotado. Os hospedeiros têm a chance de coexistir com os simbiontes.</p>':'<h3 style="color:var(--gold)">Final II — A Vitória Amarga</h3><p>Poison Thanos foi derrotado, mas a vitória exigiu sacrifícios irreversíveis.</p>'):last==='loss'?'<h3 style="color:var(--red)">Final III — O Mundo Devorado</h3><p>Os Poisons estabeleceram uma cabeça de ponte na Terra.</p>':'<p class="muted">O desfecho permanece oculto até a conclusão da quinta missão.</p>'}
 function exportSave(){const blob=new Blob([JSON.stringify({app:'legendary-venom-fome',...save},null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='venom-campanha-progresso.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),500)}
