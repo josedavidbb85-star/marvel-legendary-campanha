@@ -139,7 +139,7 @@ main.shell.layout{padding:5px 8px 78px!important}
 <header class="top"><div class="shell topinner"><div class="brand">LEGENDARY <span>● VENOM</span></div><nav aria-label="Navegação" class="nav"><button data-view="capitulos">Missões</button><button data-view="prologo">Prólogo</button><button data-view="campanha">Campanha</button><button data-view="regras">Regras</button></nav><div class="mode-buttons"><button onclick="setVenomMode('mobile')">📱 Celular</button><button onclick="setVenomMode('notebook')">💻 Notebook</button></div></div></header>
 <section class="hero"><div class="shell"><div class="eyebrow">Uma campanha original • Core Set + Venom</div><h1>A FOME QUE<br/><em>NOS CONSOME</em></h1><p>Cinco missões cooperativas. Uma investigação em Nova York. Cada descoberta deve ser conquistada durante a partida.</p><div class="hero-actions"><button class="btn" onclick="showView('prologo')">Ler o prólogo</button><button class="btn secondary" onclick="showView('capitulos')">Ver as 5 missões</button></div></div></section>
 <main class="shell layout"><section class="view" id="view-inicio"><div class="section-head"><span class="eyebrow">Visão geral</span><h2>Uma cidade. Cinco vozes. Uma fome.</h2><p>História independente, com sementes narrativas para uma conexão futura com <em>A Ruptura das Dimensões</em>. Cooperação Full Coop, sem utilizar componentes de outras expansões.</p></div><div class="grid"><div class="card stat"><b>05</b><small>Missões narrativas</small></div><div class="card stat"><b>02</b><small>Modos de visualização</small></div><div class="card stat"><b>02</b><small>Caixas utilizadas</small></div></div><div class="card"><h3>Os três atos</h3><p><span class="tag">I · A infecção</span><br/>Desaparecimentos, experimentos e o colapso da segurança pública. O horror nasce nas ruas.</p><p>As revelações deste ato serão apresentadas somente durante as missões.</p></div><div class="card"><h3>Como usar este aplicativo</h3><p>Leia o prólogo, abra a missão correspondente, confira a lista de componentes e registre vitória ou derrota. Os indicadores e os resultados ficam salvos automaticamente neste navegador. É possível exportar e importar o progresso em JSON para migrar futuramente para GitHub ou outra plataforma.</p><p class="note"><strong>Versão revisada com efeitos dos Schemes e Responsabilidades no padrão atual de Ecos:</strong> a preparação específica de cada Scheme está descrita na missão. Symbiotic Absorption exige Mastermind Drained e vilões extras; Secret Invasion exige seis heróis. Confirme a carta física antes de jogar.</p></div></section>
-<section class="view" id="view-prologo"><div class="section-head"><span class="eyebrow">Arquivo 00 • Nova York, 02h17</span><h2>Prólogo — A cidade que aprendeu a sentir fome</h2><p>Uma investigação que começa com um corpo impossível.</p></div><div class="card" id="prologueGate"><p>O prólogo contém revelações iniciais da trama. Abra somente quando for começar a campanha.</p><button class="btn" onclick="document.getElementById('prologueGate').hidden=true;document.getElementById('prologueContent').hidden=false;document.getElementById('venomPrologueAudio').hidden=false">Revelar prólogo</button></div><div class="card" id="venomPrologueAudio" hidden><h3>🎙 Narração do prólogo</h3><p>Ouça os seis capítulos em português. A voz feminina é selecionada entre as vozes disponíveis no seu navegador.</p><div class="actions"><button class="btn" type="button" onclick="venomPrologueSpeak()">▶ Ouvir prólogo</button><button class="btn secondary" type="button" onclick="venomProloguePause()">Ⅱ Pausar / Continuar</button><button class="btn secondary" type="button" onclick="venomPrologueStop()">■ Parar</button></div><p id="venomPrologueSpeechStatus" class="note" aria-live="polite">Pronto para narrar.</p></div><div class="story" hidden="" id="prologueContent"></div><div class="actions" style="justify-content:center"><button class="btn" onclick="openChapter(1)">Iniciar Capítulo 1</button></div></section>
+<section class="view" id="view-prologo"><div class="section-head"><span class="eyebrow">Arquivo 00 • Nova York, 02h17</span><h2>Prólogo — A cidade que aprendeu a sentir fome</h2><p>Uma investigação que começa com um corpo impossível.</p></div><div class="card" id="prologueGate"><p>O prólogo contém revelações iniciais da trama. Abra somente quando for começar a campanha.</p><button class="btn" onclick="document.getElementById('prologueGate').hidden=true;document.getElementById('prologueContent').hidden=false;document.getElementById('venomPrologueAudio').hidden=false">Revelar prólogo</button></div><div class="card" id="venomPrologueAudio" hidden><h3>🎙 Narração do prólogo</h3><p>Ouça os seis capítulos com narração alternada de Kore e Algenib (Chirp 3 HD).</p><div class="actions"><button class="btn" type="button" onclick="venomPrologueSpeak()">▶ Ouvir prólogo</button><button class="btn secondary" type="button" onclick="venomProloguePause()">Ⅱ Pausar / Continuar</button><button class="btn secondary" type="button" onclick="venomPrologueStop()">■ Parar</button></div><p id="venomPrologueSpeechStatus" class="note" aria-live="polite">Pronto para narrar.</p></div><div class="story" hidden="" id="prologueContent"></div><div class="actions" style="justify-content:center"><button class="btn" onclick="openChapter(1)">Iniciar Capítulo 1</button></div></section>
 <section class="view active" id="view-capitulos"><div class="section-head"><span class="eyebrow">Dossiês de operação</span><h2>As cinco missões</h2><p>Os dossiês são liberados progressivamente para preservar as surpresas da história.</p></div><div class="v9-intro"><strong>Interface por abas — versão 13</strong><p>Escolha uma missão e abra a aba Personagens para ver as imagens e a participação de cada componente. As abas permanecem visíveis sem rolar a página.</p><button onclick="openChapter(1)">Abrir Missão 1</button></div><div class="chapters" id="chapterGrid"></div></section>
 <section class="view" id="view-detalhe"><div class="chapter-detail" id="chapterDetail"></div></section>
 <section class="view" id="view-campanha"><div class="section-head"><span class="eyebrow">Estado persistente</span><h2>Registro de campanha</h2><p>Indicadores narrativos e resultados. Os indicadores são recalculados a partir das vitórias registradas, com limite de 4 por atributo.</p></div><div class="tracker" id="tracker"></div><div class="card"><h3>Resultados por missão</h3><div id="resultSummary"></div></div><div class="card"><h3>Desfecho da campanha</h3><div id="ending"></div></div><div class="card"><h3>Gerenciar progresso</h3><p class="muted">Salvamento automático neste dispositivo. Exporte o arquivo antes de trocar de navegador ou hospedar uma nova versão.</p><div class="actions"><button class="btn" onclick="exportSave()">Exportar progresso (.json)</button><label class="btn secondary" style="cursor:pointer">Importar progresso <input accept="application/json,.json" hidden="" onchange="importSave(event)" type="file"/></label><button class="btn danger" onclick="resetSave()">Zerar campanha</button></div><p class="kbd" id="saveMessage" role="status"></p></div></section>
@@ -261,38 +261,20 @@ document.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',(
 // Usa uma voz feminina pt-BR quando o sistema oferece metadados suficientes.
 let venomPrologueSpeechIndex=0,venomPrologueSpeechActive=false,venomPrologueSpeechUtterance=null;
 function venomPrologueStatus(msg){const e=document.getElementById('venomPrologueSpeechStatus');if(e)e.textContent=msg}
-function venomPrologueStop(){venomPrologueSpeechActive=false;venomPrologueSpeechIndex=0;if('speechSynthesis' in window)window.speechSynthesis.cancel();venomPrologueStatus('Narração interrompida.')}
+const venomPrologueAudio=new Audio('audios/VENOM_Prologo_Completo_Duas_Vozes.mp3');
+venomPrologueAudio.preload='none';
+venomPrologueAudio.onended=()=>venomPrologueStatus('Prólogo concluído.');
+venomPrologueAudio.onerror=()=>venomPrologueStatus('Arquivo do prólogo ainda não disponível no site. Verifique a publicação do MP3.');
+function venomPrologueStatus(msg){const e=document.getElementById('venomPrologueSpeechStatus');if(e)e.textContent=msg}
+function venomPrologueStop(){venomPrologueAudio.pause();venomPrologueAudio.currentTime=0;venomPrologueStatus('Narração interrompida.')}
 function venomProloguePause(){
- if(!('speechSynthesis' in window))return venomPrologueStatus('Este navegador não oferece narração por voz.');
- if(!venomPrologueSpeechActive)return venomPrologueSpeak();
- if(window.speechSynthesis.paused){window.speechSynthesis.resume();venomPrologueStatus('Narração retomada.')}
- else{window.speechSynthesis.pause();venomPrologueStatus('Narração pausada.')}
-}
-function venomPrologueVoice(){
- const voices=window.speechSynthesis.getVoices();
- const pt=voices.filter(v=>/^pt[-_]/i.test(v.lang));
- return pt.find(v=>/female|feminina|francisca|luciana|camila|helena|maria|vitoria|vitória/i.test(v.name))
- ||pt.find(v=>/br/i.test(v.lang))||pt[0]||null;
+ if(venomPrologueAudio.paused){venomPrologueAudio.play().then(()=>venomPrologueStatus('Narração retomada.')).catch(()=>venomPrologueStatus('Não foi possível reproduzir o MP3.'))}
+ else{venomPrologueAudio.pause();venomPrologueStatus('Narração pausada.')}
 }
 function venomPrologueSpeak(){
- if(!('speechSynthesis' in window))return venomPrologueStatus('Seu navegador não oferece síntese de voz. Leia o prólogo abaixo.');
- venomPrologueStop();venomPrologueSpeechActive=true;
  if(typeof vnPlayer!=='undefined'&&!vnPlayer.paused)vnPlayer.pause();
- const chapters=DATA.prologue||[];
- const next=()=>{
-  if(!venomPrologueSpeechActive)return;
-  if(venomPrologueSpeechIndex>=chapters.length){venomPrologueSpeechActive=false;venomPrologueStatus('Prólogo concluído.');return}
-  const c=chapters[venomPrologueSpeechIndex];
-  const u=new SpeechSynthesisUtterance(c.title+'. '+c.text);
-  u.lang='pt-BR';u.rate=0.88;u.pitch=0.92;u.volume=1;
-  const v=venomPrologueVoice();if(v)u.voice=v;
-  venomPrologueSpeechUtterance=u;
-  venomPrologueStatus('Narrando '+(venomPrologueSpeechIndex+1)+'/6 — '+c.title+(v?' · '+v.name:' · voz padrão'));
-  u.onend=()=>{if(!venomPrologueSpeechActive)return;venomPrologueSpeechIndex++;next()};
-  u.onerror=e=>{if(!venomPrologueSpeechActive)return;venomPrologueSpeechActive=false;venomPrologueStatus('A narração foi interrompida ('+e.error+'). Tente novamente.')};
-  window.speechSynthesis.speak(u);
- };
- next();
+ venomPrologueAudio.currentTime=0;
+ venomPrologueAudio.play().then(()=>venomPrologueStatus('Reproduzindo o prólogo completo · Kore e Algenib · 6 capítulos.')).catch(()=>venomPrologueStatus('MP3 não disponível. Publique audios/VENOM_Prologo_Completo_Duas_Vozes.mp3 no repositório.'));
 }
 
 function renderPrologue(){document.getElementById('prologueContent').innerHTML=DATA.prologue.map((p,i)=>`<article class="storypart"><div class="eyebrow">${String(i+1).padStart(2,'0')} / 06</div><h3>${escapeHtml(p.title)}</h3><p>${escapeHtml(p.text)}</p></article>`).join('')}
