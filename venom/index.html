@@ -286,11 +286,12 @@ function buildMissionTabs(){
    if(/Cooperação e Ameaça/.test(h))bucket.jogo.push(el);
    else if(/Três situações|Responsabilidades/.test(h))bucket.jogo.push(el);
    else if(/Protocolo de validação/.test(h))el.remove();
-   else if(/Resultado da missão/.test(h)){const narration=el.querySelector('.venom-ending-narration');if(narration){narration.remove();bucket.preparo.push(narration)}bucket.resultado.push(el);}
+   else if(/Resultado da missão/.test(h)){const narration=el.querySelector('.venom-ending-narration');if(narration){narration.remove();el.querySelector('h3')?.insertAdjacentElement('afterend',narration)}bucket.resultado.push(el);}
    else bucket.preparo.push(el);
   }else if(el.classList?.contains('actions'))bucket.resultado.push(el);
   else if(el.classList?.contains('audit-warning'))bucket.preparo.push(el);
  }
+ const finalBlow=root.querySelector('.venom-final-blow');if(finalBlow){finalBlow.remove();bucket.resultado.unshift(finalBlow)}
  const ending=root.querySelector('.venom-ending-detail');
  if(ending){ending.remove();bucket.resultado.unshift(ending);}
  const castBlock=document.createElement('div');castBlock.innerHTML=renderVenomCast(currentChapter);bucket.elenco.push(castBlock);
@@ -368,7 +369,7 @@ function renderEcosPanel(id){
  const e=ensureEcos(),vets=[...new Set(Object.values(e.finalBlows).filter(x=>PLAYER_PRESETS.includes(x)))];
  return `<div class="compact-grid"><div class="compact-stat"><strong>Ameaça ${e.threat}/3</strong><span>Ao atingir 3, zere e revele uma carta extra do Villain Deck.</span><div class="result"><button class="btn secondary small" onclick="changeThreat(1)">+1</button><button class="btn secondary small" onclick="changeThreat(-1)">−1</button></div></div><div class="compact-stat"><strong>Crise: ${e.crisis?'SIM':'NÃO'}</strong><span>Cooperação: ${e.crisis?7:4} VP. Veterano elegível: 3 VP uma vez por confronto.</span><select onchange="toggleCrisis(this.value==='sim')"><option value="nao" ${!e.crisis?'selected':''}>Crise NÃO</option><option value="sim" ${e.crisis?'selected':''}>Crise SIM</option></select></div></div>
  <div class="card inner"><h4>Cooperação realizada</h4><p class="note">Resolva na mesa: descarte da Victory Pile ${e.crisis?7:4} VP para dar +1 Attack ou +1 Recruit a outro jogador. Veterano pode pagar 3 VP uma vez por confronto. Máximo de uma cooperação por jogador por turno; nunca para si mesmo. O aplicativo não registra quem ajudou, quem recebeu ou o bônus.</p><button class="btn small" onclick="registerCoop(${id})">Houve cooperação · +1 Ameaça</button><p class="note">Veteranos de confrontos anteriores: ${vets.length?vets.map(escapeHtml).join(', '):'nenhum ainda'}.</p></div>
- <div class="card inner"><h4>Final Blow</h4><p class="note">Selecione quem encerrou o confronto com o Mastermind. O jogador será Veterano nos confrontos seguintes.</p>${playerSelect('finalBlowPlayer',e.finalBlows[id]||'','')}<button class="btn secondary small" onclick="recordFinalBlow(${id})">Registrar Final Blow</button></div>`
+ <div class="card inner venom-final-blow"><h4>Final Blow</h4><p class="note">Selecione quem encerrou o confronto com o Mastermind. O jogador será Veterano nos confrontos seguintes.</p>${playerSelect('finalBlowPlayer',e.finalBlows[id]||'','')}<button class="btn secondary small" onclick="recordFinalBlow(${id})">Registrar Final Blow</button></div>`
 }
 
 // Três situações independentes, cada uma com dois níveis ligados, no padrão visual de Ecos.
@@ -535,7 +536,7 @@ function vnMount(){
  const tracks=VN_TRACKS.filter(x=>x.mission===mission);
  const div=document.createElement('section');div.id='venomNarration';
  div.innerHTML='<strong>🎙 Narração cinematográfica · Missão '+mission+'</strong><p class="vn-current" id="vnStatus">Selecione a abertura ou um evento. As narrações não avançam automaticamente as escolhas.</p><button type="button" id="vnOpening">▶ Abertura</button><button type="button" id="vnCast">▶ Elenco</button><button type="button" id="vnPause">Ⅱ Pausar</button><details><summary>Áudios dos gatilhos e consequências (podem conter spoilers)</summary><div class="vn-tracks">'+tracks.map(t=>'<div class="vn-track"><span>'+t.id.replaceAll('_',' · ')+'</span><button type="button" data-vn="'+t.id+'">▶</button></div>').join('')+'</div></details>';
- const title=detail.querySelector('h2');title.insertAdjacentElement('afterend',div);
+ const prep=detail.querySelector('[data-panel="preparo"]');if(prep)prep.insertBefore(div,prep.children[1]||null);else detail.querySelector('h2').insertAdjacentElement('afterend',div);
  div.querySelector('#vnOpening').onclick=()=>vnPlay('M'+String(mission).padStart(2,'0')+'_01_abertura',mission);
  div.querySelector('#vnCast').onclick=()=>vnPlay('M'+String(mission).padStart(2,'0')+'_02_elenco',mission);
  div.querySelector('#vnPause').onclick=()=>{vnPlayer.pause();vnStatus('Narração pausada.')};
