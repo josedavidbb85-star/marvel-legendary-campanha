@@ -213,6 +213,30 @@ background:linear-gradient(90deg,#04080b66,#04080b00 65%),url('assets/symbiote-c
 .chapter-card:nth-child(3n+2):after{background-image:url('assets/symbiote-lab.svg')}
 .chapter-card:nth-child(3n):after{background-image:url('assets/symbiote-eyes.svg')}
 @media(max-width:650px){#view-detalhe #chapterDetail:before{height:48px}#view-detalhe #chapterDetail:has(.mission-panel[data-panel="jogo"].active):before{height:25px}#view-capitulos .section-head:after,#view-prologo .section-head:after,#view-inicio .section-head:after{height:105px}}
+</style><style id="venom-background-panels-v2">
+/* Artwork is atmospheric wallpaper, not narrow standalone banners. */
+#view-capitulos .section-head:after,#view-prologo .section-head:after,#view-inicio .section-head:after,
+#view-detalhe #chapterDetail:before,.chapter-card:after{display:none!important;content:none!important}
+body{background:#080c14 url('assets/symbiote-comic-bg.svg') center center/cover fixed no-repeat!important}
+#view-inicio,#view-prologo,#view-capitulos,#view-campanha,#view-regras,#view-detalhe{
+position:relative;isolation:isolate;background:transparent!important}
+#view-inicio:before,#view-prologo:before,#view-capitulos:before,#view-campanha:before,#view-regras:before,#view-detalhe:before{
+content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+background:linear-gradient(90deg,rgba(5,9,16,.90),rgba(5,9,16,.76) 48%,rgba(5,9,16,.88)),url('assets/symbiote-city.svg') center center/cover no-repeat;
+opacity:.9}
+#view-prologo:before{background-image:linear-gradient(90deg,rgba(5,9,16,.92),rgba(5,9,16,.76),rgba(5,9,16,.91)),url('assets/symbiote-lab.svg')}
+#view-inicio:before,#view-regras:before{background-image:linear-gradient(90deg,rgba(5,9,16,.91),rgba(5,9,16,.76),rgba(5,9,16,.91)),url('assets/symbiote-eyes.svg')}
+#view-detalhe:before{background-image:linear-gradient(90deg,rgba(5,9,16,.94),rgba(5,9,16,.80),rgba(5,9,16,.93)),url('assets/symbiote-lab.svg')}
+#view-detalhe:has([data-panel="jogo"].active):before{background-image:linear-gradient(90deg,rgba(5,9,16,.94),rgba(5,9,16,.83),rgba(5,9,16,.94)),url('assets/symbiote-eyes.svg')}
+#view-detalhe:has([data-panel="resultado"].active):before{background-image:linear-gradient(90deg,rgba(5,9,16,.94),rgba(5,9,16,.82),rgba(5,9,16,.94)),url('assets/symbiote-city.svg')}
+#view-detalhe .mission-panels{background:transparent!important}
+#view-detalhe .mission-panel.active{position:relative}
+.card,.chapter-card{background:rgba(12,19,29,.88)!important;backdrop-filter:blur(2px)}
+.storypart{background:rgba(243,236,219,.96)!important}
+@media(max-width:700px){
+body{background-attachment:scroll!important}
+#view-inicio:before,#view-prologo:before,#view-capitulos:before,#view-campanha:before,#view-regras:before,#view-detalhe:before{background-position:center top;background-size:cover}
+}
 </style></head><body>
 <header class="top"><div class="shell topinner"><div class="brand">LEGENDARY <span>● VENOM</span></div><nav aria-label="Navegação" class="nav"><button data-view="capitulos">Missões</button><button data-view="prologo">Prólogo</button><button data-view="campanha">Campanha</button><button data-view="regras">Regras</button></nav><div class="mode-buttons"><button onclick="setVenomMode('mobile')">📱 Celular</button><button onclick="setVenomMode('notebook')">💻 Notebook</button></div></div></header>
 <section class="hero"><div class="shell"><div class="eyebrow">Uma campanha original • Core Set + Venom</div><h1>A FOME QUE<br/><em>NOS CONSOME</em></h1><p>Cinco missões cooperativas. Uma investigação em Nova York. Cada descoberta deve ser conquistada durante a partida.</p><div class="hero-actions"><button class="btn" onclick="showView('prologo')">Ler o prólogo</button><button class="btn secondary" onclick="showView('capitulos')">Ver as 5 missões</button></div></div></section>
