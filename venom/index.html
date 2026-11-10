@@ -419,6 +419,27 @@ main .view,main .view.active,#view-detalhe.view.active,#chapterDetail{height:aut
  #chapterDetail .mission-panel .card{padding:16px!important}
  #chapterDetail .mission-panel .dilemma-context{margin:18px 5px!important}
 }
+</style><style id="venom-trigger-comic-modal-20261110">
+body.venom-trigger-modal-open{overflow:hidden!important}
+.venom-trigger-comic-overlay{position:fixed;inset:0;z-index:100005;background:rgba(0,0,0,.91);display:flex;align-items:center;justify-content:center;padding:clamp(8px,2vw,26px)}
+.venom-trigger-comic-panel{display:flex;flex-direction:column;width:min(1320px,98vw);max-height:96dvh;min-height:0;overflow:hidden;background:#f8edc6;color:#141c20;border:5px solid #080b0e;box-shadow:10px 10px 0 #e7c646,17px 17px 0 #111;border-radius:7px}
+.venom-trigger-comic-head{position:relative;flex:0 0 auto;padding:clamp(15px,2.3vw,30px) clamp(18px,3vw,42px);background:repeating-linear-gradient(-35deg,#d53238 0,#d53238 19px,#bd202d 19px,#bd202d 21px);color:#fff;border-bottom:5px solid #111}
+.venom-trigger-comic-kicker{font:900 clamp(13px,1.2vw,18px)/1.3 Impact,'Arial Narrow',sans-serif;letter-spacing:.17em;color:#fff3b5}
+.venom-trigger-comic-head h2{font:900 clamp(30px,4.1vw,62px)/1.06 Impact,'Arial Narrow',sans-serif;letter-spacing:.035em;text-transform:uppercase;margin:8px 115px 10px 0;text-shadow:3px 3px 0 #171717}
+.venom-trigger-comic-chapter{display:inline-block;background:#ffe45c;border:3px solid #111;color:#111;padding:5px 13px;font:900 clamp(15px,1.4vw,22px)/1.25 Impact,'Arial Narrow',sans-serif;transform:rotate(-1deg)}
+.venom-trigger-comic-close{position:absolute;top:14px;right:14px;border:3px solid #111;border-radius:4px;background:#fff6db;color:#111;padding:9px 13px;font:900 16px Impact,'Arial Narrow',sans-serif;cursor:pointer}
+.venom-trigger-comic-body{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:clamp(14px,2.4vw,34px);background:radial-gradient(#d3bb8233 1.5px,transparent 1.5px) 0 0/13px 13px,#f5e9c5}
+.venom-trigger-comic-body .situation-detail{margin:0!important;width:100%!important;max-width:none!important;background:#fff9e6!important;color:#151b1b!important;border:4px solid #151515!important;border-radius:2px!important;box-shadow:7px 7px 0 #171717!important;padding:clamp(18px,2.5vw,38px)!important}
+.venom-trigger-comic-body .situation-detail h3{font:900 clamp(28px,3.1vw,45px)/1.15 Impact,'Arial Narrow',sans-serif!important;text-transform:uppercase!important;color:#b8232f!important}
+.venom-trigger-comic-body .situation-detail p,.venom-trigger-comic-body .situation-detail label,.venom-trigger-comic-body .situation-detail .choice-explain,.venom-trigger-comic-body .situation-detail .choice-outcome{font-size:clamp(19px,1.6vw,25px)!important;line-height:1.55!important}
+.venom-trigger-comic-body .situation-detail .dilemma-context{font-size:clamp(20px,1.7vw,27px)!important;line-height:1.6!important}
+.venom-trigger-comic-body .situation-detail .situation-level{background:#fffdf5!important;border-top:5px solid #141414!important;padding:clamp(14px,2vw,28px)!important;color:#17201c!important}
+.venom-trigger-comic-body .situation-detail .note,.venom-trigger-comic-body .situation-detail .readonly-choice{background:#f4e6bd!important;color:#182019!important;border:2px solid #1a1a1a!important}
+.venom-trigger-comic-body .situation-detail select{background:#fffef6!important;color:#111!important;border:3px solid #111!important;font-size:clamp(18px,1.5vw,23px)!important;min-height:54px!important}
+.venom-trigger-comic-body .situation-detail .target-line{color:#b71e2d!important}
+.venom-trigger-comic-body .situation-detail .eyebrow{color:#ae202a!important;font-size:clamp(15px,1.2vw,19px)!important}
+.venom-trigger-comic-body .situation-detail .venom-modifiers{color:#131d18!important}
+@media(max-width:650px){.venom-trigger-comic-panel{width:100%;max-height:96dvh;box-shadow:4px 4px 0 #e7c646}.venom-trigger-comic-head h2{margin-right:55px;font-size:29px}.venom-trigger-comic-close{font-size:13px;padding:7px}.venom-trigger-comic-body{padding:10px}.venom-trigger-comic-body .situation-detail{padding:14px!important}.venom-trigger-comic-body .situation-detail .form-grid{grid-template-columns:1fr!important}}
 </style></head><body>
 <header class="top"><div class="shell topinner"><div class="brand">LEGENDARY <span>● VENOM</span></div><nav aria-label="Navegação" class="nav"><button data-view="capitulos">Missões</button><button data-view="prologo">Prólogo</button><button data-view="campanha">Campanha</button><button data-view="regras">Regras</button></nav></div></header>
 <section class="hero"><div class="shell"><div class="eyebrow">Uma campanha original • Core Set + Venom</div><h1>A FOME QUE<br/><em>NOS CONSOME</em></h1><p>Cinco missões cooperativas. Uma investigação em Nova York. Cada descoberta deve ser conquistada durante a partida.</p><div class="hero-actions"><button class="btn" onclick="showView('prologo')">Ler o prólogo</button><button class="btn secondary" onclick="showView('capitulos')">Ver as 5 missões</button></div></div></section>
@@ -815,8 +836,36 @@ function getEcosResp(id){save.responsibilities ||= {};save.responsibilities[id] 
 function getSituation(id,i){const r=getEcosResp(id);r.situations[i] ||= {levels:{}};return r.situations[i]}
 let venomTriggerExpanded=false;
 let venomActivePlayer='Bel';
-function selectSituation(i){selectedSituation=i;venomTriggerExpanded=true;const el=document.getElementById('ecosResponsibilities');if(el)el.innerHTML=renderEcosResponsibilities(currentChapter);const st=getSituation(currentChapter,i);const player=st.levels?.[1]?.player||venomResponsible(currentChapter,i);showVenomPlayerPopup(player,i)}
-function setSituationField(id,i,level,key,value){if(key==='path'&&value!==''&&level===1)venomNarrateEvent(id,i,level,'escolha'+(Number(value)+1));if(key==='player'&&['David','Davi','Bel','Guilherme'].includes(value))venomCustomFx(value==='Davi'?'David':value);const st=getSituation(id,i);st.levels[level] ||= {};st.levels[level][key]=value;if(level===1&&key==='player'&&st.levels[2])st.levels[2].player=value;if(['path','player','hasWound','hasSymbiote'].includes(key)){delete st.levels[level].result;delete st.levels[level].die;delete st.levels[level].power;delete st.levels[level].thematic;if(level===1){delete st.levels[2];delete st.legacy}}persist();const el=document.getElementById('ecosResponsibilities');if(el)el.innerHTML=renderEcosResponsibilities(id)}
+function selectSituation(i){venomCloseTriggerComic();selectedSituation=i;venomTriggerExpanded=true;const el=document.getElementById('ecosResponsibilities');if(el)el.innerHTML=renderEcosResponsibilities(currentChapter);const st=getSituation(currentChapter,i);const player=st.levels?.[1]?.player||venomResponsible(currentChapter,i);showVenomPlayerPopup(player,i)}
+function venomCloseTriggerComic(){
+ document.getElementById('venomTriggerComic')?.remove();
+ document.body.classList.remove('venom-trigger-modal-open');
+}
+function venomOpenTriggerComic(id,i){
+ venomCloseTriggerComic();
+ const detail=document.querySelector('#ecosResponsibilities .situation-detail');
+ if(!detail)return;
+ const def=venomSituation(id,i),level=getSituation(id,i).levels?.[1]?.result?2:1;
+ const overlay=document.createElement('div');overlay.id='venomTriggerComic';overlay.className='venom-trigger-comic-overlay';
+ overlay.setAttribute('role','presentation');
+ const panel=document.createElement('section');panel.className='venom-trigger-comic-panel';panel.setAttribute('role','dialog');panel.setAttribute('aria-modal','true');panel.setAttribute('aria-label','Situação '+(i+1)+': '+def.title);
+ const header=document.createElement('header');header.className='venom-trigger-comic-head';
+ header.innerHTML='<div class="venom-trigger-comic-kicker">MARVEL LEGENDARY · MISSÃO '+id+' · SITUAÇÃO '+(i+1)+'</div><h2>'+escapeHtml(def.title)+'</h2><span class="venom-trigger-comic-chapter">CAPÍTULO '+level+' · '+(level===1?'A DECISÃO':'AS CONSEQUÊNCIAS')+'</span>';
+ const close=document.createElement('button');close.type='button';close.className='venom-trigger-comic-close';close.textContent='✕ FECHAR';close.onclick=venomCloseTriggerComic;header.append(close);
+ const body=document.createElement('div');body.className='venom-trigger-comic-body';body.append(detail);
+ panel.append(header,body);overlay.append(panel);document.body.append(overlay);
+ overlay.addEventListener('click',e=>{if(e.target===overlay)venomCloseTriggerComic()});
+ document.body.classList.add('venom-trigger-modal-open');
+ close.focus();
+}
+function venomRefreshTriggerComic(id,i){
+ const modal=document.getElementById('venomTriggerComic');if(!modal)return;
+ const el=document.getElementById('ecosResponsibilities');
+ if(el)el.innerHTML=renderEcosResponsibilities(id);
+ const detail=el?.querySelector('.situation-detail'),body=modal.querySelector('.venom-trigger-comic-body');
+ if(detail&&body){body.replaceChildren(detail);const h=modal.querySelector('.venom-trigger-comic-chapter'),lvl=getSituation(id,i).levels?.[1]?.result?2:1;if(h)h.textContent='CAPÍTULO '+lvl+' · '+(lvl===1?'A DECISÃO':'AS CONSEQUÊNCIAS')}
+}
+function setSituationField(id,i,level,key,value){if(key==='path'&&value!==''&&level===1)venomNarrateEvent(id,i,level,'escolha'+(Number(value)+1));if(key==='player'&&['David','Davi','Bel','Guilherme'].includes(value))venomCustomFx(value==='Davi'?'David':value);const st=getSituation(id,i);st.levels[level] ||= {};st.levels[level][key]=value;if(level===1&&key==='player'&&st.levels[2])st.levels[2].player=value;if(['path','player','hasWound','hasSymbiote'].includes(key)){delete st.levels[level].result;delete st.levels[level].die;delete st.levels[level].power;delete st.levels[level].thematic;if(level===1){delete st.levels[2];delete st.legacy}}persist();const el=document.getElementById('ecosResponsibilities');if(el)el.innerHTML=renderEcosResponsibilities(id);venomRefreshTriggerComic(id,i)}
 // Condições opcionais e verificáveis em mesa; textos narrativos e áudios intactos.
 const VENOM_THEMATIC_MODIFIERS={"1":[[["Amostra rastreada","Há Black Widow ou Nick Fury na mão do responsável, jogado neste turno ou disponível no QG (+2)",2],["Material contaminado","Há pelo menos 1 Wound na mão de qualquer jogador (−1)",-1]],[["Rede de proteção","Há Spider-Man na mão do responsável, jogado neste turno ou disponível no QG (+2)",2],["Civis expostos","Há pelo menos 1 vilão na Cidade (−1)",-1]],[["Canal seguro","Há Iron Man ou Nick Fury na mão do responsável, jogado neste turno ou disponível no QG (+2)",2],["Sinal interrompido","Há pelo menos 2 vilões na Cidade (−1)",-1]]],"2":[[["Rastro do simbionte","Há Venom na mão do responsável, jogado neste turno ou disponível no QG (+2)",2],["Arquivo comprometido","Já ocorreu pelo menos 1 Scheme Twist nesta missão (−1)",-1]],[["Extração coordenada","Há Black Widow ou Venompool na mão do responsável, jogado neste turno ou disponível no QG (+2)",2],["Reféns expostos","Há pelo menos 1 vilão na Cidade (−1)",-1]],[["Invasão de Stark","Há Iron Man na mão do responsável, jogado neste turno ou disponível no QG (+2)",2],["Segurança reforçada","Há pelo menos 2 vilões na Cidade (−1)",-1]]],"3":[[["Voz do hospedeiro","Há Venom na mão do responsável, jogado neste turno ou disponível no QG (+2)",2],["Identidade instável","Há pelo menos 1 Wound na mão de qualquer jogador (−1)",-1]],[["Leitura psíquica","Há Emma Frost na mão do responsável, jogada neste turno ou disponível no QG (+2)",2],["Memória fragmentada","Já ocorreu pelo menos 1 Scheme Twist nesta missão (−1)",-1]],[["Absorção controlada","Há Rogue na mão do responsável, jogada neste turno ou disponível no QG (+2)",2],["Fusão acelerada","Há pelo menos 2 vilões na Cidade (−1)",-1]]],"4":[[["Visão extradimensional","Há Venomized Dr. Strange na mão do responsável, jogado neste turno ou disponível no QG (+2)",2],["Infiltração ativa","Há pelo menos 1 vilão na Cidade (−1)",-1]],[["Rastreamento espacial","Há Venom Rocket na mão do responsável, jogado neste turno ou disponível no QG (+2)",2],["Civis sob suspeita","Há pelo menos 2 vilões na Cidade (−1)",-1]],[["Protocolo de confiança","Há Black Widow ou Cyclops na mão do responsável, jogado neste turno ou disponível no QG (+2)",2],["Ordem falsa","Já ocorreu pelo menos 1 Scheme Twist nesta missão (−1)",-1]]],"5":[[["Vínculo preservado","Há Venom ou Carnage na mão do responsável, jogado neste turno ou disponível no QG (+2)",2],["Fome crescente","Há pelo menos 1 Wound na mão de qualquer jogador (−1)",-1]],[["Portal identificado","Há Venomized Dr. Strange ou Venom Rocket na mão do responsável, jogado neste turno ou disponível no QG (+2)",2],["Linha rompida","Há pelo menos 1 vilão na Cidade (−1)",-1]],[["Última resistência","Há Venompool na mão do responsável, jogado neste turno ou disponível no QG (+2)",2],["Hospedeiros cercados","Há pelo menos 2 vilões na Cidade (−1)",-1]]]};
 function venomThematicOptions(id,i,level){if(level===2){const st=getSituation(id,i),x=st.levels?.[2]||{};return x.path===undefined||x.path===''?[]:venomN2Modifiers(id,i,st.levels?.[1]?.path,x.path)}return VENOM_THEMATIC_MODIFIERS[id]?.[i]||[]}
@@ -868,7 +917,6 @@ function finishSituationTest(id,i,level){
  const st=getSituation(id,i),x=st.levels[level]||{},prior=st.levels[1]||{};
  const player=level===2?prior.player:venomResponsible(id,i);
  if(level===1&&!x.result)x.player=player;
- if(level===2&&prior.path!==undefined)x.path=prior.path;
  if(!player||x.path===undefined||x.path==='')return alert('Selecione um dos três caminhos.');
  if(level===2&&!prior.result)return alert('Conclua o Nível 1 primeiro.');
  const rawPower=document.getElementById(`situationPower-${i}-${level}`)?.value;
@@ -886,7 +934,7 @@ function finishSituationTest(id,i,level){
  if(x.result==='failure'&&!x.threatApplied){x.threatApplied=true;const e=ensureEcos();e.threat=(e.threat||0)+1;while(e.threat>=3){e.threat-=3;alert('ESCALADA DA AMEAÇA: revele e resolva uma carta adicional do Villain Deck.')}}
  if(level===2)st.legacy={path:prior.path,result:x.result,previous:prior.result,n2Path:x.path};
  if(level===1)venomTriggerExpanded=false;
- persist();const el=document.getElementById('ecosResponsibilities');if(el)el.innerHTML=renderEcosResponsibilities(id);
+ persist();const el=document.getElementById('ecosResponsibilities');if(el)el.innerHTML=renderEcosResponsibilities(id);venomRefreshTriggerComic(id,i);
  const fx=x.result==='success'&&level===2?'n2':x.result==='failure'&&venomIsSpiderSituation(id,i)?'spiderFail':null;
  venomShowResultBalloon(id,i,level,x.path,x.result);
  const audioPath=level===2?prior.path:x.path;
@@ -912,7 +960,7 @@ function showVenomPlayerPopup(name,triggerIndex){
  let modal=document.getElementById('venomPlayerModal');
  if(!modal){modal=document.createElement('div');modal.id='venomPlayerModal';modal.className='venom-modal-backdrop';modal.addEventListener('click',e=>{if(e.target===modal)modal.remove()});document.body.appendChild(modal)}
  const context=Number.isInteger(triggerIndex)?`<p>Responsável pela Situação ${triggerIndex+1} · ${getSituation(currentChapter,triggerIndex).levels?.[1]?.result?'Nível 2':'Nível 1'}</p>`:'<p>Integrante da equipe</p>';
- modal.innerHTML=`<div class="venom-modal-card" role="dialog" aria-modal="true" aria-label="${name} — herói da campanha"><button type="button" class="venom-modal-close" onclick="document.getElementById('venomPlayerModal')?.remove()">✕</button><img src="${img}" alt="${name} como herói"><div class="venom-modal-label"><strong>${name}</strong>${context}<button class="btn small" onclick="document.getElementById('venomPlayerModal')?.remove();if(Number.isInteger(${triggerIndex})){const level=getSituation(currentChapter,${triggerIndex}).levels?.[1]?.result?2:1;venomNarrateEvent(currentChapter,${triggerIndex},level,'gatilho')}">Continuar e narrar gatilho</button></div></div>`;
+ modal.innerHTML=`<div class="venom-modal-card" role="dialog" aria-modal="true" aria-label="${name} — herói da campanha"><button type="button" class="venom-modal-close" onclick="document.getElementById('venomPlayerModal')?.remove()">✕</button><img src="${img}" alt="${name} como herói"><div class="venom-modal-label"><strong>${name}</strong>${context}<button class="btn small" onclick="document.getElementById('venomPlayerModal')?.remove();if(Number.isInteger(${triggerIndex})){const level=getSituation(currentChapter,${triggerIndex}).levels?.[1]?.result?2:1;venomNarrateEvent(currentChapter,${triggerIndex},level,'gatilho');venomOpenTriggerComic(currentChapter,${triggerIndex})}">Continuar e narrar gatilho</button></div></div>`;
 }
 function setVenomActivePlayer(v){venomActivePlayer=v;const el=document.getElementById('ecosResponsibilities');if(el)el.innerHTML=renderEcosResponsibilities(currentChapter)}
 function renderSituationLevel(id,i,level){const def=venomSituation(id,i),st=getSituation(id,i),x=st.levels[level]||{},prior=st.levels[1]||{},locked=level===2&&!prior.result,player=level===2?prior.player||'':(x.result?x.player:venomResponsible(id,i));
