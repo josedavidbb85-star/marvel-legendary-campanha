@@ -121,6 +121,14 @@ main.shell.layout{padding:5px 8px 78px!important}
 
 /* Trilha e efeitos v27 */
 .venom-soundbar{position:fixed;bottom:12px;right:12px;z-index:7000;background:#0a1b1b;border:1px solid #69876b;border-radius:12px;padding:10px 12px;box-shadow:0 10px 40px #0009;display:flex;flex-wrap:wrap;align-items:center;gap:7px;max-width:min(96vw,590px);font-size:12px;color:#e9f3e9}.venom-soundbar select,.venom-soundbar button{background:#18322d;color:#e9f3e9;border:1px solid #54725f;border-radius:6px;padding:7px;font:inherit}.venom-soundbar input[type=range]{width:70px}.venom-soundbar .venom-audio-status{width:100%;font-size:11px;color:#b5d4b6}.venom-soundbar button:focus-visible{outline:2px solid #b6ee83}@media(max-width:650px){.venom-soundbar{bottom:5px;right:5px;left:5px;max-width:none;padding:7px;gap:5px}}
+</style><style id="venom-audio-collapsible">
+.venom-audio-shell{position:fixed;right:12px;bottom:12px;z-index:7100;display:flex;align-items:flex-end;flex-direction:column;gap:8px;max-width:calc(100vw - 20px)}
+.venom-audio-trigger{width:52px;height:52px;border-radius:50%;border:2px solid #8bad83;background:#0a1b1b;color:#d8f4c7;box-shadow:0 5px 18px #000b;font-size:27px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.venom-audio-trigger:focus-visible{outline:3px solid #b6ee83;outline-offset:3px}
+.venom-audio-shell .venom-soundbar{position:static;display:none;max-width:min(590px,calc(100vw - 20px));max-height:min(65vh,490px);overflow-y:auto;box-sizing:border-box}
+.venom-audio-shell.is-open .venom-soundbar{display:flex}
+@media(hover:hover) and (pointer:fine){.venom-audio-shell:hover .venom-soundbar,.venom-audio-shell:focus-within .venom-soundbar{display:flex}}
+@media(max-width:650px){.venom-audio-shell{right:10px;bottom:10px}.venom-audio-shell .venom-soundbar{width:min(390px,calc(100vw - 20px));padding:10px;gap:8px}}
 </style><style id="venom-during-layout-fix">
 /* Give live story triggers the usable viewport; keep the navigation stable. */
 #view-detalhe:has([data-panel="jogo"].active) #chapterDetail>.lead,
@@ -386,7 +394,7 @@ body.mode-notebook #chapterDetail .form-grid{grid-template-columns:repeat(2,minm
 <div class="card" id="venomOfficialRules"><h3>Regras oficiais da expansão Venom · consulta por assunto</h3><p>Consulte cada tópico individualmente. Abaixo há uma explicação detalhada em português, organizada a partir do encarte oficial da expansão, sem confundir essas regras com as adaptações Full Coop/Ecos acima. Para conferir o texto integral original, abra o <a href="https://gamers-hq.de/media/pdf/7e/1c/75/Legendary_Rules_-_Venom.pdf" target="_blank" rel="noopener noreferrer">manual oficial Venom (PDF em inglês)</a>.</p><label for="venomRuleSelect"><strong>Selecione a parte das regras:</strong></label><select id="venomRuleSelect" style="width:100%;margin:12px 0;padding:12px;background:#1b272b;color:#e9efe9;border:1px solid #788c58;border-radius:8px" onchange="venomShowOfficialRule(this.value)"><option value="">Escolha um assunto…</option><option value="contexto">Venomverse — contexto da expansão</option><option value="bonds">Symbiote Bonds — combinar vilões</option><option value="bondsFight">Symbiote Bonds — combate, fuga e exceções</option><option value="poisons">Poison Villains — conversão em Heróis</option><option value="digest">Digest</option><option value="indigestion">Indigestion</option><option value="violence">Excessive Violence</option><option value="contents">Conteúdo da expansão</option><option value="sources">Manual oficial e distinção das regras caseiras</option></select><div id="venomOfficialRuleText" class="choice-explain" aria-live="polite">Selecione um tópico para consultar as regras e exemplos.</div></div>
 <div class="card"><h3>Conexões entre campanhas</h3><p>Ruptura e Ecos podem aparecer em referências discretas e ocultas, sem importar cartas, habilidades ou revelar acontecimentos futuros.</p></div></section></main>
 <footer class="footer"><div class="shell"><span>MARVEL LEGENDARY • VENOM — A FOME QUE NOS CONSOME</span><span>Protótipo offline v5.0 • Preparado para futura publicação no GitHub Pages</span></div></footer>
-<div class="venom-soundbar" id="venomSoundbar" aria-label="Trilha sonora e efeitos"><strong>♫ Áudio</strong><select id="venomMusicSelect" aria-label="Trilha musical"><option value="0">Abertura</option><option value="1">Thor</option><option value="2">Iron Man</option><option value="3">Confronto</option><option value="4">Suspense</option></select><button type="button" id="venomMusicToggle" onclick="venomToggleMusic()">▶ Música</button><button type="button" onclick="venomStopMusic()">■</button><label>Volume <input type="range" id="venomMusicVolume" min="0" max="100" value="24" oninput="venomSetMusicVolume(this.value)"></label><label>Efeitos <input type="range" id="venomFxVolume" min="0" max="100" value="95" oninput="venomSetFxVolume(this.value)"></label><label><input type="checkbox" id="venomFxEnabled" checked onchange="venomSetFx(this.checked)"> Efeitos</label><button type="button" onclick="venomPlayFx('test')">▶ Testar</button><span class="venom-audio-status" id="venomAudioStatus">Clique em ▶ Música para iniciar. A trilha continua ao trocar de aba.</span></div>
+<div class="venom-audio-shell" id="venomAudioShell"><button class="venom-audio-trigger" id="venomAudioTrigger" type="button" aria-label="Abrir controles de áudio" aria-expanded="false" aria-controls="venomSoundbar" onclick="venomToggleAudioPanel()" title="Controles de áudio">♫</button><div class="venom-soundbar" id="venomSoundbar" aria-label="Trilha sonora e efeitos"><strong>♫ Áudio</strong><select id="venomMusicSelect" aria-label="Trilha musical"><option value="0">Abertura</option><option value="1">Thor</option><option value="2">Iron Man</option><option value="3">Confronto</option><option value="4">Suspense</option></select><button type="button" id="venomMusicToggle" onclick="venomToggleMusic()">▶ Música</button><button type="button" onclick="venomStopMusic()">■</button><label>Volume <input type="range" id="venomMusicVolume" min="0" max="100" value="24" oninput="venomSetMusicVolume(this.value)"></label><label>Efeitos <input type="range" id="venomFxVolume" min="0" max="100" value="95" oninput="venomSetFxVolume(this.value)"></label><label><input type="checkbox" id="venomFxEnabled" checked onchange="venomSetFx(this.checked)"> Efeitos</label><button type="button" onclick="venomPlayFx('test')">▶ Testar</button><span class="venom-audio-status" id="venomAudioStatus">Clique em ▶ Música para iniciar. A trilha continua ao trocar de aba.</span></div></div>
 <script>
 
 // Os arquivos de áudio permanecem externos para evitar um HTML de dezenas de MB.
@@ -397,6 +405,19 @@ const venomFxAudio=new Audio();venomFxAudio.preload='none';
 let venomSound={music:0,volume:24,fxVolume:95,fx:true,playing:false};
 try{const v=JSON.parse(localStorage.getItem('venom-audio-v27')||'{}');venomSound={...venomSound,...v,playing:false}}catch(e){}
 function venomAudioStore(){try{localStorage.setItem('venom-audio-v27',JSON.stringify({...venomSound,playing:false}))}catch(e){}}
+function venomToggleAudioPanel(force){
+ const shell=document.getElementById('venomAudioShell'),button=document.getElementById('venomAudioTrigger');
+ if(!shell||!button)return;
+ const open=typeof force==='boolean'?force:!shell.classList.contains('is-open');
+ shell.classList.toggle('is-open',open);
+ button.setAttribute('aria-expanded',String(open));
+ button.setAttribute('aria-label',open?'Ocultar controles de áudio':'Abrir controles de áudio');
+}
+document.addEventListener('pointerdown',e=>{
+ const shell=document.getElementById('venomAudioShell');
+ if(shell?.classList.contains('is-open')&&!shell.contains(e.target))venomToggleAudioPanel(false);
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')venomToggleAudioPanel(false)});
 function venomAudioStatus(t){const e=document.getElementById('venomAudioStatus');if(e)e.textContent=t}
 const VENOM_REMOTE_MUSIC=["01 - Every Hero Has to Start Somewhere.mp3", "03 - God of Thunder.mp3", "06 - I Am Iron Man.mp3", "12 - Hulk Smash.mp3", "15 - By Force of Mind.mp3"];
 const VENOM_REMOTE_FX=["dragon-studio-attack-theme-382730.mp3", "gsmsea-cloverfield-roar-attack-428084.mp3", "yodguard-spider-attack-6-482535.mp3", "yodguard-spider-attack-4-482536.mp3", "freesound_community-space-attack-45505.mp3", "freesound_gamestudio-attack-fire-384913.mp3", "yodguard-powerful-bear-attack-with-roar-7-482525.mp3", "freesound_community-bass-clarinet-attack-4-41962.mp3"];
