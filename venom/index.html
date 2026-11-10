@@ -751,7 +751,7 @@ function cinemaOpen(kind){
 function cinemaRender(){
  const v=cinemaState,el=document.getElementById('cinemaOverlay');if(!v||!el)return;const scene=v.scenes[v.index];
  el.querySelector('.cinema-count').textContent='QUADRO '+(v.index+1)+' / '+v.scenes.length;el.querySelector('h2').textContent=scene.title;
- const box=el.querySelector('.cinema-paragraphs');box.replaceChildren();const parts=Array.isArray(scene.body)?scene.body:[scene.body];for(const t of parts){const p=document.createElement('p');p.textContent=String(t);box.append(p)}
+ const box=el.querySelector('.cinema-paragraphs');box.replaceChildren();const parts=Array.isArray(scene.body)?scene.body:String(scene.body||'').split(/\n\s*\n/);for(const t of parts){const p=document.createElement('p');p.textContent=String(t);box.append(p)}
  const url=venomCardImage(scene.art);el.querySelector('.cinema-character').style.backgroundImage=url?'url("'+url+'")':'none';
  el.querySelector('.cinema-reading').scrollTop=0;const btn=el.querySelectorAll('footer button');btn[0].disabled=v.index===0;btn[2].disabled=v.index===v.scenes.length-1;
 }
