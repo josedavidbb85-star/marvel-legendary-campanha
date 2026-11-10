@@ -2,7 +2,7 @@
 (function(){
 'use strict';
 const style=document.createElement('style');style.textContent=`
-.cinema-launch{display:none!important}#venomNarration #vnOpening,#venomNarration #vnCast{display:none!important}
+.cinema-launch{display:none!important}#venomNarration{display:none!important}#venomNarration #vnOpening,#venomNarration #vnCast{display:none!important}
 #vc-launch{display:block;margin:12px 0;padding:12px 18px;background:linear-gradient(115deg,#a9e96a,#6eae81);color:#09160d;border:0;border-radius:10px;font-weight:900;font-size:15px;cursor:pointer}
 #vc-overlay{position:fixed;inset:0;z-index:200000;background:#030806;color:#fff;display:flex;flex-direction:column;overflow:hidden}
 #vc-stage{position:relative;flex:1;min-height:0;overflow:hidden;background:radial-gradient(ellipse at 55% 45%,#1d4636,#030806 75%);background-position:center;background-size:cover}
@@ -30,7 +30,11 @@ function build(){
 
 
  const base='audios/Missao_'+String(mission).padStart(2,'0')+'/M'+String(mission).padStart(2,'0');
- if(chapter)add('PRÓLOGO DA MISSÃO '+mission+' — '+chapter.title,chapter.story,'ABERTURA DA MISSÃO','Venom',base+'_01_abertura.mp3');
+ // Reproduce the full literary prologue from the mission dossier, not the short synopsis.
+ const narrative=typeof CAMPAIGN_COMPLETE!=='undefined'?CAMPAIGN_COMPLETE[mission]:null;
+ const opening=Array.isArray(narrative?.opening)?narrative.opening:[];
+ if(opening.length){opening.forEach((paragraph,i)=>add(i===0?'PRÓLOGO DA MISSÃO '+mission+' — '+(narrative.subtitle||chapter?.title||''):'',paragraph,'PRÓLOGO DA MISSÃO · '+(i+1)+'/'+opening.length,'Venom',base+'_01_abertura.mp3'))}
+ else if(chapter)add('PRÓLOGO DA MISSÃO '+mission+' — '+chapter.title,chapter.story,'ABERTURA DA MISSÃO','Venom',base+'_01_abertura.mp3');
  const cast=typeof CAMPAIGN_COMPLETE!=='undefined'?CAMPAIGN_COMPLETE[mission]?.cast:null;
  if(cast)Object.entries(cast).forEach(([name,description])=>add(name,description,'APRESENTAÇÃO DOS PERSONAGENS',name,base+'_02_elenco.mp3'));
  else if(chapter)[...(chapter.heroes||[]),chapter.mastermind,...(chapter.villains||[])].filter(Boolean).forEach(name=>add(name,'','PERSONAGEM',name,base+'_02_elenco.mp3'));
@@ -47,6 +51,6 @@ audio.addEventListener('error',()=>{if(overlay)setStatus('MP3 indisponível. A n
 function jump(i){if(!overlay)return;i=Math.max(0,Math.min(i,scenes.length-1));const g=sections().findIndex(x=>i>=x.start&&i<x.end);if(g!==group){playGroup(g)}const range=sections()[g],total=scenes.slice(range.start,range.end).reduce((a,s)=>a+s.weight,0),before=scenes.slice(range.start,i).reduce((a,s)=>a+s.weight,0);if(Number.isFinite(audio.duration)&&audio.duration>0)audio.currentTime=audio.duration*before/total;draw(i)}
 function close(){cancelAnimationFrame(raf);clearTimeout(changeTimer);audio.pause();audio.removeAttribute('src');audio.load();overlay?.remove();overlay=null}
 function open(){close();if(typeof vnPlayer!=='undefined')vnPlayer.pause();if(typeof venomPrologueAudio!=='undefined')venomPrologueAudio.pause();build();if(!scenes.length)return;overlay=document.createElement('div');overlay.id='vc-overlay';overlay.setAttribute('role','dialog');overlay.setAttribute('aria-modal','true');overlay.setAttribute('aria-label','Abertura cinematográfica');overlay.innerHTML='<div id="vc-stage"><div id="vc-slide"></div></div><div id="vc-controls"><button id="vc-prev">◀ Cena</button><button id="vc-toggle">Ⅱ Pausar</button><button id="vc-next">Cena ▶</button><input id="vc-progress" aria-label="Progresso" type="range" min="0" max="100" value="0"><span id="vc-clock"></span><button id="vc-close">✕ Fechar</button><span id="vc-message"></span></div>';document.body.appendChild(overlay);overlay.querySelector('#vc-prev').onclick=()=>jump(scene-1);overlay.querySelector('#vc-next').onclick=()=>jump(scene+1);overlay.querySelector('#vc-close').onclick=close;overlay.querySelector('#vc-toggle').onclick=()=>{if(audio.paused)audio.play().catch(()=>{});else audio.pause()};overlay.querySelector('#vc-progress').onchange=e=>jump(Math.floor(Number(e.target.value)/100*scenes.length));overlay.addEventListener('keydown',e=>{if(e.key==='Escape')close();if(e.key==='ArrowRight')jump(scene+1);if(e.key==='ArrowLeft')jump(scene-1)});audio.onplay=()=>{if(overlay)overlay.querySelector('#vc-toggle').textContent='Ⅱ Pausar'};audio.onpause=()=>{if(overlay)overlay.querySelector('#vc-toggle').textContent='▶ Continuar'};playGroup(0);tick()}
-function mount(){document.querySelectorAll('.cinema-launch').forEach(e=>e.style.display='none');const prep=document.querySelector('#chapterDetail .mission-panel[data-panel="preparo"]');if(!prep||prep.querySelector('#vc-launch'))return;document.querySelectorAll('#vc-launch').forEach(e=>e.remove());const btn=document.createElement('button');btn.id='vc-launch';btn.type='button';btn.textContent='🎬 PRÓLOGO CINEMATOGRÁFICO DA MISSÃO · MP3 ORIGINAL';btn.onclick=open;prep.insertBefore(btn,prep.firstChild)}
+function mount(){document.querySelectorAll('#venomNarration').forEach(e=>e.remove());document.querySelectorAll('.cinema-launch').forEach(e=>e.style.display='none');const prep=document.querySelector('#chapterDetail .mission-panel[data-panel="preparo"]');if(!prep||prep.querySelector('#vc-launch'))return;document.querySelectorAll('#vc-launch').forEach(e=>e.remove());const btn=document.createElement('button');btn.id='vc-launch';btn.type='button';btn.textContent='🎬 PRÓLOGO CINEMATOGRÁFICO DA MISSÃO · MP3 ORIGINAL';btn.onclick=open;prep.insertBefore(btn,prep.firstChild)}
 let scheduled=false;new MutationObserver(()=>{if(scheduled)return;scheduled=true;setTimeout(()=>{scheduled=false;mount()},100)}).observe(document.body,{subtree:true,childList:true});if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount);else mount();
 })();
