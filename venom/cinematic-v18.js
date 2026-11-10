@@ -57,8 +57,9 @@ function open(){close();if(typeof vnPlayer!=='undefined'&&!vnPlayer.paused)vnPla
 }
 function mount(){
  document.querySelectorAll('.cinema-launch').forEach(e=>e.style.display='none');
- document.querySelectorAll('#vc-launch').forEach(e=>e.remove());
  const prep=document.querySelector('#chapterDetail .mission-panel[data-panel="preparo"]');if(!prep)return;
+ if(prep.querySelector('#vc-launch'))return;
+ document.querySelectorAll('#vc-launch').forEach(e=>e.remove());
  const b=document.createElement('button');b.id='vc-launch';b.type='button';b.textContent='🎬 ABERTURA CINEMATOGRÁFICA — PRÓLOGO E PERSONAGENS';b.onclick=open;prep.insertBefore(b,prep.firstChild);
 }
 let scheduled=false;new MutationObserver(()=>{if(scheduled)return;scheduled=true;setTimeout(()=>{scheduled=false;mount()},100)}).observe(document.body,{childList:true,subtree:true});
