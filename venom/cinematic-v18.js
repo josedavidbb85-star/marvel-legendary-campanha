@@ -26,7 +26,7 @@ let overlay=null,slides=[],idx=0,raf=0,playing=false,source=null,lastIndex=-1,st
 const player=()=>typeof vnPlayer!=='undefined'?vnPlayer:null;
 function txt(node){return (node?.textContent||'').replace(/\s+/g,' ').trim()}
 function makeSlides(){
- const detail=document.getElementById('chapterDetail'),mission=Number(window.currentChapter||window.currentChapterId||1);
+ const detail=document.getElementById('chapterDetail'),mission=Number((typeof currentChapter!=='undefined'&&currentChapter)||window.currentChapter||window.currentChapterId||1);
  const heading=txt(detail?.querySelector('h2'))||'A FOME QUE NOS CONSOME';
  const lead=txt(detail?.querySelector('.lead'));
  const story=Array.from(detail?.querySelectorAll('[data-panel="historia"] p,[data-panel="narrativa"] p,.storypart p,.mission-panel p')||[]).map(txt).filter(x=>x.length>80).slice(0,9);
@@ -42,7 +42,7 @@ function duration(){const p=player();return p&&Number.isFinite(p.duration)&&p.du
 function update(){if(!overlay)return;const p=player(),d=duration(),t=p&&Number.isFinite(p.currentTime)?p.currentTime:0;const fraction=Math.min(1,t/d);const n=Math.min(slides.length-1,Math.floor(fraction*slides.length));if(n!==idx)draw(n);overlay.querySelector('#vc-progress').value=fraction*100;overlay.querySelector('#vc-clock').textContent=Math.floor(t)+'s / '+Math.floor(d)+'s';raf=requestAnimationFrame(update)}
 function close(){cancelAnimationFrame(raf);if(source&&player()&&!player().paused)player().pause();overlay?.remove();overlay=null;playing=false;source=null}
 function start(){if(starting)return;starting=true;setTimeout(()=>starting=false,500);close();slides=makeSlides();idx=0;lastIndex=-1;overlay=document.createElement('div');overlay.id='vc-overlay';overlay.setAttribute('role','dialog');overlay.setAttribute('aria-label','Abertura cinematográfica');overlay.innerHTML='<div id="vc-stage"><div id="vc-slide"></div></div><div id="vc-controls"><button id="vc-prev" type="button">◀ Cena</button><button id="vc-toggle" type="button">Ⅱ Pausar</button><button id="vc-next" type="button">Cena ▶</button><input id="vc-progress" aria-label="Progresso da narração" type="range" min="0" max="100" value="0"><span id="vc-clock">0s</span><button id="vc-close" type="button">✕ Fechar</button></div>';document.body.appendChild(overlay);draw(0);
- const p=player(),mission=Number(window.currentChapter||window.currentChapterId||1);
+ const p=player(),mission=Number((typeof currentChapter!=='undefined'&&currentChapter)||window.currentChapter||window.currentChapterId||1);
  const id='M'+String(mission).padStart(2,'0')+'_01_abertura';
  source=id;
  if(typeof vnPlay==='function')vnPlay(id,mission);
