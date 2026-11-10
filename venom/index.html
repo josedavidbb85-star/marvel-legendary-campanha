@@ -719,7 +719,7 @@ const VENOM_STORY_ROLES={"1": {"Spider-Man": "Rastreia os primeiros relatos de h
 const VENOM_CARD_GALLERY={core:'https://www.legendarycardgame.com/core-set-original',venom:'https://www.legendarycardgame.com/venom'};
 function venomCardImage(name){let clean=name.replace(/ \(.*?\)/g,'');return VENOM_CARD_IMAGES[clean]||''}
 function venomPreparationCard(name,kind){
- const url=venomCardImage(name),clean=name.replace(/ \\(.*?\\)/g,'');
+ const url=venomCardImage(name),clean=name.replace(/ \(.*?\)/g,'');
  return '<article class="venom-prep-card"><div class="venom-prep-art">'+(url?'<img loading="lazy" src="'+escapeHtml(url)+'" alt="Carta '+escapeHtml(clean)+'" onerror="this.hidden=true;this.nextElementSibling.hidden=false">':'')+'<div class="venom-prep-missing" '+(url?'hidden':'')+'>MARVEL LEGENDARY<br><strong>'+escapeHtml(clean)+'</strong><br>Imagem não disponível</div></div><div class="venom-prep-card-label"><small>'+escapeHtml(kind)+'</small><strong>'+escapeHtml(name)+'</strong></div></article>';
 }
 function venomOpenPreparation(id){
