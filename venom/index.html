@@ -386,7 +386,7 @@ body.mode-notebook #chapterDetail .form-grid{grid-template-columns:repeat(2,minm
 <div class="card" id="venomOfficialRules"><h3>Regras oficiais da expansão Venom · consulta por assunto</h3><p>Consulte cada tópico individualmente. Abaixo há uma explicação detalhada em português, organizada a partir do encarte oficial da expansão, sem confundir essas regras com as adaptações Full Coop/Ecos acima. Para conferir o texto integral original, abra o <a href="https://gamers-hq.de/media/pdf/7e/1c/75/Legendary_Rules_-_Venom.pdf" target="_blank" rel="noopener noreferrer">manual oficial Venom (PDF em inglês)</a>.</p><label for="venomRuleSelect"><strong>Selecione a parte das regras:</strong></label><select id="venomRuleSelect" style="width:100%;margin:12px 0;padding:12px;background:#1b272b;color:#e9efe9;border:1px solid #788c58;border-radius:8px" onchange="venomShowOfficialRule(this.value)"><option value="">Escolha um assunto…</option><option value="contexto">Venomverse — contexto da expansão</option><option value="bonds">Symbiote Bonds — combinar vilões</option><option value="bondsFight">Symbiote Bonds — combate, fuga e exceções</option><option value="poisons">Poison Villains — conversão em Heróis</option><option value="digest">Digest</option><option value="indigestion">Indigestion</option><option value="violence">Excessive Violence</option><option value="contents">Conteúdo da expansão</option><option value="sources">Manual oficial e distinção das regras caseiras</option></select><div id="venomOfficialRuleText" class="choice-explain" aria-live="polite">Selecione um tópico para consultar as regras e exemplos.</div></div>
 <div class="card"><h3>Conexões entre campanhas</h3><p>Ruptura e Ecos podem aparecer em referências discretas e ocultas, sem importar cartas, habilidades ou revelar acontecimentos futuros.</p></div></section></main>
 <footer class="footer"><div class="shell"><span>MARVEL LEGENDARY • VENOM — A FOME QUE NOS CONSOME</span><span>Protótipo offline v5.0 • Preparado para futura publicação no GitHub Pages</span></div></footer>
-<div class="venom-soundbar" id="venomSoundbar" aria-label="Trilha sonora e efeitos"><strong>♫ Áudio</strong><select id="venomMusicSelect" aria-label="Trilha musical"><option value="0">Abertura</option><option value="1">Thor</option><option value="2">Iron Man</option><option value="3">Confronto</option><option value="4">Suspense</option></select><button type="button" id="venomMusicToggle" onclick="venomToggleMusic()">▶ Música</button><button type="button" onclick="venomStopMusic()">■</button><label>Volume <input type="range" id="venomMusicVolume" min="0" max="100" value="24" oninput="venomSetMusicVolume(this.value)"></label><label><input type="checkbox" id="venomFxEnabled" checked onchange="venomSetFx(this.checked)"> Efeitos</label><button type="button" onclick="venomPlayFx('test')">▶ Testar</button><span class="venom-audio-status" id="venomAudioStatus">Clique em ▶ Música para iniciar. A trilha continua ao trocar de aba.</span></div>
+<div class="venom-soundbar" id="venomSoundbar" aria-label="Trilha sonora e efeitos"><strong>♫ Áudio</strong><select id="venomMusicSelect" aria-label="Trilha musical"><option value="0">Abertura</option><option value="1">Thor</option><option value="2">Iron Man</option><option value="3">Confronto</option><option value="4">Suspense</option></select><button type="button" id="venomMusicToggle" onclick="venomToggleMusic()">▶ Música</button><button type="button" onclick="venomStopMusic()">■</button><label>Volume <input type="range" id="venomMusicVolume" min="0" max="100" value="24" oninput="venomSetMusicVolume(this.value)"></label><label>Efeitos <input type="range" id="venomFxVolume" min="0" max="100" value="95" oninput="venomSetFxVolume(this.value)"></label><label><input type="checkbox" id="venomFxEnabled" checked onchange="venomSetFx(this.checked)"> Efeitos</label><button type="button" onclick="venomPlayFx('test')">▶ Testar</button><span class="venom-audio-status" id="venomAudioStatus">Clique em ▶ Música para iniciar. A trilha continua ao trocar de aba.</span></div>
 <script>
 
 // Os arquivos de áudio permanecem externos para evitar um HTML de dezenas de MB.
@@ -394,18 +394,19 @@ const VENOM_AUDIO_MUSIC=['music_1.mp3','music_2.mp3','music_3.mp3','music_4.mp3'
 const VENOM_AUDIO_FX={test:1,hero:5,trigger:8,success:3,failure:2,threat:6,crisis:7,ending:4};
 const venomMusic=new Audio();venomMusic.loop=true;venomMusic.preload='none';
 const venomFxAudio=new Audio();venomFxAudio.preload='none';
-let venomSound={music:0,volume:24,fx:true,playing:false};
+let venomSound={music:0,volume:24,fxVolume:95,fx:true,playing:false};
 try{const v=JSON.parse(localStorage.getItem('venom-audio-v27')||'{}');venomSound={...venomSound,...v,playing:false}}catch(e){}
 function venomAudioStore(){try{localStorage.setItem('venom-audio-v27',JSON.stringify({...venomSound,playing:false}))}catch(e){}}
 function venomAudioStatus(t){const e=document.getElementById('venomAudioStatus');if(e)e.textContent=t}
 const VENOM_REMOTE_MUSIC=["01 - Every Hero Has to Start Somewhere.mp3", "03 - God of Thunder.mp3", "06 - I Am Iron Man.mp3", "12 - Hulk Smash.mp3", "15 - By Force of Mind.mp3"];
 const VENOM_REMOTE_FX=["dragon-studio-attack-theme-382730.mp3", "gsmsea-cloverfield-roar-attack-428084.mp3", "yodguard-spider-attack-6-482535.mp3", "yodguard-spider-attack-4-482536.mp3", "freesound_community-space-attack-45505.mp3", "freesound_gamestudio-attack-fire-384913.mp3", "yodguard-powerful-bear-attack-with-roar-7-482525.mp3", "freesound_community-bass-clarinet-attack-4-41962.mp3"];
 function venomAudioPath(file){const n=/^music_(\d+)\.mp3$/.exec(file), f=/^fx_(\d+)\.mp3$/.exec(file);if(n)return '../'+encodeURIComponent(VENOM_REMOTE_MUSIC[+n[1]-1]);if(f)return '../'+encodeURIComponent(VENOM_REMOTE_FX[+f[1]-1]);return 'audio/'+file}
-function venomSetMusicVolume(v){venomSound.volume=Number(v);venomMusic.volume=venomSound.volume/100;venomFxAudio.volume=Math.min(1,venomSound.volume/100*1.5);venomAudioStore()}
+function venomSetMusicVolume(v){venomSound.volume=Number(v);venomMusic.volume=venomSound.volume/100;venomAudioStore()}
+function venomSetFxVolume(v){venomSound.fxVolume=Number(v);venomFxAudio.volume=venomSound.fxVolume/100;venomAudioStore()}
 function venomSetFx(v){venomSound.fx=!!v;if(!v)venomFxAudio.pause();venomAudioStore()}
 function venomStopMusic(){venomMusic.pause();venomMusic.currentTime=0;venomSound.playing=false;document.getElementById('venomMusicToggle').textContent='▶ Música';venomAudioStatus('Trilha interrompida.');}
 async function venomToggleMusic(){if(!venomMusic.paused){venomMusic.pause();venomSound.playing=false;document.getElementById('venomMusicToggle').textContent='▶ Música';venomAudioStatus('Trilha pausada.');return}const i=Number(document.getElementById('venomMusicSelect').value);if(venomMusic.dataset.track!==String(i)){venomMusic.src=venomAudioPath(VENOM_AUDIO_MUSIC[i]);venomMusic.dataset.track=String(i)}venomMusic.volume=venomSound.volume/100;try{await venomMusic.play();venomSound.playing=true;document.getElementById('venomMusicToggle').textContent='Ⅱ Pausar';venomAudioStatus('Trilha em reprodução.')}catch(e){venomAudioStatus('Não foi possível tocar. Abra o HTML dentro da pasta extraída, com a subpasta audio.')}}
-function venomPlayFx(kind){if(!venomSound.fx)return;const n=VENOM_AUDIO_FX[kind]||1;venomFxAudio.pause();venomFxAudio.src=venomAudioPath('fx_'+n+'.mp3');venomFxAudio.currentTime=0;venomFxAudio.volume=Math.min(1,venomSound.volume/100*1.5);venomFxAudio.play().catch(()=>{});}
+function venomPlayFx(kind){if(!venomSound.fx)return;const n=VENOM_AUDIO_FX[kind]||1;venomFxAudio.pause();venomFxAudio.src=venomAudioPath('fx_'+n+'.mp3');venomFxAudio.currentTime=0;venomFxAudio.volume=Math.min(1,(venomSound.fxVolume??95)/100);venomFxAudio.play().catch(()=>{});}
 
 function venomPlayFxThen(kind,after){
  const token=++venomSequenceToken;
@@ -414,7 +415,7 @@ function venomPlayFxThen(kind,after){
  if(!venomSound.fx){done();return}
  const n=VENOM_AUDIO_FX[kind]||1;
  venomFxAudio.src=venomAudioPath('fx_'+n+'.mp3');
- venomFxAudio.currentTime=0;venomFxAudio.volume=Math.min(1,venomSound.volume/100*1.5);
+ venomFxAudio.currentTime=0;venomFxAudio.volume=Math.min(1,(venomSound.fxVolume??95)/100);
  venomFxAudio.onended=done;venomFxAudio.onerror=done;
  venomFxAudio.play().catch(done);
 }
@@ -429,7 +430,7 @@ function venomCustomFx(kind,after){
  const done=()=>{if(token===venomSequenceToken&&typeof after==='function')after()};
  if(!venomSound.fx||!VENOM_CUSTOM_FX[kind]){done();return}
  venomFxAudio.src='efeitos/'+encodeURIComponent(VENOM_CUSTOM_FX[kind]);
- venomFxAudio.currentTime=0;venomFxAudio.volume=Math.min(1,venomSound.volume/100*1.5);
+ venomFxAudio.currentTime=0;venomFxAudio.volume=Math.min(1,(venomSound.fxVolume??95)/100);
  venomFxAudio.onended=done;venomFxAudio.onerror=done;
  venomFxAudio.play().catch(done);
 }
@@ -734,6 +735,7 @@ function finishSituationTest(id,i,level){
  const st=getSituation(id,i),x=st.levels[level]||{},prior=st.levels[1]||{};
  const player=level===2?prior.player:venomResponsible(id,i);
  if(level===1&&!x.result)x.player=player;
+ if(level===2&&prior.path!==undefined)x.path=prior.path;
  if(!player||x.path===undefined||x.path==='')return alert('Selecione um dos três caminhos.');
  if(level===2&&!prior.result)return alert('Conclua o Nível 1 primeiro.');
  const rawPower=document.getElementById(`situationPower-${i}-${level}`)?.value;
@@ -753,6 +755,7 @@ function finishSituationTest(id,i,level){
  if(level===1)venomTriggerExpanded=false;
  persist();const el=document.getElementById('ecosResponsibilities');if(el)el.innerHTML=renderEcosResponsibilities(id);
  const fx=x.result==='success'&&level===2?'n2':x.result==='failure'&&venomIsSpiderSituation(id,i)?'spiderFail':null;
+ venomShowResultBalloon(id,i,level,x.path,x.result);
  if(fx)venomCustomFx(fx,()=>venomOutcomeNarration(id,i,level,x.path,x.result));
  else venomOutcomeNarration(id,i,level,x.path,x.result);
 }
@@ -779,9 +782,10 @@ function showVenomPlayerPopup(name,triggerIndex){
 }
 function setVenomActivePlayer(v){venomActivePlayer=v;const el=document.getElementById('ecosResponsibilities');if(el)el.innerHTML=renderEcosResponsibilities(currentChapter)}
 function renderSituationLevel(id,i,level){const def=venomSituation(id,i),st=getSituation(id,i),x=st.levels[level]||{},prior=st.levels[1]||{},locked=level===2&&!prior.result,player=level===2?prior.player||'':(x.result?x.player:venomResponsible(id,i));
- const options=def.paths.map(([name],k)=>`<option value="${k}" ${x.path===String(k)?'selected':''}>${escapeHtml(name)}</option>`).join('');const choice=x.path!==undefined&&x.path!==''?def.paths[Number(x.path)]:null;
+ const effectivePath=level===2?prior.path:x.path;
+ const options=def.paths.map(([name],k)=>`<option value="${k}" ${effectivePath===String(k)?'selected':''}>${escapeHtml(name)}</option>`).join('');const choice=effectivePath!==undefined&&effectivePath!==''?def.paths[Number(effectivePath)]:null;
  const intro=level===1?`${escapeHtml(def.scenes[0])}`:`${escapeHtml(def.scenes[1])} A decisão anterior ${prior.result==='success'?'produziu uma pista, mas não encerrou a ameaça':'deixou uma marca que agora exige uma resposta'}. O mesmo responsável precisa continuar.`;
- return `<div class="situation-level"><div class="eyebrow">NÍVEL ${level} · ${level===1?'PRIMEIRO ATO':'CONTINUAÇÃO'}</div><p><strong>Gatilho:</strong> ${escapeHtml(def.triggers[level-1])}</p>${locked?'<p class="note">A continuação será aberta depois de resolver o Nível 1.</p>':`<p class="note">${level===1?escapeHtml(def.criterion):`Mesmo responsável: <strong>${escapeHtml(player)}</strong>. ${prior.result==='success'?'Impulso Narrativo +1 disponível.':'Sem Impulso Narrativo.'}`}</p><div class="form-grid"><label>Responsável ${level===2?`<div class="readonly-choice">${escapeHtml(player)}</div>`:`<div class="readonly-choice">${`<img class="venom-responsible-thumb" src="${VENOM_PLAYER_PORTRAITS[player]||''}" alt="">`}${escapeHtml(player)} · atribuição pelo critério</div>`}</label><label>Caminho <select onchange="setSituationField(${id},${i},${level},'path',this.value)"><option value="">Selecione uma escolha</option>${options}</select></label></div>${choice?`<div class="choice-explain"><strong>${escapeHtml(choice[0])}</strong><p>${escapeHtml(intro)} ${escapeHtml(choice[1])}</p><p><strong>Se tiver sucesso:</strong> ${escapeHtml(choice[2])} ${level===1?'Recebe Impulso +1 no Nível 2.':'Registra um Legado positivo.'}</p><p><strong>Se falhar:</strong> ${escapeHtml(choice[3])} +1 Ameaça. ${level===1?'Não recebe Impulso.':'Registra uma Cicatriz.'}</p></div>`:'<p class="note">Escolha um caminho para ler sua explicação e as consequências possíveis.</p>'}<div class="form-grid"><div class="venom-modifiers"><strong>Condições temáticas verificáveis</strong><p class="note">Marque apenas condições verificadas na mesa. “Neste turno” refere-se somente à jogada do jogador atual; “nesta rodada” abrange os três últimos turnos (atual e dois anteriores).</p>${venomThematicOptions(id,i,level).map((o,k)=>`<label class="venom-modifier"><input type="checkbox" ${Array.isArray(x.thematic)&&x.thematic.includes(k)?'checked':''} onchange="setVenomThematic(${id},${i},${level},${k},this.checked)"><span><strong>${escapeHtml(o[0])} (${o[2]>0?'+':''}${o[2]})</strong> — ${escapeHtml(o[1])}</span></label>`).join('')}</div><label>Força Tática física (até 2 cartas) <select id="situationPower-${i}-${level}">${optionList(Array.from({length:31},(_,n)=>n),x.power??'','Selecione a Força Tática')}</select></label><label class="venom-modifier"><input type="checkbox" id="situationLast-${i}-${level}"><span><strong>Último Recurso</strong> — confirmo que nenhuma combinação disponível vence; comprometi a melhor combinação.</span></label><label>D4 físico (somente Último Recurso) <select id="situationRescue-${i}-${level}">${optionList([1,2,3,4],x.rescue||'','Selecione o D4, se necessário')}</select></label></div><div class="target-line">Força Tática + modificadores ${venomTestStats(id,i,level).modifier>=0?'+':''}${venomTestStats(id,i,level).modifier} ≥ ${situationTarget(id,i,level)}</div><p class="kbd">Modificadores: ${venomThematicOptions(id,i,level).filter((o,k)=>Array.isArray(x.thematic)&&x.thematic.includes(k)).map(o=>`${o[2]>0?'+':''}${o[2]} ${o[0]}`).join(' · ')||'Nenhuma condição temática'} · ${level===2&&prior.result==='success'?'+1 Impulso · ':''}Legado anterior ${venomTestStats(id,i,level).legacy.bonus>=0?'+':''}${venomTestStats(id,i,level).legacy.bonus}; eco das escolhas ${venomTestStats(id,i,level).echo>=0?'+':''}${venomTestStats(id,i,level).echo}. Gerencie as cartas fisicamente.</p><button class="btn small" onclick="finishSituationTest(${id},${i},${level})">Resolver e revelar consequência</button>${x.result?`<div class="choice-outcome ${x.result==='success'?'good':'bad'}"><strong>${x.result==='success'?'Sucesso':'Falha'} · ${escapeHtml(choice?.[0]||'Decisão')}</strong><p>${escapeHtml(choice?.[x.result==='success'?2:3]||'A escolha teve consequências.')}</p><p>${level===1?(x.result==='success'?'O responsável recebe +1 Impulso Narrativo para a continuação.':'O mesmo responsável continuará sem Impulso.'):'Esta situação foi concluída e passa a integrar o Legado da missão.'}</p></div>`:''}`}</div>`;
+ return `<div class="situation-level"><div class="eyebrow">NÍVEL ${level} · ${level===1?'PRIMEIRO ATO':'CONTINUAÇÃO'}</div><p><strong>Gatilho:</strong> ${escapeHtml(def.triggers[level-1])}</p>${locked?'<p class="note">A continuação será aberta depois de resolver o Nível 1.</p>':`<p class="note">${level===1?escapeHtml(def.criterion):`Mesmo responsável: <strong>${escapeHtml(player)}</strong>. ${prior.result==='success'?'Impulso Narrativo +1 disponível.':'Sem Impulso Narrativo.'}`}</p><div class="form-grid"><label>Responsável ${level===2?`<div class="readonly-choice">${escapeHtml(player)}</div>`:`<div class="readonly-choice">${`<img class="venom-responsible-thumb" src="${VENOM_PLAYER_PORTRAITS[player]||''}" alt="">`}${escapeHtml(player)} · atribuição pelo critério</div>`}</label>${level===1?`<label>Caminho <select onchange="setSituationField(${id},${i},${level},'path',this.value);venomShowChoiceBalloon(${id},${i},this.value)"><option value="">Selecione uma escolha</option>${options}</select></label>`:`<div class="venom-inherited-path"><strong>Continuação do caminho escolhido no N1:</strong> ${escapeHtml(choice?.[0]||"Aguardando escolha anterior")}</div>`}</div>${choice?`<div class="choice-explain"><strong>${escapeHtml(choice[0])}</strong><p>${escapeHtml(intro)} ${escapeHtml(choice[1])}</p><p><strong>Se tiver sucesso:</strong> ${escapeHtml(choice[2])} ${level===1?'Recebe Impulso +1 no Nível 2.':'Registra um Legado positivo.'}</p><p><strong>Se falhar:</strong> ${escapeHtml(choice[3])} +1 Ameaça. ${level===1?'Não recebe Impulso.':'Registra uma Cicatriz.'}</p></div>`:'<p class="note">Escolha um caminho para ler sua explicação e as consequências possíveis.</p>'}<div class="form-grid"><div class="venom-modifiers"><strong>Condições temáticas verificáveis</strong><p class="note">Marque apenas condições verificadas na mesa. “Neste turno” refere-se somente à jogada do jogador atual; “nesta rodada” abrange os três últimos turnos (atual e dois anteriores).</p>${venomThematicOptions(id,i,level).map((o,k)=>`<label class="venom-modifier"><input type="checkbox" ${Array.isArray(x.thematic)&&x.thematic.includes(k)?'checked':''} onchange="setVenomThematic(${id},${i},${level},${k},this.checked)"><span><strong>${escapeHtml(o[0])} (${o[2]>0?'+':''}${o[2]})</strong> — ${escapeHtml(o[1])}</span></label>`).join('')}</div><label>Força Tática física (até 2 cartas) <select id="situationPower-${i}-${level}">${optionList(Array.from({length:31},(_,n)=>n),x.power??'','Selecione a Força Tática')}</select></label><label class="venom-modifier"><input type="checkbox" id="situationLast-${i}-${level}"><span><strong>Último Recurso</strong> — confirmo que nenhuma combinação disponível vence; comprometi a melhor combinação.</span></label><label>D4 físico (somente Último Recurso) <select id="situationRescue-${i}-${level}">${optionList([1,2,3,4],x.rescue||'','Selecione o D4, se necessário')}</select></label></div><div class="target-line">Força Tática + modificadores ${venomTestStats(id,i,level).modifier>=0?'+':''}${venomTestStats(id,i,level).modifier} ≥ ${situationTarget(id,i,level)}</div><p class="kbd">Modificadores: ${venomThematicOptions(id,i,level).filter((o,k)=>Array.isArray(x.thematic)&&x.thematic.includes(k)).map(o=>`${o[2]>0?'+':''}${o[2]} ${o[0]}`).join(' · ')||'Nenhuma condição temática'} · ${level===2&&prior.result==='success'?'+1 Impulso · ':''}Legado anterior ${venomTestStats(id,i,level).legacy.bonus>=0?'+':''}${venomTestStats(id,i,level).legacy.bonus}; eco das escolhas ${venomTestStats(id,i,level).echo>=0?'+':''}${venomTestStats(id,i,level).echo}. Gerencie as cartas fisicamente.</p><button class="btn small" onclick="finishSituationTest(${id},${i},${level})">Resolver e revelar consequência</button>${x.result?`<div class="choice-outcome ${x.result==='success'?'good':'bad'}"><strong>${x.result==='success'?'Sucesso':'Falha'} · ${escapeHtml(choice?.[0]||'Decisão')}</strong><p>${escapeHtml(choice?.[x.result==='success'?2:3]||'A escolha teve consequências.')}</p><p>${level===1?(x.result==='success'?'O responsável recebe +1 Impulso Narrativo para a continuação.':'O mesmo responsável continuará sem Impulso.'):'Esta situação foi concluída e passa a integrar o Legado da missão.'}</p></div>`:''}`}</div>`;
 }
 // Convenção temporal desta campanha: turno = jogada do jogador atual;
 // rodada = janela móvel de três turnos (atual e dois imediatamente anteriores).
@@ -867,5 +871,42 @@ function vnMount(){
  div.querySelectorAll('[data-vn]').forEach(b=>b.onclick=()=>vnPlay(b.dataset.vn,mission));
 }
 (function(){const old=window.openChapter;window.openChapter=function(id){const changed=Number(currentChapter)!==Number(id);old(id);if(changed&&typeof vnPlayer!=='undefined')vnPlayer.pause();vnMount()};if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',vnMount);else vnMount()})();
+</script>
+
+<style>
+/* Venom v17: leitura em mesa, com balões de HQ e controles independentes */
+#venomMusicVolume,#venomFxVolume{width:115px;accent-color:#a9e96a}
+.situation-detail,.situation-level{font-size:clamp(19px,2.1vw,25px)!important;line-height:1.65!important}
+.situation-detail p,.situation-level p,.situation-level label,.choice-explain,.choice-outcome,.dilemma-context{font-size:inherit!important;line-height:1.55!important}
+.situation-detail h3{font-size:clamp(27px,3vw,38px)!important}
+.situation-level button,.situation-level select{font-size:clamp(18px,2vw,23px)!important;min-height:48px}
+.situation-level .note,.situation-level .kbd{font-size:clamp(16px,1.7vw,20px)!important}
+.venom-inherited-path{padding:14px;background:#1b3028;border:2px solid #a9e96a;border-radius:12px}
+.venom-comic-overlay{position:fixed;inset:0;background:rgba(0,0,0,.84);z-index:100010;display:flex;align-items:center;justify-content:center;padding:16px}
+.venom-comic-balloon{position:relative;width:min(760px,96vw);max-height:88dvh;overflow:auto;padding:clamp(22px,5vw,45px);background:#fffef0;color:#15191c;border:5px solid #15191c;border-radius:42px 42px 36px 12px;box-shadow:12px 12px 0 #a9e96a;font-size:clamp(21px,3vw,30px);line-height:1.5}
+.venom-comic-balloon:after{content:"";position:absolute;bottom:0;left:30px;border:16px solid transparent;border-left-color:#15191c;transform:translateY(90%)}
+.venom-comic-balloon h2{font-size:clamp(27px,4vw,42px);line-height:1.2;margin:0 0 15px}
+.venom-comic-balloon p{margin:12px 0}.venom-comic-balloon button{display:block;margin:22px 0 0 auto;background:#182a21;color:#fff;padding:13px 23px;border-radius:12px;font-size:20px}
+@media(max-width:650px){.venom-comic-balloon{font-size:23px;padding:25px}.situation-detail,.situation-level{font-size:21px!important}}
+</style>
+<script>
+function venomComicBalloon(title,paragraphs){
+ const old=document.getElementById('venomComicOverlay');if(old)old.remove();
+ const overlay=document.createElement('div');overlay.id='venomComicOverlay';overlay.className='venom-comic-overlay';
+ const balloon=document.createElement('div');balloon.className='venom-comic-balloon';balloon.setAttribute('role','dialog');balloon.setAttribute('aria-modal','true');
+ const h=document.createElement('h2');h.textContent=title;balloon.appendChild(h);
+ for(const t of paragraphs){if(!t)continue;const p=document.createElement('p');p.textContent=t;balloon.appendChild(p)}
+ const b=document.createElement('button');b.textContent='CONTINUAR ▶';b.onclick=()=>overlay.remove();balloon.appendChild(b);
+ overlay.appendChild(balloon);overlay.addEventListener('click',e=>{if(e.target===overlay)overlay.remove()});document.body.appendChild(overlay);b.focus();
+}
+function venomShowChoiceBalloon(id,i,path){
+ if(path==='')return;const d=venomSituation(id,i),c=d.paths[Number(path)];if(!c)return;
+ venomComicBalloon('A ESCOLHA — '+c[0],[d.scenes[0],c[1],'Se vencer: '+c[2],'Se falhar: '+c[3]]);
+}
+function venomShowResultBalloon(id,i,level,path,result){
+ const d=venomSituation(id,i),c=d.paths[Number(path)];if(!c)return;
+ venomComicBalloon((result==='success'?'SUCESSO!':'FALHA!')+' · NÍVEL '+level,[c[result==='success'?2:3],level===1?'A história continua no Nível 2, mantendo a mesma decisão.':'Este resultado passa a integrar o Legado da campanha.']);
+}
+document.addEventListener('DOMContentLoaded',()=>{const fx=document.getElementById('venomFxVolume');if(fx)fx.value=venomSound.fxVolume??95;const mv=document.getElementById('venomMusicVolume');if(mv)mv.value=venomSound.volume??24});
 </script>
 </body></html>
