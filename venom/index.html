@@ -1359,4 +1359,74 @@ document.addEventListener('DOMContentLoaded',()=>{const fx=document.getElementBy
  #venomPreparationModal .venom-prep-tactical .venom-prep-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 }
 </style>
+<style id="venom-notebook-fit-v30">
+@media(min-width:1024px) and (min-height:600px){
+ #venomPreparationModal .venom-prep-head,#venomTriggerComic .venom-trigger-comic-head{padding-top:5px!important;padding-bottom:5px!important}
+ #venomPreparationModal .venom-prep-scroll{display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;gap:5px 9px!important;padding:7px 12px!important;overflow:hidden!important;align-content:start!important}
+ #venomPreparationModal .venom-prep-summary{grid-column:span 12!important;padding:5px 10px!important}
+ #venomPreparationModal .venom-prep-summary p{margin:1px 0!important;line-height:1.2!important;font-size:13px!important}
+ #venomPreparationModal .venom-prep-group:nth-of-type(1),#venomPreparationModal .venom-prep-group:nth-of-type(2){grid-column:span 2!important}
+ #venomPreparationModal .venom-prep-group:nth-of-type(3){grid-column:span 5!important}
+ #venomPreparationModal .venom-prep-group:nth-of-type(4){grid-column:span 3!important}
+ #venomPreparationModal .venom-prep-group:nth-of-type(5){grid-column:span 2!important}
+ #venomPreparationModal .venom-prep-group h3{font-size:16px!important;margin:0 0 3px!important}
+ #venomPreparationModal .venom-prep-grid{grid-template-columns:repeat(auto-fit,minmax(65px,1fr))!important;gap:3px!important}
+ #venomPreparationModal .venom-prep-art{height:clamp(55px,10dvh,88px)!important}
+ #venomPreparationModal .venom-prep-card-label strong{font-size:11px!important}
+ #venomPreparationModal .venom-prep-tactical{grid-column:span 5!important;padding:5px 8px!important}
+ #venomPreparationModal .venom-prep-tactical h3{font-size:16px!important}
+ #venomPreparationModal .venom-prep-tactical p{font-size:12px!important;line-height:1.2!important;margin:0 0 4px!important}
+ #venomPreparationModal .venom-prep-tactical .venom-prep-grid{grid-template-columns:repeat(2,minmax(0,95px))!important}
+ #venomPreparationModal .venom-prep-tactical .venom-prep-art{height:60px!important}
+ #venomPreparationModal .venom-prep-rules{grid-column:span 7!important;padding:5px 9px!important}
+ #venomPreparationModal .venom-prep-rules h3{font-size:16px!important;margin:0 0 3px!important}
+ #venomPreparationModal .venom-prep-rules p{font-size:12px!important;line-height:1.2!important;margin:2px 0!important}
+ #venomPreparationModal .venom-prep-footnote{grid-column:1/-1!important;margin:0!important}
+ #venomTriggerComic .venom-trigger-comic-body{padding:5px 9px!important;overflow:hidden!important}
+ #venomTriggerComic .situation-detail{padding:7px 10px!important;gap:3px 10px!important}
+ #venomTriggerComic .situation-detail>h3{font-size:23px!important}
+ #venomTriggerComic .situation-level{padding:6px!important;gap:4px 9px!important}
+ #venomTriggerComic .situation-detail .note,#venomTriggerComic .situation-detail .readonly-choice{padding:4px!important}
+ #venomTriggerComic .situation-detail .venom-modifier{padding:2px!important}
+ #venomTriggerComic .situation-detail .form-grid{gap:4px!important}
+ #venomTriggerComic .situation-detail .choice-explain p{margin:2px 0!important}
+ #venomTriggerComic .situation-detail select{min-height:29px!important;padding:2px!important}
+ #venomTriggerComic .situation-detail p,#venomTriggerComic .situation-detail label{line-height:1.2!important}
+}
+/* Short or narrow viewports retain natural scrolling instead of clipping controls. */
+@media(max-width:1023px),(max-height:599px){
+ #venomPreparationModal .venom-prep-scroll,#venomTriggerComic .venom-trigger-comic-body{overflow-y:auto!important}
+}
+</style><script id="venom-auto-fit-v30">
+(function(){
+ function fit(modalId,scrollSelector,contentSelector){
+  const modal=document.getElementById(modalId);
+  if(!modal)return;
+  const viewport=modal.querySelector(scrollSelector);
+  const content=modal.querySelector(contentSelector);
+  if(!viewport||!content)return;
+  const desktop=window.innerWidth>=1024&&window.innerHeight>=600;
+  if(!desktop){viewport.style.zoom='';viewport.style.overflowY='auto';return;}
+  viewport.style.zoom='1';
+  viewport.style.overflowY='hidden';
+  const height=viewport.clientHeight;
+  const needed=viewport.scrollHeight;
+  if(height<=0)return;
+  const ratio=Math.min(1,(height-4)/Math.max(height,needed));
+  if(ratio<.54){viewport.style.zoom='.54';viewport.style.overflowY='auto';return;}
+  viewport.style.zoom=String(Math.max(.54,ratio*.98));
+ }
+ let queued=false;
+ function run(){
+  queued=false;
+  fit('venomPreparationModal','.venom-prep-scroll','.venom-prep-summary');
+  fit('venomTriggerComic','.venom-trigger-comic-body','.situation-detail');
+ }
+ function schedule(){if(queued)return;queued=true;requestAnimationFrame(run);}
+ new MutationObserver(schedule).observe(document.documentElement,{childList:true,subtree:true});
+ window.addEventListener('resize',schedule);
+ document.addEventListener('DOMContentLoaded',schedule);
+ if(document.readyState!=='loading')schedule();
+})();
+</script>
 </body></html>
