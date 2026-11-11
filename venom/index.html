@@ -963,16 +963,45 @@ const VENOM_TEST_BASE={1:[[11,12],[11,12],[10,11]],2:[[10,11],[10,11],[9,10]],3:
 const VENOM_SUPPORT_HEROES={1:['Wolverine','Venompool'],2:['Spider-Man','Carnage'],3:['Captain America','Venompool'],4:['Wolverine','Carnage'],5:['Hulk','Thor']};
 const VENOM_SUPPORT_CLASSES=[['Instinto','Tecnologia'],['Força','Instinto'],['Tecnologia','À Distância']];
 const VENOM_CLASS_ICONS={
- 'Instinto':'<svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#e5d83d" d="M16 1 5 18h8l-2 13 16-19h-9l4-11z"/></svg>',
- 'Tecnologia':'<svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#292d35" stroke="#e7edf1" stroke-width="1.5" d="M12 2h8v5h5v5h5v8h-5v5h-5v5h-8v-5H7v-5H2v-8h5V7h5z"/><circle cx="16" cy="16" r="5" fill="#c7cdd4"/></svg>',
- 'Força':'<svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#e47d29" d="M7 18 5 7l6 4 5-8 5 8 6-4-2 11-9 12z"/></svg>',
- 'À Distância':'<svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="13" fill="none" stroke="#39b4dc" stroke-width="3"/><circle cx="16" cy="16" r="6" fill="#39b4dc"/><path d="M16 0v8M16 24v8M0 16h8M24 16h8" stroke="#39b4dc" stroke-width="2"/></svg>',
- 'Furtividade':'<svg viewBox="0 0 32 32" aria-hidden="true"><path fill="#dc434c" d="M16 1 29 10 24 26 16 31 8 26 3 10z"/><path fill="#fff" d="M10 12h12l-6 11z"/></svg>'
+ 'Instinto':'assets/classes/instinto.svg',
+ 'Tecnologia':'assets/classes/tecnologia.svg',
+ 'Força':'assets/classes/forca.svg',
+ 'À Distância':'assets/classes/distancia.svg',
+ 'Furtividade':'assets/classes/furtividade.svg'
 };
 function venomClassIcons(text){
- return String(text).replace(/Instinto|Tecnologia|Força|À Distância|Furtividade/g,term=>'<span class="venom-class-symbol" title="'+term+'" aria-label="'+term+'">'+VENOM_CLASS_ICONS[term]+'<span>'+term+'</span></span>');
+ return String(text).replace(/Instinto|Tecnologia|Força|À Distância|Furtividade/g,term=>'<span class="venom-class-symbol" title="'+term+'"><img src="'+VENOM_CLASS_ICONS[term]+'" alt="" loading="lazy"><span>'+term+'</span></span>');
 }
-
+function venomDecorateClassNames(root){
+ if(!root)return;
+ const rx=/Instinto|Tecnologia|Força|À Distância|Furtividade/g;
+ const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{
+  acceptNode(n){
+   if(!n.parentElement||n.parentElement.closest('.venom-class-symbol,script,style,textarea,option,svg,button'))return NodeFilter.FILTER_REJECT;
+   return rx.test(n.nodeValue)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;
+  }
+ });
+ const matches=[];while(walker.nextNode())matches.push(walker.currentNode);
+ for(const n of matches){
+  const fragment=document.createDocumentFragment(),text=n.nodeValue;let last=0;
+  rx.lastIndex=0;
+  for(const m of text.matchAll(rx)){
+   if(m.index>last)fragment.appendChild(document.createTextNode(text.slice(last,m.index)));
+   const span=document.createElement('span');span.className='venom-class-symbol';span.title=m[0];
+   const img=document.createElement('img');img.src=VENOM_CLASS_ICONS[m[0]];img.alt='';img.loading='lazy';
+   const label=document.createElement('span');label.textContent=m[0];span.append(img,label);fragment.append(span);last=m.index+m[0].length;
+  }
+  if(last<text.length)fragment.appendChild(document.createTextNode(text.slice(last)));
+  n.replaceWith(fragment);
+ }
+}
+document.addEventListener('DOMContentLoaded',()=>{
+ let busy=false;
+ const run=()=>{busy=false;venomDecorateClassNames(document.getElementById('chapterDetail'));venomDecorateClassNames(document.getElementById('ecosResponsibilities'));venomDecorateClassNames(document.getElementById('venomTriggerComic'))};
+ const observer=new MutationObserver(()=>{if(!busy){busy=true;setTimeout(run,120)}});
+ observer.observe(document.body,{subtree:true,childList:true});
+ run();
+});
 function venomSupportPanel(id){
  const h=VENOM_SUPPORT_HEROES[id];
  return `<div class="card"><h3>Reserva Tática · baralho físico comum (28 cartas)</h3><p><strong>Heróis de apoio:</strong> ${h.map(escapeHtml).join(' + ')}. Use os 14 cards de cada herói, fora do Hero Deck principal.</p><p>Embaralhe os 28 cards juntos. Bel, David e Guilherme revelam <strong>4 cartas próprias</strong> cada (12 no total). O responsável usa apenas as suas cartas abertas; cartas comprometidas ficam exauridas até o fim da missão.</p><p><strong>Troca Tática (opcional, 1 por teste):</strong> coloque uma carta aberta no fundo; revele 3 do topo; escolha uma para a reserva, uma para o topo e outra para o fundo. Resolva o teste com até 2 cartas. Reponha as exauridas pelo topo do baralho.</p><p><strong>Força Tática:</strong> custo 0–2 = 2; custo 3–4 = 3; custo 5–6 = 4; custo 7+ = 5. +1 se houver Ataque impresso positivo (0+ não conta); +1 se a classe corresponder à afinidade da situação. Ignore as habilidades das cartas de apoio.</p><p><strong>Afinidades:</strong> ${VENOM_SUPPORT_CLASSES.map((c,i)=>'S'+(i+1)+': '+venomClassIcons(c.join(' / '))).join(' · ')}. Máximo +1 de classe por carta.</p><p><strong>Último Recurso:</strong> se nenhuma combinação de até 2 cartas disponíveis alcançar a meta, comprometa a melhor combinação e role D4 físico. Somente 4 vence; as cartas são exauridas independentemente do resultado.</p><p class="kbd">Se restarem menos de 3 cartas no baralho comum, a troca não pode ser realizada. A gestão do baralho é totalmente física. O aplicativo recebe apenas a soma das cartas, aplica os modificadores e registra o resultado.</p></div>`;
@@ -1190,6 +1219,6 @@ function venomShowResultBalloon(id,i,level,path,result){
 }
 document.addEventListener('DOMContentLoaded',()=>{const fx=document.getElementById('venomFxVolume');if(fx)fx.value=venomSound.fxVolume??95;const mv=document.getElementById('venomMusicVolume');if(mv)mv.value=venomSound.volume??24});
 </script>
-<style>.venom-class-symbol{display:inline-flex;align-items:center;gap:3px;white-space:nowrap;vertical-align:middle}.venom-class-symbol svg{width:23px;height:23px;flex-shrink:0;filter:drop-shadow(0 1px 2px #000)}.venom-class-symbol span{vertical-align:middle}</style>
+<style>.venom-class-symbol{display:inline-flex;align-items:center;gap:3px;white-space:nowrap;vertical-align:middle}.venom-class-symbol img{width:25px;height:25px;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 1px 2px #000)}.venom-class-symbol span{vertical-align:middle}</style>
 <script defer src="cinematic-v20.js?v=24-tactical-modifiers"></script>
 </body></html>
