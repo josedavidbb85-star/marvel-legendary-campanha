@@ -767,10 +767,10 @@ function venomOpenPreparation(id){
  document.getElementById('venomPreparationModal')?.remove();
  const overlay=document.createElement('div');overlay.id='venomPreparationModal';overlay.className='venom-prep-overlay';
  const panel=document.createElement('section');panel.className='venom-prep-dialog';panel.setAttribute('role','dialog');panel.setAttribute('aria-modal','true');panel.setAttribute('aria-label','Preparação da missão '+id);
- const sections=[['Mastermind',[c.mastermind],'Mastermind'],['Scheme',[c.scheme],'Scheme'],['Heróis',c.heroes,'Herói'],['Grupos de vilões',c.villains,'Vilão'],['Capangas',c.henchmen,'Henchmen']];
+ const sections=[['Mastermind',[c.mastermind],'Mastermind'],['Scheme',[c.scheme],'Scheme'],['Heróis (5 conjuntos; 6 na Invasão Secreta)',c.heroes,'Herói'],['Grupos de vilões',c.villains,'Vilão'],['Capangas',c.henchmen,'Henchmen']];
  const cards=sections.map(([title,names,kind])=>'<section class="venom-prep-group"><h3>'+escapeHtml(title)+'</h3><div class="venom-prep-grid">'+names.map(n=>venomPreparationCard(n,kind)).join('')+'</div></section>').join('');
  const rules=SCHEME_RULES[c.scheme];
- panel.innerHTML='<header class="venom-prep-head"><div class="venom-prep-kicker">MARVEL LEGENDARY · DOSSIÊ '+String(id).padStart(2,'0')+' / 05</div><h2>PREPARAÇÃO DA MISSÃO</h2><p>'+escapeHtml(c.title)+'</p><button class="venom-prep-close" type="button" onclick="venomClosePreparation()">✕ FECHAR</button></header><div class="venom-prep-scroll"><div class="venom-prep-summary"><strong>OBJETIVO</strong><p>'+escapeHtml(c.objective)+'</p><strong>INDICADOR: '+escapeHtml(c.indicator)+'</strong></div>'+cards+(rules?'<section class="venom-prep-rules"><h3>Regras do Scheme</h3><p><strong>'+escapeHtml(rules.twists)+' Scheme Twists</strong></p><p><strong>Setup:</strong> '+escapeHtml(rules.setup)+'</p><p><strong>Twist:</strong> '+escapeHtml(rules.effect)+'</p><p><strong>Evil Wins:</strong> '+escapeHtml(rules.loss)+'</p><p><strong>Atenção:</strong> '+escapeHtml(rules.attention)+'</p></section>':'')+'<p class="venom-prep-footnote">Imagens ilustrativas de cartas dos conjuntos. Confira nomes, quantidades e efeitos nas cartas físicas. Imagens externas dependem de conexão com a internet.</p></div>';
+ panel.innerHTML='<header class="venom-prep-head"><div class="venom-prep-kicker">MARVEL LEGENDARY · DOSSIÊ '+String(id).padStart(2,'0')+' / 05</div><h2>PREPARAÇÃO DA MISSÃO</h2><p>'+escapeHtml(c.title)+'</p><button class="venom-prep-close" type="button" onclick="venomClosePreparation()">✕ FECHAR</button></header><div class="venom-prep-scroll"><div class="venom-prep-summary"><div class="venom-prep-objective"><strong>OBJETIVO DA MISSÃO</strong><p>'+escapeHtml(c.objective)+'</p></div><div class="venom-prep-indicator"><strong>INDICADOR DA MISSÃO</strong><p>'+escapeHtml(c.indicator)+'</p></div></div>'+cards+(rules?'<section class="venom-prep-rules"><h3>Regras do Scheme</h3><p><strong>'+escapeHtml(rules.twists)+' Scheme Twists</strong></p><p><strong>Setup:</strong> '+escapeHtml(rules.setup)+'</p><p><strong>Twist:</strong> '+escapeHtml(rules.effect)+'</p><p><strong>Evil Wins:</strong> '+escapeHtml(rules.loss)+'</p><p><strong>Atenção:</strong> '+escapeHtml(rules.attention)+'</p></section>':'')+'<p class="venom-prep-footnote">Imagens ilustrativas de cartas dos conjuntos. Confira nomes, quantidades e efeitos nas cartas físicas. Imagens externas dependem de conexão com a internet.</p></div>';
  overlay.append(panel);overlay.addEventListener('click',e=>{if(e.target===overlay)venomClosePreparation()});document.body.append(overlay);document.body.classList.add('venom-prep-open');panel.querySelector('.venom-prep-close').focus();
 }
 function venomClosePreparation(){document.getElementById('venomPreparationModal')?.remove();document.body.classList.remove('venom-prep-open')}
@@ -1266,6 +1266,42 @@ document.addEventListener('DOMContentLoaded',()=>{const fx=document.getElementBy
  .venom-prep-art{height:clamp(50px,10dvh,80px)!important}
  .venom-prep-head h2{font-size:21px!important}
  .venom-prep-card-label strong{font-size:11px!important}
+}
+</style>
+<style id="venom-prep-wide-v28">
+/* Dossiê ilustrado — aproveitar toda a tela e mostrar todas as informações do resumo de preparação */
+#venomPreparationModal.venom-prep-overlay{padding:0!important;align-items:stretch!important;justify-content:stretch!important}
+#venomPreparationModal .venom-prep-dialog{width:100vw!important;max-width:none!important;height:100dvh!important;max-height:100dvh!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+#venomPreparationModal .venom-prep-head{padding:9px clamp(12px,2vw,32px)!important}
+#venomPreparationModal .venom-prep-scroll{padding:clamp(10px,1.4vw,22px)!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;gap:clamp(8px,1vw,16px)!important}
+#venomPreparationModal .venom-prep-summary{display:grid!important;grid-template-columns:minmax(0,3fr) minmax(160px,1fr)!important;gap:clamp(10px,2vw,30px)!important;align-items:start!important;padding:12px 16px!important}
+#venomPreparationModal .venom-prep-summary p{font-size:clamp(14px,1.1vw,19px)!important;line-height:1.35!important}
+#venomPreparationModal .venom-prep-indicator{border-left:2px solid #d6c9a0;padding-left:clamp(8px,1vw,18px)}
+#venomPreparationModal .venom-prep-indicator p{font-size:clamp(17px,1.3vw,23px)!important;font-weight:800!important}
+#venomPreparationModal .venom-prep-group:nth-of-type(1),#venomPreparationModal .venom-prep-group:nth-of-type(2){grid-column:span 3!important}
+#venomPreparationModal .venom-prep-group:nth-of-type(3){grid-column:span 6!important}
+#venomPreparationModal .venom-prep-group:nth-of-type(4){grid-column:span 8!important}
+#venomPreparationModal .venom-prep-group:nth-of-type(5){grid-column:span 4!important}
+#venomPreparationModal .venom-prep-group h3{font-size:clamp(16px,1.5vw,25px)!important;line-height:1.2!important}
+#venomPreparationModal .venom-prep-grid{grid-template-columns:repeat(auto-fit,minmax(100px,1fr))!important;gap:clamp(7px,.8vw,14px)!important}
+#venomPreparationModal .venom-prep-art{height:clamp(92px,16dvh,175px)!important}
+#venomPreparationModal .venom-prep-card-label strong{font-size:clamp(12px,1vw,17px)!important;line-height:1.25!important}
+#venomPreparationModal .venom-prep-rules{padding:12px 16px!important}
+#venomPreparationModal .venom-prep-rules p{display:block!important;margin:5px 0!important;font-size:clamp(13px,1vw,17px)!important;line-height:1.4!important}
+@media(max-width:850px){
+ #venomPreparationModal .venom-prep-scroll{grid-template-columns:repeat(6,minmax(0,1fr))!important}
+ #venomPreparationModal .venom-prep-group:nth-of-type(1),#venomPreparationModal .venom-prep-group:nth-of-type(2){grid-column:span 3!important}
+ #venomPreparationModal .venom-prep-group:nth-of-type(3),#venomPreparationModal .venom-prep-group:nth-of-type(4){grid-column:span 6!important}
+ #venomPreparationModal .venom-prep-group:nth-of-type(5){grid-column:span 3!important}
+ #venomPreparationModal .venom-prep-art{height:clamp(80px,13dvh,135px)!important}
+}
+@media(max-width:550px){
+ #venomPreparationModal .venom-prep-scroll{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ #venomPreparationModal .venom-prep-summary{grid-template-columns:1fr!important}
+ #venomPreparationModal .venom-prep-indicator{border-left:0;border-top:2px solid #d6c9a0;padding:8px 0 0}
+ #venomPreparationModal .venom-prep-group:nth-of-type(n){grid-column:span 2!important}
+ #venomPreparationModal .venom-prep-grid{grid-template-columns:repeat(auto-fit,minmax(84px,1fr))!important}
+ #venomPreparationModal .venom-prep-art{height:clamp(76px,12dvh,110px)!important}
 }
 </style>
 </body></html>
