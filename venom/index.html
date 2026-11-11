@@ -978,7 +978,7 @@ function venomDecorateClassNames(root){
  const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{
   acceptNode(n){
    if(!n.parentElement||n.parentElement.closest('.venom-class-symbol,script,style,textarea,option,svg,button'))return NodeFilter.FILTER_REJECT;
-   return rx.test(n.nodeValue)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;
+   rx.lastIndex=0;return rx.test(n.nodeValue)?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_REJECT;
   }
  });
  const matches=[];while(walker.nextNode())matches.push(walker.currentNode);
