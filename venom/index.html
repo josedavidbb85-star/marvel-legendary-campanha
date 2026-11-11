@@ -973,11 +973,11 @@ const VENOM_CLASS_ICONS={
  'Furtividade':'assets/classes/furtividade.svg'
 };
 function venomClassIcons(text){
- return String(text).replace(/Instinto|Tecnologia|Força|À Distância|Furtividade/g,term=>'<span class="venom-class-symbol" title="'+term+'"><img src="'+VENOM_CLASS_ICONS[term]+'" alt="" loading="lazy"><span>'+term+'</span></span>');
+ return String(text).replace(/Instinto|Tecnologia|Força(?!\s+[Tt][áa]tica\b)|À Distância|Furtividade/g,term=>'<span class="venom-class-symbol" title="'+term+'"><img src="'+VENOM_CLASS_ICONS[term]+'" alt="" loading="lazy"><span>'+term+'</span></span>');
 }
 function venomDecorateClassNames(root){
  if(!root)return;
- const rx=/Instinto|Tecnologia|Força|À Distância|Furtividade/g;
+ const rx=/Instinto|Tecnologia|Força(?!\s+[Tt][áa]tica\b)|À Distância|Furtividade/g;
  const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{
   acceptNode(n){
    if(!n.parentElement||n.parentElement.closest('.venom-class-symbol,script,style,textarea,option,svg,button'))return NodeFilter.FILTER_REJECT;
@@ -1477,5 +1477,51 @@ document.addEventListener('DOMContentLoaded',()=>{const fx=document.getElementBy
 
 #venomTriggerComic .venom-choice-fields>label{width:100%;align-self:stretch}
 </style>
+<style id="venom-responsibility-readable-v33">
+/* v33: class icons identify card classes; tactical power stays plain text. */
+#venomPlayerModal .venom-modal-card{
+ background:linear-gradient(90deg,#07101955,#07101988 48%,#071019aa),url('assets/symbiote-city.svg') center/cover no-repeat!important;
+}
+#venomPlayerModal .venom-modal-label{gap:22px;text-shadow:0 2px 6px #000;min-width:0}
+#venomPlayerModal .venom-modal-label strong{font-size:clamp(48px,5vw,88px)!important;line-height:1.1}
+#venomPlayerModal .venom-modal-label p{font-size:clamp(24px,2vw,36px)!important;line-height:1.45;margin:0;max-width:26ch}
+#venomPlayerModal .venom-modal-label button{font-size:clamp(20px,1.4vw,25px)!important;padding:16px 24px!important;text-shadow:none;min-height:54px}
+/* Enlarge the decision dossier as well as the responsibility portrait. */
+@media(min-width:1001px){
+ #venomTriggerComic .situation-detail>.dilemma-context,
+ #venomTriggerComic .situation-level p,
+ #venomTriggerComic .situation-level label,
+ #venomTriggerComic .situation-level .choice-explain,
+ #venomTriggerComic .situation-level .choice-explain p,
+ #venomTriggerComic .situation-level>.note:not(p) p,
+ #venomTriggerComic .venom-choice-fields .note,
+ #venomTriggerComic .venom-choice-fields .venom-inherited-path,
+ #venomTriggerComic .venom-choice-fields .venom-inherited-path p,
+ #venomTriggerComic .situation-detail .readonly-choice{font-size:clamp(18px,1.12vw,22px)!important;line-height:1.4!important}
+ #venomTriggerComic .situation-detail select{font-size:clamp(18px,1.12vw,22px)!important;min-height:46px!important}
+ #venomTriggerComic .situation-level>.kbd{font-size:16px!important;color:#344137!important}
+ #venomTriggerComic .situation-level>.target-line{font-size:clamp(22px,1.45vw,28px)!important;line-height:1.3}
+ #venomTriggerComic .situation-level .venom-modifiers>strong{font-size:22px!important}
+ #venomTriggerComic .situation-level .choice-explain>strong{font-size:clamp(24px,1.65vw,30px)!important}
+ #venomTriggerComic .situation-level>button,#venomTriggerComic .venom-choice-fields .note button{font-size:18px!important;min-height:46px!important}
+ #venomTriggerComic .situation-level>.eyebrow{font-size:18px!important}
+ #venomTriggerComic .venom-choice-fields>label{width:100%}
+}
+@media(max-width:600px){
+ #venomPlayerModal .venom-modal-label{gap:10px}
+ #venomPlayerModal .venom-modal-label strong{font-size:36px!important}
+ #venomPlayerModal .venom-modal-label p{font-size:20px!important}
+ #venomPlayerModal .venom-modal-label button{font-size:18px!important;padding:10px 14px!important}
+}
+
+
+@media(min-width:1101px){
+ #venomTriggerComic .venom-trigger-comic-head{min-height:80px;padding-right:clamp(430px,32vw,570px)!important}
+ #venomTriggerComic .venom-trigger-comic-head h2{margin:3px 0!important}
+ #venomTriggerComic .venom-trigger-comic-chapter{position:absolute;right:150px;top:16px;font-size:18px!important;padding:6px!important;max-width:390px}
+ #venomTriggerComic .situation-detail>.situation-level{gap:10px 18px!important}
+}
+</style>
 </body></html>
+
 
