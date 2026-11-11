@@ -1137,9 +1137,25 @@ renderPrologue();renderChapters();
 (function(){
  const tabs=[['preparo','📋','Preparação'],['jogo','⚔️','Durante'],['resultado','🏁','Encerrar'],['missoes','☰','Missões']];
  const bar=document.createElement('nav');bar.className='v9-tabs';bar.setAttribute('aria-label','Abas fixas da missão');
- tabs.forEach(([key,emoji,label])=>{const b=document.createElement('button');b.type='button';b.dataset.v9tab=key;b.innerHTML='<span>'+emoji+'</span>'+label;b.addEventListener('click',()=>{if(key==='missoes'){showView('capitulos');refreshV9();return;}if(!currentChapter||!document.querySelector('.mission-panels'))openChapter(1);switchMissionTab(key,false);refreshV9();});bar.appendChild(b)});
+ tabs.forEach(([key,emoji,label])=>{const b=document.createElement('button');b.type='button';b.dataset.v9tab=key;b.setAttribute('aria-label',label);b.title=label;b.innerHTML='<span class="v9-nav-icon" aria-hidden="true">'+emoji+'</span><span class="v9-nav-label">'+label+'</span>';b.addEventListener('click',()=>{if(key==='missoes'){showView('capitulos');refreshV9();return;}if(!currentChapter||!document.querySelector('.mission-panels'))openChapter(1);switchMissionTab(key,false);refreshV9();});bar.appendChild(b)});
+ bar.id='venomMissionNav';
+ const toggle=document.createElement('button');toggle.type='button';toggle.className='venom-nav-toggle';toggle.setAttribute('aria-controls',bar.id);
+ let collapsed=false;try{collapsed=localStorage.getItem('venom-nav-collapsed')==='true'}catch(e){}
+ function updateNavigation(){
+  document.body.classList.toggle('venom-nav-collapsed',collapsed);
+  toggle.setAttribute('aria-expanded',String(!collapsed));
+  toggle.setAttribute('aria-label',collapsed?'Expandir menu da missão':'Recolher menu da missão');
+  toggle.title=collapsed?'Expandir menu':'Recolher menu';
+  toggle.textContent=collapsed?'☰':'‹ Recolher';
+ }
+ toggle.addEventListener('click',()=>{collapsed=!collapsed;updateNavigation();try{localStorage.setItem('venom-nav-collapsed',String(collapsed))}catch(e){}});
+ bar.prepend(toggle);updateNavigation();
+ const header=document.querySelector('.top');
+ const measureHeader=()=>document.documentElement.style.setProperty('--venom-nav-top',(header?header.getBoundingClientRect().height:0)+'px');
+ if(header&&typeof ResizeObserver!=='undefined')new ResizeObserver(measureHeader).observe(header);
+ window.addEventListener('resize',measureHeader);measureHeader();
  document.body.appendChild(bar);
- window.refreshV9=function(){const inMission=document.getElementById('view-detalhe')?.classList.contains('active');bar.querySelectorAll('button').forEach(b=>b.classList.toggle('active',b.dataset.v9tab===(inMission?activeMissionTab:'missoes')))};
+ window.refreshV9=function(){const inMission=document.getElementById('view-detalhe')?.classList.contains('active');bar.querySelectorAll('button[data-v9tab]').forEach(b=>b.classList.toggle('active',b.dataset.v9tab===(inMission?activeMissionTab:'missoes')))};
  const origOpen=window.openChapter;window.openChapter=function(id){origOpen(id);refreshV9()};
  const origShow=window.showView;window.showView=function(id){origShow(id);refreshV9()};
  const origSwitch=window.switchMissionTab;window.switchMissionTab=function(key,scroll){origSwitch(key,scroll);refreshV9()};
@@ -1522,6 +1538,34 @@ document.addEventListener('DOMContentLoaded',()=>{const fx=document.getElementBy
  #venomTriggerComic .situation-detail>.situation-level{gap:10px 18px!important}
 }
 </style>
+<style id="venom-retractable-navigation-v34">
+/* v34: reserve actual navigation space so the menu never covers page text. */
+body{--venom-nav-width:174px;--venom-nav-height:76px}
+body.venom-nav-collapsed{--venom-nav-width:64px;--venom-nav-height:58px}
+.v9-tabs .v9-nav-label{display:inline!important;font-size:inherit!important;margin:0!important}
+.v9-tabs .v9-nav-icon{font-size:20px!important;flex-shrink:0}
+.v9-tabs button{display:flex;align-items:center;gap:9px;justify-content:flex-start;white-space:normal}
+.v9-tabs .venom-nav-toggle{font-size:14px!important;font-weight:800;color:#f7e5a7;border:1px solid #667e6a;justify-content:center;min-height:42px!important;margin-bottom:8px}
+body.venom-nav-collapsed .v9-tabs .v9-nav-label{display:none!important}
+body.venom-nav-collapsed .v9-tabs button{justify-content:center!important;padding-left:4px!important;padding-right:4px!important}
+body.venom-nav-collapsed .v9-tabs .v9-nav-icon{margin:0!important}
+@media(min-width:900px){
+ body .v9-tabs{top:var(--venom-nav-top,60px)!important;left:0;right:auto;bottom:0;width:var(--venom-nav-width)!important;display:flex!important;flex-direction:column;padding:10px 7px!important;overflow-y:auto;overflow-x:hidden;box-shadow:none}
+ body .v9-tabs button{width:100%;font-size:14px!important;min-height:46px!important;flex-shrink:0;padding:10px 8px!important}
+ body main.shell.layout{margin-left:var(--venom-nav-width)!important;margin-right:0!important;width:calc(100% - var(--venom-nav-width))!important;max-width:none!important;min-width:0;padding-left:18px!important;padding-right:18px!important}
+}
+@media(max-width:899px){
+ body .v9-tabs{top:auto!important;bottom:0;left:0;right:0;width:100%!important;display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr));gap:3px;padding:5px 4px calc(5px + env(safe-area-inset-bottom))!important;align-items:stretch}
+ body .v9-tabs button{flex-direction:column;justify-content:center;text-align:center;gap:3px;font-size:11px!important;min-height:58px!important;padding:4px 2px!important}
+ body .v9-tabs .venom-nav-toggle{font-size:12px!important;margin:0;min-height:48px!important}
+ body .v9-tabs .v9-nav-icon{display:block!important;margin:0!important}
+ body.venom-nav-collapsed .v9-tabs button{min-height:40px!important}
+ body main.shell.layout{margin-left:0!important;width:100%!important;min-width:0;padding-bottom:calc(var(--venom-nav-height) + 24px + env(safe-area-inset-bottom))!important}
+}
+
+@media(max-width:899px){#venomAudioShell{bottom:calc(var(--venom-nav-height) + 12px + env(safe-area-inset-bottom))!important}}
+</style>
 </body></html>
+
 
 
