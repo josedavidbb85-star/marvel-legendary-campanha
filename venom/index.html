@@ -1258,7 +1258,7 @@ function venomShowResultBalloon(id,i,level,path,result){
 document.addEventListener('DOMContentLoaded',()=>{const fx=document.getElementById('venomFxVolume');if(fx)fx.value=venomSound.fxVolume??95;const mv=document.getElementById('venomMusicVolume');if(mv)mv.value=venomSound.volume??24});
 </script>
 <style>.venom-class-symbol{display:inline-flex;align-items:center;gap:3px;white-space:nowrap;vertical-align:middle}.venom-class-symbol img{width:25px;height:25px;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 1px 2px #000)}.venom-class-symbol span{vertical-align:middle}</style>
-<script defer src="cinematic-v20.js?v=24-tactical-modifiers"></script>
+<script defer src="cinematic-v20.js?v=38-preparation-toolbar"></script>
 
 
 <style id="venom-dossier-fullscreen-v29">
@@ -1815,3 +1815,12 @@ function venomClosePreparationReading(){for(const {node,anchor}of venomPreparati
 </script>
 
 </body></html>
+
+
+<style id="venom-preparation-toolbar-v38">
+#view-detalhe #chapterDetail [data-panel="preparo"]>.venom-prep-toolbar{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;align-items:stretch;min-width:0}
+#view-detalhe #chapterDetail .venom-prep-toolbar>button{display:flex;align-items:center;justify-content:center;width:100%;min-width:0;max-width:100%;margin:0!important;padding:8px 10px!important;min-height:44px;font-size:18px!important;line-height:1.2;white-space:normal;overflow-wrap:anywhere;text-align:center}
+#view-detalhe #chapterDetail [data-panel="preparo"]>#vc-launch{grid-column:1/-1;min-width:0;max-width:100%;white-space:normal;overflow-wrap:anywhere}
+@media(max-width:1100px){#view-detalhe #chapterDetail [data-panel="preparo"]>.venom-prep-toolbar{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){#view-detalhe #chapterDetail [data-panel="preparo"]>.venom-prep-toolbar{grid-template-columns:1fr}}
+</style>
