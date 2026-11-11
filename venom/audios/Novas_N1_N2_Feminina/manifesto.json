@@ -2,15 +2,8 @@
   "schema_version": 1,
   "source_blob_sha": "0342e43f862cfaf4c784f77ab000f58b2662cbb0",
   "provider": "Google Cloud Text-to-Speech",
-  "voice": {
-    "languageCode": "pt-BR",
-    "name": "pt-BR-Neural2-A",
-    "ssmlGender": "FEMALE"
-  },
   "audioConfig": {
-    "audioEncoding": "MP3",
-    "speakingRate": 0.94,
-    "pitch": -1.0
+    "audioEncoding": "MP3"
   },
   "scope": "Somente os textos novos: dilemas N1 e continuações N2. Áudios antigos preservados.",
   "tracks": [
@@ -22,8 +15,13 @@
       "text": "Missão 1. O Primeiro Hospedeiro. Situação 1. O sinal na amostra. Nível um.\n\nGatilho: Primeiro Scheme Twist.\n\nA primeira mutação do vírus atravessa os filtros de Natasha.\n\nAnalisar, proteger os pacientes ou eliminar a fonte antes que o vírus mude?\n\nEscolha o caminho que a equipe seguirá.",
       "output": "audios/Novas_N1_N2_Feminina/Missao_01/M01_S1_N1_gatilho.mp3",
       "text_sha256": "84908e200698d36cd722b322dfae15d4d9609d77cb31f11aaea5fb86be6b193b",
-      "audio_sha256": "d2e596ac9e7d8bae4c9bcc80ae47398a96e7c619bc64b5a20b24c38feda52212",
-      "bytes": 203520
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "95ac0fb0cc19a97bf74839c4650596056182aaa3947c1b75fab44cf2324a1e4c",
+      "bytes": 97152
     },
     {
       "id": "M01_S1_N2_gatilho_apos_escolha1_sucesso",
@@ -35,8 +33,13 @@
       "text_sha256": "39b7fd20206669f759effc00f91172111f565023288055f62f34aa2e6e2c88ff",
       "n1_path": 0,
       "n1_result": "success",
-      "audio_sha256": "1d05cf4f9067c32e8b93254fcd95052211c096003379393582ad6e1e4128500e",
-      "bytes": 305472
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "cca4dd7bd685a5b6d6b722e130417bf0011a0dfb51eff29a576c0e4ecbd31dea",
+      "bytes": 131712
     },
     {
       "id": "M01_S1_N2_gatilho_apos_escolha1_falha",
@@ -48,8 +51,13 @@
       "text_sha256": "47051e512895adcd257a99112deba6afb4284c1bf880359f15dc3fc06d93dae2",
       "n1_path": 0,
       "n1_result": "failure",
-      "audio_sha256": "819e3c73ca26059d0c0cf29511cd38a4d61bf3b99d7f2b614d824b662b580142",
-      "bytes": 301248
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "e8d7526f7ebae8d62bbd59adae9ba2778de7c08babfb7b8df66bd224c2eb86d0",
+      "bytes": 129312
     },
     {
       "id": "M01_S1_N2_escolha1",
@@ -60,8 +68,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_01/M01_S1_N2_escolha1.mp3",
       "text_sha256": "02607c0e77d4afcedaa5849f5ff11c0cd53ccaa381f51ceb0bb40375b74ee887",
       "n1_path": 0,
-      "audio_sha256": "4e0dee05c6fb071d4031947aae4531fdd1a79844a158fc7feeac8f03a2499196",
-      "bytes": 269376
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "dbed64020359c067c543e5bf221a88a1fb0fb090fdbd1663552fa7ba90b9e86b",
+      "bytes": 111552
     },
     {
       "id": "M01_S1_N2_escolha1_sucesso",
@@ -73,8 +86,13 @@
       "text_sha256": "44b6d2045f56658dcbfce67c5385951a16620ff45a4de2eada42efca8df95cec",
       "n1_path": 0,
       "result": "success",
-      "audio_sha256": "f1e2d563aab6bbbea5aae14e52aebf4ca2a4b49713275a89b7f785f517ae34cb",
-      "bytes": 140928
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "fde6490180ae5b3b78d89819f2abaeee1389ddab80ede8e7b3344385838d71cf",
+      "bytes": 61632
     },
     {
       "id": "M01_S1_N2_escolha1_falha",
@@ -86,8 +104,13 @@
       "text_sha256": "e7d3cdaf63e6fb72949163776b4461787d8396b866f8f341c6b6755ae6014f19",
       "n1_path": 0,
       "result": "failure",
-      "audio_sha256": "3e575e76ffb42e3a18e27bdbecee4b905f77b4e5b16e34c35dab99456e73d0ff",
-      "bytes": 149760
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "42094701eed3b78b870ecfa3a31227f8892d3c8f4ddaa659944d9e30988638ad",
+      "bytes": 69312
     },
     {
       "id": "M01_S1_N2_gatilho_apos_escolha2_sucesso",
@@ -99,8 +122,13 @@
       "text_sha256": "cbfbee04e3e342bd124082d7d4ce5f009542db8cdd31a0e3d31bfafb72de0f02",
       "n1_path": 1,
       "n1_result": "success",
-      "audio_sha256": "d26286b60e7a01b407988743e0939d58b86a16196fa2d000e7480cd18b749e70",
-      "bytes": 311232
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "9bbd6b9f2c2fd28b578c2b0859382a62b66e943bcced3a54193116c615736c1a",
+      "bytes": 129984
     },
     {
       "id": "M01_S1_N2_gatilho_apos_escolha2_falha",
@@ -112,8 +140,13 @@
       "text_sha256": "08f1c35fd8fc2fb9e5b8de71d34cd80a2ac991d56c75f2833bb69588bc1d1df7",
       "n1_path": 1,
       "n1_result": "failure",
-      "audio_sha256": "78f0fe8cd83b7693caea4dcdecd0ee08d395eb6043567007cb23e03aaf3d97c9",
-      "bytes": 309312
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "45776624dcc491bb96223a80b61b680f94d0c9c0bba60e57250f756c42b0d331",
+      "bytes": 126432
     },
     {
       "id": "M01_S1_N2_escolha2",
@@ -124,8 +157,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_01/M01_S1_N2_escolha2.mp3",
       "text_sha256": "aac204f6190d43a0a8086e2b2a906572e58586d9b6f4da5227325095a3fba599",
       "n1_path": 1,
-      "audio_sha256": "4748d203540b868614712d6536ca690a8593866327c074512bae0aae71d09550",
-      "bytes": 271680
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "1c99d71d6f4de51a3624ecfa95a24ee99ecbccbc77becaac2a807db3e15eef64",
+      "bytes": 109536
     },
     {
       "id": "M01_S1_N2_escolha2_sucesso",
@@ -137,8 +175,13 @@
       "text_sha256": "c21a0fef99e45d24d1de3a1064436c804891f598b8b33ab4f32b99deba63e738",
       "n1_path": 1,
       "result": "success",
-      "audio_sha256": "bf8737a5ef4b4499974965e06ef67eae3856d072c7d630f22d0e4b01cdc13eef",
-      "bytes": 137088
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "361893cd2f499b677d34125b2765c7e0e0a5797f7533cda677dbbec03fd0150a",
+      "bytes": 57312
     },
     {
       "id": "M01_S1_N2_escolha2_falha",
@@ -150,8 +193,13 @@
       "text_sha256": "8618f559d9e565122b20dec0a02aaf4ddc470d8a494801b4d3fd16b7010e31e8",
       "n1_path": 1,
       "result": "failure",
-      "audio_sha256": "179d1eb6606062a0a337a38ba09b313a54572820274f77b9284828bf42535eb3",
-      "bytes": 156288
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "7310a7e406160325b0ee5deea7af8dab576cc4b529a189db17642f82affe6ee6",
+      "bytes": 64512
     },
     {
       "id": "M01_S1_N2_gatilho_apos_escolha3_sucesso",
@@ -163,8 +211,13 @@
       "text_sha256": "83008161544fd42b4e5c86716e4101867f256b0df69a862124f1a3d1fec9a4a2",
       "n1_path": 2,
       "n1_result": "success",
-      "audio_sha256": "446604917fab23989251bd9204eb1ec7fa2a1d22776c67c37642487f721e57d1",
-      "bytes": 295488
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "495848d6195a814e73a3bab34ac842b503983f3ad69c3b7923528d9d092ae5d4",
+      "bytes": 126144
     },
     {
       "id": "M01_S1_N2_gatilho_apos_escolha3_falha",
@@ -176,8 +229,13 @@
       "text_sha256": "fbf357545d382665498da9fc6ca55f82aa119f647ca6bcc610ce5278dd46c8f7",
       "n1_path": 2,
       "n1_result": "failure",
-      "audio_sha256": "19774763198950b31a12cdd1ff0499a64e4ff1c04d0de6294e724ff0b98c8e4e",
-      "bytes": 297216
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "27f5b5a32df99ff452326b6c7ded0a445e9281ba8a2cce27b6b285d2731d1f9d",
+      "bytes": 129696
     },
     {
       "id": "M01_S1_N2_escolha3",
@@ -188,8 +246,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_01/M01_S1_N2_escolha3.mp3",
       "text_sha256": "aa8544a8e7f2c8c615e2384b0fefb6ab1bf75ef5ddf799e6cbe6f4fadb284dd2",
       "n1_path": 2,
-      "audio_sha256": "28b169cc0703270852993fc71047de81c34594dc00607b6621059beedace72a6",
-      "bytes": 257280
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "a74ea6fe9f0aa6d08bb16ce824ede18f19db609a08d76a5c1064203f12581641",
+      "bytes": 111264
     },
     {
       "id": "M01_S1_N2_escolha3_sucesso",
@@ -201,8 +264,13 @@
       "text_sha256": "493c1c5e616d365bcfe38b73e5a684fbf9e47e0340770cbfe813d6defa1fb6ee",
       "n1_path": 2,
       "result": "success",
-      "audio_sha256": "0c870c637f57c73f0927529bf6a2092599199c825a54073277b075f0b79831c3",
-      "bytes": 137664
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "1c51f9c5ae8cd8eb768c81b9de7f206f6b26ae3e04f83fa755faf36e55d13432",
+      "bytes": 58272
     },
     {
       "id": "M01_S1_N2_escolha3_falha",
@@ -214,8 +282,13 @@
       "text_sha256": "9bf1ee95c0e08fe8aaeb408681c479325fe0462a4ce1d242088a24ea270583fe",
       "n1_path": 2,
       "result": "failure",
-      "audio_sha256": "0ee7580722cb525097c509dbe2881fac33801a85c8b87443640f290c84179e16",
-      "bytes": 141696
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "5d26eee1efefd3654c24c0f3148e49b9fc37de3c97c84b2aee71ea012666fbca",
+      "bytes": 59904
     },
     {
       "id": "M01_S2_N1_gatilho",
@@ -225,8 +298,13 @@
       "text": "Missão 1. O Primeiro Hospedeiro. Situação 2. As portas do abrigo. Nível um.\n\nGatilho: Primeiro vilão a entrar na Cidade.\n\nO abrigo improvisado recebe mais pessoas do que pode proteger.\n\nRetirar os civis, defender a entrada ou seguir os agressores?\n\nEscolha o caminho que a equipe seguirá.",
       "output": "audios/Novas_N1_N2_Feminina/Missao_01/M01_S2_N1_gatilho.mp3",
       "text_sha256": "fb6e650d96e628f8acfaaa7111938c7ac4d9cd26b5b3159fb694b4153a16df98",
-      "audio_sha256": "9f0746e28c52cfa77d8f4783aef95b225294e6f0cf8e322ab2849e703a4557bf",
-      "bytes": 202560
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "0d69096a66dac9c0fc3e6da1263449787565069169fd2ea35fffc3d7740db2af",
+      "bytes": 86112
     },
     {
       "id": "M01_S2_N2_gatilho_apos_escolha1_sucesso",
@@ -238,8 +316,13 @@
       "text_sha256": "585f63756163bc1d898b7fdc768f6888c22389622e0331141a393bdf6de72685",
       "n1_path": 0,
       "n1_result": "success",
-      "audio_sha256": "156be535360295d3752bb9f633ef49e14c0b848334835b6c4f426a63a3a5f45b",
-      "bytes": 305088
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "a7e612075afa1bc3a69a77e02db3ace97b3658e5f126aea21e803891dcb8b5e9",
+      "bytes": 129216
     },
     {
       "id": "M01_S2_N2_gatilho_apos_escolha1_falha",
@@ -251,8 +334,13 @@
       "text_sha256": "d26daaf6d5b0c7b753d24a750707a08f57847ec00b2389035da226080bdba94b",
       "n1_path": 0,
       "n1_result": "failure",
-      "audio_sha256": "01cb973906c598c28e42c5e0c539ae27be437864cad6ea82ceef25f02045fd90",
-      "bytes": 317184
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "d1ecfded6315d63745e98959964bfe9957746d8779ed09f17700811579a49365",
+      "bytes": 128832
     },
     {
       "id": "M01_S2_N2_escolha1",
@@ -263,8 +351,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_01/M01_S2_N2_escolha1.mp3",
       "text_sha256": "8f9009cc15dc7c6da5f78bafe9081380dc40238d17fed557b64188fa289c13cf",
       "n1_path": 0,
-      "audio_sha256": "bede343c72062ce5d05114cfd9d2445809a024cc7e5342796956d0dc48b977fc",
-      "bytes": 275328
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "08a0ad7f55d68c9f292ee8e7add641d10c3e4a873aed530ecde1ca964535d9c1",
+      "bytes": 108192
     },
     {
       "id": "M01_S2_N2_escolha1_sucesso",
@@ -276,8 +369,13 @@
       "text_sha256": "3c080afc5852d2f635a56da1ac98fb88601381974ffc00d4b2fe13ea04b771db",
       "n1_path": 0,
       "result": "success",
-      "audio_sha256": "56a6ccdd9899bfd5c2ab5366959ec51ce84a5c0aeeb1a0ea15e1701ffa34a4f8",
-      "bytes": 139392
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "3b18f13a53269ad1b5a2e794b10c9d60201235b02ed71ee48aa3335e43ccc67d",
+      "bytes": 58944
     },
     {
       "id": "M01_S2_N2_escolha1_falha",
@@ -289,8 +387,13 @@
       "text_sha256": "b5635de21e48dd0e4878aba3a95fe94bb0dc0c8557a13301e8d236e565babaa3",
       "n1_path": 0,
       "result": "failure",
-      "audio_sha256": "c8124ef0f2c3322c74bc5b5514a856de4a1f7d4a7e9243a7c5e253c04dc044d0",
-      "bytes": 154368
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "f32b0141713823e3e244b4e6e2b4c860e9981f3dc168ad54c6d944914cae938c",
+      "bytes": 63936
     },
     {
       "id": "M01_S2_N2_gatilho_apos_escolha2_sucesso",
@@ -302,8 +405,13 @@
       "text_sha256": "c150655dcfc5d696f75417c3e9bea69de4c389e748319925bd308ecdee64dc0b",
       "n1_path": 1,
       "n1_result": "success",
-      "audio_sha256": "7438af48322f4a8b843176ffbb415d85523bb80a8177e32b5a6e43b459a74c7e",
-      "bytes": 299712
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "165dc816ee9132d69835e6ed7e77ed74c4fc0dbce3fdb3da9201c2c56633182f",
+      "bytes": 129984
     },
     {
       "id": "M01_S2_N2_gatilho_apos_escolha2_falha",
@@ -315,8 +423,13 @@
       "text_sha256": "8ab411c2f1384bb0d5e1d869b61ca42982f2652653c2a66a0d6cf8a6b828ad05",
       "n1_path": 1,
       "n1_result": "failure",
-      "audio_sha256": "212239c7673a682ecace933560a16ad72743ed2a0e1bd8527ffddd8643f93b59",
-      "bytes": 308928
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "b02c0f9a4f5461d1c3c6f732052a8edcbf3c140bb39dd142f236d6f438a94ce7",
+      "bytes": 130944
     },
     {
       "id": "M01_S2_N2_escolha2",
@@ -327,8 +440,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_01/M01_S2_N2_escolha2.mp3",
       "text_sha256": "4a1ec432a6c934d7bd776ac1cf8b2d373e122802087a03570104a8be2d73da0a",
       "n1_path": 1,
-      "audio_sha256": "6b1f2533581e1ab404c0bae0e46d1bba37f9125e27f321838a2b440b4288a9b8",
-      "bytes": 260928
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "dade4318e671b8af8dd0c712e09153916a6f30f22cc14ab7540b71943d781fbc",
+      "bytes": 104064
     },
     {
       "id": "M01_S2_N2_escolha2_sucesso",
@@ -340,8 +458,13 @@
       "text_sha256": "f0b9bf1baefe321628d9b66d31770aba7691a095a632ae872f0af4cab378b9e6",
       "n1_path": 1,
       "result": "success",
-      "audio_sha256": "dc155d968f7c5797f53933cc7ea37cac7592122089d60822f6965d6443a1b85d",
-      "bytes": 129984
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "c9e17274b981af5f9f120af829728f264c0ae8f24ba95b7ab587c983c8d12173",
+      "bytes": 50304
     },
     {
       "id": "M01_S2_N2_escolha2_falha",
@@ -353,8 +476,13 @@
       "text_sha256": "3d40c78ba02506cbeeea7ea7c5121a05cb33e554816da926058b4affe3f135f1",
       "n1_path": 1,
       "result": "failure",
-      "audio_sha256": "2c5fe2a847a20a71e3fbe9c382a34f5f4c5b60e6c67d6d379ecdaa65285bee0c",
-      "bytes": 148608
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "222f41fbe03fefe742e6f30ee514ebe9188833cc115020add8f86a2b0e340dd2",
+      "bytes": 59712
     },
     {
       "id": "M01_S2_N2_gatilho_apos_escolha3_sucesso",
@@ -366,8 +494,13 @@
       "text_sha256": "07aeaf05ffc8ef610f599bafd4d23949d14c9411dd273d89c3b68724a2214ac0",
       "n1_path": 2,
       "n1_result": "success",
-      "audio_sha256": "4c270dbb5dcad67f5ac3369b89a098f6910319f84622721e5bff2c58b622296b",
-      "bytes": 308928
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "4c26d3c26c2f80a985d83dc23b38fd78c70713e3bc5bf7392e4ca8d600735c43",
+      "bytes": 134496
     },
     {
       "id": "M01_S2_N2_gatilho_apos_escolha3_falha",
@@ -379,8 +512,13 @@
       "text_sha256": "45309b582ba9c1828624e72351f5d82e9437a73412690729a7f82c0e6c10b7a5",
       "n1_path": 2,
       "n1_result": "failure",
-      "audio_sha256": "aabb71552fcb54766d9a60e2521524475c6066fdd67c96065cddb9c6fdd615f2",
-      "bytes": 309120
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "675b45937e36dcb9cd2d812f8f331a08ad603db3362755bbd987e02f0bc1ed1b",
+      "bytes": 131232
     },
     {
       "id": "M01_S2_N2_escolha3",
@@ -391,8 +529,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_01/M01_S2_N2_escolha3.mp3",
       "text_sha256": "7fd146160ca9550c40ee0f70701c28488c28605d4e422b0bedc641bb485f1fe6",
       "n1_path": 2,
-      "audio_sha256": "dc809b04e0e3f22d4a62c4d2b0e4e043d3e4f863b46216191bf41d22df6dfe6a",
-      "bytes": 266880
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "97edcac0ddfa58078af3d648d2837fe09f1728cda16da27a33c9c83f7bef6ae5",
+      "bytes": 106272
     },
     {
       "id": "M01_S2_N2_escolha3_sucesso",
@@ -404,8 +547,13 @@
       "text_sha256": "eab99daef787be776349f89bbeaff6aba0043026a08eb129c8c57f93d6886ab7",
       "n1_path": 2,
       "result": "success",
-      "audio_sha256": "2b8266efdd5d18e070f061b07f00a6b1a4a1bb99de33d7aa99d2ac5b42770d5a",
-      "bytes": 144768
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "985f69ddef81e9f219552f4eb98e7fe8a6fd5fbe9e27e86d09fb9ec81c67978e",
+      "bytes": 58176
     },
     {
       "id": "M01_S2_N2_escolha3_falha",
@@ -417,8 +565,13 @@
       "text_sha256": "72e82113dbb5b3fcdae6ce2f64910728c239947ac70f39ae92b2eeec7de0f3da",
       "n1_path": 2,
       "result": "failure",
-      "audio_sha256": "414aedf2bd9c77a0447d1b58c5252c43dc35c5bf5e146edc4c34c8430154c293",
-      "bytes": 149760
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "5c614e1184ca4001aa1108b73edd0747e58af45b8a51a0fa63050a4f5c069fb6",
+      "bytes": 60672
     },
     {
       "id": "M01_S3_N1_gatilho",
@@ -428,8 +581,13 @@
       "text": "Missão 1. O Primeiro Hospedeiro. Situação 3. A voz no transmissor. Nível um.\n\nGatilho: Primeiro Master Strike.\n\nUma voz desconhecida responde ao chamado de emergência.\n\nResponder, bloquear ou guardar a transmissão desconhecida?\n\nEscolha o caminho que a equipe seguirá.",
       "output": "audios/Novas_N1_N2_Feminina/Missao_01/M01_S3_N1_gatilho.mp3",
       "text_sha256": "6cf7864ccf893155ec5ca56f02e6ae20dcba831135edd8e77d23efb0a608a3a8",
-      "audio_sha256": "8badffa900fc23cf97504a503625adb93bb0ce9ba7611f4f18dd695c024b794d",
-      "bytes": 187968
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "3014520b7d90ab2b10089bf3d31a60b0f0b73ad10e8663b7a9584ba1736fae46",
+      "bytes": 86496
     },
     {
       "id": "M01_S3_N2_gatilho_apos_escolha1_sucesso",
@@ -441,8 +599,13 @@
       "text_sha256": "4e86f2f66e53e487f0b1785a7386858bb2c2f54f018f32a841b6b8fd5b142a60",
       "n1_path": 0,
       "n1_result": "success",
-      "audio_sha256": "f6b5b582f45f79641eff93b61b545e976fb288262e72b097e5e885de40575bf5",
-      "bytes": 315456
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "71d8d8967d3f16c161342d5921fa2ce8b35c47f93d5a4b4e13a0219018d3ecf3",
+      "bytes": 133152
     },
     {
       "id": "M01_S3_N2_gatilho_apos_escolha1_falha",
@@ -454,8 +617,13 @@
       "text_sha256": "736f6cf01c63cd060834ca567fb763894545d948c7f8a4725e6bd32d1c170f59",
       "n1_path": 0,
       "n1_result": "failure",
-      "audio_sha256": "d1b4d72b812afcf3a1a2d2d38462430afa2684382e8c6512ed48c0abe17e083f",
-      "bytes": 319680
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "8ab526eec87bd450d8a7cb95dbeaab5cff6d4f95d5c3d120b6e3a484c45efd92",
+      "bytes": 131232
     },
     {
       "id": "M01_S3_N2_escolha1",
@@ -466,8 +634,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_01/M01_S3_N2_escolha1.mp3",
       "text_sha256": "7558ddca9a186899fed7f66540cb6b184ee56297153a913a7e0af2b00ef41869",
       "n1_path": 0,
-      "audio_sha256": "7a24a569c3b517d81027a7b219760d362949d8e3af77ef9fafb46bd70ce09226",
-      "bytes": 274368
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "e5aed8a654e364ce98a80c2d774be47e40adca8e1b99cb0f8e1274372ef9fbff",
+      "bytes": 110976
     },
     {
       "id": "M01_S3_N2_escolha1_sucesso",
@@ -479,8 +652,13 @@
       "text_sha256": "c5aa15effbe46db252fa42feac1372f097f783fc8cb6f1699c2fa0b705a584b2",
       "n1_path": 0,
       "result": "success",
-      "audio_sha256": "58469b0826aa441fbdd5c19368bd56c71de61e725ddf10916d97557e6842c1ee",
-      "bytes": 135744
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "616def32628d0d93aa22e5faffc5aac688423f31d25af2a65f65abe0f4d823a3",
+      "bytes": 52896
     },
     {
       "id": "M01_S3_N2_escolha1_falha",
@@ -492,8 +670,13 @@
       "text_sha256": "63b650919ff766202cacae9fa3eadd6efc48261e54d63ecec2d5397469c57b4c",
       "n1_path": 0,
       "result": "failure",
-      "audio_sha256": "c491aec8b5a4d51dbac224f65220f98b8d591667df36d2e139adc9ba0f989abe",
-      "bytes": 158400
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "ab740820322a97dac06d42f47fa013a6b1697db5faab21b7f5f9322a61198530",
+      "bytes": 59904
     },
     {
       "id": "M01_S3_N2_gatilho_apos_escolha2_sucesso",
@@ -505,8 +688,13 @@
       "text_sha256": "f55fb48d2efb97bda465b3b73f1e20912ffbd50c4d8bdbe170c15e90fb9e0f31",
       "n1_path": 1,
       "n1_result": "success",
-      "audio_sha256": "400a13e4081cb7b1bc9474285b3961d3017720151a5aef51148eccdbbfa15e2a",
-      "bytes": 305472
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "7481e3c65c114f8b885869942b938cc4454a0f1066c342f7e21bfa11dcc66fd8",
+      "bytes": 122784
     },
     {
       "id": "M01_S3_N2_gatilho_apos_escolha2_falha",
@@ -518,8 +706,13 @@
       "text_sha256": "94c9e1cb57275da44f93ab1fecc0ccc4338f7080bbc88383f370372f52cb0ed1",
       "n1_path": 1,
       "n1_result": "failure",
-      "audio_sha256": "c20249fe64bd61380ddbba2a742d366a8758f7e3ebdb1fee14af1a14d5acf326",
-      "bytes": 316224
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "95f18be1868a0a9f70a86c9795f58c99030464db774a6def20f7416f8db20ae9",
+      "bytes": 130272
     },
     {
       "id": "M01_S3_N2_escolha2",
@@ -530,8 +723,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_01/M01_S3_N2_escolha2.mp3",
       "text_sha256": "51c1a735f6682a215ce9dc8405aeb69763a58f6afa445e2ca14ad2d49d4c5b1e",
       "n1_path": 1,
-      "audio_sha256": "ff1c3d32ebeed3d2cf4d712e04fba0c3d72d8fa8579dd6498c52f5406dae6f9a",
-      "bytes": 266880
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "639a9e3c20911d5d0ddc4c12a3e0da71672a6f5a615329c0cd159acc50c4a83f",
+      "bytes": 109152
     },
     {
       "id": "M01_S3_N2_escolha2_sucesso",
@@ -543,8 +741,13 @@
       "text_sha256": "4fb7bb1ffc5b6819385de331bc3f10cab9bc951b59646411bde8a35cee296cea",
       "n1_path": 1,
       "result": "success",
-      "audio_sha256": "51b552227f4458cf9861afc9abb8f7e36216f4a75558b5168cc8af53923241b3",
-      "bytes": 134592
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "3ae73b371034f8b63190dd054894e95a79dfe737a4e5e804ee94aab22aeb30b4",
+      "bytes": 60576
     },
     {
       "id": "M01_S3_N2_escolha2_falha",
@@ -556,8 +759,13 @@
       "text_sha256": "e05a831db21dc48157365a45d3260bd970e57799619ae73f98b77705e323ee41",
       "n1_path": 1,
       "result": "failure",
-      "audio_sha256": "2a2dc199506e9c87eae955b52c8bf2d830a8f303a987ef534700c9646a246aaa",
-      "bytes": 157440
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "778aa239f97263bab9a403ed307e315ca6b2e483a0d7fb91930e677954256864",
+      "bytes": 63264
     },
     {
       "id": "M01_S3_N2_gatilho_apos_escolha3_sucesso",
@@ -569,8 +777,13 @@
       "text_sha256": "7872e8d07c918983b5bcbeaf2fcaaa9174fd30d2fb44a3c29e229cbb57a7ea2e",
       "n1_path": 2,
       "n1_result": "success",
-      "audio_sha256": "55018b71d22572296937bf11fed631e2ead58b933f2b17e37652e1f0148b4369",
-      "bytes": 309504
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "41436d883f078e63cdd6ea72aa36e253ef97cfbd93d9c4bdcd0b0806fe1eb56b",
+      "bytes": 130176
     },
     {
       "id": "M01_S3_N2_gatilho_apos_escolha3_falha",
@@ -582,8 +795,13 @@
       "text_sha256": "e1033b54bba94d0727fde47382b68c3e9b31acb8225466102946870786d4c4d4",
       "n1_path": 2,
       "n1_result": "failure",
-      "audio_sha256": "c7c50e668b4247da94042bbf7bf529e6723f980ea1b75a200bc300e9030b8de9",
-      "bytes": 313152
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "5c64ed7921c69bf6ed3f7072c3235d00bfc1ed0674b0312b37246e2fe1851302",
+      "bytes": 131232
     },
     {
       "id": "M01_S3_N2_escolha3",
@@ -594,8 +812,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_01/M01_S3_N2_escolha3.mp3",
       "text_sha256": "45c41d81e3d893f85217137c960c4cbfb93f2125701cb128afe9c27af78f3c64",
       "n1_path": 2,
-      "audio_sha256": "b708b7e15fcabc03fdbae36982784bd62eb8d8a50a9bdb88c3b9cdca8277d79d",
-      "bytes": 269184
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "2d1deb8279b0a0c3c7e94d3b7b0769d47d09dfc0bcc15aa04fc2e8019e88c375",
+      "bytes": 110496
     },
     {
       "id": "M01_S3_N2_escolha3_sucesso",
@@ -607,8 +830,13 @@
       "text_sha256": "3689edda007c448b84057e61d3266287fa47c614d3a496ded1b62eef1a244fb4",
       "n1_path": 2,
       "result": "success",
-      "audio_sha256": "5322694b999a512fa1024a2aa3fecbdfd208b52df217d6a0aebf366b4e2f58c5",
-      "bytes": 137664
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "cc8f625211a5d5145d4d6343e8b68c60097b7f401dc8115ef1a0ee0f31b08311",
+      "bytes": 60576
     },
     {
       "id": "M01_S3_N2_escolha3_falha",
@@ -620,8 +848,13 @@
       "text_sha256": "ce05d9be8ffd2ada2805847ea5d1e7305fd4e1c77b39d3a5f98a80e5063a85e6",
       "n1_path": 2,
       "result": "failure",
-      "audio_sha256": "bc4c4a38dd84ab17d0e01fcf5ddf3416f8c97a9a3ab84716901d26bb2eb4025f",
-      "bytes": 147840
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "a1df6a45217b631f5ab04cd6ed2b838932a9abfbb3d7ea5000f858b3ef9b5977",
+      "bytes": 62976
     },
     {
       "id": "M02_S1_N1_gatilho",
@@ -631,8 +864,13 @@
       "text": "Missão 2. A Fundação Vida. Situação 1. Os arquivos da Fundação. Nível um.\n\nGatilho: Primeiro Scheme Twist.\n\nDoom oferece acesso a registros que não deveria possuir.\n\nSalvar os registros, os pesquisadores ou interromper os experimentos?\n\nEscolha o caminho que a equipe seguirá.",
       "output": "audios/Novas_N1_N2_Feminina/Missao_02/M02_S1_N1_gatilho.mp3",
       "text_sha256": "fd58311167440b01a33f5133961e722ae2ed6875d265b57484a35e411e92a66a",
-      "audio_sha256": "a940fb7e80a961423e4494b7c18778ce1be0fb2c9b36217c102af519114844e4",
-      "bytes": 194304
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "0d12a81067f61f39ad4dcbabb8a7b59c4b76eb43029d4a164462c00cf89a72fe",
+      "bytes": 90912
     },
     {
       "id": "M02_S1_N2_gatilho_apos_escolha1_sucesso",
@@ -644,8 +882,13 @@
       "text_sha256": "0182ee3abd9c1355645837b7a08fed3ece346a37b72fb07a99da790003da194e",
       "n1_path": 0,
       "n1_result": "success",
-      "audio_sha256": "1c1aa85f25aaeb49dd2950860ff5a33a542f00ad544de55fcfb1d0a1f2ba6461",
-      "bytes": 289344
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "ed6551f99c4ca1492a8eb40e5c2c372a710f8d4165a29bff05371a8c0118e004",
+      "bytes": 123456
     },
     {
       "id": "M02_S1_N2_gatilho_apos_escolha1_falha",
@@ -657,8 +900,13 @@
       "text_sha256": "d5aa6f7833eb788d8a8915d58c152c9365a8391dda27611dbb16d3c88e58387e",
       "n1_path": 0,
       "n1_result": "failure",
-      "audio_sha256": "044244a81e183cd490fbd9fdba1f3099810bee447438bb22f6b02716348fdb81",
-      "bytes": 288768
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "7bd6768dfc17482fa1191f793963563e9cef86e897a64320d69db96458d84beb",
+      "bytes": 115776
     },
     {
       "id": "M02_S1_N2_escolha1",
@@ -669,8 +917,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_02/M02_S1_N2_escolha1.mp3",
       "text_sha256": "dd1a6d8480a19dffb44e7d60ba1f59aefa678759333a35a449ee3af6cdee8d97",
       "n1_path": 0,
-      "audio_sha256": "9651c4208a2a9e6a78d54aba70cde270e86f1796f722b5eddf5b2baba1182158",
-      "bytes": 278592
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "729ee61bb9d4e5562d512943cfec8ed5f4c522cbb9fd74868f362d116e95ce07",
+      "bytes": 106752
     },
     {
       "id": "M02_S1_N2_escolha1_sucesso",
@@ -682,8 +935,13 @@
       "text_sha256": "c324c50dd209e4b8ada133eb6e28a610e294f9ee8452548031e079ef51772a2e",
       "n1_path": 0,
       "result": "success",
-      "audio_sha256": "5f205101c94976191503effa535da59d9dd062511aa2eb53761dac4565147643",
-      "bytes": 142464
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "65431e8869286cf68cd7e0245594a49ed913696645890de9dd55976c5f31ef92",
+      "bytes": 55584
     },
     {
       "id": "M02_S1_N2_escolha1_falha",
@@ -695,8 +953,13 @@
       "text_sha256": "d6127a762415dd748b3a8035d1a5916aa9edf57a183daa72546c2499939d0da5",
       "n1_path": 0,
       "result": "failure",
-      "audio_sha256": "29b5404500ae054037808344f99249086011478a33c97afc99d93c1efb2552bc",
-      "bytes": 157824
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "4685a625ee65f28c4efe4f7fa70efa0a8ba4e75f219e36749c3fcf6b6af4c98c",
+      "bytes": 72096
     },
     {
       "id": "M02_S1_N2_gatilho_apos_escolha2_sucesso",
@@ -708,8 +971,13 @@
       "text_sha256": "f69b0be29876cc721b9859e658b54c37f2dd014c337e7240c7a4dfed67883a85",
       "n1_path": 1,
       "n1_result": "success",
-      "audio_sha256": "ebceac8f9a316d8a541224009d5108b6cc08513efa39253373098fb2a00d6977",
-      "bytes": 283968
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "39bfd0e02fcec9c91deb2b598e226540dad730a12a7873b32cc588726e8a2f89",
+      "bytes": 113952
     },
     {
       "id": "M02_S1_N2_gatilho_apos_escolha2_falha",
@@ -721,8 +989,13 @@
       "text_sha256": "4e9b4404710bde93d0714cd242819b80767d48a2bda8c21915171e47bddd4895",
       "n1_path": 1,
       "n1_result": "failure",
-      "audio_sha256": "f811cce17794f5be5b32ed95191d1a4c45af488b6d169d4d7e29790c319e7269",
-      "bytes": 293760
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "ab27d00e6f943e3580d561a75e5b96855a21a0b76984100a0174f7c1ac9f6f93",
+      "bytes": 118752
     },
     {
       "id": "M02_S1_N2_escolha2",
@@ -733,8 +1006,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_02/M02_S1_N2_escolha2.mp3",
       "text_sha256": "e9374df9fe88736c9d211be0f689a90059d40cfb5487afd61ce90a66beb308bf",
       "n1_path": 1,
-      "audio_sha256": "d7469751da277a586a089188e0304500ef148f0a86d271121f9deb259a460eca",
-      "bytes": 281664
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "82b826b882d9bbdac5df3b622eec8333ebf9836ebaf90c990a04be36a31d11e4",
+      "bytes": 110112
     },
     {
       "id": "M02_S1_N2_escolha2_sucesso",
@@ -746,8 +1024,13 @@
       "text_sha256": "9512f0246b7f999054414cef8ecebbd268a2a7143edd66bb0c24811dbcc873e1",
       "n1_path": 1,
       "result": "success",
-      "audio_sha256": "1bdbfdaab9219e39abea7179cdd5b4a33ce09b697f6295aaa4497bc544280789",
-      "bytes": 145920
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "c0c7082bcffc3668f556a62c3ef772875aed66c2768016616a1b6bc6fc0c3191",
+      "bytes": 57792
     },
     {
       "id": "M02_S1_N2_escolha2_falha",
@@ -759,8 +1042,13 @@
       "text_sha256": "abdb05f4cc12471394b2be1b26af88547e73e6c09feadbc4ba42f9c2e7aae982",
       "n1_path": 1,
       "result": "failure",
-      "audio_sha256": "ac0a35bc2a17ff293c2353dd0e8655c06b1a6ed16c3bbcb6eeaa82a0c5405fae",
-      "bytes": 160896
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "b50b8344f655de8972cc74ad27c5b50a9d23f803e236de13c270e43d85fef19f",
+      "bytes": 61536
     },
     {
       "id": "M02_S1_N2_gatilho_apos_escolha3_sucesso",
@@ -772,8 +1060,13 @@
       "text_sha256": "7ea81eecce3a35c90f533a087fe9aba9fd5ba5357b4edd5cd6cdcbcff557a995",
       "n1_path": 2,
       "n1_result": "success",
-      "audio_sha256": "7f21f32b0bdf00210bb1328c3750c64b54e5f1457b490e4312f35f20483758a1",
-      "bytes": 284928
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "0ac6069a9f53f140ad1f9ab2d7aac614529efed281f1bf413dd211158c6ee479",
+      "bytes": 113856
     },
     {
       "id": "M02_S1_N2_gatilho_apos_escolha3_falha",
@@ -785,8 +1078,13 @@
       "text_sha256": "c1345ee50cf2da32b61551038b49c80997e2e2a6d9d411f5346e292fc7c2ce04",
       "n1_path": 2,
       "n1_result": "failure",
-      "audio_sha256": "d58ddc7005929ad374cd3724bd4b8eaf8d58bad6a8192fc681bb7b399252af0e",
-      "bytes": 284352
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "4380066bc77c2a027d07d81bc4d502d0998c4896279b2a20c8015ac909034125",
+      "bytes": 112032
     },
     {
       "id": "M02_S1_N2_escolha3",
@@ -797,8 +1095,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_02/M02_S1_N2_escolha3.mp3",
       "text_sha256": "e05d3b49181b8f68e921cad658123b9bcb280cd9131fa1b73a9bbbef56ed2647",
       "n1_path": 2,
-      "audio_sha256": "009187f2e082ab5db9abd1b88b47ffcbdbba1b1b3b14886aa404c6cff7ab9b49",
-      "bytes": 260352
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "908ed1d1228c71429762fa22009efe2ea47d0ff0f1993d6868459948e4d78f96",
+      "bytes": 105312
     },
     {
       "id": "M02_S1_N2_escolha3_sucesso",
@@ -810,8 +1113,13 @@
       "text_sha256": "cfa564a501255374dd44ba39397fe5378d2db8c7ef305f797a0352f4507a46da",
       "n1_path": 2,
       "result": "success",
-      "audio_sha256": "b67d8eb81f7bf2423c33d8de90bdfb5b2dbb44f5c4d85618bb483b9557b6854d",
-      "bytes": 137280
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "2e67903007d8c9f31bb2ab15345b38c8459f68887dee7bd7e3b78e9083e9603f",
+      "bytes": 59712
     },
     {
       "id": "M02_S1_N2_escolha3_falha",
@@ -823,8 +1131,13 @@
       "text_sha256": "261b7daf3836a4b9aaa036f96e0e319cb4a7f9b0ec2053cace020fa04861b2a6",
       "n1_path": 2,
       "result": "failure",
-      "audio_sha256": "f242e277d306c87aecc22e73d126a16ae7f4926218986041b4bbb56f89197734",
-      "bytes": 156864
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "605bffc43e0254707bb2076a5596f218e9aadd19ef934122b2165ccd1c4e0f4f",
+      "bytes": 59712
     },
     {
       "id": "M02_S2_N1_gatilho",
@@ -834,8 +1147,13 @@
       "text": "Missão 2. A Fundação Vida. Situação 2. Os que não conseguem se mover. Nível um.\n\nGatilho: Primeiro Bystander resgatado.\n\nO veneno paralisa pessoas ainda conscientes.\n\nTratar os pacientes, sustentar a enfermaria ou perseguir a distribuição?\n\nEscolha o caminho que a equipe seguirá.",
       "output": "audios/Novas_N1_N2_Feminina/Missao_02/M02_S2_N1_gatilho.mp3",
       "text_sha256": "495a5a24b131abbbbf8fb10195a9b399901bb29988a46ae9618faea237927329",
-      "audio_sha256": "14b44417d331f281a7324b76e08df2afee1dd7c700a3aa1c680433940ff3950a",
-      "bytes": 201408
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "57dc1d0942d0bece8ef2c152ceafab0131256597a22081a7d9ec2763b936bd35",
+      "bytes": 89184
     },
     {
       "id": "M02_S2_N2_gatilho_apos_escolha1_sucesso",
@@ -847,8 +1165,13 @@
       "text_sha256": "d22fe3572f97ac90d795719ef062062494c180993382d696939fceda97250e0e",
       "n1_path": 0,
       "n1_result": "success",
-      "audio_sha256": "c679ef32232c4ecb8184a9eb9eed36a63f83f68d948cf958a063bf68ac0bf988",
-      "bytes": 303744
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "535ae1728f9548e3021f8fcb3ca605f43a8909d2bc1c6ca8985bccfdb6fd02d1",
+      "bytes": 124992
     },
     {
       "id": "M02_S2_N2_gatilho_apos_escolha1_falha",
@@ -860,8 +1183,13 @@
       "text_sha256": "0d547018732181ca055c8a7994b4fd1d3d64eae4314f9d0a0f8b3ae11d7421a7",
       "n1_path": 0,
       "n1_result": "failure",
-      "audio_sha256": "bd9e652f8f6e06f6eb6d8518eb21a1f514ffbae725208540bf3b86a2737cff29",
-      "bytes": 305664
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "4f33751dba02541b0ac8f602d4110182440cb7c0164fc776105bba7aca7d6e39",
+      "bytes": 125472
     },
     {
       "id": "M02_S2_N2_escolha1",
@@ -872,8 +1200,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_02/M02_S2_N2_escolha1.mp3",
       "text_sha256": "1fc4358110c091379da581a38a888d2aba10bb7f4fa461ee5cd0f8a713343aa6",
       "n1_path": 0,
-      "audio_sha256": "85d8e7c3733b625d1daa26bcb47975003dc97f77f1757bbb00c8fcd7658b4298",
-      "bytes": 269376
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "799ce3d38cc7a7b70d4add633a57e008a8ea04fff6bb2cbcb15bfde0eb44c523",
+      "bytes": 112032
     },
     {
       "id": "M02_S2_N2_escolha1_sucesso",
@@ -885,8 +1218,13 @@
       "text_sha256": "2a9ee58e47889012f046ed45844bd9530296731e74c618abcb256a70d1b8048f",
       "n1_path": 0,
       "result": "success",
-      "audio_sha256": "668d2d3c85e29b5f8f7dce5890f726eba1946d4587082ad529305e85bfd7b870",
-      "bytes": 135168
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "e93f6a692eb1ca63e61f1befa7adfb4e831a67520913232c6e1b633d0d8986c4",
+      "bytes": 57792
     },
     {
       "id": "M02_S2_N2_escolha1_falha",
@@ -898,8 +1236,13 @@
       "text_sha256": "6442d4d6d8e2b2f3ee9b53a0e922afeae6387646ef67b639ebcb9e845e3d541e",
       "n1_path": 0,
       "result": "failure",
-      "audio_sha256": "053779d9c85269070f7a7fadfded9b19c618f0fe43f781c8989b3082e1e62920",
-      "bytes": 150720
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "c0fb71a0b69bd0a2b1ddd79e4ae9d1356f4f5814a95aac73fad927e8ba76ad9d",
+      "bytes": 65952
     },
     {
       "id": "M02_S2_N2_gatilho_apos_escolha2_sucesso",
@@ -911,8 +1254,13 @@
       "text_sha256": "cf1328e652b670902e524c0ce3a8092d96a84c97f31f31dd7ce43a8848cdbdae",
       "n1_path": 1,
       "n1_result": "success",
-      "audio_sha256": "7d61d8275964ae4dd8895866c24dedb7d862f62563f8b65cfe312f235f94132b",
-      "bytes": 295296
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "deb742733b2bf257b40f53f25b9eb3393f9a696557c04999b4486c542ed2ed02",
+      "bytes": 124896
     },
     {
       "id": "M02_S2_N2_gatilho_apos_escolha2_falha",
@@ -924,8 +1272,13 @@
       "text_sha256": "a82a07b3f39a554f023f14e3834a8b71d2f17323c6001ba094f1ff782bd8b9af",
       "n1_path": 1,
       "n1_result": "failure",
-      "audio_sha256": "30ed9e9079daa0c342defb8a3fdeccdca8b6e9e5376931bf72e30f7e833f9e63",
-      "bytes": 301056
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "f0cc6e8053ac123690bc996060efaff059340fa0eeac7da0986946e8e77e9655",
+      "bytes": 120192
     },
     {
       "id": "M02_S2_N2_escolha2",
@@ -936,8 +1289,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_02/M02_S2_N2_escolha2.mp3",
       "text_sha256": "2760ee69b6d05fdbdd63b797781ab14d3a3a886c73808c30171375d4b40e93f0",
       "n1_path": 1,
-      "audio_sha256": "9dea4cbe04c042a705408b5974e0d13271d145d5d0a1742e4bb21281d1bba85d",
-      "bytes": 263424
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "280555b67453f357f3a7ff1324a1b526e9780aa2a712ed225ad982d342d0a6b5",
+      "bytes": 100992
     },
     {
       "id": "M02_S2_N2_escolha2_sucesso",
@@ -949,8 +1307,13 @@
       "text_sha256": "a054ec6bcc4bbfbcd93d60661f0a0f4c1929f52167f0a5fd46bf365f1fe526b9",
       "n1_path": 1,
       "result": "success",
-      "audio_sha256": "9665081a01a4d7eb980447d1a82bf36e3ca668459c8a0a9c6cae214af1314be3",
-      "bytes": 129024
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "d52b2aecaecf180d9cbbcb0e5acd1ad3528ae48167b05a365c5019f874dee5c4",
+      "bytes": 51552
     },
     {
       "id": "M02_S2_N2_escolha2_falha",
@@ -962,8 +1325,13 @@
       "text_sha256": "551c0621ff479489e9b5f5d6dc364e88e13f2fec19c27f0e4820cd34dedf92db",
       "n1_path": 1,
       "result": "failure",
-      "audio_sha256": "90beae9eb6b53186ce1d523ec237d341a4f4b1121912fca4317ccd4ca023948b",
-      "bytes": 147264
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "92371fcd9e73e1dfc4db753f4880bbd645513bcaf8f4469891d110ab61641254",
+      "bytes": 59712
     },
     {
       "id": "M02_S2_N2_gatilho_apos_escolha3_sucesso",
@@ -975,8 +1343,13 @@
       "text_sha256": "afda269f11e0e8ffec059a6033a44402cebeb83f9b51cf67710c94f02acb809b",
       "n1_path": 2,
       "n1_result": "success",
-      "audio_sha256": "620444cc7695f3872d5149454ed5591747646675652107b6351d17f9d0df6e18",
-      "bytes": 311616
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "50a84c01614324015bfdcf80795f67a3e4b4b1696b6111002fc203d7df50cac2",
+      "bytes": 131136
     },
     {
       "id": "M02_S2_N2_gatilho_apos_escolha3_falha",
@@ -988,8 +1361,13 @@
       "text_sha256": "9aea18da49ec72b1f35ea2e25b9f0636f30f2994a6e61d12ce5d26be09799c3d",
       "n1_path": 2,
       "n1_result": "failure",
-      "audio_sha256": "7fe01e9ba9bcf844b2b576f70276c81087071b81184ef4abb6c945dcf28e9f66",
-      "bytes": 312192
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "0778119812ddb54bbca1ded3db3115524283c38653a5db6a446982a3169742e4",
+      "bytes": 128544
     },
     {
       "id": "M02_S2_N2_escolha3",
@@ -1000,8 +1378,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_02/M02_S2_N2_escolha3.mp3",
       "text_sha256": "1bcf7ceb689e32df352d98e11b98e8c2156f93765812367b1d79f57f06ae5301",
       "n1_path": 2,
-      "audio_sha256": "ccceba55ea7372798d8e496251f5cac23ac56f56a8d10419cb1d3c93e6bc478b",
-      "bytes": 268800
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "9c48f05ae4f68339b5b7c91ac01f3d2e89e92994bbd29e43f6c1821e7d67345a",
+      "bytes": 106464
     },
     {
       "id": "M02_S2_N2_escolha3_sucesso",
@@ -1013,8 +1396,13 @@
       "text_sha256": "3f07d616ab025c40a5e336980604c88a7ee8503a050683d61c3de77ef679d06c",
       "n1_path": 2,
       "result": "success",
-      "audio_sha256": "da424d8d2b08ce182512be63a9cbe227edec9be756bc9435263b31ef8584bad5",
-      "bytes": 145344
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "af9d290bf109c38bf9ca163870e9cbc78b0eccdb7e7021f1a640cfa739917660",
+      "bytes": 60576
     },
     {
       "id": "M02_S2_N2_escolha3_falha",
@@ -1026,8 +1414,13 @@
       "text_sha256": "a63a972b7969c3e172f342d9ffd9019594037830121886ba24a9321f6578040e",
       "n1_path": 2,
       "result": "failure",
-      "audio_sha256": "2e45576b5db490bffb2a8468601c30d330c5b25bee3fa3d6495e1912dc6187d9",
-      "bytes": 156480
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "9c17f837cdffc5bd77825bffd6712ae409f6ba475a178e53681af1ab6d06c9b2",
+      "bytes": 59616
     },
     {
       "id": "M02_S3_N1_gatilho",
@@ -1037,8 +1430,13 @@
       "text": "Missão 2. A Fundação Vida. Situação 3. O pacto de Doom. Nível um.\n\nGatilho: Primeiro Master Strike.\n\nDoom exige colaboração para conter o desastre que ajudou a criar.\n\nAceitar um acordo vigiado, recusar Doom ou provocar sua arrogância?\n\nEscolha o caminho que a equipe seguirá.",
       "output": "audios/Novas_N1_N2_Feminina/Missao_02/M02_S3_N1_gatilho.mp3",
       "text_sha256": "220c236af33018ab08e728fd87802c8ba222e14bca193717d2163341cf836e0b",
-      "audio_sha256": "dc020b4424e349ee0ea0967c88bac4f8a60e0718b09942677a5547c39ae0e7fd",
-      "bytes": 200256
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "b9aab6fd814f5e878844753e144e550e30a37727a4536d5e02fd844b8c0efdf3",
+      "bytes": 94656
     },
     {
       "id": "M02_S3_N2_gatilho_apos_escolha1_sucesso",
@@ -1050,8 +1448,13 @@
       "text_sha256": "822d319cb3e2391e2e820e825ad7d859c32afc1cb749fb0ce66e3154bffd6b06",
       "n1_path": 0,
       "n1_result": "success",
-      "audio_sha256": "ff912ce355ca2b85515c607a2fa866d637895ddc73ac96c760cf20aeadda6e0f",
-      "bytes": 309696
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "5d1b4703fcf02c2aa6823bb2f7c5544b600baba473c3e9ade9f4017ae85fcdf7",
+      "bytes": 123072
     },
     {
       "id": "M02_S3_N2_gatilho_apos_escolha1_falha",
@@ -1063,8 +1466,13 @@
       "text_sha256": "8fb8b9224352589bbc74163a46e455efe23dc6c839fa0f5725f3c7501ab8e735",
       "n1_path": 0,
       "n1_result": "failure",
-      "audio_sha256": "35049f19b0fd9f8bd43badf38e79007e0008b43c0033c1aa96580b02c09e3b5a",
-      "bytes": 303360
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "f987006eac6577a7462e12e93f520a7fc15689809ebd8be282dbad276b9b031f",
+      "bytes": 127872
     },
     {
       "id": "M02_S3_N2_escolha1",
@@ -1075,8 +1483,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_02/M02_S3_N2_escolha1.mp3",
       "text_sha256": "e86998dbf5c4ade80991ba4d33d730edb7427a4ea2d0db6d2b17d2f5ff666bf0",
       "n1_path": 0,
-      "audio_sha256": "58d473e69fc5169a200d8b02e9a3997de6905db641305113fa62c06a12e5611c",
-      "bytes": 277824
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "500c6d07b8355f8f3d669938a4a2200c3b2d035a9b85ef022cd1f85948b8fdac",
+      "bytes": 106656
     },
     {
       "id": "M02_S3_N2_escolha1_sucesso",
@@ -1088,8 +1501,13 @@
       "text_sha256": "2f29acdbab7e5024aef8aed00b389fba7ce8e04ad2055b4c79c64576cf30ec6e",
       "n1_path": 0,
       "result": "success",
-      "audio_sha256": "20d7f26ce5ccb29acd89af95c21e13f4abebc8bb4becde3e7ccfeee7e69fc78c",
-      "bytes": 143232
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "990d4f2f1fec09b6840ea521023f87b1eb4dde807aec8d94d81f061aabebb733",
+      "bytes": 58272
     },
     {
       "id": "M02_S3_N2_escolha1_falha",
@@ -1101,8 +1519,13 @@
       "text_sha256": "46684417e6fb9c4b5d4dd08cfe8e500201254a3f510ab0beb4d7a1c577437f72",
       "n1_path": 0,
       "result": "failure",
-      "audio_sha256": "0a331150b9aa63e0a5f1c6a6b9906ae636aee117870b457e7cf305b6a6c619fd",
-      "bytes": 156480
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "55c3c9ba30695231f3c35a5ff14c2a71871c7ad4c6729b5575f7807931ae05ff",
+      "bytes": 65664
     },
     {
       "id": "M02_S3_N2_gatilho_apos_escolha2_sucesso",
@@ -1114,8 +1537,13 @@
       "text_sha256": "1d7b1e52e9f55625ff2381db76fe982696158f67e9c4b9506d1a7de21659c8af",
       "n1_path": 1,
       "n1_result": "success",
-      "audio_sha256": "7b343cb287a29f43cbe9e99fbcfa9a3d861f4b081ad53b0d4e3775cade520f5c",
-      "bytes": 298368
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "a84228d4d9b191bb2b34ad7dd9fe390ee7c413f1e70c14833b2efb02c15c0bc2",
+      "bytes": 119616
     },
     {
       "id": "M02_S3_N2_gatilho_apos_escolha2_falha",
@@ -1127,8 +1555,13 @@
       "text_sha256": "97018cbaa2c2c5ee3dab0c9101bc268ca2b902437abe6026fd1f9ad2facbf349",
       "n1_path": 1,
       "n1_result": "failure",
-      "audio_sha256": "d8b29c18dc6f124d158dd36ea9447ee6c549566d2ce9fa071e17b1b64c8bbaca",
-      "bytes": 303744
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "33dc15f186648ed064a36a42403c8e77a1923a7f5f701f1967ce85762bbc1b7c",
+      "bytes": 123072
     },
     {
       "id": "M02_S3_N2_escolha2",
@@ -1139,8 +1572,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_02/M02_S3_N2_escolha2.mp3",
       "text_sha256": "6ffd6ba94ddef6526a8ec3b960f3a15579a00d6c2ab776f090c792f65d1cb4c6",
       "n1_path": 1,
-      "audio_sha256": "6cb600e056016cffadd3b85989f409bca4cd0393629f23ae7daade27b5d58a23",
-      "bytes": 283776
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "da01368ccb637072f873ed2609d8b388fa285ef17b0f41e112c66c16ae76dde4",
+      "bytes": 115776
     },
     {
       "id": "M02_S3_N2_escolha2_sucesso",
@@ -1152,8 +1590,13 @@
       "text_sha256": "bb6a8142b259c32ffef7e4f7b0c7be6a04f21f697aa01d77231d7744ec6f7d17",
       "n1_path": 1,
       "result": "success",
-      "audio_sha256": "043e89bf7adfae967f75f80b6fabf84b545b3fcb6ce14899662b76721511e6dc",
-      "bytes": 135168
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "2fb2253f96fe8e39ab27c976c46e9f7bd24f333366025d3c507f23164eba8f00",
+      "bytes": 55392
     },
     {
       "id": "M02_S3_N2_escolha2_falha",
@@ -1165,8 +1608,13 @@
       "text_sha256": "f01ff7a170636fad5e3e774f4fca7c38b3572290e19e795cec61f297a6ea05fc",
       "n1_path": 1,
       "result": "failure",
-      "audio_sha256": "c22851baa26886e6a99b213c35d1d28d43c759ed7e61bbb96df31f72390f3d01",
-      "bytes": 158976
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "3ccbea7c63f446943a571620ca4d5987ec57182c321e357126e26bc78a8e292c",
+      "bytes": 65952
     },
     {
       "id": "M02_S3_N2_gatilho_apos_escolha3_sucesso",
@@ -1178,8 +1626,13 @@
       "text_sha256": "63f1426b9d8f191f86ee973a960def747498031614f1351e757cc3696e714d6d",
       "n1_path": 2,
       "n1_result": "success",
-      "audio_sha256": "3141b235a17ccdae08861e6787cb75885ba89b44c8075b0d2a2d66ab68051479",
-      "bytes": 298944
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "10dade7b7290a8936268728fe1253d6b64f53758df227252a62680db871fb292",
+      "bytes": 125664
     },
     {
       "id": "M02_S3_N2_gatilho_apos_escolha3_falha",
@@ -1191,8 +1644,13 @@
       "text_sha256": "09a045b23da8a54862b2a03e16a929b6ba687e55838960859bef48e5d5f88b33",
       "n1_path": 2,
       "n1_result": "failure",
-      "audio_sha256": "17f0a3301a17a35029367a0dcc715ba8801c7d4484ac158e8a97f50595b9a722",
-      "bytes": 309120
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "f641b5a27617ee2a6ebfeb07c05a83a13ac9df474a5c2f277a9a163af6b42a42",
+      "bytes": 121536
     },
     {
       "id": "M02_S3_N2_escolha3",
@@ -1203,8 +1661,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_02/M02_S3_N2_escolha3.mp3",
       "text_sha256": "1ac6cae0be5c44ca61fdba12a8c7a97949e2310d9102ca59289159050b9c1658",
       "n1_path": 2,
-      "audio_sha256": "e84aeb09cd1af2cb52643511d313d924a24bb13943be5fbc2ef853d764a70bee",
-      "bytes": 270720
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "0026a49884ddc538c8207f0788d7d8e7a13c0e1b9f7af964606863a3e46f3363",
+      "bytes": 100992
     },
     {
       "id": "M02_S3_N2_escolha3_sucesso",
@@ -1216,8 +1679,13 @@
       "text_sha256": "944f60cd73ffb940ce057954e9e6411cb64493451a659585d12cd9fa0b12d590",
       "n1_path": 2,
       "result": "success",
-      "audio_sha256": "68457daaf24b15a0e4f4436ac50f8a1fd6a6367b0f63114f55de273119deccc5",
-      "bytes": 139584
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "d89be0425da1b1cc55b2094337922df02e7d5b6ee1c56a5b5f1c6765b7932071",
+      "bytes": 55584
     },
     {
       "id": "M02_S3_N2_escolha3_falha",
@@ -1229,8 +1697,13 @@
       "text_sha256": "e2229e9df500c9013d85b99d17b4d3371b286c08d3079bb2d9502b83789a0c26",
       "n1_path": 2,
       "result": "failure",
-      "audio_sha256": "efe8ba79fb7e5effe793ecc8e090f3de32cf63ed39707eb644ab708b75b78f11",
-      "bytes": 153216
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "b34700ee7cfba73d2f3291fedfe75a14c0dcc2909b1c2e596c05c74147993fb1",
+      "bytes": 65184
     },
     {
       "id": "M03_S1_N1_gatilho",
@@ -1240,8 +1713,13 @@
       "text": "Missão 3. Somos Muitos. Situação 1. A consciência fragmentada. Nível um.\n\nGatilho: Primeiro Scheme Twist.\n\nHybrid demonstra que não é uma única vontade.\n\nSeparar as vozes, estabilizar o vínculo ou enfrentar o núcleo?\n\nEscolha o caminho que a equipe seguirá.",
       "output": "audios/Novas_N1_N2_Feminina/Missao_03/M03_S1_N1_gatilho.mp3",
       "text_sha256": "98980f53cebe4fa83731a82731bcdf6c2bbb5857b54fef25e663a8d29ea1b7bd",
-      "audio_sha256": "1cb34182d2203d31e09f7a41ce42c606a79fbda6ce7e90d78b7f987fdbb42b84",
-      "bytes": 188544
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "3ea72c4345e56c83badca47ab8c34b5f9a60d2c31fed6b630345a7cc6fa8b8b7",
+      "bytes": 91872
     },
     {
       "id": "M03_S1_N2_gatilho_apos_escolha1_sucesso",
@@ -1253,8 +1731,13 @@
       "text_sha256": "5da0d1341d412436da15a0ea0bb4aedc46a83407e7f57022a15f777c62760f39",
       "n1_path": 0,
       "n1_result": "success",
-      "audio_sha256": "db8881529e1b63c2d67463075fb7d5efe5976ce627ba07dbbc303ee72f988f48",
-      "bytes": 295296
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "dd83c589a66164990dc5bc8070d28ef8c07aa5b5e585481a6b16c880d2d5669c",
+      "bytes": 123936
     },
     {
       "id": "M03_S1_N2_gatilho_apos_escolha1_falha",
@@ -1266,8 +1749,13 @@
       "text_sha256": "00eaf8826f66f8818b1d76d18e4e18afb453c617501c910adb0b6f07d90b6fdd",
       "n1_path": 0,
       "n1_result": "failure",
-      "audio_sha256": "663c5f6490da5adbab238cf0451eae9038ffd9aa4c6ff2ac7e2511dc5fa4fa1c",
-      "bytes": 289536
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "e1fac52bc41043870d580d5951c43d8c6a2ce84df781c6b3c8055e16310d15cc",
+      "bytes": 114816
     },
     {
       "id": "M03_S1_N2_escolha1",
@@ -1278,8 +1766,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_03/M03_S1_N2_escolha1.mp3",
       "text_sha256": "ec63830a93a23514c017550a384f696295e1cd8751d7e43e2fc19194a6e08241",
       "n1_path": 0,
-      "audio_sha256": "a424310393c41dee8db7c211b35f0b0837e681baa52cc949347abffb37d49e65",
-      "bytes": 263232
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "94b85af78d3ee90920fafbbc97f55f6824c366739ed0958604889d0537464f0b",
+      "bytes": 110976
     },
     {
       "id": "M03_S1_N2_escolha1_sucesso",
@@ -1291,8 +1784,13 @@
       "text_sha256": "f5832011d4107ed64bea4ab9bc0ab2f62ce807bf9e95366ad618d97eef997a82",
       "n1_path": 0,
       "result": "success",
-      "audio_sha256": "4112a784809289d9c2236e28aab5a61b2a974ec7e8a5ab8df1b4a5a797c20e70",
-      "bytes": 136128
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "cede8fba4f3ce864f1d99c79a89392f231fbbee83b48146a844f386ddf300da8",
+      "bytes": 63936
     },
     {
       "id": "M03_S1_N2_escolha1_falha",
@@ -1304,8 +1802,13 @@
       "text_sha256": "bc1cd2450ae3b08e595dd1c3821cfeb1dd53d015060e64a8e7273c032b553cd6",
       "n1_path": 0,
       "result": "failure",
-      "audio_sha256": "de28fd9fed9a13fd65f24d1c14ff3b30c8b2ebab5cd1c0e0c7bcc4945304dc7b",
-      "bytes": 146496
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "65cb49fd82deecc951139e7cc7bf590c6461327035926dd65b04cb65ab48bd19",
+      "bytes": 61056
     },
     {
       "id": "M03_S1_N2_gatilho_apos_escolha2_sucesso",
@@ -1317,8 +1820,13 @@
       "text_sha256": "039c2d5e04bfcbfd47614d2a70ae7029b48cdbe77428ad9f4866c102e489a6a2",
       "n1_path": 1,
       "n1_result": "success",
-      "audio_sha256": "13b1c9717775101d65620101df5dcedc44feb0cfc1fb7dd708143d4e28b85abd",
-      "bytes": 284736
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "49927148d7c6643bb7c5b1a01cac2c84bd2b1be65edfccd4ddcd8b0f499db3fc",
+      "bytes": 121056
     },
     {
       "id": "M03_S1_N2_gatilho_apos_escolha2_falha",
@@ -1330,8 +1838,13 @@
       "text_sha256": "65fa791fa299d76b9e46de6c4a0899e0ab6fb727112f537efae1e5acd6eef211",
       "n1_path": 1,
       "n1_result": "failure",
-      "audio_sha256": "40a5a2ec77450aa7d9b4d740be4b8315aaab8ce8776d5e19356cb176cb4a16d7",
-      "bytes": 296064
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "950a24f5f30685395ae045846b63c46e024248ee702540e2d1b9d9ffdd81b04a",
+      "bytes": 117984
     },
     {
       "id": "M03_S1_N2_escolha2",
@@ -1342,8 +1855,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_03/M03_S1_N2_escolha2.mp3",
       "text_sha256": "89f465794c1a76f2c8c9ec3f1ff15a206c951c9502b687cd3ac6143ec1daf482",
       "n1_path": 1,
-      "audio_sha256": "8e9f28d853c48c62835513f7db44b3615604de17b89a365dba9441aaa103c3b0",
-      "bytes": 260160
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "5b18625445c2b63d37e55161228da4537a60f737fbf05215c02f69401b563607",
+      "bytes": 105312
     },
     {
       "id": "M03_S1_N2_escolha2_sucesso",
@@ -1355,8 +1873,13 @@
       "text_sha256": "594143f8f9ea0bc22fa8bc370b53622a925abacce31ab3f7532802c774558fc9",
       "n1_path": 1,
       "result": "success",
-      "audio_sha256": "3b45d4709091e88a73e7bb8cce13379cd81daa69707b468110de2fe4e2e71aca",
-      "bytes": 133440
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "54adb0ba26dc5387ef8721270091d63c299495ad0d9efd67ed61358b28ab843d",
+      "bytes": 54912
     },
     {
       "id": "M03_S1_N2_escolha2_falha",
@@ -1368,8 +1891,13 @@
       "text_sha256": "f5f9a175992a42e9cfe2592b60bcd94816447803b1eb132892ad585ca947c4dc",
       "n1_path": 1,
       "result": "failure",
-      "audio_sha256": "c634bcce85f1c7b363c06854fb804f6c109c24419017ae742be50c0f73308085",
-      "bytes": 152640
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "a831ded7cf5d8d3d397537cd8865c4ce1533c19c558129e43181b1adbdda6a86",
+      "bytes": 64704
     },
     {
       "id": "M03_S1_N2_gatilho_apos_escolha3_sucesso",
@@ -1381,8 +1909,13 @@
       "text_sha256": "611ff31a654771633723ad8b73c523ce846ffa3e902bc1b868ce7cbab1be4c5b",
       "n1_path": 2,
       "n1_result": "success",
-      "audio_sha256": "98f2b1d64ad5fc4b78d90529860c5992f66cc62fdb9767feaabb1c851f0079e8",
-      "bytes": 285888
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "73c42c496d21ddf422942ea9311daa0b25cb8bb74d9f8378351428848a4f9c4a",
+      "bytes": 120096
     },
     {
       "id": "M03_S1_N2_gatilho_apos_escolha3_falha",
@@ -1394,8 +1927,13 @@
       "text_sha256": "6914d89051d8e6481124cc1cd9bfaf66ca9eae60cd5f142af9bf16f16b538f17",
       "n1_path": 2,
       "n1_result": "failure",
-      "audio_sha256": "b28ee2d8988b26eff2cf1833147cc3b41714d615a853e872ee25de7f5830011f",
-      "bytes": 291264
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "37d6ab83229d287650ba0e966b1bde5579920ba78b1c32e43049366648e89036",
+      "bytes": 122112
     },
     {
       "id": "M03_S1_N2_escolha3",
@@ -1406,8 +1944,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_03/M03_S1_N2_escolha3.mp3",
       "text_sha256": "4842c5c8e5b697e2a8b4f8e0d2bc874ee5b893501a3dc6fcc95f078c73005ece",
       "n1_path": 2,
-      "audio_sha256": "f53555d6faba321157a8cd995147419b859a9c16bf254173cdae4a0918f1ac7e",
-      "bytes": 264384
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "03f113327a78f853bb3e9378aedaabda0ddf04397ca1e23c595f1c738e0e6847",
+      "bytes": 113184
     },
     {
       "id": "M03_S1_N2_escolha3_sucesso",
@@ -1419,8 +1962,13 @@
       "text_sha256": "54ae4602a08ab04b7e5746077d7eeb0efa8e5f109d0915852836e886c89af761",
       "n1_path": 2,
       "result": "success",
-      "audio_sha256": "1aeb2931f5f4d3e1c7aa16d928b4cd4cf5d91cc20c2cc8392141639a2c0b7dff",
-      "bytes": 137088
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "9b6df2276d48c63af9e4771ca70d51d09da55f4b134e16d368401d8302553e00",
+      "bytes": 57024
     },
     {
       "id": "M03_S1_N2_escolha3_falha",
@@ -1432,8 +1980,13 @@
       "text_sha256": "3559eb4cfaf952ad9ea761af152c65f4a28748d00326ebc7a247698a6d27b631",
       "n1_path": 2,
       "result": "failure",
-      "audio_sha256": "7e3df56a7eb963e6e5a1cfd1ba36857d854602c0e2868a7b58717e9650d59e4d",
-      "bytes": 154368
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "bf5f4dbd76e2d5513b089235fc44a6ecd807553dbd3fb4fdc1b2d561bb64567c",
+      "bytes": 60672
     },
     {
       "id": "M03_S2_N1_gatilho",
@@ -1443,8 +1996,13 @@
       "text": "Missão 3. Somos Muitos. Situação 2. A memória que não pertence. Nível um.\n\nGatilho: Primeiro Villain com Symbiote Bonds na Cidade; se não houver, primeiro Villain.\n\nRogue absorve uma lembrança que não pertence a nenhum aliado.\n\nPreservar a lembrança, dividir seu peso ou apagá-la?\n\nEscolha o caminho que a equipe seguirá.",
       "output": "audios/Novas_N1_N2_Feminina/Missao_03/M03_S2_N1_gatilho.mp3",
       "text_sha256": "81dc49a45924e06bd94a333e215fc50958d85a91629ee076620fb743956018ed",
-      "audio_sha256": "b71faa17c307469ce7632d569fd3a0787367c318cb8137454c06ec6ace0b8148",
-      "bytes": 227712
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "d364c5040587171a47e3f5995a2b27adbae7476f88787b1fcf033eff1351b835",
+      "bytes": 94464
     },
     {
       "id": "M03_S2_N2_gatilho_apos_escolha1_sucesso",
@@ -1456,8 +2014,13 @@
       "text_sha256": "b6bbac69a41e6abfb560f52b076ae2a8d9300ccf8bd903c66d07ef03aadd9f17",
       "n1_path": 0,
       "n1_result": "success",
-      "audio_sha256": "190245506ff1bdb111a1cd125545f08a7594b260f4613609db92c6d8b89c29ff",
-      "bytes": 311616
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "e524c08a48d71ab5cbf2d0bae6ffab53ae9f85d7b130c90cd8de0a99824981de",
+      "bytes": 121632
     },
     {
       "id": "M03_S2_N2_gatilho_apos_escolha1_falha",
@@ -1469,8 +2032,13 @@
       "text_sha256": "e1126488b40f02ff25c9c184bd835beea3f817e3df11f8a3d07db8f3c2c2cc0f",
       "n1_path": 0,
       "n1_result": "failure",
-      "audio_sha256": "456c48978ce9824de298fdcbd9a0107cb5cc1a0c58d66f337d6a8fdc9a0452e4",
-      "bytes": 305856
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "bac1f8195cdf3edfc91010d7a6f46ad0d1488eaab5253671293e1b1f5a5757cf",
+      "bytes": 124704
     },
     {
       "id": "M03_S2_N2_escolha1",
@@ -1481,8 +2049,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_03/M03_S2_N2_escolha1.mp3",
       "text_sha256": "06e94973e21ecce6ee9d0f28930f4d74bd4bb9acd5f35e4d28cd2dfc7014be4a",
       "n1_path": 0,
-      "audio_sha256": "e7737a63a16f6f102831672d262761e9b96f29bf774a6bbde8dcccb7e7a306aa",
-      "bytes": 255936
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "2c884fb2fd59364d0a05004af3d61b274abbe413df80cf5f14cf54f87b6c679d",
+      "bytes": 103776
     },
     {
       "id": "M03_S2_N2_escolha1_sucesso",
@@ -1494,8 +2067,13 @@
       "text_sha256": "78f897c984e6b88d7bc121565d3a88c6474a5b827b3a799bae68fb83c31f9665",
       "n1_path": 0,
       "result": "success",
-      "audio_sha256": "c98e61d1950c51581a38ffe247c7d4abd3ba26b125ac3a763c3ba4c087acc5ff",
-      "bytes": 144000
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "bb7e745968c48186a99c427efebcd3307ad99b8d4a5e850f939f63ca6398da8c",
+      "bytes": 58752
     },
     {
       "id": "M03_S2_N2_escolha1_falha",
@@ -1507,8 +2085,13 @@
       "text_sha256": "a951d034d3322809380dc5cef53441adaee4be694e0de051a2bcd5249917451b",
       "n1_path": 0,
       "result": "failure",
-      "audio_sha256": "b9c12df783d90ab20af7fad415fe8776cdbdcb78d2187029c6573218afd8206e",
-      "bytes": 143616
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "28271f3cf1e1d30034716599bc688ab564a507eb265a955c6eacfa739c092c4f",
+      "bytes": 59232
     },
     {
       "id": "M03_S2_N2_gatilho_apos_escolha2_sucesso",
@@ -1520,8 +2103,13 @@
       "text_sha256": "9bf5a90f659a731b46a32c50d4e43999e7c509bfee6dbc867a75cbc1e14ae736",
       "n1_path": 1,
       "n1_result": "success",
-      "audio_sha256": "4770a41cb8f0d9b356c1e8f6ecd2cf5c6cb8c0a9af65ea1538f3a1d18c3d219b",
-      "bytes": 312000
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "5e44ebb88cdf5dceac9a9fc23bb0527ee54351a762fc4af288528c7da1aef45d",
+      "bytes": 126912
     },
     {
       "id": "M03_S2_N2_gatilho_apos_escolha2_falha",
@@ -1533,8 +2121,13 @@
       "text_sha256": "b27ef3bc31a32ec7558fa2d1a3ebd4948c65257b6587af6dc12469b79ed2c4b5",
       "n1_path": 1,
       "n1_result": "failure",
-      "audio_sha256": "8babd3e401eb71d88969a537da3483d7e3899029faf6bcdc11e3daa0d72e80d2",
-      "bytes": 312768
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "3c749ed6b3ca2da0315ee21e4c6b0273f60f8ee92a77a7e38e564cc42fefcbef",
+      "bytes": 128544
     },
     {
       "id": "M03_S2_N2_escolha2",
@@ -1545,8 +2138,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_03/M03_S2_N2_escolha2.mp3",
       "text_sha256": "7fb9c85aaad6b22bba9a0e1162390f0373b01b0c76c2a40bea794d1236f2f3d8",
       "n1_path": 1,
-      "audio_sha256": "e0dd59d6424a49d4d6fc98942c6334c9c6f51603dc4e3ae1d1e780f654d3e9f2",
-      "bytes": 273792
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "d226a59af37e77454f6646a93425fec6ca9d7679e522aba42ebfa7be159c01ab",
+      "bytes": 108096
     },
     {
       "id": "M03_S2_N2_escolha2_sucesso",
@@ -1558,8 +2156,13 @@
       "text_sha256": "42d4ad25b45e62c37ad8f9e1d7d7a6e6a052469b87245968105a4c0dfc94099e",
       "n1_path": 1,
       "result": "success",
-      "audio_sha256": "9a76f53ed966cf41261f1ef9ef35dae76f7bcd95f3cc136d1078a55b324c599a",
-      "bytes": 140160
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "f54e5cbf10e3f20ea768f2d8e6f00475e7192aaab61be5cb4931e69bd14f5328",
+      "bytes": 55776
     },
     {
       "id": "M03_S2_N2_escolha2_falha",
@@ -1571,8 +2174,13 @@
       "text_sha256": "7460fd098ecd1e7ffccdd5abb1efe366a9d83956442d60bece9f85150faf9315",
       "n1_path": 1,
       "result": "failure",
-      "audio_sha256": "dffc3eada7d60e8f7bd595e80bc5d151844b09297f28014328bc1d3368846551",
-      "bytes": 159168
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "f8fd7628742071fd770e722cbd694516efa6dfee39f4f54a6278deb501369d7a",
+      "bytes": 65952
     },
     {
       "id": "M03_S2_N2_gatilho_apos_escolha3_sucesso",
@@ -1584,8 +2192,13 @@
       "text_sha256": "37e7b1d5192e2659eb3b87dcceb648ed9170d296bf4f7c1207e0b2333c78c93c",
       "n1_path": 2,
       "n1_result": "success",
-      "audio_sha256": "bd15731946e74c19577fd3d2fd9ba6805302068f8f399f0598f1558e9525bbda",
-      "bytes": 300672
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "70de46228652b1c2dc994805420de020edef0e2c2d532f39db331933509803a0",
+      "bytes": 117792
     },
     {
       "id": "M03_S2_N2_gatilho_apos_escolha3_falha",
@@ -1597,8 +2210,13 @@
       "text_sha256": "bf4b3f0c1f286058d964704db999de0116b6fecede9288806ce4656e6d07d616",
       "n1_path": 2,
       "n1_result": "failure",
-      "audio_sha256": "e698b0e67c38c7dc48364d250fa85a0262536abedcc243a146c070f4520ca818",
-      "bytes": 307008
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "42c9118a159a266454389f688379dbea789f59c05aaf0e3a9628014d15dcd478",
+      "bytes": 123744
     },
     {
       "id": "M03_S2_N2_escolha3",
@@ -1609,8 +2227,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_03/M03_S2_N2_escolha3.mp3",
       "text_sha256": "767ee7a8716636af43aa64882f9648941f897b5832a5c5df6412d72853b7ab45",
       "n1_path": 2,
-      "audio_sha256": "cfc5b24cd8b016766ff85c45f42c0b76584c55a540309be6983f9f479baa8d01",
-      "bytes": 266304
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "054aa35065210483bf70bc0e4b023790bbd8a9c9ecae23db86236df2c7d24fc9",
+      "bytes": 112896
     },
     {
       "id": "M03_S2_N2_escolha3_sucesso",
@@ -1622,8 +2245,13 @@
       "text_sha256": "e8ff2d53f95d35496984c441e8b2d2f7fbbab4f8422c8412be46a789f239c8a6",
       "n1_path": 2,
       "result": "success",
-      "audio_sha256": "c41ddb29493b2504935f8ad97d34e154c03810e32055843055807b516e703c26",
-      "bytes": 132864
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "260c0a461e2e9d7e28a12b4a6c23e843fb3a0dcd25e81692115cff9803e1f3fd",
+      "bytes": 59712
     },
     {
       "id": "M03_S2_N2_escolha3_falha",
@@ -1635,8 +2263,13 @@
       "text_sha256": "648ede45c0983fa860de8390fce1774b0959e07072cf4118893bd4da513aef41",
       "n1_path": 2,
       "result": "failure",
-      "audio_sha256": "10214462b91a76930a6d72253857f13966da4fb3c775807d8c7b692145032434",
-      "bytes": 160896
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "e4480751cb05df75aaa15f06177fc7c571d393e71ac441f74d1ea049c824e939",
+      "bytes": 62592
     },
     {
       "id": "M03_S3_N1_gatilho",
@@ -1646,8 +2279,13 @@
       "text": "Missão 3. Somos Muitos. Situação 3. O adversário absorvido. Nível um.\n\nGatilho: Primeiro Master Strike.\n\nUm eco de Red Skull surge no comportamento de Hybrid.\n\nConter a voz absorvida, estudar sua fusão ou explorar a rivalidade?\n\nEscolha o caminho que a equipe seguirá.",
       "output": "audios/Novas_N1_N2_Feminina/Missao_03/M03_S3_N1_gatilho.mp3",
       "text_sha256": "e0bd314452080dc89a61256adf89390bcff468054c1eafa663d7d2362014b90f",
-      "audio_sha256": "cacfe7f38a15b89517831b709a4e7aff1dca6accdc395e083ab1208a933d0be7",
-      "bytes": 203520
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "b8e734c8fa977f5a0b065a98307da37e81b87552253c5008f86be7f7cca263c3",
+      "bytes": 93024
     },
     {
       "id": "M03_S3_N2_gatilho_apos_escolha1_sucesso",
@@ -1659,8 +2297,13 @@
       "text_sha256": "4643939db5a3ec6cbb734a544c3e696e3533d4001752c2cbb96176076e3e4321",
       "n1_path": 0,
       "n1_result": "success",
-      "audio_sha256": "5ffb59ed71ced2cee5d72237c63a59c1e3f6b56482ad6fb927f04730176dd48c",
-      "bytes": 287424
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "5893174e93a865e80249a9a54d565feb383c0489343eab00d241fbfc4186859f",
+      "bytes": 122784
     },
     {
       "id": "M03_S3_N2_gatilho_apos_escolha1_falha",
@@ -1672,8 +2315,13 @@
       "text_sha256": "81d776d8720b06c94664a2b69b7665e08635141ec6e131c674eec119dcba9762",
       "n1_path": 0,
       "n1_result": "failure",
-      "audio_sha256": "adf09fabc3e68f10a85d6cfe751b1b3967d2462c60c5ce5ed034690aa8259eb4",
-      "bytes": 291648
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "8522a2ff33d08eb5a842dd3533a4804b29b89b718e18e7e6259d4f2ed565454b",
+      "bytes": 118464
     },
     {
       "id": "M03_S3_N2_escolha1",
@@ -1684,8 +2332,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_03/M03_S3_N2_escolha1.mp3",
       "text_sha256": "f3dd0854483b085d2b1a5c0af44a1b5a31640cd94c38f51b7965d7b70e074483",
       "n1_path": 0,
-      "audio_sha256": "eff6c87c448eb494a008e5cf22439081c88bb7c6ed31b616dd4e9c0609f83f18",
-      "bytes": 264384
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "41cfaa574313f903416e9c22b5773e89bbce0fe1225d134ac7cbb1d7d670eacb",
+      "bytes": 109152
     },
     {
       "id": "M03_S3_N2_escolha1_sucesso",
@@ -1697,8 +2350,13 @@
       "text_sha256": "fdfa150642c70a000d7dfacec7676f0db7f570e470dcac7f817702724c3a01bb",
       "n1_path": 0,
       "result": "success",
-      "audio_sha256": "3ed24538f337c2ebde0cee0f2094332602afee4c4609770b3d136cc55e65500d",
-      "bytes": 138048
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "247145dac3efcb07d447271f29e51a5770bd27301c0c971f16e729aa820edf88",
+      "bytes": 57312
     },
     {
       "id": "M03_S3_N2_escolha1_falha",
@@ -1710,8 +2368,13 @@
       "text_sha256": "e6a60290bd909d1f0e4a38946ef5b5e437b348ab17b4f7672510055725b19634",
       "n1_path": 0,
       "result": "failure",
-      "audio_sha256": "700a9f0bc063d35fadfb64aba61728b5757596be615a18d1605c9581264e0faf",
-      "bytes": 145728
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "f904b6d69986cdf6a06214fafa1903be893bae0fc8969314d94efb3d891334ce",
+      "bytes": 57696
     },
     {
       "id": "M03_S3_N2_gatilho_apos_escolha2_sucesso",
@@ -1723,8 +2386,13 @@
       "text_sha256": "419763077c1f53f6252b134bc3aff01c29c63a3c307cbdd5f92a4f53db2f0419",
       "n1_path": 1,
       "n1_result": "success",
-      "audio_sha256": "9c8e90bffdd597c101be1647ddb01aa196a9a1672fa41d475bcee9a90fd2f162",
-      "bytes": 291264
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "3489ea049ef1d7b3f2e4b61845c8ce0a7018f63a8c9b7342426b8432796b6390",
+      "bytes": 127296
     },
     {
       "id": "M03_S3_N2_gatilho_apos_escolha2_falha",
@@ -1736,8 +2404,13 @@
       "text_sha256": "249e9afb0a4d1698a28a1c090062fa437a430e00855f4bb551125bada9d17905",
       "n1_path": 1,
       "n1_result": "failure",
-      "audio_sha256": "4ff91cdb57da6875291a5ddf7bdb05c083209b5b84c000d8995329bc24c2b47a",
-      "bytes": 298560
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "811d777aaa1ca3ee3dda0b3518f02069e798161d2b5d34ddaf115092797ccfd0",
+      "bytes": 118656
     },
     {
       "id": "M03_S3_N2_escolha2",
@@ -1748,8 +2421,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_03/M03_S3_N2_escolha2.mp3",
       "text_sha256": "b8195cb8d94070482003782f7038e89d772900d711580847b77f9f56a95e1f36",
       "n1_path": 1,
-      "audio_sha256": "eae542014c60dfb1cf00e6b4879af19da3d605932846a19fd2d75d2f4d38ad4c",
-      "bytes": 264384
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "6294b2bfb92f94c3e10de29348283bf7b7d96383801c8d8167cf324b6070e9d3",
+      "bytes": 108864
     },
     {
       "id": "M03_S3_N2_escolha2_sucesso",
@@ -1761,8 +2439,13 @@
       "text_sha256": "5a29f6f54e7eacccba190a352f8c5fe39e29252916d0f93eb2fa628e998760f3",
       "n1_path": 1,
       "result": "success",
-      "audio_sha256": "287eb38206f1093fb2d5bfed469a52da7594e43a15fab595915c860b648f1010",
-      "bytes": 140352
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "b9c81a80ce892a82c53a05f5f7f9368dad57dbe0dfbdcf9589d66844db43742b",
+      "bytes": 57696
     },
     {
       "id": "M03_S3_N2_escolha2_falha",
@@ -1774,8 +2457,13 @@
       "text_sha256": "0216723ae333f8fd5b71517c0db95768ac315ba02389f80a4f59ed2f355124b4",
       "n1_path": 1,
       "result": "failure",
-      "audio_sha256": "0b7a00f2155b98bbcf1cb5e9959b4448b86c942a4e2e4ef6214a5ea8bb3ec46e",
-      "bytes": 149376
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "2c8ebe644aa99d6a279fe860dfec4261e91acee213af5a243f3407e09b5b360e",
+      "bytes": 68256
     },
     {
       "id": "M03_S3_N2_gatilho_apos_escolha3_sucesso",
@@ -1787,8 +2475,13 @@
       "text_sha256": "6808bae79747088e2d5e26fb6c0e80057d951a67bade4b565785417b669c11f6",
       "n1_path": 2,
       "n1_result": "success",
-      "audio_sha256": "5df1592a4dacea3f3900e70f8f005135a84a4f131a80063b2c8dab9fa32a7879",
-      "bytes": 299328
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "8edaa7a1074d6b7382ee0451a2106a90fb277b326d3a4ed6465a450c5a28ccb8",
+      "bytes": 122592
     },
     {
       "id": "M03_S3_N2_gatilho_apos_escolha3_falha",
@@ -1800,8 +2493,13 @@
       "text_sha256": "a94c1f84e92d3fdf8bbaa829a33f5a25a358b6b35963c2c2c0e5907767e96ebe",
       "n1_path": 2,
       "n1_result": "failure",
-      "audio_sha256": "d066d5fd35ffa8371edc3cb9b0bcc5d33ecd7b1f0330d2f4042d87f4e4ca1356",
-      "bytes": 302016
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "15ca688a4e6b97bf920359575635c684144a348a884c828ab1bc76785eaa5913",
+      "bytes": 122784
     },
     {
       "id": "M03_S3_N2_escolha3",
@@ -1812,8 +2510,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_03/M03_S3_N2_escolha3.mp3",
       "text_sha256": "7d554f7e061dfbdd2eeb06daeef05a2402c6dbdfe3c64837d9d523b739597acf",
       "n1_path": 2,
-      "audio_sha256": "e7973f57a6d53286d6c5dd5476c0b871117a977c91043769e9742c55e77e0f73",
-      "bytes": 258048
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "321bd4468ede842849ace1e20623e40c33b502b192d137c4431efec5706af6ab",
+      "bytes": 105792
     },
     {
       "id": "M03_S3_N2_escolha3_sucesso",
@@ -1825,8 +2528,13 @@
       "text_sha256": "03b258b6805a29fa3b7f8756600a87f19974de03748c5f5b4fda44b3830ca0a6",
       "n1_path": 2,
       "result": "success",
-      "audio_sha256": "68b74004e3be277397be3e08a991ad99dd659928720a836500bdc5fd8c12ed7f",
-      "bytes": 131904
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "d7b7206c80b20e4ad319e64824f9abf987f1e035cdca056d5bb56a74c2aba868",
+      "bytes": 56256
     },
     {
       "id": "M03_S3_N2_escolha3_falha",
@@ -1838,8 +2546,13 @@
       "text_sha256": "a7653b4ec513415dc50117f17fd5e355148bdcdea9c5ce3ace1c460502415421",
       "n1_path": 2,
       "result": "failure",
-      "audio_sha256": "5fae1608e9e8b8b7c870b29afd01e522e53f07b504821563ffefa7a6b5d4a339",
-      "bytes": 146112
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "521aee74f09a7863e855a49aedb0837bea07ec13287be3dcb41090ad297719a8",
+      "bytes": 69216
     },
     {
       "id": "M04_S1_N1_gatilho",
@@ -1849,8 +2562,13 @@
       "text": "Missão 4. Aqueles que Nos Substituem. Situação 1. Um rosto conhecido. Nível um.\n\nGatilho: Primeiro Scheme Twist.\n\nUm aliado retorna com uma lembrança que não deveria ter.\n\nExigir provas, confiar no vínculo ou isolar os suspeitos?\n\nEscolha o caminho que a equipe seguirá.",
       "output": "audios/Novas_N1_N2_Feminina/Missao_04/M04_S1_N1_gatilho.mp3",
       "text_sha256": "b7e611c4fbff8001cf6e876df935af07e058bdbc061b1c0792a985aa70a021bd",
-      "audio_sha256": "ae88ec267000011a5f5c888ea670cc03af03c4a4ca3fea3f83f91125adf24d68",
-      "bytes": 192384
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "a35486b64442d85debe5dfe1a78755bae38179dddf9eb6f76894c9068ebba952",
+      "bytes": 89184
     },
     {
       "id": "M04_S1_N2_gatilho_apos_escolha1_sucesso",
@@ -1862,8 +2580,13 @@
       "text_sha256": "09928fa8e999e028c7450a6a77a5b06fa7205c17f34b438bd71c8932d5ac7f08",
       "n1_path": 0,
       "n1_result": "success",
-      "audio_sha256": "c678cceafe41bee80db02f9d2d0a58b2cb5c360da6f06fddfc6dc813767a5f99",
-      "bytes": 289536
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "efd24940b903dc03d207d78f1ede7871ed89608024ee6de80c9e4e3f0da65766",
+      "bytes": 119904
     },
     {
       "id": "M04_S1_N2_gatilho_apos_escolha1_falha",
@@ -1875,8 +2598,13 @@
       "text_sha256": "9ff6b6065213605bf3c59339faeafd9a06295cbb7b54a0c3d1e50ff3b12a17db",
       "n1_path": 0,
       "n1_result": "failure",
-      "audio_sha256": "396c5fd9c96c50d7fb12300f6ecf838d3fe536e64d76f7c3d9a913dabc858315",
-      "bytes": 283200
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "516b4e082831143781670dce37795db3714698464f6ac655754306692dfeb528",
+      "bytes": 116736
     },
     {
       "id": "M04_S1_N2_escolha1",
@@ -1887,8 +2615,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_04/M04_S1_N2_escolha1.mp3",
       "text_sha256": "1ff67c0203d87b2660e744ce7a0dfdb7849c4a8a0bc77f0c916cf79380c3dfe1",
       "n1_path": 0,
-      "audio_sha256": "1f0ffd7149a581a5e510f1e47cc4edf242a0bd08c3f675bdf4722e58e3769ba7",
-      "bytes": 275520
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "63e1f1bd5368b9b9921351154e3991afdef7e727290019f45b3035fa8961ee4a",
+      "bytes": 111936
     },
     {
       "id": "M04_S1_N2_escolha1_sucesso",
@@ -1900,8 +2633,13 @@
       "text_sha256": "53070c99706926e63c61ffee23a3825a3b7fc8c6fbe5252d1bdd54f0895e3d66",
       "n1_path": 0,
       "result": "success",
-      "audio_sha256": "e3d8c033e7c2dd2be5a66630a859b7f3bf0bd4705b4511f2f876094db4a19b22",
-      "bytes": 138624
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "ac654ec97199eb1eb3b9f97c1c417150336a27531ff25228057794112b51bada",
+      "bytes": 60576
     },
     {
       "id": "M04_S1_N2_escolha1_falha",
@@ -1913,8 +2651,13 @@
       "text_sha256": "9e6e4dfa7f4b8586860f879182cc43a88908c3f0662e06728d13a41b177256b2",
       "n1_path": 0,
       "result": "failure",
-      "audio_sha256": "72d494f3f82cca005c29f600843694b877454824e5f9c6f631b12645bbcec47e",
-      "bytes": 153216
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "613a81f9d176ac6824d5a0645e48c8d9c6eb5bea43aeca4475b7ce5996fbdfcf",
+      "bytes": 64032
     },
     {
       "id": "M04_S1_N2_gatilho_apos_escolha2_sucesso",
@@ -1926,8 +2669,13 @@
       "text_sha256": "990695eae6383333c7cb431c8f15d70d149af9408974d62f39fbe0d097f35aaf",
       "n1_path": 1,
       "n1_result": "success",
-      "audio_sha256": "47eef7f0864ce8b36e711bb3d13f42d8347b604de81f0871857e4cea4b06aa2c",
-      "bytes": 288576
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "f40dd19167b5f1190c6a9ebc0af36465beb22d6e173119c44624c63be6b65ab4",
+      "bytes": 124512
     },
     {
       "id": "M04_S1_N2_gatilho_apos_escolha2_falha",
@@ -1939,8 +2687,13 @@
       "text_sha256": "e68f12de0ff2b6dddadf7172e646b27003d1ef8d776290669bbe8b8d2896f6d4",
       "n1_path": 1,
       "n1_result": "failure",
-      "audio_sha256": "0efab944a5bffbee4ae1fccc563af912ae9b139d027aa788cca2f0f06092d633",
-      "bytes": 291264
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "e530ca651124145ead9a542b748ca36b946f287d99ffe43c27b48777c54e29e3",
+      "bytes": 115776
     },
     {
       "id": "M04_S1_N2_escolha2",
@@ -1951,8 +2704,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_04/M04_S1_N2_escolha2.mp3",
       "text_sha256": "33e9844d6dbb842f76719230acd066f63344c1aa929f32dd89c9364c9fdc3f5a",
       "n1_path": 1,
-      "audio_sha256": "fc1b12db992d27dcaa68bc87d7e05b274ef0c01a431bce9bdcb1eed05d4b30dc",
-      "bytes": 283968
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "c55402ef9a808df3806dc70f6fbcaed092bbeb6911d89978449794fb08ca4263",
+      "bytes": 107136
     },
     {
       "id": "M04_S1_N2_escolha2_sucesso",
@@ -1964,8 +2722,13 @@
       "text_sha256": "0e40cb5f7294cdc5d4de61ff94e1daf06daf1f0948c1dad49905683505b9a9b7",
       "n1_path": 1,
       "result": "success",
-      "audio_sha256": "4ea9da081077add7f1b9d39f023bc78359c48c091e20301c8327abe871e7d6a7",
-      "bytes": 149952
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "65a04253589833397cbf598297abaaea21d3e76cc79945914feefc200cc90f6f",
+      "bytes": 60576
     },
     {
       "id": "M04_S1_N2_escolha2_falha",
@@ -1977,8 +2740,13 @@
       "text_sha256": "9d4c5408951e8707a550416d2a533b4e29f5498d90be411cd842793038c41b76",
       "n1_path": 1,
       "result": "failure",
-      "audio_sha256": "14c22aa349016d071cb5034a7c671e2b77cb5b2b4b06e1a91e8d373036a247e8",
-      "bytes": 160320
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "1fe849d0b4235c2102fe860a6b8bacbfa759805d6c257da3a8e041effb7a9d91",
+      "bytes": 60864
     },
     {
       "id": "M04_S1_N2_gatilho_apos_escolha3_sucesso",
@@ -1990,8 +2758,13 @@
       "text_sha256": "a5aaf33a817c26bfc470dea37fed8a42c1032cb2cc51cd1d1023ee1a1c74221e",
       "n1_path": 2,
       "n1_result": "success",
-      "audio_sha256": "23e474c8bdb06f46f06bcb663caf7ee68eafb4a3290ea3b927686fe715fb18e4",
-      "bytes": 279360
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "62c1534619730baf47af5c39e76c8fc5de32830733dafcfc3df555244a5a0d34",
+      "bytes": 115104
     },
     {
       "id": "M04_S1_N2_gatilho_apos_escolha3_falha",
@@ -2003,8 +2776,13 @@
       "text_sha256": "813aad60ee9993a3bf7a97e21f4f804c8c59d918019398b72199728ccc6f6cb6",
       "n1_path": 2,
       "n1_result": "failure",
-      "audio_sha256": "ea794166524065e663410e2e8a88314eb4b0e00c301c74f6e7e52ea307b738b9",
-      "bytes": 290880
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "3f3fc72e6afb41259a8b4a7fcc1c99f458a806a5fc0b09e3012bc7a1b1e1ab18",
+      "bytes": 117024
     },
     {
       "id": "M04_S1_N2_escolha3",
@@ -2015,8 +2793,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_04/M04_S1_N2_escolha3.mp3",
       "text_sha256": "aa814b3416dd89a35811a6d6474c72e328e46c9aac05b880508462d734c65a29",
       "n1_path": 2,
-      "audio_sha256": "66d7b970a2e88f98db9b65033a5a93ea9a19be6e88ea7b4bd956f2d010e37e74",
-      "bytes": 270720
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "7ab67b77c3d917d5f6b61d944e84e3ebf046a82cdd395fb75a29875893eeddc2",
+      "bytes": 105696
     },
     {
       "id": "M04_S1_N2_escolha3_sucesso",
@@ -2028,8 +2811,13 @@
       "text_sha256": "145f8d7c40cb90e79d97b6fc5ac4a101b0f71eb459a5e8d5a413b19a1ac6a571",
       "n1_path": 2,
       "result": "success",
-      "audio_sha256": "60ec302c19b83bc5f1f8028d75fb01ed5c4a6f9612b07bbc348006367033497f",
-      "bytes": 132864
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "f1cdb79889cf3026858e7a69c63c59e073f65ba07b375bc98364062339e6bdc2",
+      "bytes": 55584
     },
     {
       "id": "M04_S1_N2_escolha3_falha",
@@ -2041,8 +2829,13 @@
       "text_sha256": "6430ad1c4195c5c907dbcd8ad37734e1e8cab716c47a4a209295f5e26dc89082",
       "n1_path": 2,
       "result": "failure",
-      "audio_sha256": "a44ba42b035035290d9dee43ca47c2bf4a7c2b8d86e28c4c1dfe850922cb0cb4",
-      "bytes": 155712
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "48ef796df175f21639fd4ff22f96763bb72d4d65b28cff3cb76f9a443f1acc1a",
+      "bytes": 61824
     },
     {
       "id": "M04_S2_N1_gatilho",
@@ -2052,8 +2845,13 @@
       "text": "Missão 4. Aqueles que Nos Substituem. Situação 2. A Cidade duplicada. Nível um.\n\nGatilho: Primeiro Herói Skrull revelado no Villain Deck.\n\nAs pessoas veem versões incompatíveis dos mesmos heróis.\n\nProteger testemunhas, capturar uma cópia ou denunciar a duplicação?\n\nEscolha o caminho que a equipe seguirá.",
       "output": "audios/Novas_N1_N2_Feminina/Missao_04/M04_S2_N1_gatilho.mp3",
       "text_sha256": "6f257a6c411986c06b685236b5d621db6a698f1277fbf8f0654b4e1b5100f2d3",
-      "audio_sha256": "64e2c02e8c9624577ba79e5ba9c4486277a8642cdfa06bd1ffd0ed5f8bb60f96",
-      "bytes": 213120
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "9feb8609f9bf87d233d6ae9ffa2c506490502ecbc0070ed5530485179100db5b",
+      "bytes": 97536
     },
     {
       "id": "M04_S2_N2_gatilho_apos_escolha1_sucesso",
@@ -2065,8 +2863,13 @@
       "text_sha256": "e4cc6c698e5b6680748a4160a16793af2663b743a063de9ddc2d10104c4237c0",
       "n1_path": 0,
       "n1_result": "success",
-      "audio_sha256": "0f671ddb4b311f552475a18df6e6ceb302b0bd7b03f98ccbe32d55c74687a2b9",
-      "bytes": 308736
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "204733c1e31643bae52e899b0e5f7c2e3c9e6fdd84797885fbbcb06c4e2571c3",
+      "bytes": 133632
     },
     {
       "id": "M04_S2_N2_gatilho_apos_escolha1_falha",
@@ -2078,8 +2881,13 @@
       "text_sha256": "8462dbb6bba0ca199eb383d39151e9d80fc55f4a21228eb1b8daebe07996f350",
       "n1_path": 0,
       "n1_result": "failure",
-      "audio_sha256": "4de9944d7c2fdba3ab6d9eba31b14cfa0e8220a0261608c5a545df00d33bf342",
-      "bytes": 305280
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "fc8d06f3daa4104608f1240c9d3b58282a383a7e04a2dbe1fd910ba329e60110",
+      "bytes": 135744
     },
     {
       "id": "M04_S2_N2_escolha1",
@@ -2090,8 +2898,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_04/M04_S2_N2_escolha1.mp3",
       "text_sha256": "93865c95085fa0e431c06d826f962830cb96dcb3cd759e3a6c08dd44d7f869e0",
       "n1_path": 0,
-      "audio_sha256": "e0dac7195e0d8b3ded301378891ffe9f518a3bb231feb7ef32f4a98c25b913fe",
-      "bytes": 271296
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "ddbd3921019236feb6d37143c55070de584a99b500ec98aec9d45a70a3a0e6f9",
+      "bytes": 109344
     },
     {
       "id": "M04_S2_N2_escolha1_sucesso",
@@ -2103,8 +2916,13 @@
       "text_sha256": "ed81b765796026cb59fd6546fb33f80bd809baafe0ce1381e49fb9fb0631c1de",
       "n1_path": 0,
       "result": "success",
-      "audio_sha256": "6657e8d24264da20513173191e4da1ac58d02f7428f3ca4910b44dfde3edfc62",
-      "bytes": 138048
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "71ed63cae2a37701098a23042fc0de550592deaed33009edf85ec26cade31efe",
+      "bytes": 59232
     },
     {
       "id": "M04_S2_N2_escolha1_falha",
@@ -2116,8 +2934,13 @@
       "text_sha256": "07426cb3baba57fde6a9d88828c8cb96db0bed965e0c528696e0fbdbf9a2cbe4",
       "n1_path": 0,
       "result": "failure",
-      "audio_sha256": "97e1ab53be5cc1792a5dbc2a6a0728250635ba21b952be3550022e4f149092cf",
-      "bytes": 152832
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "de2a65596357ae72638e66f634128d2aa8f41f3e71c96a622137efa996e2928d",
+      "bytes": 66816
     },
     {
       "id": "M04_S2_N2_gatilho_apos_escolha2_sucesso",
@@ -2129,8 +2952,13 @@
       "text_sha256": "527b612060f7a681e8188b42e6673010a6782104b092af6cb5155f1b555f9887",
       "n1_path": 1,
       "n1_result": "success",
-      "audio_sha256": "703b780bc7e0e5aa1c69c0a24f24e0da55c5dc56bbf6af28e2cf1acb309fa3fd",
-      "bytes": 306624
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "2110ba9327c9b6cd845b77f46ef7f5aee15a48d9667b3e8a746795c73b552c4c",
+      "bytes": 130944
     },
     {
       "id": "M04_S2_N2_gatilho_apos_escolha2_falha",
@@ -2142,8 +2970,13 @@
       "text_sha256": "d870ad1dd16c13acc0763ee5f92278eb0f56bb9478a60da7c5dc28a42e019270",
       "n1_path": 1,
       "n1_result": "failure",
-      "audio_sha256": "9c19e88dba65143f550f3443fb35bd5a5b1d7be3d0f266dbbdf1f3d073aeb853",
-      "bytes": 302592
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "4bba4a4203fad08d34a4ff2e555409027810ffea8fca17f6b5f41eb00be3dddf",
+      "bytes": 125664
     },
     {
       "id": "M04_S2_N2_escolha2",
@@ -2154,8 +2987,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_04/M04_S2_N2_escolha2.mp3",
       "text_sha256": "a0db8e268979f81ea9f4f4973194e2feb21181af310b39e639842bfd79a34ddc",
       "n1_path": 1,
-      "audio_sha256": "ae8d77dafa1b756e30ea2b1e37456d89218775745102619785977f7c04cd0b8c",
-      "bytes": 267264
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "d2113ebfadfbe0f5a2149119b8d232c313b75700df4705d47a963252f35fdf1e",
+      "bytes": 103296
     },
     {
       "id": "M04_S2_N2_escolha2_sucesso",
@@ -2167,8 +3005,13 @@
       "text_sha256": "37d0614f887756b73fe2eb4c2f05c606e12d17c4e4f2dfa82b4b7bb6ea0b5497",
       "n1_path": 1,
       "result": "success",
-      "audio_sha256": "68290720061f205ea536704282d9cc8188a8795468f652fff8f8ff9e09037359",
-      "bytes": 139392
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "ab7c9128353c80081cdfc1f67f5fc34dd455cfd3d3411a99149cd3f0abe9d85a",
+      "bytes": 58752
     },
     {
       "id": "M04_S2_N2_escolha2_falha",
@@ -2180,8 +3023,13 @@
       "text_sha256": "c003a4f7deb68d3864afe626bb41bc95a440fcd2d501af9c34139bd020dfb302",
       "n1_path": 1,
       "result": "failure",
-      "audio_sha256": "d13ef2f422b0ae323d6d799cef04ae562a07afc37c35155ddc0e77119882561f",
-      "bytes": 152256
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "f766293fedfbc232b97c80ac30f449a217fd7efe3b1e7987ff70be4c64145bd6",
+      "bytes": 65856
     },
     {
       "id": "M04_S2_N2_gatilho_apos_escolha3_sucesso",
@@ -2193,8 +3041,13 @@
       "text_sha256": "7fe9660ef7d01bd02d5b803583a82465a2b15e1077519db9032f7711142081c8",
       "n1_path": 2,
       "n1_result": "success",
-      "audio_sha256": "c6ee93d1deb67d9b5af7f9deb50fc07aac9ce32109798797e37e2e6d65b41eec",
-      "bytes": 305280
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "1096d8e23d5c2fb102a17d24a938b2067ad40fc3bd3c277708b0c65289b5dba9",
+      "bytes": 127872
     },
     {
       "id": "M04_S2_N2_gatilho_apos_escolha3_falha",
@@ -2206,8 +3059,13 @@
       "text_sha256": "74e06701e47ed56d5599f30488b603e7772b59019f98ce7551e0be74dd9dd53a",
       "n1_path": 2,
       "n1_result": "failure",
-      "audio_sha256": "48f281e52ab7ee3cd3495a288e80463581631b122b571c63ff342741277d38e9",
-      "bytes": 302208
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "4f73ee0fd8142394849fec7e909d3a445dea2c163a7295819a5a04c2e9417bc3",
+      "bytes": 132384
     },
     {
       "id": "M04_S2_N2_escolha3",
@@ -2218,8 +3076,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_04/M04_S2_N2_escolha3.mp3",
       "text_sha256": "1896c9d5dc44d1fa2fbae1191004162bb52ed250916342565bdf4efde266e659",
       "n1_path": 2,
-      "audio_sha256": "de13f58f07814d6fe2aefa9f0a1349dbe9aa521b49c2c1f41a029287c9a6846a",
-      "bytes": 265536
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "d23192308733df14fb0383f0426eb103450b482047d749f0d2ee83e2a6fdccbc",
+      "bytes": 110112
     },
     {
       "id": "M04_S2_N2_escolha3_sucesso",
@@ -2231,8 +3094,13 @@
       "text_sha256": "0fb8f9b14359fccb4034a35c298998c5fa485be15fb709cca39b5ee8ac5b6393",
       "n1_path": 2,
       "result": "success",
-      "audio_sha256": "6ce34f42c379ed890ebe64680e5d6dc31d03bdd80e417d1e14a09572fbf6de49",
-      "bytes": 137472
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "937c2fd586011956a31f03d740e194b24f0833fc12c75154253e17056cf36117",
+      "bytes": 54144
     },
     {
       "id": "M04_S2_N2_escolha3_falha",
@@ -2244,8 +3112,13 @@
       "text_sha256": "40b766919437a25c24d9672eb7d6adcc430efce074a49559186a8ca85d307a8d",
       "n1_path": 2,
       "result": "failure",
-      "audio_sha256": "6b1ceaf9c348b6ca2400d179c0b535222bddaeb2032f9ee1f8daaab74cbf0e9b",
-      "bytes": 146880
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "5054b3f6ae82440a54bb343dd14e65220b2487acf9b4215ce6b0ab969854fb7e",
+      "bytes": 62592
     },
     {
       "id": "M04_S3_N1_gatilho",
@@ -2255,8 +3128,13 @@
       "text": "Missão 4. Aqueles que Nos Substituem. Situação 3. O decreto impossível. Nível um.\n\nGatilho: Primeiro Master Strike.\n\nDoom apresenta uma ordem que parece ter sido assinada pelos próprios heróis.\n\nRastrear a ordem, desobedecer ou desfazer sua aparência legítima?\n\nEscolha o caminho que a equipe seguirá.",
       "output": "audios/Novas_N1_N2_Feminina/Missao_04/M04_S3_N1_gatilho.mp3",
       "text_sha256": "5ae98daf00b7e02150404dc4815d429ddd9c62e5b8aa92254796080144829970",
-      "audio_sha256": "53f7e649be5e798bccf6029cefe1c8bc9705ab7da4a8624d5275b696f1b77bb6",
-      "bytes": 212736
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "000caf8b94b00d69743d0b236acccb8e30b8ce0d9f71c57eae7593ccc58c6d85",
+      "bytes": 92064
     },
     {
       "id": "M04_S3_N2_gatilho_apos_escolha1_sucesso",
@@ -2268,8 +3146,13 @@
       "text_sha256": "50d37e78708f5df0af7818455cd40f102f9fdcf7e1ee6c93e51743f71fdc14c9",
       "n1_path": 0,
       "n1_result": "success",
-      "audio_sha256": "cddb899b45fb331b774f010615bda37e3ae3e091c941675b19d615c7004765eb",
-      "bytes": 301824
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "e6db1b5868fa750a2f8cc03da0ced55860f6a3b6b7db867028fe758ac616a527",
+      "bytes": 123936
     },
     {
       "id": "M04_S3_N2_gatilho_apos_escolha1_falha",
@@ -2281,8 +3164,13 @@
       "text_sha256": "0a9600258745d5f14cacfc6b10d67400b714d4fe3f4e231ae708a9115ec80427",
       "n1_path": 0,
       "n1_result": "failure",
-      "audio_sha256": "d70fd78394408b215ffe785471d283a58b12e640a9bcec871836f45e27092efd",
-      "bytes": 301056
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "a79876ee9fd72fba8c85571198ebc2124c7ec3f336dde1fb27796817726d74de",
+      "bytes": 129312
     },
     {
       "id": "M04_S3_N2_escolha1",
@@ -2293,8 +3181,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_04/M04_S3_N2_escolha1.mp3",
       "text_sha256": "249e677e33c1d797a754ece90eb8764b332d6dc5cc771665fbb2fdcf4a6059d6",
       "n1_path": 0,
-      "audio_sha256": "8dfe6660b52900b3697d2035f484a1ccabf6cc7311b71f4d47c0a993602ffebd",
-      "bytes": 264960
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "af66fa1ab338b5c8414cd4b91acf1ce220c675ce6cd605b1c2bd09a833d49909",
+      "bytes": 109152
     },
     {
       "id": "M04_S3_N2_escolha1_sucesso",
@@ -2306,8 +3199,13 @@
       "text_sha256": "aa5ed2ea68695e05fe76b15f1e39b6502845f4636aa4472dd6fc9e2396d8da17",
       "n1_path": 0,
       "result": "success",
-      "audio_sha256": "2863757581fa38517b29094b420dccbd022a4287688ba117e0d90b40bc6107f2",
-      "bytes": 139776
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "783c364cd05b4d33701141b2891b72666c9eb516b5fb1156100b4f1f6435e70b",
+      "bytes": 61536
     },
     {
       "id": "M04_S3_N2_escolha1_falha",
@@ -2319,8 +3217,13 @@
       "text_sha256": "f8c6f26319dbeb82576b0c79f3c65ec03226f10e4f71ccdf3b677ed473c5605f",
       "n1_path": 0,
       "result": "failure",
-      "audio_sha256": "52f5eecdf62b7fc7d952d3bf011b07e92e6775e229ea6f2e570f19a37ef608b4",
-      "bytes": 149568
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "11f82fc19d1fee75d30382b45f6530f490732a13fcddd054c7b63dd03014523b",
+      "bytes": 64512
     },
     {
       "id": "M04_S3_N2_gatilho_apos_escolha2_sucesso",
@@ -2332,8 +3235,13 @@
       "text_sha256": "013618ea4e9d0300a36fe0ac40935c647c0063852a7d4032f07a2006f8816198",
       "n1_path": 1,
       "n1_result": "success",
-      "audio_sha256": "2871c4a52e35fd719ac9fe47e6b36b78a5fd355bb44affa419eb4bce4d2625ce",
-      "bytes": 304896
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "f7e7e954d9bc19e4022d956849c0720217e1bc08e7b34da9e7d4ab9737752b86",
+      "bytes": 123744
     },
     {
       "id": "M04_S3_N2_gatilho_apos_escolha2_falha",
@@ -2345,8 +3253,13 @@
       "text_sha256": "a7043d54e9b0b1a9805e4508102406f3944e512b0355369fbbe961963d7f88e6",
       "n1_path": 1,
       "n1_result": "failure",
-      "audio_sha256": "5c38a36beb968cbc8a2df8a34ab4e5dd41c231dcbbd2e7bd5cdc855e1ffe3050",
-      "bytes": 301056
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "dfbf4eee7bac248fdfca40b840ec914784fa129159737bb15040f4e81d5d853a",
+      "bytes": 122784
     },
     {
       "id": "M04_S3_N2_escolha2",
@@ -2357,8 +3270,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_04/M04_S3_N2_escolha2.mp3",
       "text_sha256": "c397b8db93954e477706bafe9ed27a87dc7a500f99c377368a20653c14265a40",
       "n1_path": 1,
-      "audio_sha256": "4abe174eb4d8ac580444bcbd7fff31dcfeec9cc66a40b81a1884d5e388a4fa45",
-      "bytes": 267264
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "8b4165643ee4a781e807377876db01666b671145e0780f366eb155dbd6723bfb",
+      "bytes": 100512
     },
     {
       "id": "M04_S3_N2_escolha2_sucesso",
@@ -2370,8 +3288,13 @@
       "text_sha256": "2b91bbc180b2ece41e5c150b57c73afa63fe0c383c579a2724e00dbcae965fc2",
       "n1_path": 1,
       "result": "success",
-      "audio_sha256": "c367b440c740e7095adcdc2acd0e86fe2b244fea5da62faf7aa09dae3c9ce293",
-      "bytes": 140352
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "38522d48e1a6310541287a73e56d19d58e658d62f4bb3b4897a497d50367a5b4",
+      "bytes": 55776
     },
     {
       "id": "M04_S3_N2_escolha2_falha",
@@ -2383,8 +3306,13 @@
       "text_sha256": "a503f8d4aec50c7bc5a14e92114b9495fd1ac11ea648f159b34380cccdb56705",
       "n1_path": 1,
       "result": "failure",
-      "audio_sha256": "117ff6ae65db6af4936bf1a9d034ad0efe0eba2515e2400e2e6ce3c8f344d898",
-      "bytes": 150144
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "bfb833f4e9bdf0fc1e6ad3ddacdb73e9b90df4c1f23954c2d22c2fbea78ba28d",
+      "bytes": 62496
     },
     {
       "id": "M04_S3_N2_gatilho_apos_escolha3_sucesso",
@@ -2396,8 +3324,13 @@
       "text_sha256": "d9b42066ea7ebaa2d9d24675c8eba24445ed8bf903e2e8874cf0668c8f3bc451",
       "n1_path": 2,
       "n1_result": "success",
-      "audio_sha256": "c72e878ecfff084e438a8e836e4096a0d10e692f38d6bd3d7dca560c3928d38e",
-      "bytes": 297792
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "6d046468dc77267a49e0e2e00dbd77cdcbb51dbb431599d19331e763dcfa7d45",
+      "bytes": 124896
     },
     {
       "id": "M04_S3_N2_gatilho_apos_escolha3_falha",
@@ -2409,8 +3342,13 @@
       "text_sha256": "6575b9f95a4742de74637d17957f8cfd10ddc682ca9351ec8bbd9cf31e5b9e88",
       "n1_path": 2,
       "n1_result": "failure",
-      "audio_sha256": "cf90d32759d54887caa8b306ba7e173f24acdf2d1d9eaf98895dd771dfae8c48",
-      "bytes": 308352
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "1fb7c11e717bfad7dadc42a7230af328651e1ea433dfddec9ce8641f4a4cd250",
+      "bytes": 130272
     },
     {
       "id": "M04_S3_N2_escolha3",
@@ -2421,8 +3359,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_04/M04_S3_N2_escolha3.mp3",
       "text_sha256": "56966d4bf623d6f5b77205cc46af7df9a970e2ab32f9a874aba8ce30464751f1",
       "n1_path": 2,
-      "audio_sha256": "a40c586ea3ea62ed448c60e031c191572b24a8635aa201e70bddc83f5ebd33eb",
-      "bytes": 269184
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "c78df759bf6a1bc6e58f2c3155044c669015b4a3f6f15e0f9159927ac0454c4f",
+      "bytes": 111744
     },
     {
       "id": "M04_S3_N2_escolha3_sucesso",
@@ -2434,8 +3377,13 @@
       "text_sha256": "2758fdb50014458bc608b2e2323defb71bfde9c3fdf0cb560e1b2ed4c956559a",
       "n1_path": 2,
       "result": "success",
-      "audio_sha256": "48c1ab2391a18c325f65c248e57c44c55c245253fddf676b6b952d1193786840",
-      "bytes": 140160
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "337618d8bc94a50b1156ca5fe5f473b72a9b8501f44b38ee10a9a82b4e508963",
+      "bytes": 55872
     },
     {
       "id": "M04_S3_N2_escolha3_falha",
@@ -2447,8 +3395,13 @@
       "text_sha256": "ad5c948c6c2211842dd764a15badde4c20edef60c30f98e39001c1d2d50012bd",
       "n1_path": 2,
       "result": "failure",
-      "audio_sha256": "6ae26a0df0c8287de7a34a96e09bb68e9f067f7d29fde34ae6cadede1db95d2c",
-      "bytes": 156672
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "fd2fa7bcf3eb961e197d2d7ca9598b7b1e2a9f9c434c7eaa5d8998fbe1ba4bea",
+      "bytes": 68832
     },
     {
       "id": "M05_S1_N1_gatilho",
@@ -2458,8 +3411,13 @@
       "text": "Missão 5. A Última Escolha. Situação 1. O apetite do vazio. Nível um.\n\nGatilho: Primeiro Scheme Twist.\n\nPoison Thanos observa os heróis como recursos a consumir.\n\nResistir ao pulso, estudar seu padrão ou atacar a ligação cósmica?\n\nEscolha o caminho que a equipe seguirá.",
       "output": "audios/Novas_N1_N2_Feminina/Missao_05/M05_S1_N1_gatilho.mp3",
       "text_sha256": "b60ba110eba5e28fa599ad70332aea25f70c0c03e1ec0961d7ef11e4ed086dc7",
-      "audio_sha256": "c83b7a5a7ad6540cb1e44e9c0859ff7bf778b8544643b24d95bd751bb8352d7e",
-      "bytes": 198912
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "c32ea5188c0224dd699c144a1bc5d9cc3846347a9d92006e006860d3edc306ab",
+      "bytes": 88032
     },
     {
       "id": "M05_S1_N2_gatilho_apos_escolha1_sucesso",
@@ -2471,8 +3429,13 @@
       "text_sha256": "5843605f61cb10ca69c41802d61949b86a26d7adabd0e2ec6784116454eac6f4",
       "n1_path": 0,
       "n1_result": "success",
-      "audio_sha256": "a4c36f9e50fbd6cdc7567896ddc13a0bf96d425ebabea4ca70774316744ce675",
-      "bytes": 277824
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "7f3e44dff91720f081c72e63d5d900b3ee57b1619dfb62228eb0245a8058e34c",
+      "bytes": 112704
     },
     {
       "id": "M05_S1_N2_gatilho_apos_escolha1_falha",
@@ -2484,8 +3447,13 @@
       "text_sha256": "f19a1f54f59b4559e5db174c1f072afbecfe58f35d9d37298b1563927b79280a",
       "n1_path": 0,
       "n1_result": "failure",
-      "audio_sha256": "3627bbcef451f9926074b72aa901d5b58e90c5647e9f771f9f2c663bcec77108",
-      "bytes": 277632
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "884983d545a0577534d7969b3aa7dd93cd5bd0e5c7c3948818da76c5298150d5",
+      "bytes": 115296
     },
     {
       "id": "M05_S1_N2_escolha1",
@@ -2496,8 +3464,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_05/M05_S1_N2_escolha1.mp3",
       "text_sha256": "396f93589edcba30658759d8006d7fccc1641dbc2b8dc183886d6a46fa78e089",
       "n1_path": 0,
-      "audio_sha256": "729db38af8ee67c978fb72e8c56cc03382ddd7e65c92726be1f005fd12508dc1",
-      "bytes": 279552
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "fb3991e69ede616b455fea989d34c3a8fea6aa68ce9609df3499f0d7e400e82d",
+      "bytes": 116256
     },
     {
       "id": "M05_S1_N2_escolha1_sucesso",
@@ -2509,8 +3482,13 @@
       "text_sha256": "1832541eb1abf448e5243c6a87f9e7bd6452e866874e172230adb439cb128be2",
       "n1_path": 0,
       "result": "success",
-      "audio_sha256": "ef6dd523eadf7bc300fe0e781117c3f31b7b1e7e3886f4931b9e0fa2952edf90",
-      "bytes": 137088
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "b699a8e42a07ed15ebdd7a8c024e389b45f23e6834a0bba32420f6b618266c9a",
+      "bytes": 56736
     },
     {
       "id": "M05_S1_N2_escolha1_falha",
@@ -2522,8 +3500,13 @@
       "text_sha256": "4d18ea7999f9dabc3cdce279b3f29e1b9b6a9b324cf910468c9347620bb3ce4c",
       "n1_path": 0,
       "result": "failure",
-      "audio_sha256": "d61e3383656d17d6a458150cc45994ae23fa7ca8b3c74c02d43d7beb80f9b696",
-      "bytes": 156672
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "345ea89b80d055d6a939aa8d19b9534522b232f0ed8b40e83ee3c9b0cae11469",
+      "bytes": 63072
     },
     {
       "id": "M05_S1_N2_gatilho_apos_escolha2_sucesso",
@@ -2535,8 +3518,13 @@
       "text_sha256": "171a8b6ecb60cd2c6fb7e9169ec9a713a1e84891735f5fa022a58e5fcf2a6420",
       "n1_path": 1,
       "n1_result": "success",
-      "audio_sha256": "50e6b5145bdadebec00b2f9be531a1f28aa1930b41b37ddb406f37bdbb1737f9",
-      "bytes": 271680
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "12979dded27b2609d53b6b41dd61ab6cd63ec20261a0c564ef2409d7a867c3f1",
+      "bytes": 114432
     },
     {
       "id": "M05_S1_N2_gatilho_apos_escolha2_falha",
@@ -2548,8 +3536,13 @@
       "text_sha256": "e6ad9f22c391f6683104f56e42fde3ae5cb9229270c5f895ba9533d17608fef6",
       "n1_path": 1,
       "n1_result": "failure",
-      "audio_sha256": "0d01736919bacbde1971edd6758cec189d48a86c96260d7a4e78cd17e3fa0f9a",
-      "bytes": 276672
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "f7396298d6452871690266d60b8cf2dd4ea4c0802172164ad53a60a8dd14b885",
+      "bytes": 119424
     },
     {
       "id": "M05_S1_N2_escolha2",
@@ -2560,8 +3553,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_05/M05_S1_N2_escolha2.mp3",
       "text_sha256": "15bba68e4aaf8ab0e61363c80a0e5e5c2d164896eed3ebe42fbe963778e31121",
       "n1_path": 1,
-      "audio_sha256": "6baac05b55cd3674a0849804b5837f4931ca84ca939e726a961a501d8d295106",
-      "bytes": 277632
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "26890761686b355fd7d93bc3397a1b7316a09598e7d0237c9e17b798f7c564de",
+      "bytes": 113664
     },
     {
       "id": "M05_S1_N2_escolha2_sucesso",
@@ -2573,8 +3571,13 @@
       "text_sha256": "28f1ea03f22aaedb340f10fab6abfe45fdf08dc3d2d8f0129531fb1df8fcb2cb",
       "n1_path": 1,
       "result": "success",
-      "audio_sha256": "9803076c66b2d4a96f1d7b847dd8ec544ae94b8b091dfeed99a604062221c8b4",
-      "bytes": 145920
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "8c511f997604f608cd4614ac7b700def110a6bcee117a0b60aedd3676c5e0b68",
+      "bytes": 62016
     },
     {
       "id": "M05_S1_N2_escolha2_falha",
@@ -2586,8 +3589,13 @@
       "text_sha256": "a2ea2874e525557e81e3a78e0e26f4c2e5ef39acfef5f3d9abcc9c69be908474",
       "n1_path": 1,
       "result": "failure",
-      "audio_sha256": "13adcf1d02dd432e23fb095de9e188eff617d1a34f67a72fab12b17a70e280cd",
-      "bytes": 151488
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "1fa1d2f2f43e78a8188bafbc8c0f4a7d805551a8d4835ca2b7a743339d33687f",
+      "bytes": 62976
     },
     {
       "id": "M05_S1_N2_gatilho_apos_escolha3_sucesso",
@@ -2599,8 +3607,13 @@
       "text_sha256": "c6d8b258eecb50cfdf68a304ea307aeaaa81514f92801e5dec3f7f98eaef179d",
       "n1_path": 2,
       "n1_result": "success",
-      "audio_sha256": "9c92c44b7be8d41dc1324edd50ad9af3d6e1c67240662022413c1af71a4dccd5",
-      "bytes": 263616
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "5d1f65854e14f4dcf4d3656b2b48302ee87409ae026f6052e429e6ece43294b9",
+      "bytes": 113184
     },
     {
       "id": "M05_S1_N2_gatilho_apos_escolha3_falha",
@@ -2612,8 +3625,13 @@
       "text_sha256": "4d72a02c059cfa24707256453884e9331df3efb18b0f7b351fb852b00e8b8b49",
       "n1_path": 2,
       "n1_result": "failure",
-      "audio_sha256": "82aa5296e4244c8ffa8ad2a8cfa2e2b7573d07e045383a347a43fd67bb67ff1e",
-      "bytes": 270336
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "0b5c5767f53f7e45e1f43487438eb99e1ba47a5dee804698aa434796d6a0ecfe",
+      "bytes": 114912
     },
     {
       "id": "M05_S1_N2_escolha3",
@@ -2624,8 +3642,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_05/M05_S1_N2_escolha3.mp3",
       "text_sha256": "4afabf84eecf39adfc81e8cd511f8c116d524e3d5af68f0e1f2e82ce7003d756",
       "n1_path": 2,
-      "audio_sha256": "3a944e8c3fd4a4d8814975781ae44031c57ab619a463c627fa0e4392622de201",
-      "bytes": 269952
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "032ff363386a4affb7ed4eddafc88e678f8e2c4bb10611a80c06d0f27ba2e8c8",
+      "bytes": 109056
     },
     {
       "id": "M05_S1_N2_escolha3_sucesso",
@@ -2637,8 +3660,13 @@
       "text_sha256": "cbda12bcefcffef315373308d4c4dc93fc7168acbe58a807b7d2ec6a092e6214",
       "n1_path": 2,
       "result": "success",
-      "audio_sha256": "fc120fa8a3c30c79e802d64d0760adc96d906db9f8e506a4c33caddc6d24e670",
-      "bytes": 142656
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "622bcef4a61cea730ea5a3226dc5113a2fc4171a9858de3e365c85b9e39099d7",
+      "bytes": 59712
     },
     {
       "id": "M05_S1_N2_escolha3_falha",
@@ -2650,8 +3678,13 @@
       "text_sha256": "5a5a7c0737481abf4770ac60cc3f7bbacfa784c28309b9955b9d283fc05bd147",
       "n1_path": 2,
       "result": "failure",
-      "audio_sha256": "8f3c44b535fe4a246553af37241f572fbf1209ef2d9fe238e820ec2c69891197",
-      "bytes": 152640
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "66eb6cace6c264dc4464c51187d17284013ef5b199858b807fbf0294ab7c9104",
+      "bytes": 63552
     },
     {
       "id": "M05_S2_N1_gatilho",
@@ -2661,8 +3694,13 @@
       "text": "Missão 5. A Última Escolha. Situação 2. A última evacuação. Nível um.\n\nGatilho: Primeiro Villain a entrar na Cidade.\n\nOs sobreviventes atravessam uma passagem estreita.\n\nManter a passagem, desviar a horda ou ficar com os últimos?\n\nEscolha o caminho que a equipe seguirá.",
       "output": "audios/Novas_N1_N2_Feminina/Missao_05/M05_S2_N1_gatilho.mp3",
       "text_sha256": "3aacf13ce94c8e4aa5b1ad797e57e125b22c0ac10558f9657b3defaaa1884ca1",
-      "audio_sha256": "5c2f320df878bcc906ac1754dfc5faf321a55629b1034c5bce83ea8450cf9ff5",
-      "bytes": 197952
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "596b3b45d9c5d6d8e6f146df2e1cd24b4fd78bd94f487cde748cb1a2ff79db3b",
+      "bytes": 87072
     },
     {
       "id": "M05_S2_N2_gatilho_apos_escolha1_sucesso",
@@ -2674,8 +3712,13 @@
       "text_sha256": "aed681404ecca3329f1f0188cf93941d8e7f24e21eb143f3023d2bc6f7d0616d",
       "n1_path": 0,
       "n1_result": "success",
-      "audio_sha256": "636605ca15348f6a1e8530651035f0d68a1914240dd02a6e9a096a4639add100",
-      "bytes": 286272
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "41da53abdb291db0563144ac33e44103bda381f286e74b3b3b96607fcc6cb292",
+      "bytes": 114624
     },
     {
       "id": "M05_S2_N2_gatilho_apos_escolha1_falha",
@@ -2687,8 +3730,13 @@
       "text_sha256": "e868eadb374fd2e650cdeff76ac0e4e85ad27eafe40af65fcde128b7143c3358",
       "n1_path": 0,
       "n1_result": "failure",
-      "audio_sha256": "725976cccfbd12384f03c5089ca6416c4713c0ec7bbd1d7a21b896a0a4186171",
-      "bytes": 282432
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "441d2c61d094d7e2415e3db8af08cc74453bf3a2ee880579fa8e83a60deeadf5",
+      "bytes": 113376
     },
     {
       "id": "M05_S2_N2_escolha1",
@@ -2699,8 +3747,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_05/M05_S2_N2_escolha1.mp3",
       "text_sha256": "dec9e5784bbae4823da4563a42bfe79898046cdc2a9a8264c6470664bd9f6c16",
       "n1_path": 0,
-      "audio_sha256": "704acbdfaab0b1c9f202a06a021173da26e8de923062fb95ba7671d650456093",
-      "bytes": 270912
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "e400982c211dd3ca8598712db8f41f78411805240f269d06aaad87bd93109f8e",
+      "bytes": 109344
     },
     {
       "id": "M05_S2_N2_escolha1_sucesso",
@@ -2712,8 +3765,13 @@
       "text_sha256": "a6216787aff999268c31f93fe964dcebfd26d8b604f43503755dcb4209474d71",
       "n1_path": 0,
       "result": "success",
-      "audio_sha256": "d80d7013ec1e2f9ee1a0b1b7e53ffdd091f40e073708d4211fad71b64d08b185",
-      "bytes": 141696
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "8481a4f14d0df3ac1ba6356c17479a22a6d833aa5756640bf83bfc9d713ee371",
+      "bytes": 57792
     },
     {
       "id": "M05_S2_N2_escolha1_falha",
@@ -2725,8 +3783,13 @@
       "text_sha256": "af3f2580b118d26c06b3f1dc37ff06c2d3284baa246caea502d3f7d8da87dfab",
       "n1_path": 0,
       "result": "failure",
-      "audio_sha256": "b69efc1f91b12a6f389cf6cc6e7cf63f6c875157992a664a4136b4d5d26f9a98",
-      "bytes": 149376
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "852d4a485d67c41801edc97a1de0d692fe82fce7fd9214de881f33e5c1d2b790",
+      "bytes": 61536
     },
     {
       "id": "M05_S2_N2_gatilho_apos_escolha2_sucesso",
@@ -2738,8 +3801,13 @@
       "text_sha256": "e8777291a1713092e12dd9f7820c505c08becac9fda7bcc17e9b6fb035e538f9",
       "n1_path": 1,
       "n1_result": "success",
-      "audio_sha256": "c3d83bed48cad88c8807bd2201963e8356108b93587ca0d6b350c3ae151d5131",
-      "bytes": 289728
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "b9d66536d31fbee4a15e4f1cc17699f7c039de45b2c166260787402458fd4c93",
+      "bytes": 118464
     },
     {
       "id": "M05_S2_N2_gatilho_apos_escolha2_falha",
@@ -2751,8 +3819,13 @@
       "text_sha256": "43fab5731340a8717e1b55559de57b1b7c93c7686c86399e0410cd5739cf543e",
       "n1_path": 1,
       "n1_result": "failure",
-      "audio_sha256": "b15121443c445ebbff573d38afdfd65ddf71fbbd702d466edeae235081e1c426",
-      "bytes": 293760
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "83fb42c18ebd7668662459263ed0252ec8ac4db26276caa6e6360ee040b29c2a",
+      "bytes": 118272
     },
     {
       "id": "M05_S2_N2_escolha2",
@@ -2763,8 +3836,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_05/M05_S2_N2_escolha2.mp3",
       "text_sha256": "419f36c46e2fc122c85a2d5c11a4bd049b5532e267aca6803def241f3037b19f",
       "n1_path": 1,
-      "audio_sha256": "41d66af28445bd4404fc9f1fdf8bb17d63427072a50aa1a8c89e66d67e6e6ee0",
-      "bytes": 261312
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "d58b7b7fee9699a488a67fd5cf3af7f0fdc314d0a9b496e93d712a3bd1b28bc9",
+      "bytes": 100704
     },
     {
       "id": "M05_S2_N2_escolha2_sucesso",
@@ -2776,8 +3854,13 @@
       "text_sha256": "dca3217510d52e6c53cdf0c2bb2064020d41e4037af6fcbe78f7e09be0711090",
       "n1_path": 1,
       "result": "success",
-      "audio_sha256": "dd15b33f9bb6b0830306fc0665b7ca281a27db5849ac1dd1a1fee67ba9f50549",
-      "bytes": 137280
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "a6d0a689f31b30c7be41d41213536742f1aac27e970f3eec591d5dd21781ec9a",
+      "bytes": 55776
     },
     {
       "id": "M05_S2_N2_escolha2_falha",
@@ -2789,8 +3872,13 @@
       "text_sha256": "250acd2da2333bc9afd328ca830dc0df5a2260da3918292964a6a588010e99d9",
       "n1_path": 1,
       "result": "failure",
-      "audio_sha256": "502d090ee4cb2f115ccd6cc87fc9618f18a69f33c5c6f0351261c60743742c20",
-      "bytes": 150912
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "e813d05f00c97e68ff1e94e8e83e64ba2f08f1470d7899fe26ce376add994c58",
+      "bytes": 59712
     },
     {
       "id": "M05_S2_N2_gatilho_apos_escolha3_sucesso",
@@ -2802,8 +3890,13 @@
       "text_sha256": "5fe2e8d56776734874506647dd66d172959afa614c3974a7d5fc1601df56feea",
       "n1_path": 2,
       "n1_result": "success",
-      "audio_sha256": "f184852873193aa745747c9d9c832087fc5c52b50d6c91e06086eec7da48bee3",
-      "bytes": 303360
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "4710997e532b1dc32bcb32ec6c83328b8aafc03e388230373f44a1df4a523a2c",
+      "bytes": 120192
     },
     {
       "id": "M05_S2_N2_gatilho_apos_escolha3_falha",
@@ -2815,8 +3908,13 @@
       "text_sha256": "3f6931bba8f1ed32b5ecb85d68ac74e53cf3cc007a3c84fc740d9d7c13a69e97",
       "n1_path": 2,
       "n1_result": "failure",
-      "audio_sha256": "d8ad19f85657100d5c7cbb7c979996dff5a8f38592f55645568027282c356214",
-      "bytes": 297216
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "56b42fca3ecf409f5f87868354f599437711938b4ac104e441ba0423b07d53aa",
+      "bytes": 116352
     },
     {
       "id": "M05_S2_N2_escolha3",
@@ -2827,8 +3925,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_05/M05_S2_N2_escolha3.mp3",
       "text_sha256": "7bde5ac26860bf4d89c05c6496e281c64f5d4a58b62fead3f20fd7a362ad03a8",
       "n1_path": 2,
-      "audio_sha256": "9f0e7298f37a3ae9de464734faf37ee72d42c528c8e197d687bb1386ea0d25bf",
-      "bytes": 268224
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "2a31f140f37c621fa635926acbaa5541c96aad82904ec0b6849bb7358f16ff62",
+      "bytes": 107904
     },
     {
       "id": "M05_S2_N2_escolha3_sucesso",
@@ -2840,8 +3943,13 @@
       "text_sha256": "4c9092d545406916f12e9457497a3b4f8d1a238353815b87e7397ef5ce8a9698",
       "n1_path": 2,
       "result": "success",
-      "audio_sha256": "5bd5e8704eefb80866b000edfb7585abf1406fd17f1f4beab3d51fcc2bdf5215",
-      "bytes": 137856
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "5bab6e58882118f47ff8951c96d9b3536cef1ba247e2e064944260aed2f42891",
+      "bytes": 58176
     },
     {
       "id": "M05_S2_N2_escolha3_falha",
@@ -2853,8 +3961,13 @@
       "text_sha256": "869db8abe26bc85916146932e990336264297d7264c1a3ed5e8413dae2750def",
       "n1_path": 2,
       "result": "failure",
-      "audio_sha256": "d15e283e2afc630d94188afd442659778a275648344923e82315b932045269e8",
-      "bytes": 152640
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Aoede",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "0cc02462a9f117273e9751f04eda282a99a18bb9a6cf7801771218bcb2c9de12",
+      "bytes": 61344
     },
     {
       "id": "M05_S3_N1_gatilho",
@@ -2864,8 +3977,13 @@
       "text": "Missão 5. A Última Escolha. Situação 3. O preço da escolha. Nível um.\n\nGatilho: Primeiro Master Strike.\n\nUma consciência absorvida oferece uma vitória fácil em troca de submissão.\n\nRecusar, enganar ou negociar um limite com a consciência que oferece a vitória?\n\nEscolha o caminho que a equipe seguirá.",
       "output": "audios/Novas_N1_N2_Feminina/Missao_05/M05_S3_N1_gatilho.mp3",
       "text_sha256": "ab31fd3e4a5668828a464cfa177db052e9952e9eb3d78ef3459c89d3b2ad960d",
-      "audio_sha256": "c7e7a69479acdf1beb8810634a1712a6f77e578c2253bff9a076621e568c79d6",
-      "bytes": 215040
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "7dd81f1fcc8597e8fe4d6c80cb13845df1538971103033968a30bcff94a3aa00",
+      "bytes": 97152
     },
     {
       "id": "M05_S3_N2_gatilho_apos_escolha1_sucesso",
@@ -2877,8 +3995,13 @@
       "text_sha256": "0726e52b84f34326509c015fde26a0f213ec20edc8e032440121d280090028ac",
       "n1_path": 0,
       "n1_result": "success",
-      "audio_sha256": "4290ea3f7f43ced60f69c0aa5ee209d995a06c7feadfbdf6fc8c42b6d89e95e4",
-      "bytes": 305856
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "f9b40fa2e384b5187881bb2789ce82d73dd56ccb65a56fad9b614bd8bc6a5ada",
+      "bytes": 121536
     },
     {
       "id": "M05_S3_N2_gatilho_apos_escolha1_falha",
@@ -2890,8 +4013,13 @@
       "text_sha256": "74ad35b6a7f96da4273ffafbaa89146829f058549273937a7deb1ebf0b1ce57c",
       "n1_path": 0,
       "n1_result": "failure",
-      "audio_sha256": "30e3f7f9b40d223961940b83594b356b5b1a1f713fa7bc4b08f8da25aa45b121",
-      "bytes": 307776
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "48bc7f87599ca646c00b051aa88ea9dba198d12702a23f941e491a14254c97d6",
+      "bytes": 125856
     },
     {
       "id": "M05_S3_N2_escolha1",
@@ -2902,8 +4030,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_05/M05_S3_N2_escolha1.mp3",
       "text_sha256": "f19c551bb894dc5823b751d8e64600d608ad324a45afada999e3fa39d5ca476d",
       "n1_path": 0,
-      "audio_sha256": "7c4c5d7770bba78f6aecee34fb3eb8a00cf46a8acdd39c079d072a82d7ba6a58",
-      "bytes": 277824
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "f9d7b0d68ec1a3db946aac5b9adbc5ec8350594eeaf4be4464d7b28402249452",
+      "bytes": 112224
     },
     {
       "id": "M05_S3_N2_escolha1_sucesso",
@@ -2915,8 +4048,13 @@
       "text_sha256": "6d5084469ec12c095faec19854cc36a14f9df30b54123daa0bf2bd61259a1e5a",
       "n1_path": 0,
       "result": "success",
-      "audio_sha256": "d27e899c573ccdfb60d9b16cadaa4932a5cc04485f574dc679e691393ff4fa48",
-      "bytes": 136320
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "e0f12f24ccaabaf54c36318d0c10d6372184a79cc513451f5060f29eb4ea501d",
+      "bytes": 59616
     },
     {
       "id": "M05_S3_N2_escolha1_falha",
@@ -2928,8 +4066,13 @@
       "text_sha256": "8281954b862b836e763a6ac92a35353e1de0ae0230cf7560788a483910c8dc6d",
       "n1_path": 0,
       "result": "failure",
-      "audio_sha256": "31e73b01faac2c055451bf2d12faf5704622d9e573c76261bed1b0cb53169c37",
-      "bytes": 153408
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "2e16bc7b12b1dc421886f9ccbd1d39f37c7a50832259985fa59952b505ff4aa1",
+      "bytes": 59616
     },
     {
       "id": "M05_S3_N2_gatilho_apos_escolha2_sucesso",
@@ -2941,8 +4084,13 @@
       "text_sha256": "e50afa57a4f0cf64432e7c367383c3a313da0fcba9b09406596348e873649759",
       "n1_path": 1,
       "n1_result": "success",
-      "audio_sha256": "923bb1b3ed06de458a3c0f83bc9538d48f5dceb47051857598a1a32174eb1c04",
-      "bytes": 306624
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "b3cc8252aaf7af23d93018dd93f0f35d207a34296ab68c22fff287f15a948e8a",
+      "bytes": 121152
     },
     {
       "id": "M05_S3_N2_gatilho_apos_escolha2_falha",
@@ -2954,8 +4102,13 @@
       "text_sha256": "1c60d62e0151c9c163244b5e2feee159753a2373e54d843f8e80a834818502d0",
       "n1_path": 1,
       "n1_result": "failure",
-      "audio_sha256": "b40395f63988681e67f1b6f85d0a327d5ccb9152536bad1335a1de8fd7e64dd0",
-      "bytes": 307200
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "9acc623c1ff00cb1b289541f3b953f3bded27a72f18f75d9187b1317a981d6e3",
+      "bytes": 123744
     },
     {
       "id": "M05_S3_N2_escolha2",
@@ -2966,8 +4119,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_05/M05_S3_N2_escolha2.mp3",
       "text_sha256": "c0407103e0cdd93d3ba8821c73470662f16722c0c938a3a51f60a1bd0daa987c",
       "n1_path": 1,
-      "audio_sha256": "1fb4a101ca1e900780f3847e64db63d37e5608c5396a529373a9f8cab40710f3",
-      "bytes": 271488
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "0b9e2237c238e75b881fdf1f976968e0296a9cebed5d24117bdd84ee8fd93186",
+      "bytes": 109056
     },
     {
       "id": "M05_S3_N2_escolha2_sucesso",
@@ -2979,8 +4137,13 @@
       "text_sha256": "19421bbfad4204640032a6aa88c6a3575c6ff8c5f886b366270510e3b6b74288",
       "n1_path": 1,
       "result": "success",
-      "audio_sha256": "9ed24d18901b7cb18b59d89f524aedb849c5127ac710eeb099ba378bfdbc28fa",
-      "bytes": 138240
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "2ddc03376b08bd44613769edc87d340819165e9b24675c7dff80b13d2738909f",
+      "bytes": 58464
     },
     {
       "id": "M05_S3_N2_escolha2_falha",
@@ -2992,8 +4155,13 @@
       "text_sha256": "ee539c03fa1957762f52e7173e3db0857d0ab25177c3718aec567f7aac27a712",
       "n1_path": 1,
       "result": "failure",
-      "audio_sha256": "9ee3a0324b32b5a9b4fdd20b229e7af7c2ee1bff966b30a520fa998a6207f403",
-      "bytes": 150912
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "b6b644b8f00aa5ecbbb89c21544ea07008cef0c67e045c423f6da2425898a867",
+      "bytes": 59904
     },
     {
       "id": "M05_S3_N2_gatilho_apos_escolha3_sucesso",
@@ -3005,8 +4173,13 @@
       "text_sha256": "63c54230c32d71388e6a40f14993aad12661cbe7b509f87a59f475b4adc93451",
       "n1_path": 2,
       "n1_result": "success",
-      "audio_sha256": "c8b98a7c839339925bfbd85f16c7835106fc988eed6f00194c1b1454fb3577ba",
-      "bytes": 299904
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "de27052c0aa18c69fa171e50ef5df3f33919fc8a9ab294e4acb8b5fd3a9a1aeb",
+      "bytes": 120096
     },
     {
       "id": "M05_S3_N2_gatilho_apos_escolha3_falha",
@@ -3018,8 +4191,13 @@
       "text_sha256": "084e40a91b052aebbd67d9998d0db6e0291c1b5f962e9b7fffb24527a93fc130",
       "n1_path": 2,
       "n1_result": "failure",
-      "audio_sha256": "8052c3206742f5baaa35e1c65b9be98e83e96890e4c99263b903c75028c47c4a",
-      "bytes": 300288
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "53adb29fe906c559cd1dae274efb878e4156c28fff5d4b0b41977073bb08395f",
+      "bytes": 121536
     },
     {
       "id": "M05_S3_N2_escolha3",
@@ -3030,8 +4208,13 @@
       "output": "audios/Novas_N1_N2_Feminina/Missao_05/M05_S3_N2_escolha3.mp3",
       "text_sha256": "381dd9a18a4e6acd6fe1525a0442d43fca2d1d4d85ae85134a50ccd569c9b791",
       "n1_path": 2,
-      "audio_sha256": "51b45ada5ef6598b2465d24fb27a70420a1f5f0511ec768421e0c9cedc7d3372",
-      "bytes": 272448
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "c1d5ee41c55a097b7efdbc70fdb9358d1a48ac1cfbf3ef59ab6e8aaeddfa3a63",
+      "bytes": 107904
     },
     {
       "id": "M05_S3_N2_escolha3_sucesso",
@@ -3043,8 +4226,13 @@
       "text_sha256": "fd8a97cb5a2ac5b5c4022ce17f01c88992fc1fbc646b9129e4d4310a4baa9b39",
       "n1_path": 2,
       "result": "success",
-      "audio_sha256": "c78444bf04065c503bd37c7b4cd6722a30c8214676176408242021f18741f8d3",
-      "bytes": 134208
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "70d17ab689c54cdb9f680f0b4043fe5fae2beae002e6e258fe9bd5ff4bd06f19",
+      "bytes": 53472
     },
     {
       "id": "M05_S3_N2_escolha3_falha",
@@ -3056,8 +4244,18 @@
       "text_sha256": "84597ea3e08b776ab510b8f45033cf4d146ffb63aaa94fe921f3e1bd5c181448",
       "n1_path": 2,
       "result": "failure",
-      "audio_sha256": "23b8bf4de59b99720d4ebe2de8fa2e257ac0870bb0a185c946e044a9503832fe",
-      "bytes": 150336
+      "voice": {
+        "languageCode": "pt-BR",
+        "name": "pt-BR-Chirp3-HD-Kore",
+        "ssmlGender": "FEMALE"
+      },
+      "audio_sha256": "b1a3fd2480f9adeecc7ac751c0c81296de62bc6d95f19ee8a21869b99cb1a0e5",
+      "bytes": 60576
     }
-  ]
+  ],
+  "voices": [
+    "pt-BR-Chirp3-HD-Kore",
+    "pt-BR-Chirp3-HD-Aoede"
+  ],
+  "version": "chirp3-kore-aoede-v1"
 }

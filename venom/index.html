@@ -1189,7 +1189,7 @@ function venomFemaleNarrationPath(id,mission){
   if(!prior?.result||!['0','1','2'].includes(String(prior.path)))return null;
   file+='_apos_escolha'+(Number(prior.path)+1)+'_'+(prior.result==='success'?'sucesso':'falha');
  }
- return 'audios/Novas_N1_N2_Feminina/Missao_'+String(mission).padStart(2,'0')+'/'+file+'.mp3';
+ return 'audios/Novas_N1_N2_Feminina/Missao_'+String(mission).padStart(2,'0')+'/'+file+'.mp3?v=chirp3-kore-aoede-v1';
 }
 
 function vnPath(id,mission){const revised=venomFemaleNarrationPath(id,mission);if(revised)return revised;return 'audios/Missao_'+String(mission).padStart(2,'0')+'/'+encodeURIComponent(id)+'.mp3'}
