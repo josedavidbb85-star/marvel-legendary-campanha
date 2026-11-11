@@ -770,7 +770,10 @@ function venomOpenPreparation(id){
  const sections=[['Mastermind',[c.mastermind],'Mastermind'],['Scheme',[c.scheme],'Scheme'],['Heróis (5 conjuntos; 6 na Invasão Secreta)',c.heroes,'Herói'],['Grupos de vilões',c.villains,'Vilão'],['Capangas',c.henchmen,'Henchmen']];
  const cards=sections.map(([title,names,kind])=>'<section class="venom-prep-group"><h3>'+escapeHtml(title)+'</h3><div class="venom-prep-grid">'+names.map(n=>venomPreparationCard(n,kind)).join('')+'</div></section>').join('');
  const rules=SCHEME_RULES[c.scheme];
- panel.innerHTML='<header class="venom-prep-head"><div class="venom-prep-kicker">MARVEL LEGENDARY · DOSSIÊ '+String(id).padStart(2,'0')+' / 05</div><h2>PREPARAÇÃO DA MISSÃO</h2><p>'+escapeHtml(c.title)+'</p><button class="venom-prep-close" type="button" onclick="venomClosePreparation()">✕ FECHAR</button></header><div class="venom-prep-scroll"><div class="venom-prep-summary"><div class="venom-prep-objective"><strong>OBJETIVO DA MISSÃO</strong><p>'+escapeHtml(c.objective)+'</p></div><div class="venom-prep-indicator"><strong>INDICADOR DA MISSÃO</strong><p>'+escapeHtml(c.indicator)+'</p></div></div>'+cards+(rules?'<section class="venom-prep-rules"><h3>Regras do Scheme</h3><p><strong>'+escapeHtml(rules.twists)+' Scheme Twists</strong></p><p><strong>Setup:</strong> '+escapeHtml(rules.setup)+'</p><p><strong>Twist:</strong> '+escapeHtml(rules.effect)+'</p><p><strong>Evil Wins:</strong> '+escapeHtml(rules.loss)+'</p><p><strong>Atenção:</strong> '+escapeHtml(rules.attention)+'</p></section>':'')+'<p class="venom-prep-footnote">Imagens ilustrativas de cartas dos conjuntos. Confira nomes, quantidades e efeitos nas cartas físicas. Imagens externas dependem de conexão com a internet.</p></div>';
+ const tacticalHeroes=VENOM_SUPPORT_HEROES[Number(id)]||[];
+ const tacticalCards=tacticalHeroes.map(name=>venomPreparationCard(name,'Herói de apoio tático')).join('');
+ const tacticalSection='<section class="venom-prep-tactical"><h3>RESERVA TÁTICA · 2 BARALHOS DE APOIO</h3><p><strong>'+tacticalHeroes.map(escapeHtml).join(' + ')+'</strong> · 14 cartas de cada herói, total de 28 cartas. Embaralhe em um baralho físico comum, separado do Hero Deck principal. Distribua 4 cartas abertas a Bel, David e Guilherme.</p><div class="venom-prep-grid">'+tacticalCards+'</div></section>';
+ panel.innerHTML='<header class="venom-prep-head"><div class="venom-prep-kicker">MARVEL LEGENDARY · DOSSIÊ '+String(id).padStart(2,'0')+' / 05</div><h2>PREPARAÇÃO DA MISSÃO</h2><p>'+escapeHtml(c.title)+'</p><button class="venom-prep-close" type="button" onclick="venomClosePreparation()">✕ FECHAR</button></header><div class="venom-prep-scroll"><div class="venom-prep-summary"><div class="venom-prep-objective"><strong>OBJETIVO DA MISSÃO</strong><p>'+escapeHtml(c.objective)+'</p></div><div class="venom-prep-indicator"><strong>INDICADOR DA MISSÃO</strong><p>'+escapeHtml(c.indicator)+'</p></div></div>'+cards+tacticalSection+(rules?'<section class="venom-prep-rules"><h3>Regras do Scheme</h3><p><strong>'+escapeHtml(rules.twists)+' Scheme Twists</strong></p><p><strong>Setup:</strong> '+escapeHtml(rules.setup)+'</p><p><strong>Twist:</strong> '+escapeHtml(rules.effect)+'</p><p><strong>Evil Wins:</strong> '+escapeHtml(rules.loss)+'</p><p><strong>Atenção:</strong> '+escapeHtml(rules.attention)+'</p></section>':'')+'<p class="venom-prep-footnote">Imagens ilustrativas de cartas dos conjuntos. Confira nomes, quantidades e efeitos nas cartas físicas. Imagens externas dependem de conexão com a internet.</p></div>';
  overlay.append(panel);overlay.addEventListener('click',e=>{if(e.target===overlay)venomClosePreparation()});document.body.append(overlay);document.body.classList.add('venom-prep-open');panel.querySelector('.venom-prep-close').focus();
 }
 function venomClosePreparation(){document.getElementById('venomPreparationModal')?.remove();document.body.classList.remove('venom-prep-open')}
@@ -1302,6 +1305,58 @@ document.addEventListener('DOMContentLoaded',()=>{const fx=document.getElementBy
  #venomPreparationModal .venom-prep-group:nth-of-type(n){grid-column:span 2!important}
  #venomPreparationModal .venom-prep-grid{grid-template-columns:repeat(auto-fit,minmax(84px,1fr))!important}
  #venomPreparationModal .venom-prep-art{height:clamp(76px,12dvh,110px)!important}
+}
+</style>
+<style id="venom-dossier-fullscreen-v29">
+/* Preparação: dois heróis de apoio da Reserva Tática, distintos dos conjuntos principais */
+#venomPreparationModal .venom-prep-tactical{grid-column:1/-1!important;min-width:0;margin:0!important;padding:10px 14px!important;border:2px solid #141414!important;background:#fff9e4!important}
+#venomPreparationModal .venom-prep-tactical h3{font:900 clamp(17px,1.5vw,24px)/1.15 Impact,'Arial Narrow',sans-serif!important;color:#a51c28!important;margin:0 0 5px!important}
+#venomPreparationModal .venom-prep-tactical p{font-size:clamp(12px,1vw,16px)!important;line-height:1.35!important;margin:0 0 9px!important}
+#venomPreparationModal .venom-prep-tactical .venom-prep-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,180px))!important;justify-content:start!important;gap:10px!important}
+#venomPreparationModal .venom-prep-tactical .venom-prep-art{height:clamp(70px,11dvh,115px)!important}
+/* N1 and N2: same edge-to-edge notebook layout as the preparation dossier */
+#venomTriggerComic.venom-trigger-comic-overlay{padding:0!important;align-items:stretch!important;justify-content:stretch!important}
+#venomTriggerComic .venom-trigger-comic-panel{width:100vw!important;max-width:none!important;height:100dvh!important;max-height:100dvh!important;border:0!important;border-radius:0!important;box-shadow:none!important}
+#venomTriggerComic .venom-trigger-comic-head{padding:8px clamp(12px,1.8vw,28px)!important;border-bottom-width:3px!important}
+#venomTriggerComic .venom-trigger-comic-head h2{font-size:clamp(23px,2.5vw,38px)!important;line-height:1.08!important;margin:3px 130px 3px 0!important}
+#venomTriggerComic .venom-trigger-comic-kicker{font-size:12px!important}
+#venomTriggerComic .venom-trigger-comic-close{top:8px!important;right:12px!important;padding:6px 12px!important;font-size:13px!important}
+#venomTriggerComic .venom-trigger-comic-body{padding:clamp(7px,1vw,14px)!important;overflow-y:auto!important}
+#venomTriggerComic .situation-detail{width:100%!important;max-width:none!important;padding:clamp(10px,1.3vw,19px)!important;box-shadow:none!important;border-width:2px!important;display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;gap:7px 15px!important;align-content:start}
+#venomTriggerComic .situation-detail>.eyebrow,#venomTriggerComic .situation-detail>h3{grid-column:1/-1!important;margin:0!important}
+#venomTriggerComic .situation-detail>h3{font-size:clamp(20px,2vw,31px)!important}
+#venomTriggerComic .situation-detail>.dilemma-context{grid-column:1/9!important;font-size:clamp(13px,1.05vw,17px)!important;line-height:1.35!important;margin:0!important}
+#venomTriggerComic .situation-detail>p:not(.dilemma-context){grid-column:9/-1!important;font-size:clamp(12px,1vw,16px)!important;line-height:1.35!important;margin:0!important}
+#venomTriggerComic .situation-detail>.situation-level{grid-column:1/-1!important;display:grid!important;grid-template-columns:repeat(12,minmax(0,1fr))!important;gap:7px 14px!important;padding:10px!important;border-top-width:3px!important}
+#venomTriggerComic .situation-level>.eyebrow{grid-column:1/-1!important;margin:0!important}
+#venomTriggerComic .situation-level>p:first-of-type{grid-column:1/7!important}
+#venomTriggerComic .situation-level>p.note{grid-column:7/-1!important}
+#venomTriggerComic .situation-level>p{margin:0!important;font-size:clamp(12px,1vw,16px)!important;line-height:1.35!important}
+#venomTriggerComic .situation-level>.form-grid:first-of-type{grid-column:1/6!important;align-content:start!important}
+#venomTriggerComic .situation-level>.choice-explain{grid-column:6/-1!important;min-width:0!important}
+#venomTriggerComic .situation-level>.choice-explain p{font-size:clamp(12px,1vw,16px)!important;line-height:1.35!important;margin:5px 0!important}
+#venomTriggerComic .situation-level>.form-grid:nth-of-type(2){grid-column:1/8!important;align-content:start!important;display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:8px!important}
+#venomTriggerComic .situation-level>.form-grid:nth-of-type(2) .venom-modifiers{grid-column:1/-1!important}
+#venomTriggerComic .situation-level>.note:not(p){grid-column:8/-1!important;min-width:0!important}
+#venomTriggerComic .situation-level>.note:not(p) p{font-size:clamp(12px,.9vw,15px)!important;line-height:1.3!important;margin:5px 0!important}
+#venomTriggerComic .situation-level>.target-line{grid-column:1/7!important}
+#venomTriggerComic .situation-level>.kbd{grid-column:7/-1!important;font-size:clamp(11px,.85vw,14px)!important;line-height:1.3!important;margin:0!important}
+#venomTriggerComic .situation-level>button{grid-column:1/7!important;justify-self:start!important}
+#venomTriggerComic .situation-level>.choice-outcome{grid-column:7/-1!important}
+#venomTriggerComic .situation-detail label,#venomTriggerComic .situation-detail .choice-explain,#venomTriggerComic .situation-detail .choice-outcome{font-size:clamp(12px,1vw,16px)!important;line-height:1.3!important}
+#venomTriggerComic .situation-detail select{min-height:36px!important;font-size:clamp(12px,1vw,16px)!important;padding:5px!important}
+#venomTriggerComic .situation-detail .note,#venomTriggerComic .situation-detail .readonly-choice{padding:7px!important}
+#venomTriggerComic .situation-detail .venom-modifier{padding:4px!important}
+@media(max-width:950px){
+ #venomTriggerComic .situation-detail>.dilemma-context,#venomTriggerComic .situation-detail>p:not(.dilemma-context){grid-column:1/-1!important}
+ #venomTriggerComic .situation-level>.form-grid:first-of-type,#venomTriggerComic .situation-level>.choice-explain{grid-column:1/-1!important}
+ #venomTriggerComic .situation-level>.form-grid:nth-of-type(2),#venomTriggerComic .situation-level>.note:not(p){grid-column:1/-1!important}
+ #venomTriggerComic .situation-level>p:first-of-type,#venomTriggerComic .situation-level>p.note,#venomTriggerComic .situation-level>.target-line,#venomTriggerComic .situation-level>.kbd,#venomTriggerComic .situation-level>button,#venomTriggerComic .situation-level>.choice-outcome{grid-column:1/-1!important}
+}
+@media(max-width:550px){
+ #venomTriggerComic .situation-level>.form-grid:nth-of-type(2){grid-template-columns:1fr!important}
+ #venomTriggerComic .venom-trigger-comic-head h2{margin-right:85px!important}
+ #venomPreparationModal .venom-prep-tactical .venom-prep-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
 }
 </style>
 </body></html>
