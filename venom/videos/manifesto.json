@@ -1,0 +1,72 @@
+[
+  {
+    "missao": 1,
+    "arquivo": "VENOM_M01_Abertura_Narrada.mp4",
+    "segundos_video": 114.58333333333333,
+    "segundos_narracao": 113.544,
+    "audio_original": "M01_01_abertura.mp3",
+    "resolucao": [
+      1280,
+      720
+    ],
+    "novos_creditos_ia": 0,
+    "bytes": 19053420,
+    "sha256": "2eda19f2c998eebdd261619076d80c992bb2309e9086ee625f7362c1bb43d296"
+  },
+  {
+    "missao": 2,
+    "arquivo": "VENOM_M02_Abertura_Narrada.mp4",
+    "segundos_video": 100.54166666666667,
+    "segundos_narracao": 99.528,
+    "audio_original": "M02_01_abertura.mp3",
+    "resolucao": [
+      1280,
+      720
+    ],
+    "novos_creditos_ia": 0,
+    "bytes": 3874468,
+    "sha256": "2bcd747cf55df8f0e8f4878a715ad98ba23d2d08c24a11a0a1ab6db1a5da9f28"
+  },
+  {
+    "missao": 3,
+    "arquivo": "VENOM_M03_Abertura_Narrada.mp4",
+    "segundos_video": 95.375,
+    "segundos_narracao": 94.368,
+    "audio_original": "M03_01_abertura.mp3",
+    "resolucao": [
+      1280,
+      720
+    ],
+    "novos_creditos_ia": 0,
+    "bytes": 4637674,
+    "sha256": "76c1d50291f6e91d1edfa40cba72b2c3bbd931f89ea6c2b90b442d3613b1adf0"
+  },
+  {
+    "missao": 4,
+    "arquivo": "VENOM_M04_Abertura_Narrada.mp4",
+    "segundos_video": 96.5,
+    "segundos_narracao": 95.496,
+    "audio_original": "M04_01_abertura.mp3",
+    "resolucao": [
+      1280,
+      720
+    ],
+    "novos_creditos_ia": 0,
+    "bytes": 4014081,
+    "sha256": "b4ce8e95c3892b9f764dfa44db2da945d26f7f057e5e1514646a8c5509208f17"
+  },
+  {
+    "missao": 5,
+    "arquivo": "VENOM_M05_Abertura_Narrada.mp4",
+    "segundos_video": 92.5,
+    "segundos_narracao": 91.488,
+    "audio_original": "M05_01_abertura.mp3",
+    "resolucao": [
+      1280,
+      720
+    ],
+    "novos_creditos_ia": 0,
+    "bytes": 3599920,
+    "sha256": "63dc6ad54969860a294f6814d8b0705316c9d3fe0406bad652dcec961b263989"
+  }
+]

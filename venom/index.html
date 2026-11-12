@@ -1271,7 +1271,7 @@ function venomShowResultBalloon(id,i,level,path,result){
 document.addEventListener('DOMContentLoaded',()=>{const fx=document.getElementById('venomFxVolume');if(fx)fx.value=venomSound.fxVolume??95;const mv=document.getElementById('venomMusicVolume');if(mv)mv.value=venomSound.volume??24});
 </script>
 <style>.venom-class-symbol{display:inline-flex;align-items:center;gap:3px;white-space:nowrap;vertical-align:middle}.venom-class-symbol img{width:25px;height:25px;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 1px 2px #000)}.venom-class-symbol span{vertical-align:middle}</style>
-<script defer src="cinematic-v20.js?v=38-preparation-toolbar"></script>
+<script defer src="cinematic-v20.js?v=40-narrated-videos"></script>
 
 
 <style id="venom-dossier-fullscreen-v29">
@@ -1852,4 +1852,16 @@ function venomClosePreparationReading(){for(const {node,anchor}of venomPreparati
 @media(min-width:1001px){#view-detalhe #chapterDetail .mission-panel[data-panel="preparo"].active{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr)}#view-detalhe #chapterDetail [data-panel="preparo"]>.venom-prep-story{grid-column:1/-1;grid-row:2;min-height:0;margin:6px 7px 8px 0}}
 @media(max-width:1100px){#view-detalhe #chapterDetail [data-panel="preparo"]>.venom-prep-toolbar{grid-template-columns:repeat(3,minmax(0,1fr))}.venom-prep-story{gap:14px}}
 @media(max-width:700px){#view-detalhe #chapterDetail [data-panel="preparo"]>.venom-prep-toolbar{grid-template-columns:repeat(2,minmax(0,1fr))}.venom-prep-story{grid-template-columns:1fr}.venom-prep-story>section{padding:24px}#view-detalhe #chapterDetail [data-panel="preparo"] .venom-prep-story h3{font-size:36px!important}#view-detalhe #chapterDetail [data-panel="preparo"] .venom-prep-story p{font-size:25px!important}}
+</style>
+
+
+<style id="venom-narrated-movies-v40">
+.vc-movie-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 20px;border-bottom:3px solid #ad263a;background:#0b131b}
+.vc-movie-header h2{font-family:'Bangers',Impact,cursive;font-size:clamp(22px,2.4vw,38px);font-weight:400;margin:0;color:#fff4cd;letter-spacing:.04em}
+.vc-movie-header button{flex:none}
+.vc-movie-shell{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;background:#000;padding:8px}
+.vc-movie-shell video{display:block;width:100%;height:100%;max-width:1600px;object-fit:contain}
+.vc-movie-footer{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:8px 20px;background:#0b131b;font-size:16px;color:#ced7cf}
+.vc-movie-footer button[hidden]{display:none!important}
+@media(max-width:600px){.vc-movie-header{padding:10px;gap:8px}.vc-movie-header button{font-size:14px;padding:8px}.vc-movie-footer{padding:8px 10px;flex-wrap:wrap}}
 </style>
