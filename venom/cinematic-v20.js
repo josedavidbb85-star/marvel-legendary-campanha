@@ -108,7 +108,7 @@ let scheduled=false;new MutationObserver(()=>{if(scheduled)return;scheduled=true
   const root=document.createElement('section');dialog=root;root.id='ve-overlay';root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label','Desfecho narrado da missão '+mission);
   root.innerHTML='<header><h2>MISSÃO '+String(mission).padStart(2,'0')+' · '+(win?'VITÓRIA':'DERROTA')+'</h2><button class="btn secondary" type="button">✕ VOLTAR</button></header><div id="ve-stage"><video muted playsinline preload="metadata" aria-label="Cena do desfecho"></video></div><footer><audio controls preload="metadata" aria-label="Narração do desfecho"></audio><span id="ve-status" role="status">Narração original da missão</span></footer>';
   document.body.append(root);const video=root.querySelector('video'),voice=root.querySelector('audio'),status=root.querySelector('#ve-status');video.muted=true;
-  video.src='videos/desfecho_'+(win?'vitoria':'derrota')+'_piloto.mp4?v=1';voice.src=vnPath(id,mission);
+  video.src='videos/M'+String(mission).padStart(2,'0')+'_'+(win?'vitoria':'derrota')+'_narrada.mp4?v=1';voice.src=vnPath(id,mission);
   const sync=()=>{if(!Number.isFinite(video.duration))return;const target=Math.min(voice.currentTime,Math.max(0,video.duration-.08));if(Math.abs(video.currentTime-target)>.45)video.currentTime=target;};
   voice.addEventListener('play',()=>{sync();if(voice.currentTime<video.duration||!Number.isFinite(video.duration))video.play().catch(()=>{});status.textContent='Narração original da missão'});
   voice.addEventListener('pause',()=>video.pause());voice.addEventListener('seeking',sync);voice.addEventListener('timeupdate',sync);
