@@ -792,7 +792,7 @@ function renderVenomCast(id){const c=DATA.chapters.find(x=>x.id===id);if(!c)retu
  return `<div class="venom-player-gallery"><h3>Equipe de jogadores</h3><div class="venom-player-grid">${Object.entries(VENOM_PLAYER_PORTRAITS).map(([name,img])=>`<button class="venom-player-card" onclick="showVenomPlayerPopup('${name}')"><img src="${img}" alt="${name} como herói"><strong>${name}</strong></button>`).join('')}</div></div><div class="cast-intro"><h3>Elenco e ameaças da missão ${id}</h3><p>Os textos descrevem o papel de cada personagem <b>nesta campanha original</b>, não a biografia oficial dos quadrinhos. As imagens aparecem diretamente nos cartões. Elas exigem internet. As imagens são carregadas diretamente das galerias de cartas do Core Set e de Venom indicadas na base do projeto.</p></div>`+groups.map(([heading,names,kind])=>`<section class="cast-section"><h3>${heading}</h3><div class="cast-grid">${names.map(name=>venomGalleryCard(name,kind,id)).join('')}</div></section>`).join('');
 }
 
-const MISSION_TABS=[['preparo','Preparação','Componentes, Scheme e objetivo'],['elenco','Personagens','Heróis, Mastermind, vilões, Henchmen e Scheme'],['jogo','Durante','Gatilhos livres, Responsabilidades e Ameaça'],['decisoes','Decisões','Três situações, gatilhos e consequências'],['resultado','Encerrar','Resultado e anotações']];
+const MISSION_TABS=[['preparo','Preparação','Componentes, Scheme e objetivo'],['elenco','Personagens','Abertura narrada, motivações, elenco e componentes da missão'],['jogo','Durante','Gatilhos livres, Responsabilidades e Ameaça'],['decisoes','Decisões','Três situações, gatilhos e consequências'],['resultado','Encerrar','Resultado e anotações']];
 function venomPreparationRecap(id){
  const recaps={
  1:{neutral:'Nova York esconde um contágio. Desaparecimentos e uma substância negra deram início à investigação.'},
@@ -806,6 +806,7 @@ function venomPreparationRecap(id){
 function buildMissionTabs(){
  const root=document.getElementById('chapterDetail');if(!root)return;
  const cards=[...root.querySelectorAll(':scope > .card')];
+ const prepDossier=root.querySelector('.venom-prep-launch');if(prepDossier)prepDossier.remove();
  const scheme=[...root.children].filter(e=>e.classList?.contains('card')&&/Scheme/i.test(e.textContent.slice(0,130)));
  const nav=document.createElement('div');nav.className='mission-tabbar';nav.setAttribute('role','tablist');
  const panels=document.createElement('div');panels.className='mission-panels';
@@ -817,7 +818,8 @@ function buildMissionTabs(){
    else if(/Três situações|Responsabilidades/.test(h))bucket.jogo.push(el);
    else if(/Protocolo de validação/.test(h))el.remove();
    else if(/Resultado da missão/.test(h)){const narration=el.querySelector('.venom-ending-narration');if(narration){narration.remove();el.querySelector('h3')?.insertAdjacentElement('afterend',narration)}bucket.resultado.push(el);}
-   else if(el.classList?.contains('campaign-literary')||/Reserva Tática|Personagens|Mastermind|Heróis|Vilões|Capangas|Scheme|Preparação da missão/i.test(h))bucket.elenco.push(el);
+   else if(/Reserva Tática/.test(h)){const rules=document.querySelector('#view-regras');rules?.querySelector('#venomMissionTacticalRules')?.remove();el.id='venomMissionTacticalRules';rules?.append(el);}
+   else if(el.classList?.contains('campaign-literary')||/Personagens|Mastermind|Heróis|Vilões|Capangas|Scheme|Preparação da missão/i.test(h))bucket.elenco.push(el);
    else bucket.preparo.push(el);
   }else if(el.id==='venomNarration')bucket.elenco.push(el);
   else if(el.classList?.contains('actions'))bucket.resultado.push(el);
@@ -838,7 +840,7 @@ function buildMissionTabs(){
   if(key==='preparo'){
    for(const card of panel.querySelectorAll(':scope > .card')){const title=card.querySelector('h3')?.textContent||'';if(/Preparação da missão/.test(title))card.classList.add('venom-prep-components');else if(/Regras do Scheme/.test(title))card.classList.add('venom-prep-scheme');else if(/Reserva Tática/.test(title))card.classList.add('venom-prep-support');else if(/Objetivo da missão/.test(title))card.classList.add('venom-prep-objective');}
    const toolbar=document.createElement('div');toolbar.className='venom-prep-toolbar';toolbar.innerHTML='<button class="btn secondary" type="button" onclick="switchMissionTab(\'elenco\')">👥 Personagens, componentes e narração</button>';panel.prepend(toolbar);
-   const dossier=panel.querySelector('.venom-prep-launch');if(dossier){dossier.textContent='📖 Dossiê ilustrado';dossier.title='Abrir dossiê ilustrado da preparação';toolbar.append(dossier);}
+   if(prepDossier){prepDossier.textContent='📖 Dossiê ilustrado';prepDossier.title='Abrir dossiê ilustrado da preparação';toolbar.append(prepDossier);}
    const mission=DATA.chapters.find(c=>c.id===Number(currentChapter));
    const story=document.createElement('article');story.className='venom-prep-story';story.innerHTML='<section class="venom-prep-recap"><span class="venom-story-kicker">'+(Number(currentChapter)===1?'O COMEÇO DA JORNADA':'NOS CAPÍTULOS ANTERIORES')+'</span><h3>A aventura até aqui...</h3><p>'+escapeHtml(venomPreparationRecap(Number(currentChapter)))+'</p><p class="venom-prep-context">'+escapeHtml(mission?.story||'')+'</p></section><section class="venom-prep-mission"><span class="venom-story-kicker">MISSÃO '+String(currentChapter).padStart(2,'0')+'</span><h3>Nosso objetivo</h3><p>'+escapeHtml(mission?.objective||'')+'</p></section>';panel.append(story);
   }
