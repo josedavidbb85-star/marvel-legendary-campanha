@@ -82,3 +82,54 @@ function open(){
 function mount(){document.querySelectorAll('#venomNarration').forEach(e=>e.remove());document.querySelectorAll('.cinema-launch').forEach(e=>e.style.display='none');const prep=document.querySelector('#chapterDetail .mission-panel[data-panel="preparo"]');if(!prep)return;const toolbar=prep.querySelector(':scope > .venom-prep-toolbar');const existing=prep.querySelector('#vc-launch');if(existing){if(toolbar&&existing.parentElement!==toolbar)toolbar.prepend(existing);return;}document.querySelectorAll('#vc-launch').forEach(e=>e.remove());const btn=document.createElement('button');btn.id='vc-launch';btn.type='button';btn.className='btn secondary';btn.textContent='🎬 Prólogo da missão';btn.title='Abrir prólogo cinematográfico da missão com narração original';btn.onclick=open;if(toolbar)toolbar.prepend(btn);else prep.insertBefore(btn,prep.firstChild)}
 let scheduled=false;new MutationObserver(()=>{if(scheduled)return;scheduled=true;setTimeout(()=>{scheduled=false;mount()},100)}).observe(document.body,{subtree:true,childList:true});if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',mount);else mount();
 })();
+
+/* Outcome pilots: existing mission narration with shared, spoiler-free visual clips. */
+(function () {
+ 'use strict';
+ let dialog=null,returnFocus=null,resumeMusic=false,oldVolume=1;
+ const style=document.createElement('style');
+ style.textContent=`#ve-overlay{position:fixed;inset:0;z-index:210000;display:flex;flex-direction:column;background:#030806;color:#fff}#ve-overlay header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 20px;background:#0b131b;border-bottom:3px solid #ad263a}#ve-overlay h2{font:400 clamp(24px,3vw,40px)/1.1 Bangers,Impact,sans-serif;margin:0;color:#fff4cd}#ve-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;background:#000}#ve-stage video{display:block;width:100%;height:100%;object-fit:contain}#ve-overlay footer{flex:none;padding:10px 20px;background:#0b131b;display:flex;align-items:center;gap:16px;flex-wrap:wrap}#ve-overlay audio{width:min(650px,100%);flex:1;min-width:240px}#ve-status{font:16px/1.4 'Comic Neue',sans-serif;color:#e9e3ca}#ve-overlay button{flex:none;min-height:44px}@media(max-width:600px){#ve-overlay header,#ve-overlay footer{padding:10px}#ve-status{font-size:14px}}`;
+ document.head.append(style);
+ function close(){
+  if(!dialog)return;
+  dialog.querySelectorAll('audio,video').forEach(media=>{media.pause();media.removeAttribute('src');media.load()});
+  dialog.remove();dialog=null;
+  if(typeof venomMusic!=='undefined'){venomMusic.volume=oldVolume;if(resumeMusic)venomMusic.play().catch(()=>{})}
+  resumeMusic=false;if(returnFocus?.isConnected)returnFocus.focus();
+ }
+ function open(id,mission){
+  mission=Number(mission);const win=/_90_vitoria$/.test(id),result=win?'win':'loss';
+  if(typeof save==='undefined'||save.results[mission]!==result)return;
+  close();document.querySelector('#vc-movie-close,#vc-close')?.click();
+  if(typeof vnPlayer!=='undefined')vnPlayer.pause();
+  if(typeof venomPrologueAudio!=='undefined')venomPrologueAudio.pause();
+  if(typeof venomMusic!=='undefined'){oldVolume=venomMusic.volume;resumeMusic=!venomMusic.paused;venomMusic.pause()}
+  returnFocus=document.activeElement;
+  const root=document.createElement('section');dialog=root;root.id='ve-overlay';root.setAttribute('role','dialog');root.setAttribute('aria-modal','true');root.setAttribute('aria-label','Desfecho narrado da missão '+mission);
+  root.innerHTML='<header><h2>MISSÃO '+String(mission).padStart(2,'0')+' · '+(win?'VITÓRIA':'DERROTA')+'</h2><button class="btn secondary" type="button">✕ VOLTAR</button></header><div id="ve-stage"><video muted playsinline preload="metadata" aria-label="Cena do desfecho"></video></div><footer><audio controls preload="metadata" aria-label="Narração do desfecho"></audio><span id="ve-status" role="status">Narração original da missão</span></footer>';
+  document.body.append(root);const video=root.querySelector('video'),voice=root.querySelector('audio'),status=root.querySelector('#ve-status');video.muted=true;
+  video.src='videos/desfecho_'+(win?'vitoria':'derrota')+'_piloto.mp4?v=1';voice.src=vnPath(id,mission);
+  const sync=()=>{if(!Number.isFinite(video.duration))return;const target=Math.min(voice.currentTime,Math.max(0,video.duration-.08));if(Math.abs(video.currentTime-target)>.45)video.currentTime=target;};
+  voice.addEventListener('play',()=>{sync();if(voice.currentTime<video.duration||!Number.isFinite(video.duration))video.play().catch(()=>{});status.textContent='Narração original da missão'});
+  voice.addEventListener('pause',()=>video.pause());voice.addEventListener('seeking',sync);voice.addEventListener('timeupdate',sync);
+  video.addEventListener('loadedmetadata',()=>{sync();if(!voice.paused&&voice.currentTime<video.duration)video.play().catch(()=>{})});
+  voice.addEventListener('seeked',()=>{if(!voice.paused&&voice.currentTime<video.duration)video.play().catch(()=>{})});
+  voice.addEventListener('ended',()=>{video.pause();status.textContent='Desfecho concluído. Volte para a campanha quando quiser.'});
+  voice.addEventListener('error',()=>{status.textContent='Não foi possível carregar a narração. Feche e tente novamente.'});
+  video.addEventListener('error',()=>{status.textContent='Cena indisponível. A narração pode continuar pelo controle de áudio.'});
+  root.querySelector('button').onclick=close;root.addEventListener('keydown',e=>{if(e.key==='Escape')close();if(e.key==='Tab'){const controls=[root.querySelector('button'),voice];if(e.shiftKey&&document.activeElement===controls[0]){e.preventDefault();voice.focus()}else if(!e.shiftKey&&document.activeElement===voice){e.preventDefault();controls[0].focus()}}});root.querySelector('button').focus();
+  voice.play().catch(()=>{status.textContent='Toque em reproduzir para ouvir o desfecho.'});
+ }
+ const original=vnPlay;
+ vnPlay=function(id,mission){if(/^M\d{2}_(90_vitoria|91_derrota)$/.test(id))return open(id,mission);close();return original(id,mission)};
+ function mount(){
+  const mission=Number(typeof currentChapter!=='undefined'?currentChapter:1),result=typeof save!=='undefined'?save.results[mission]:null;
+  document.querySelectorAll('.venom-ending-narration button').forEach(button=>{const win=(button.getAttribute('onclick')||'').includes('90_vitoria');button.textContent='▶ Assistir '+(win?'vitória':'derrota');button.disabled=result!==(win?'win':'loss');button.title=button.disabled?'Registre o resultado correspondente para liberar este desfecho.':'Vídeo com a narração original desta missão';});
+  if(dialog&&dialog.dataset.mission!==String(mission))close();
+ }
+ // Observe inserted mission panels, without reacting to our own button labels.
+ let pending=false;new MutationObserver(records=>{if(records.every(r=>r.target.closest?.('.venom-ending-narration,#ve-overlay')))return;if(pending)return;pending=true;setTimeout(()=>{pending=false;mount()},100)}).observe(document.getElementById('chapterDetail')||document.body,{childList:true,subtree:true});
+ // Store the mission only once a dialog has been mounted.
+ const originalOpen=open;open=function(id,mission){originalOpen(id,mission);if(dialog)dialog.dataset.mission=String(Number(mission))};
+ mount();
+})();
