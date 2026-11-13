@@ -1833,6 +1833,85 @@ function venomOpenPreparationReading(kind){
 function venomClosePreparationReading(){for(const {node,anchor}of venomPreparationReadingNodes){if(anchor.isConnected)anchor.replaceWith(node)}venomPreparationReadingNodes=[];document.getElementById('venomPreparationReading')?.remove()}
 </script>
 
+<style id="venom-investigation-board-v1">
+#view-campanha .investigation-board{position:relative;overflow:hidden;margin:18px 0 22px;padding:clamp(16px,2.3vw,28px);border:2px solid #596873;border-left:6px solid #e53948;border-radius:15px;background:radial-gradient(circle at 1px 1px,rgba(255,255,255,.055) 1.2px,transparent 1.8px) 0 0/18px 18px,linear-gradient(135deg,#101922 0%,#080e15 74%);box-shadow:0 14px 34px rgba(0,0,0,.28)}
+#view-campanha .investigation-board:after{content:"";position:absolute;right:-70px;top:-95px;width:280px;height:280px;border:1px solid rgba(224,58,72,.15);border-radius:50%;box-shadow:0 0 0 20px rgba(224,58,72,.035),0 0 0 42px rgba(224,58,72,.025);pointer-events:none}
+.investigation-board-head{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:end;gap:14px;margin-bottom:20px}
+.investigation-board-head .eyebrow{color:#f4ca51;letter-spacing:.16em;font-weight:900}
+.investigation-board-head h2{margin:4px 0 3px;font-family:Impact,"Arial Narrow",sans-serif;font-size:clamp(25px,3.2vw,38px);letter-spacing:.025em;text-transform:uppercase;color:#f5f1e9;text-shadow:2px 3px 0 #9c2636}
+.investigation-board-head p{margin:0;color:#c7d1d0;max-width:72ch}
+.investigation-board-progress{flex:0 0 auto;border:1px solid #71818c;border-radius:9px;padding:9px 12px;background:#141f29;color:#f6d354;font-weight:800;white-space:nowrap}
+.investigation-board-track{position:relative;z-index:1;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.investigation-file{position:relative;min-width:0;min-height:228px;padding:15px 14px 13px;border:1px solid #697984;border-top:4px solid #87949c;border-radius:9px;background:linear-gradient(160deg,rgba(22,33,43,.97),rgba(10,16,23,.97));box-shadow:0 7px 0 rgba(0,0,0,.22);transition:transform .18s ease,border-color .18s ease}
+.investigation-file:not(.sealed):hover{transform:translateY(-3px);border-color:#f1cd56}
+.investigation-file:not(:last-child):after{content:"";position:absolute;z-index:2;left:calc(100% + 1px);top:37px;width:14px;border-top:2px dashed #d34a50}
+.investigation-file.solved:after{border-color:#e04b50;border-top-style:solid}
+.investigation-file.solved{border-top-color:#e44b53}
+.investigation-file.current{border-top-color:#f4cc50;box-shadow:0 0 0 2px rgba(244,204,80,.13),0 7px 0 rgba(0,0,0,.22)}
+.investigation-file.sealed{opacity:.72;background:linear-gradient(160deg,rgba(17,25,32,.9),rgba(8,13,18,.94))}
+.investigation-file-top{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:13px}
+.investigation-file-num{font-family:Impact,"Arial Narrow",sans-serif;font-size:21px;color:#f2d35e;letter-spacing:.05em}
+.investigation-file-status{font-size:10px;line-height:1.2;text-transform:uppercase;font-weight:900;letter-spacing:.075em;color:#b9c5c7;text-align:right}
+.investigation-file h3{font-size:clamp(16px,1.4vw,20px);line-height:1.18;margin:0 0 10px;color:#f4f0e8}
+.investigation-file p{font-size:14px;line-height:1.48;color:#c9d1d0;margin:0}
+.investigation-file .investigation-clue-label{display:block;margin:0 0 5px;color:#f1cb56;font-size:10px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.investigation-file .investigation-file-open{display:inline-flex;margin-top:14px;padding:6px 9px;border:1px solid #667985;border-radius:6px;background:#17232e;color:#f4efe2;font-size:12px;font-weight:800;text-decoration:none;cursor:pointer}
+.investigation-file .investigation-file-open:hover{background:#263744;border-color:#f1cd56}
+.investigation-file-seal{display:grid;place-items:center;height:74px;margin:3px 0 10px;border:1px dashed #53616a;border-radius:7px;background:rgba(0,0,0,.12);color:#89979b;font-size:26px}
+.investigation-board-foot{position:relative;z-index:1;margin:17px 0 0;padding-top:12px;border-top:1px solid #34434c;color:#aebabc;font-size:13px}
+@media(max-width:1100px){.investigation-board-track{grid-template-columns:repeat(3,minmax(0,1fr))}.investigation-file:nth-child(3):after{display:none}}
+@media(max-width:680px){#view-campanha .investigation-board{padding:16px 13px}.investigation-board-head{align-items:flex-start;flex-direction:column}.investigation-board-progress{align-self:flex-start}.investigation-board-track{grid-template-columns:1fr;gap:10px}.investigation-file{min-height:0;padding:13px}.investigation-file:not(:last-child):after{left:25px;top:100%;width:0;height:11px;border-top:0;border-left:2px dashed #d34a50}.investigation-file.solved:not(:last-child):after{border-left-style:solid}.investigation-file:nth-child(3):after{display:block}}
+</style>
+<script id="venom-investigation-board-v1-script">
+(function(){
+ const host=document.querySelector('#view-campanha .section-head');
+ if(!host||document.getElementById('investigationBoard'))return;
+ const board=document.createElement('section');
+ board.id='investigationBoard';
+ board.className='investigation-board';
+ board.setAttribute('aria-labelledby','investigationBoardTitle');
+ board.innerHTML='<div class="investigation-board-head"><div><span class="eyebrow">EVIDÊNCIAS · CONEXÕES · PROGRESSO</span><h2 id="investigationBoardTitle">Quadro de investigação</h2><p>Os dossiês se abrem conforme a equipe avança. Cada pista registrada liga o que já descobrimos ao próximo passo.</p></div><div class="investigation-board-progress" id="investigationBoardProgress" aria-live="polite"></div></div><div class="investigation-board-track" id="investigationBoardTrack"></div><p class="investigation-board-foot">Arquivo privado da equipe · As pistas de missões futuras permanecem lacradas.</p>';
+ host.insertAdjacentElement('afterend',board);
+ window.renderInvestigationBoard=function(){
+  const track=document.getElementById('investigationBoardTrack');
+  if(!track||typeof DATA==='undefined'||typeof save==='undefined')return;
+  const chapters=DATA.chapters||[];
+  let activeFound=false,discovered=0;
+  const cards=chapters.map(function(ch){
+   const result=save.results&&save.results[ch.id];
+   const solved=result==='win'||result==='loss';
+   if(solved)discovered++;
+   let kind,title,status,body,action='';
+   if(solved){
+    kind='solved';
+    title=ch.title;
+    status=result==='win'?'Pista confirmada · Vitória':'Rastro incompleto · Derrota';
+    body=result==='win'?(ch.win||'A equipe avançou na investigação.'):(ch.loss||'A equipe ainda busca respostas.');
+    action='<button class="investigation-file-open" onclick="openChapter('+ch.id+')">Rever dossiê</button>';
+   }else if(!activeFound){
+    activeFound=true;
+    kind='current';
+    title=ch.title;
+    status='Dossiê disponível';
+    body=ch.objective||'A investigação aguarda a equipe.';
+    action='<button class="investigation-file-open" onclick="openChapter('+ch.id+')">Abrir missão</button>';
+   }else{
+    kind='sealed';
+    title='Arquivo lacrado';
+    status='Acesso bloqueado';
+    body='Conclua o dossiê anterior para revelar a próxima pista.';
+   }
+   const label=solved?'REGISTRO DA MISSÃO':kind==='current'?'OBJETIVO ATUAL':'ACESSO RESTRITO';
+   return '<article class="investigation-file '+kind+'" aria-label="Dossiê '+ch.id+': '+escapeHtml(title)+'"><div class="investigation-file-top"><span class="investigation-file-num">DOSSIÊ '+String(ch.id).padStart(2,'0')+'</span><span class="investigation-file-status">'+escapeHtml(status)+'</span></div>'+(kind==='sealed'?'<div class="investigation-file-seal" aria-hidden="true">⌑</div>':'')+'<h3>'+escapeHtml(title)+'</h3><span class="investigation-clue-label">'+label+'</span><p>'+escapeHtml(body)+'</p>'+action+'</article>';
+  }).join('');
+  track.innerHTML=cards;
+  const progress=document.getElementById('investigationBoardProgress');
+  if(progress)progress.textContent=discovered+' / '+chapters.length+' dossiês revelados';
+ };
+ const render=window.renderCampaign;
+ if(typeof render==='function')window.renderCampaign=function(){render.apply(this,arguments);window.renderInvestigationBoard()};
+})();
+</script>
 </body></html>
 
 
