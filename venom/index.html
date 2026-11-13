@@ -1984,3 +1984,46 @@ function venomClosePreparationReading(){for(const {node,anchor}of venomPreparati
 </style>
 
 <style id="venom-prep-narrative-merge-v42">.venom-prep-context{font-size:clamp(16px,1.25vw,20px)!important;line-height:1.55!important;margin-top:12px!important;color:#cbd8d0!important}.venom-prep-toolbar{grid-template-columns:repeat(3,minmax(0,1fr))!important}.venom-prep-story{align-items:stretch}@media(max-width:760px){.venom-prep-toolbar{grid-template-columns:1fr!important}}</style>
+
+<style id="venom-hover-glow-v48">
+/* Venom cursor affordance: soft acid-green halo for interactive choices and fields. */
+@media (hover:hover) and (pointer:fine){
+  body button:not(:disabled):not([aria-disabled="true"]):hover,
+  body select:not(:disabled):hover,
+  body input:not(:disabled):hover,
+  body textarea:not(:disabled):hover,
+  body summary:hover,
+  body [role="button"]:not([aria-disabled="true"]):hover,
+  body label:has(>input:not(:disabled)):hover,
+  body .situation-selector:hover,
+  body .cast-card:hover,
+  body .investigation-file:not(.sealed):hover{
+    outline:2px solid rgba(169,233,106,.95)!important;
+    outline-offset:2px;
+    filter:drop-shadow(0 0 7px rgba(169,233,106,.58));
+    transition:filter .16s ease,outline-color .16s ease,transform .16s ease;
+  }
+  body select:not(:disabled):hover,
+  body input:not(:disabled):hover,
+  body textarea:not(:disabled):hover{
+    border-color:#a9e96a!important;
+  }
+}
+body button:not(:disabled):not([aria-disabled="true"]):focus-visible,
+body select:not(:disabled):focus-visible,
+body input:not(:disabled):focus-visible,
+body textarea:not(:disabled):focus-visible,
+body summary:focus-visible,
+body [role="button"]:not([aria-disabled="true"]):focus-visible,
+body label:has(>input:not(:disabled)):focus-within{
+  outline:2px solid #a9e96a!important;
+  outline-offset:3px;
+  filter:drop-shadow(0 0 7px rgba(169,233,106,.58));
+}
+@media(prefers-reduced-motion:reduce){
+  body button,body select,body input,body textarea,body summary,
+  body [role="button"],body .situation-selector,body .cast-card,body .investigation-file{
+    transition:none!important;
+  }
+}
+</style>
