@@ -1861,52 +1861,84 @@ function venomClosePreparationReading(){for(const {node,anchor}of venomPreparati
 .investigation-board-foot{position:relative;z-index:1;margin:17px 0 0;padding-top:12px;border-top:1px solid #34434c;color:#aebabc;font-size:13px}
 @media(max-width:1100px){.investigation-board-track{grid-template-columns:repeat(3,minmax(0,1fr))}.investigation-file:nth-child(3):after{display:none}}
 @media(max-width:680px){#view-campanha .investigation-board{padding:16px 13px}.investigation-board-head{align-items:flex-start;flex-direction:column}.investigation-board-progress{align-self:flex-start}.investigation-board-track{grid-template-columns:1fr;gap:10px}.investigation-file{min-height:0;padding:13px}.investigation-file:not(:last-child):after{left:25px;top:100%;width:0;height:11px;border-top:0;border-left:2px dashed #d34a50}.investigation-file.solved:not(:last-child):after{border-left-style:solid}.investigation-file:nth-child(3):after{display:block}}
+
+.investigation-outcome,.investigation-linkage{margin-top:10px;padding:8px 9px;border-left:2px solid #667985;border-radius:0 6px 6px 0;background:rgba(3,8,12,.32)}
+.investigation-outcome>span,.investigation-linkage>span{display:block;margin-bottom:4px;color:#aebdc1;font-size:9px;font-weight:900;letter-spacing:.12em}
+.investigation-outcome p,.investigation-linkage p{font-size:12px;line-height:1.4;color:#b9c4c6}
+.investigation-linkage{border-left-color:#f1cb56;background:rgba(70,55,14,.15)}
+.investigation-linkage>span{color:#f1cb56}
 </style>
 <script id="venom-investigation-board-v1-script">
 (function(){
  const host=document.querySelector('#view-campanha .section-head');
  if(!host||document.getElementById('investigationBoard'))return;
  const board=document.createElement('section');
- board.id='investigationBoard';
- board.className='investigation-board';
+ board.id='investigationBoard';board.className='investigation-board';
  board.setAttribute('aria-labelledby','investigationBoardTitle');
- board.innerHTML='<div class="investigation-board-head"><div><span class="eyebrow">EVIDÊNCIAS · CONEXÕES · PROGRESSO</span><h2 id="investigationBoardTitle">Quadro de investigação</h2><p>Os dossiês se abrem conforme a equipe avança. Cada pista registrada liga o que já descobrimos ao próximo passo.</p></div><div class="investigation-board-progress" id="investigationBoardProgress" aria-live="polite"></div></div><div class="investigation-board-track" id="investigationBoardTrack"></div><p class="investigation-board-foot">Arquivo privado da equipe · As pistas de missões futuras permanecem lacradas.</p>';
+ board.innerHTML='<div class="investigation-board-head"><div><span class="eyebrow">EVIDÊNCIAS · CONEXÕES · PROGRESSO</span><h2 id="investigationBoardTitle">Quadro de investigação</h2><p>As pistas surgem ao concluir cada missão. As conexões entre elas só aparecem quando os dois dossiês estão concluídos.</p></div><div class="investigation-board-progress" id="investigationBoardProgress" aria-live="polite"></div></div><div class="investigation-board-track" id="investigationBoardTrack"></div><p class="investigation-board-foot">Arquivo privado da equipe · As pistas de missões futuras permanecem lacradas.</p>';
  host.insertAdjacentElement('afterend',board);
+ const clues={
+  1:{
+   win:'Os desaparecimentos e o roubo de amostras pela HYDRA convergem para um laboratório ativo. A ligação com Carlton Drake continua sob investigação.',
+   loss:'Moradores agem de forma coordenada e a HYDRA levou amostras biológicas. Sem localizar o laboratório, a ligação com Carlton Drake permanece em aberto.'
+  },
+  2:{
+   win:'Os dados recuperados ligam a tecnologia de contenção ao caso Hybrid. O protocolo pode ajudar a entender como enfrentar a ameaça simbiótica.',
+   loss:'A tecnologia de contenção caiu em mãos inimigas. O protocolo passa a ser uma evidência que também pode ser usada contra os simbiontes.'
+  },
+  3:{
+   win:'Os registros de Hybrid confirmam a existência dos Poisons: uma ameaça que caça os simbiontes.',
+   loss:'O sinal de Hybrid ultrapassou a Terra. Algo além do planeta pode ter recebido a localização dos simbiontes.'
+  },
+  4:{
+   win:'As versões alteradas de heróis confirmam a infiltração dos Poisons. A confiança da equipe permitiu manter a resistência unida.',
+   loss:'A infiltração abalou a resistência. Protocolos de suspeita permanente passam a ser necessários para reconhecer os impostores.'
+  },
+  5:{
+   win:'A ofensiva de Poison Thanos foi detida. O futuro dos hospedeiros e dos simbiontes depende da decisão final da equipe.',
+   loss:'Os Poisons estabeleceram uma cabeça de ponte na Terra. A ameaça deixou de ser apenas uma infiltração.'
+  }
+ };
+ const connections={
+  1:'As amostras roubadas levam a investigação até a Fundação Vida.',
+  2:'O protocolo contra Hybrid conduz aos experimentos que deram origem à nova ameaça.',
+  3:'Os Poisons explicam a presença de versões alteradas dos heróis.',
+  4:'A infiltração e os mundos perdidos convergem para a ofensiva final.'
+ };
  window.renderInvestigationBoard=function(){
   const track=document.getElementById('investigationBoardTrack');
   if(!track||typeof DATA==='undefined'||typeof save==='undefined')return;
   const chapters=DATA.chapters||[];
   let activeFound=false,discovered=0;
-  const cards=chapters.map(function(ch){
+  track.innerHTML=chapters.map(function(ch){
    const result=save.results&&save.results[ch.id];
    const solved=result==='win'||result==='loss';
    if(solved)discovered++;
-   let kind,title,status,body,action='';
+   let kind,title,status,body,action='',outcome='',linkage='';
    if(solved){
-    kind='solved';
-    title=ch.title;
-    status=result==='win'?'Pista confirmada · Vitória':'Rastro incompleto · Derrota';
-    body=result==='win'?(ch.win||'A equipe avançou na investigação.'):(ch.loss||'A equipe ainda busca respostas.');
+    kind='solved';title=ch.title;
+    status=result==='win'?'Vitória registrada':'Derrota registrada';
+    const evidence=clues[ch.id]&&clues[ch.id][result];
+    body=evidence||'A equipe registrou uma nova evidência neste dossiê.';
+    outcome=result==='win'?(ch.win||'Vitória registrada.'): (ch.loss||'Derrota registrada.');
+    const nextResult=save.results&&save.results[ch.id+1];
+    if(nextResult==='win'||nextResult==='loss'){
+     linkage='<div class="investigation-linkage"><span>CONEXÃO CONFIRMADA</span><p>'+escapeHtml(connections[ch.id]||'As evidências dos dois dossiês estão conectadas.')+'</p></div>';
+    }
     action='<button class="investigation-file-open" onclick="openChapter('+ch.id+')">Rever dossiê</button>';
    }else if(!activeFound){
-    activeFound=true;
-    kind='current';
-    title=ch.title;
-    status='Dossiê disponível';
+    activeFound=true;kind='current';title=ch.title;status='Dossiê disponível';
     body=ch.objective||'A investigação aguarda a equipe.';
     action='<button class="investigation-file-open" onclick="openChapter('+ch.id+')">Abrir missão</button>';
    }else{
-    kind='sealed';
-    title='Arquivo lacrado';
-    status='Acesso bloqueado';
+    kind='sealed';title='Arquivo lacrado';status='Acesso bloqueado';
     body='Conclua o dossiê anterior para revelar a próxima pista.';
    }
-   const label=solved?'REGISTRO DA MISSÃO':kind==='current'?'OBJETIVO ATUAL':'ACESSO RESTRITO';
-   return '<article class="investigation-file '+kind+'" aria-label="Dossiê '+ch.id+': '+escapeHtml(title)+'"><div class="investigation-file-top"><span class="investigation-file-num">DOSSIÊ '+String(ch.id).padStart(2,'0')+'</span><span class="investigation-file-status">'+escapeHtml(status)+'</span></div>'+(kind==='sealed'?'<div class="investigation-file-seal" aria-hidden="true">⌑</div>':'')+'<h3>'+escapeHtml(title)+'</h3><span class="investigation-clue-label">'+label+'</span><p>'+escapeHtml(body)+'</p>'+action+'</article>';
+   const label=solved?'PISTA REVELADA':kind==='current'?'OBJETIVO DA MISSÃO':'ACESSO RESTRITO';
+   return '<article class="investigation-file '+kind+'" aria-label="Dossiê '+ch.id+': '+escapeHtml(title)+'"><div class="investigation-file-top"><span class="investigation-file-num">DOSSIÊ '+String(ch.id).padStart(2,'0')+'</span><span class="investigation-file-status">'+escapeHtml(status)+'</span></div>'+(kind==='sealed'?'<div class="investigation-file-seal" aria-hidden="true">⌑</div>':'')+'<h3>'+escapeHtml(title)+'</h3><span class="investigation-clue-label">'+label+'</span><p>'+escapeHtml(body)+'</p>'+(outcome?'<div class="investigation-outcome"><span>RESULTADO DA MISSÃO</span><p>'+escapeHtml(outcome)+'</p></div>':'')+linkage+action+'</article>';
   }).join('');
-  track.innerHTML=cards;
   const progress=document.getElementById('investigationBoardProgress');
-  if(progress)progress.textContent=discovered+' / '+chapters.length+' dossiês revelados';
+  if(progress)progress.textContent=discovered+' / '+chapters.length+' pistas reveladas';
  };
  const render=window.renderCampaign;
  if(typeof render==='function')window.renderCampaign=function(){render.apply(this,arguments);window.renderInvestigationBoard()};
