@@ -1310,8 +1310,14 @@ function venomShowChoiceBalloon(id,i,path,level=1){
  venomComicBalloon('A ESCOLHA — '+c[0],[venomLevelNarrative(id,i,level,path).context,c[1],'Se vencer: '+c[2],'Se falhar: '+c[3]]);
 }
 function venomShowResultBalloon(id,i,level,path,result){
- const d=venomSituation(id,i),c=venomLevelNarrative(id,i,level,path).choice;if(!c)return;
- venomComicBalloon((result==='success'?'SUCESSO!':'FALHA!')+' · NÍVEL '+level,[c[result==='success'?2:3],level===1?'A história continua no Nível 2: a decisão tomada terá uma ação e consequências próprias.':'Este resultado passa a integrar o Legado da campanha.']);
+ const c=venomLevelNarrative(id,i,level,path).choice;if(!c)return;
+ const paragraphs=[c[result==='success'?2:3],level===1?'A história continua no Nível 2: a decisão tomada terá uma ação e consequências próprias.':'Este resultado passa a integrar o Legado da campanha.'];
+ if(level===2&&result==='success'){
+  const player=venomNormalizePlayer(getSituation(id,i).levels?.[1]?.player||getSituation(id,i).levels?.[2]?.player||venomActivePlayer);
+  const title=venomN2VictoryTitle(player,id,i,path);
+  if(title)paragraphs.push(`Agora, ${player} é ${player==='Bel'?'portadora':'portador'} do título “${title}”.`);
+ }
+ venomComicBalloon((result==='success'?'SUCESSO!':'FALHA!')+' · NÍVEL '+level,paragraphs);
 }
 document.addEventListener('DOMContentLoaded',()=>{const fx=document.getElementById('venomFxVolume');if(fx)fx.value=venomSound.fxVolume??95;const mv=document.getElementById('venomMusicVolume');if(mv)mv.value=venomSound.volume??24});
 </script>
